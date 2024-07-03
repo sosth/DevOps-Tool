@@ -1,0 +1,67 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links li {
+    display: inline;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .navbar-links a.active {
+    color: #007bff;
+  }
+  
+  .navbar-icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .bell-icon::before {
+    content: "\f0f3"; /* Font Awesome bell icon code */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+  
+  .user-icon::before {
+    content: "\f007"; /* Font Awesome user icon code */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+  
