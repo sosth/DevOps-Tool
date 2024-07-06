@@ -1,0 +1,30 @@
+<apex:page standardController="SBQQ__Theme__c" extensions="SBQQ.ThemeSettingsController" standardStylesheets="false" docType="html-5.0">
+	<apex:slds />
+	<apex:includeLightning />
+
+	<div id="pageContainer"></div>
+	<apex:form >
+		<apex:actionFunction name="NavigateOnCancel" action="{!cancel}"/>
+	</apex:form>
+
+	<script>
+		// LO doesn't show LWC toast events; need this "glue" code
+		document.addEventListener('lightning__showtoast', event => {
+			sforce.one.showToast(event.toastAttributes);
+		});
+
+		$Lightning.use('sbqq:cpqltng', function () {
+			$Lightning.createComponent('sbqq:themePage',
+				// pass in themeLess since it isn't a field on Theme__c
+				{ recordId: '{!Theme__c}', themeLess: '{!JSENCODE(themeLess)}', previewUrl: '{!JSENCODE(previewUrl)}' },
+				'pageContainer',
+				(cmp) => { }
+			);
+		});
+
+		window.addEventListener('cpq_theme_cancel', (event) => {
+			event.stopPropagation();
+			NavigateOnCancel();
+		});
+	</script>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page standardController="sfLma__Package__c" extensions="sfLma.LicenseRefreshExtension">
+	<apex:sectionHeader subTitle="Package License Refresh" title="{!sfLma__Package__c.Name}"/>
+	<apex:form id="refreshForm">		
+            <div style="width:40%; display: inline-block; margin-left: auto; margin-right: auto; padding-left: 10px;">
+            	<p>{!descriptionText}</p>
+            	<p>{!lastRunDate}</p><br/>
+            	<div style="text-align: center; margin: auto;">
+            		<apex:commandButton action="{!doRefresh}" value="Refresh Licenses" disabled="{!disableButton}"/>
+                	<apex:commandButton action="{!cancel}" value="Cancel" />
+            	</div>          	
+            </div>                    
+	</apex:form>
+</apex:page>

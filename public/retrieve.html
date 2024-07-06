@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Metadata</title>
+    <style>
+        .metadata-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .metadata-item strong {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Retrieve Metadata</h1>
+    <form id="metadata-form">
+        <label for="metadataType">Metadata Type:</label>
+        <input type="text" id="metadataType" name="metadataType" required>
+        <br>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <br>
+        <button type="submit">Retrieve</button>
+    </form>
+    <div id="metadata-result"></div>
+
+    <script>
+        document.getElementById('metadata-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const metadataType = document.getElementById('metadataType').value;
+            const fullName = document.getElementById('fullName').value;
+
+            try {
+                const response = await fetch(`/retrieve-metadata?metadataType=${metadataType}&fullName=${fullName}`);
+                const metadata = await response.json();
+                
+                const metadataResult = document.getElementById('metadata-result');
+                metadataResult.innerHTML = '';  // Clear previous results
+
+                const metadataItem = document.createElement('div');
+                metadataItem.className = 'metadata-item';
+                metadataItem.innerHTML = `
+                    <strong>Metadata Type:</strong> ${metadataType}
+                    <strong>Full Name:</strong> ${fullName}
+                    <pre>${JSON.stringify(metadata, null, 2)}</pre>
+                `;
+                metadataResult.appendChild(metadataItem);
+            } catch (error) {
+                console.error('Error retrieving metadata:', error);
+            }
+        });
+    </script>
+</body>
+</html>

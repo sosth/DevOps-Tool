@@ -1,0 +1,1 @@
+{"size":1,"totalSize":1,"done":true,"queryLocator":null,"entityTypeName":"ApexClass","records":[{"attributes":{"type":"ApexClass","url":"/services/data/v52.0/tooling/sobjects/ApexClass/01pWx0000009w9gIAA"},"Body":"(hidden)"}]}

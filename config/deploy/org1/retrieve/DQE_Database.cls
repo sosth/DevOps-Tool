@@ -1,0 +1,1 @@
+{"size":1,"totalSize":1,"done":true,"queryLocator":null,"entityTypeName":"ApexClass","records":[{"attributes":{"type":"ApexClass","url":"/services/data/v52.0/tooling/sobjects/ApexClass/01pGA00000ZTA0fYAH"},"Body":"public with sharing class DQE_Database {\n\n   \n}"}]}

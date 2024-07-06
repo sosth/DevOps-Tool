@@ -1,0 +1,6 @@
+<!--
+    Copyright (c) 2016 Salesforce
+    @author gslater@salesforce.com
+-->
+<apex:page standardController="CHANNEL_ORDERS__Service_Order_Detail__c" extensions="CHANNEL_ORDERS.COA_OrderRedirectController" action="{!redirectToServiceOrder}">
+</apex:page>

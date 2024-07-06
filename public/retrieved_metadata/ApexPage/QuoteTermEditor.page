@@ -1,0 +1,53 @@
+<apex:page standardController="SBQQ__Quote__c" extensions="SBQQ.QuoteTermEditorController,SBQQ.ServiceRouter" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" docType="html-5.0" id="QuoteTermEditor" standardStylesheets="false" title="{!$Label.SBQQ__lbl_modify_term}">
+	<apex:slds />
+	<apex:includeLightning />
+
+	<div id="pageContainer"></div>
+
+	<script>
+		$Lightning.use('sbqq:cpqltng', function () {
+			$Lightning.createComponent('sbqq:quoteTermEditorPage',
+				{ quoteId : '{!Quote__c}',
+					'navigateToQuote': navigateToQuote,
+					'toast': showToast
+				},
+				'pageContainer',
+				(cmp) => { },
+			);
+		});
+
+		 /**
+         * Navigates to the quote page.
+         *
+         * @param {string} url - The URL to navigate to.
+         * @returns {void}
+         */
+		function navigateToQuote(url) {
+			// Check if Salesforce One is available
+			if(typeof sforce != 'undefined' && sforce && sforce.one) {
+				sforce.one.navigateToURL(url);
+			} else {
+				// Redirect to the URL
+				window.location.href = url;
+			}
+		}
+
+		/**
+         * Displays a toast notification.
+         *
+         * @param {Object} params - The parameters for the toast notification.
+         * @param {string} params.message - The message to display in the toast.
+         * @param {string} params.type - The type of toast (e.g., 'success', 'error').
+         * @param {string} params.mode - The mode of the toast (e.g., 'sticky', 'dismissable').
+         * @returns {void}
+         */
+		function showToast(params) {
+			sforce.one.showToast({
+				'message': params.message,
+				'type': params.type,
+				'mode' : params.mode
+			});
+		}
+	</script>
+
+</apex:page>

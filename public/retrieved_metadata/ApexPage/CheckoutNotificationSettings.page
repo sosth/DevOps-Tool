@@ -1,0 +1,32 @@
+<!--
+ * Copyright (c) 2016 Salesforce
+ * @author gslater@salesforce.com
+ *-->
+<apex:page standardStyleSheets="false" sidebar="false" showHeader="true">
+    <apex:includeLightning />
+    <apex:stylesheet value="{!URLFOR($Resource.sfcma__SLDS, '/assets/styles/salesforce-lightning-design-system-ltng.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.sfcma__uilib, '/css/cma-vf-slds-fixes.css')}"/>
+
+    <div class="slds">
+        <div class="centerSpinner" id="spinnerDiv">
+            <div class="slds-spinner--large">
+                <img src="/resource/sfcma__SLDS/assets/images/spinners/slds_spinner_brand.gif" />
+                <div class="slds-text-heading--label">{!$Label.cma_loading}</div>
+            </div>
+        </div>
+
+        <div id="lightning" style="display: none;"></div>
+    </div>
+
+    <script>
+       $Lightning.use("sfcma:CheckoutNotificationSettings", function() {
+          $Lightning.createComponent("sfcma:cmaNotificationContainer",
+          { showBackButton: false },
+          "lightning",
+           function(){
+               document.getElementById('spinnerDiv').style.display = 'none';
+               document.getElementById('lightning').style.display = 'block';
+           });
+        });
+    </script>
+</apex:page>

@@ -1,0 +1,6 @@
+<!-- This page is deprecated -->
+<apex:page standardController="SBQQ__WebQuote__c" docType="html-5.0">
+	<div>
+		{!$Label.SBQQ__GenerateWebDocumentDeprecationMessage}
+	</div>
+</apex:page>

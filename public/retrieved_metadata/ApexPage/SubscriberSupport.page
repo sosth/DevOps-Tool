@@ -1,0 +1,5 @@
+<apex:page >
+ <script>function srcUp(url) { window.open(url, '_blank'); }</script>
+ <apex:include pageName="{!URLFOR('/partnerbt/lmo/subOrgLogin.apexp')}">
+ </apex:include>
+</apex:page>

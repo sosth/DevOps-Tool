@@ -1,0 +1,49 @@
+<!--
+ - Created by j.lopez on 1/17/18.
+ -->
+
+<apex:page controller="CHANNEL_ORDERS.SFDCIntegrationCredentialsController" standardStyleSheets="false" sidebar="false" showHeader="true" >
+    <body>
+    <apex:includeLightning />
+    <apex:stylesheet value="{!URLFOR($Resource.CHANNEL_ORDERS__COA_SLDS, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+    <!--
+        We used as custom scope named "coa" to make some of the styles from slds work in visualforce. For that we use the
+        COA_SLDS static resource that has the SLDS classes scoped as coa.
+    -->
+
+    <style type="text/css">
+        .centerSpinner {
+            z-index: 999;
+            height: 4em;
+            width: 4em;
+            overflow: visible;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            padding: 15%;
+        }
+    </style>
+    <div class="coa slds">
+        <div class="centerSpinner" id="spinnerDiv">
+            <div class="slds-spinner--large">
+                <img src="/resource/CHANNEL_ORDERS__COA_SLDS/assets/images/spinners/slds_spinner_brand.gif" />
+                <div class="slds-text-heading--label">{!$Label.CHANNEL_ORDERS__loading}...</div>
+            </div>
+        </div>
+        <div id="lightning" style="display: none;"></div>
+    </div>
+    <script>
+        $Lightning.use("CHANNEL_ORDERS:AppSetup", function() {
+            $Lightning.createComponent("CHANNEL_ORDERS:appSetupContainer",
+                    {},
+                    "lightning",
+                    function(){
+                        document.getElementById('spinnerDiv').style.display = 'none';
+                        document.getElementById('lightning').style.display = 'block';
+                    });
+        });
+    </script>
+    </body>
+</apex:page>

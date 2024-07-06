@@ -1,0 +1,37 @@
+<!-- public/callback.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Auth Callback</title>
+</head>
+<body>
+    <script>
+        // Extract the access token from the URL fragment
+        const hash = window.location.hash.substring(1);
+        const params = new URLSearchParams(hash);
+        const accessToken = params.get('access_token');
+        const instanceUrl = params.get('instance_url');
+
+        if (accessToken && instanceUrl) {
+            // Send the access token to the server
+            fetch('/store-token', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ accessToken, instanceUrl })
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = '/apex-classes';
+                } else {
+                    console.error('Failed to store the token');
+                }
+            });
+        } else {
+            console.error('No access token found in the URL');
+        }
+    </script>
+</body>
+</html>

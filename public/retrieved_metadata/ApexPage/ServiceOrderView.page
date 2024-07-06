@@ -1,0 +1,2 @@
+<apex:page controller="CHANNEL_ORDERS.ServiceOrderViewController" sidebar="false" action="{!redirect}">
+</apex:page>

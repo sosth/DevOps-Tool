@@ -1,0 +1,21 @@
+<apex:page standardStyleSheets="false" sidebar="false" showHeader="true">
+	<body>
+        <apex:includeLightning />
+        <div class="slds">
+            <div id="lightning" style="display: none;"></div>
+        </div>
+        <script>
+            $Lightning.use("CHANNEL_ORDERS:productListContainerApp", function() {
+                var customerId = '{!JSENCODE($CurrentPage.parameters.CustomerId)}';
+                $Lightning.createComponent("CHANNEL_ORDERS:productList",
+                {
+                    customerId: customerId
+                },
+                "lightning",
+                function(){
+                    document.getElementById('lightning').style.display = 'block';
+                });
+            });
+        </script>
+    </body>    
+</apex:page>

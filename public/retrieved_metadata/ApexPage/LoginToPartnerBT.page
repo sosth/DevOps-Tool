@@ -1,0 +1,32 @@
+<apex:page standardController="sfLma__License__c" extensions="sfLma.LoginToPartnerBTExtension">
+  <script>
+  function removeParam(url, paramName) {
+    var s = url.indexOf(paramName + '=');
+    if (s < 0) return url;
+    var e = url.indexOf('&', s);
+    e++;
+    if (e == 0) {
+      e = url.length;
+    }
+    url = url.substring(0, s) + url.substring(e, url.length);
+    if (url.length > 1) {
+      var lastChar = url.charAt(url.length-1);
+      if (lastChar == '?' || lastChar == '&') {
+        url = url.substring(0, url.length-1);
+      }
+    }
+    return url;
+  }
+  var popupUrl = removeParam('{!URLFOR('/partnerbt/lmo/subOrgLogin.apexp',null,[directLoginOrgId=sfLma__License__c.sfLma__Subscriber_Org_ID__c])}','isdtp');
+  window.open(popupUrl,'_blank');
+  </script>
+  <br/>
+  <div style="width:600px">
+  <p>
+  You've been logged in to the subscriber org in a new browser window. If you don't see the window, temporarily disable any pop-up blockers in your browser and try again.
+  </p>
+  <p>
+  While logged in to a subscriber's org, you can't use other features in your license management org. To use these features, first log out of the subscriber's org, and then log in to your license management org again.
+  </p>
+  </div>
+</apex:page>

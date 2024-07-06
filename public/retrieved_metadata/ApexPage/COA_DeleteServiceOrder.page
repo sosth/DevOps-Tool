@@ -1,0 +1,29 @@
+<apex:page standardController="CHANNEL_ORDERS__Service_Order__c">
+    <apex:includeLightning />
+    <div style="width:100%;height:300px;" id="LightningContainer"/>
+    <apex:slds />
+    <div class="slds-scope">
+    <apex:form id="form" style="height: 300px;">
+        <!-- SPINNER -->
+                 <div id="spinner" class="slds-spinner_container slds-is-relative" >
+                     <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                         <div class="slds-spinner__dot-a"></div>
+                         <div class="slds-spinner__dot-b"></div>
+                         <p style="transform: translate(-32%, -50%) rotate(-90deg);width: 320px;text-align: center;">Please wait while loading </p>
+                     </div> 
+                </div>
+        <!-- / SPINNER -->
+    </apex:form>
+    </div>
+    <script>
+        $Lightning.use("CHANNEL_ORDERS:COA_DeleteServiceOrder", function() {
+            $Lightning.createComponent("CHANNEL_ORDERS:COA_ServiceOrderDeleteWarning", {strParentId: '{!CHANNEL_ORDERS__Service_Order__c.Id}'},
+            "LightningContainer",
+            function(cmp) {
+                if(cmp != 'undefined'){
+                    setTimeout(function(){ document.getElementById('spinner').className += ' slds-hide' },0);
+                }
+            });
+        });
+    </script>
+</apex:page>

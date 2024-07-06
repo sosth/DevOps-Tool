@@ -1,0 +1,32 @@
+<!--
+    Copyright (c) 2016 Salesforce
+    @author gslater@salesforce.com
+-->
+<apex:page showHeader="true" standardController="CHANNEL_ORDERS__Service_Order__c" extensions="CHANNEL_ORDERS.COA_CloneServiceOrderController">
+    <apex:stylesheet value="{!URLFOR($Resource.CHANNEL_ORDERS__COA_SLDS, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+    <div class="coa slds">
+    <apex:form >
+        <div>
+            <apex:pageMessages id="pageMsgs" />
+        </div>
+
+        <div class="slds-p-around--small">
+            <div class="slds-modal__container slds-box--border" style='width: 35%;'>
+                <div class="slds-modal__content slds-p-right--x-large slds-p-left--x-large slds-p-bottom--x-large slds-p-top--large">
+                    <div class="slds-align--absolute-center">
+                        <apex:outputText value="{!$Label.CHANNEL_ORDERS__COA_ConfirmCloneAction}" />
+                    </div>
+                </div>
+                <footer class="slds-theme_default slds-p-bottom--medium ">
+                    <div class="slds-align--absolute-center">
+                        <div class="slds-x-small-buttons--horizontal">
+                            <apex:commandButton styleClass="slds-button slds-button--neutral" action="{!doCancel}" value="{!$Label.CHANNEL_ORDERS__OrderUIBtn_Cancel}" rerender="pageMsgs" />
+                            <apex:commandButton styleClass="slds-button slds-button--neutral slds-button--brand" action="{!doClone}" value="{!$Label.CHANNEL_ORDERS__COA_CustomActionContinue}" rerender="pageMsgs" />
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </apex:form>
+    </div>
+</apex:page>

@@ -1,0 +1,58 @@
+<apex:page controller="SBQQ.ThemeLookupController" showHeader="{!(!$Setup.SBQQ__GeneralSettings__c.SBQQ__GlobalHeaderPermUsed__c || !$Permission.SBQQ__HideGlobalHeader)}" standardStylesheets="false">
+    <apex:stylesheet value="{!$Resource['sb']}"/>
+
+    <apex:form >
+    	<div class="qq sb themePage">
+	        <c:pageHeader title="{!$Label.SBQQ__lbl_user_theme_selector}">
+	            <div class="sbButtons">
+	                <apex:commandButton styleClass="sbBtn" value="{!$Label.SBQQ__lbl_revert}" action="{!revert}"/>
+	            </div>
+	            <div class="sbButtons">
+	                <apex:commandButton styleClass="sbBtn sbPrimaryAction" value="{!$Label.SBQQ__lbl_save}" action="{!save}"/>
+	            </div>
+	        </c:pageHeader>
+
+	        <apex:selectRadio value="{!theme}" layout="pageDirection">
+                <apex:selectOptions value="{!items}"/>
+            </apex:selectRadio>
+	    </div>
+	    <div id="styleSheet">
+			<link class="user" href="{!themeUrl}" rel="stylesheet" type="text/css"/>
+	    </div>
+    </apex:form>
+    <script>
+		const tbl = document.querySelector('table[role=presentation]');
+		tbl.classList.add('sbTable');
+		const rows = tbl.querySelectorAll('input');
+		for (const row of rows || []) {
+			//add event listener to inputs to trigger new style sheet loading on click
+			row.addEventListener('click', loadNewStyleSheet);
+		}
+
+		function loadNewStyleSheet(elm) {
+			const selected = elm.target.value
+
+			if (selected == '{!noneMarker}') {
+				document.getElementById('styleSheet').innerHTML = '';
+			} else {
+				const docId = (selected.indexOf(':') == 1) ? selected : selected.split(':')[1];
+				const compiledString = '<link class="user" href="/servlet/servlet.FileDownload?file=' + docId + '" rel="stylesheet" type="text/css">';
+				document.getElementById('styleSheet').innerHTML = compiledString;
+			}
+		}
+	</script>
+	<style>
+	fieldset {
+	    padding: 0;
+	}
+
+	.themePage .sbTable>tbody>tr>td {
+	    font-size:1.5em;
+	}
+
+	.sbTable>tbody>tr>td, .sbTable>thead>tr>th{
+	    padding:15px;
+	}
+
+	</style>
+</apex:page>

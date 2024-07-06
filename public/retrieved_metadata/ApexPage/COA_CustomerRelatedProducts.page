@@ -1,0 +1,22 @@
+<apex:page standardController="CHANNEL_ORDERS__Customer__c" standardStyleSheets="false" sidebar="false" showHeader="false">
+	<body>
+        <apex:includeLightning />
+        <div class="slds">
+            <div id="lightning" style="display: none;"></div>
+        </div>
+        <script>
+            $Lightning.use("CHANNEL_ORDERS:customerRelatedProductsContainerApp", function() {
+                var customerId = '{!JSENCODE($CurrentPage.parameters.Id)}';
+                $Lightning.createComponent("CHANNEL_ORDERS:customerRelatedProducts",
+                {
+                    recordId: customerId,
+                    loadFrom: 'visualforce'
+                },
+                "lightning",
+                function(){
+                    document.getElementById('lightning').style.display = 'block';
+                });
+            });
+        </script>
+    </body>    
+</apex:page>

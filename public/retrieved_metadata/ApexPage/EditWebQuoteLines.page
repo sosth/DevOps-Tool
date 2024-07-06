@@ -1,0 +1,5 @@
+<apex:page standardController="SBQQ__WebQuote__c" docType="html-5.0" standardStylesheets="false">
+	<div>
+		{!$Label.SBQQ__EditWebQuoteDeprecationMessage}
+	</div>
+</apex:page>

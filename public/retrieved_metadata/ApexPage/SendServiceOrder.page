@@ -1,0 +1,10 @@
+<!-- RelEng Perforce/RCS Header - Do not remove! -->
+<!-- ******************************************* -->
+<!-- $Author$ -->
+<!-- $Change$ -->
+<!-- $DateTime$ -->
+<!-- $File$ -->
+<!-- $Id$ -->
+<!-- $Revision$ -->
+<apex:page controller="CHANNEL_ORDERS.SendServiceOrderController" action="{!redirect}">
+</apex:page>
