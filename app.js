@@ -84,7 +84,7 @@ app.get('/get-org-info', async (req, res) => {
 
             const query = `
                 INSERT INTO organizations (
-                    org_id, name, instance_name, organization_type, is_sandbox, created_date,
+                    id, name, instance_name, organization_type, is_sandbox, created_date,
                     primary_contact, country, default_locale, time_zone, language, access_token
                 ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
                 ON CONFLICT (id) DO UPDATE SET
