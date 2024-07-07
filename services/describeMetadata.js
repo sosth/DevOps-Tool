@@ -1,6 +1,6 @@
 const jsforce = require('jsforce');
 
-const accessToken = '6Cel800DQy000009119l888Qy0000002POvvwstBQf8iUsvouwmjk5IphKrFyR3hjsOzTuqNAVPM0NkbKNEPzLBRYs4mua2yIGnDRm9wfWm';
+const accessToken = '6Cel800DQy000009119l888Qy0000002POvELtyt413jJA2Hs38PmLTBfG2T1vMJMOKpW1iKq6jr4DdehJUg5ypWSxc1mfvWiBgLmIEyH7o';
 const instanceUrl = 'https://devsafa-dev-ed.develop.my.salesforce.com';
 
 const conn = new jsforce.Connection({
