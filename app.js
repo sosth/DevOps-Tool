@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const session = require('express-session');
 const bodyParser = require('body-parser');
 const authController = require('./controllers/authController');
 const getOrgIdApi = require('./services/getOrgIdApi');
@@ -34,12 +33,6 @@ app.post('/retrieve-all-apex-classes', async (req, res) => {
     }
 });
 
-app.use(session({
-    secret: 'your_secret_key',
-    resave: false,
-    saveUninitialized: true
-}));
-
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
@@ -63,8 +56,7 @@ app.get('/callback', authController.callback);
 app.post('/store-token', (req, res) => {
     const { accessToken, instanceUrl } = req.body;
     if (accessToken && instanceUrl) {
-        req.session.token = accessToken;
-        req.session.instanceUrl = instanceUrl;
+        // Store token and instanceUrl somewhere secure, such as a secure cookie or database
         res.sendStatus(200);
     } else {
         res.sendStatus(400);
@@ -72,21 +64,17 @@ app.post('/store-token', (req, res) => {
 });
 
 app.get('/org-info-data', (req, res) => {
-    if (req.session.token && req.session.instanceUrl) {
-        res.json({
-            accessToken: req.session.token,
-            instanceUrl: req.session.instanceUrl
-        });
-    } else {
-        res.status(401).json({ error: 'Unauthorized' });
-    }
+    // Implement token retrieval logic based on your storage mechanism
+    res.status(401).json({ error: 'Unauthorized' });
 });
 
 app.get('/get-org-info', async (req, res) => {
-    if (req.session.token) {
+    const { accessToken, instanceUrl } = req.body; // Retrieve token and instanceUrl from a secure source
+
+    if (accessToken) {
         try {
-            const orgIdData = await getOrgIdApi.getOrgId(req.session.token, req.session.instanceUrl);
-            const orgInfo = await getOrgIdApi.getOrgDetails(req.session.token, req.session.instanceUrl, orgIdData.Id);
+            const orgIdData = await getOrgIdApi.getOrgId(accessToken, instanceUrl);
+            const orgInfo = await getOrgIdApi.getOrgDetails(accessToken, instanceUrl, orgIdData.Id);
 
             const query = `
                 INSERT INTO organizations (
@@ -118,7 +106,7 @@ app.get('/get-org-info', async (req, res) => {
                 orgInfo.DefaultLocaleSidKey,
                 orgInfo.TimeZoneSidKey,
                 orgInfo.LanguageLocaleKey,
-                req.session.token
+                accessToken
             ];
 
             await client.query(query, values);
@@ -237,6 +225,7 @@ app.post('/describemetadata', async (req, res) => {
 app.get('/connectedretrieve', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connectedretrieve.html'));
 });
+
 app.listen(port, () => {
     console.log(`App running at http://localhost:${port}`);
 });
