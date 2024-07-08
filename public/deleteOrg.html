@@ -16,18 +16,13 @@
             e.preventDefault();
             const orgId = document.getElementById('orgId').value;
             fetch(`/deleteorg/${orgId}`, { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.message) {
-                        alert(data.message);
+                .then(response => {
+                    if (response.ok) {
+                        alert('Organization deleted successfully');
                         window.location.href = '/listorg';
-                    } else if (data.error) {
-                        throw new Error(data.error);
+                    } else {
+                        alert('Failed to delete organization');
                     }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Failed to delete organization: ' + error.message);
                 });
         });
     </script>
