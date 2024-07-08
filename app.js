@@ -50,7 +50,7 @@ app.get('/deleteorg', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'deleteOrg.html'));
 });
 app.post('/create-deployment', deploymentController.createDeployment);
-app.use('/api/deployments', deploymentRoutres);
+app.use('/api/deployments', deploymentRoutes);
 app.post('/retrieve-all-apex-classes', async (req, res) => {
     const { accessToken, instanceUrl } = req.body;
     try {
