@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const session = require('express-session');
 const bodyParser = require('body-parser');
 const authController = require('./controllers/authController');
 const getOrgIdApi = require('./services/getOrgIdApi');
@@ -13,12 +14,6 @@ const app = express();
 const port = process.env.PORT || 3000;
 // Import the new function
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
-const sfdxRoutes = require('./routes/sfdxRoutes');
-app.use('/sfdx', sfdxRoutes);
-
-app.get('/listorg', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'listorg.html'));
-});
 
 // New endpoint to retrieve all Apex classes
 app.post('/retrieve-all-apex-classes', async (req, res) => {
@@ -32,6 +27,12 @@ app.post('/retrieve-all-apex-classes', async (req, res) => {
         res.status(500).json({ error: 'Failed to retrieve Apex classes' });
     }
 });
+
+app.use(session({
+    secret: 'your_secret_key',
+    resave: false,
+    saveUninitialized: true
+}));
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
@@ -56,7 +57,8 @@ app.get('/callback', authController.callback);
 app.post('/store-token', (req, res) => {
     const { accessToken, instanceUrl } = req.body;
     if (accessToken && instanceUrl) {
-        // Store token and instanceUrl somewhere secure, such as a secure cookie or database
+        req.session.token = accessToken;
+        req.session.instanceUrl = instanceUrl;
         res.sendStatus(200);
     } else {
         res.sendStatus(400);
@@ -64,17 +66,21 @@ app.post('/store-token', (req, res) => {
 });
 
 app.get('/org-info-data', (req, res) => {
-    // Implement token retrieval logic based on your storage mechanism
-    res.status(401).json({ error: 'Unauthorized' });
+    if (req.session.token && req.session.instanceUrl) {
+        res.json({
+            accessToken: req.session.token,
+            instanceUrl: req.session.instanceUrl
+        });
+    } else {
+        res.status(401).json({ error: 'Unauthorized' });
+    }
 });
 
 app.get('/get-org-info', async (req, res) => {
-    const { accessToken, instanceUrl } = req.body; // Retrieve token and instanceUrl from a secure source
-
-    if (accessToken) {
+    if (req.session.token) {
         try {
-            const orgIdData = await getOrgIdApi.getOrgId(accessToken, instanceUrl);
-            const orgInfo = await getOrgIdApi.getOrgDetails(accessToken, instanceUrl, orgIdData.Id);
+            const orgIdData = await getOrgIdApi.getOrgId(req.session.token, req.session.instanceUrl);
+            const orgInfo = await getOrgIdApi.getOrgDetails(req.session.token, req.session.instanceUrl, orgIdData.Id);
 
             const query = `
                 INSERT INTO organizations (
@@ -106,7 +112,7 @@ app.get('/get-org-info', async (req, res) => {
                 orgInfo.DefaultLocaleSidKey,
                 orgInfo.TimeZoneSidKey,
                 orgInfo.LanguageLocaleKey,
-                accessToken
+                req.session.token
             ];
 
             await client.query(query, values);
