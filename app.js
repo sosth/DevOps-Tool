@@ -9,7 +9,13 @@ const path = require('path');
 const { retrieveMetadata } = require('./services/metadataService');
 const jsforce = require('jsforce');
 const fs = require('fs');
+const orgController = require('./controllers/orgController');
 
+app.get('/listorg', orgController.listOrgs);
+app.post('/deleteorg/:id', orgController.deleteOrg);
+app.get('/deleteorg', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'deleteOrg.html'));
+});
 const app = express();
 const port = process.env.PORT || 3000;
 // Import the new function

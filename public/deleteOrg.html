@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Organization</title>
+</head>
+<body>
+    <h1>Delete Organization</h1>
+    <form id="deleteForm">
+        <label for="orgId">Organization ID:</label>
+        <input type="text" id="orgId" name="orgId" required>
+        <button type="submit">Delete</button>
+    </form>
+
+    <script>
+        document.getElementById('deleteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const orgId = document.getElementById('orgId').value;
+            fetch(`/deleteorg/${orgId}`, { method: 'POST' })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Organization deleted successfully');
+                        window.location.href = '/listorg';
+                    } else {
+                        alert('Failed to delete organization');
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
