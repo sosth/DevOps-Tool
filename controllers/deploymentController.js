@@ -32,9 +32,10 @@ exports.createDeployment = async (req, res) => {
 exports.getDeployments = async (req, res) => {
     try {
         const query = `
-            SELECT d.*, o.name as org_name
+            SELECT d.*, o1.name as source_org_name, o2.name as target_org_name
             FROM Deploiement d
-            JOIN Organizations o ON d.org_id = o.org_id
+            JOIN Organizations o1 ON d.org_id = o1.org_id
+            JOIN Organizations o2 ON d.org_id = o2.org_id
             ORDER BY d.created_date DESC
         `;
         const result = await client.query(query);

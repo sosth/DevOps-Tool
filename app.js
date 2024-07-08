@@ -51,6 +51,9 @@ app.get('/deleteorg', (req, res) => {
 });
 app.post('/create-deployment', deploymentController.createDeployment);
 app.use('/api/deployments', deploymentRoutes);
+app.get('/create-deployment', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'create-deployment.html'));
+});
 app.post('/retrieve-all-apex-classes', async (req, res) => {
     const { accessToken, instanceUrl } = req.body;
     try {
