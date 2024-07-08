@@ -7,7 +7,6 @@ const getOrgIdApi = require('./services/getOrgIdApi');
 const { Client } = require('pg');
 const path = require('path');
 const { retrieveMetadata } = require('./services/metadataService');
-const { retrieveMetadataByType } = require('./services/retrieveMeta');
 const jsforce = require('jsforce');
 const fs = require('fs');
 
@@ -15,17 +14,11 @@ const app = express();
 const port = process.env.PORT || 3000;
 // Import the new function
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
+const sfdxRoutes = require('./routes/sfdxRoutes');
+app.use('/sfdx', sfdxRoutes);
 
-app.post('/retrieve-metadata', async (req, res) => {
-    const { accessToken, instanceUrl, metadataType } = req.body;
-
-    try {
-        const metadata = await retrieveMetadataByType(accessToken, instanceUrl, metadataType);
-        res.json(metadata);
-    } catch (error) {
-        console.error('Error retrieving metadata:', error);
-        res.status(500).json({ error: error.message });
-    }
+app.get('/listorg', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'listorg.html'));
 });
 
 // New endpoint to retrieve all Apex classes
@@ -244,10 +237,6 @@ app.post('/describemetadata', async (req, res) => {
 app.get('/connectedretrieve', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connectedretrieve.html'));
 });
-app.get('/retrieve-metadata-page', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'retrieveMeta.html'));
-});
-
 app.listen(port, () => {
     console.log(`App running at http://localhost:${port}`);
 });
