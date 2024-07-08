@@ -2,14 +2,19 @@ require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-const authController = require('./controllers/authController');
-const getOrgIdApi = require('./services/getOrgIdApi');
-const { Client } = require('pg');
 const path = require('path');
-const { retrieveMetadata } = require('./services/metadataService');
+const { Client } = require('pg');
 const jsforce = require('jsforce');
 const fs = require('fs');
+
+const authController = require('./controllers/authController');
+const getOrgIdApi = require('./services/getOrgIdApi');
+const { retrieveMetadata } = require('./services/metadataService');
 const orgController = require('./controllers/orgController');
+const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
+
+const app = express();
+const port = process.env.PORT || 3000;
 
 // Middleware setup
 app.use(session({
@@ -19,38 +24,8 @@ app.use(session({
 }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
-app.get('/listorg', orgController.listOrgs);
-app.post('/deleteorg/:id', orgController.deleteOrg);
-app.get('/deleteorg', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'deleteOrg.html'));
-});
-const app = express();
-const port = process.env.PORT || 3000;
-// Import the new function
-const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 
-// New endpoint to retrieve all Apex classes
-app.post('/retrieve-all-apex-classes', async (req, res) => {
-    const { accessToken, instanceUrl } = req.body;
-
-    try {
-        await retrieveAllApexClasses(accessToken, instanceUrl);
-        res.status(200).json({ message: 'All Apex classes retrieved and saved successfully.' });
-    } catch (error) {
-        console.error('Error retrieving all Apex classes:', error);
-        res.status(500).json({ error: 'Failed to retrieve Apex classes' });
-    }
-});
-
-app.use(session({
-    secret: 'your_secret_key',
-    resave: false,
-    saveUninitialized: true
-}));
-
-app.use(bodyParser.json());
-app.use(express.static('public'));
-
+// Database setup
 const client = new Client({
     connectionString: process.env.DATABASE_URL,
     ssl: {
@@ -60,13 +35,30 @@ const client = new Client({
 
 client.connect();
 
+// Routes
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connect.html'));
 });
 
 app.get('/auth-url', authController.login);
-
 app.get('/callback', authController.callback);
+
+app.get('/listorg', orgController.listOrgs);
+app.post('/deleteorg/:id', orgController.deleteOrg);
+app.get('/deleteorg', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'deleteOrg.html'));
+});
+
+app.post('/retrieve-all-apex-classes', async (req, res) => {
+    const { accessToken, instanceUrl } = req.body;
+    try {
+        await retrieveAllApexClasses(accessToken, instanceUrl);
+        res.status(200).json({ message: 'All Apex classes retrieved and saved successfully.' });
+    } catch (error) {
+        console.error('Error retrieving all Apex classes:', error);
+        res.status(500).json({ error: 'Failed to retrieve Apex classes' });
+    }
+});
 
 app.post('/store-token', (req, res) => {
     const { accessToken, instanceUrl } = req.body;
@@ -155,15 +147,12 @@ app.get('/orgs', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/connectorgs.html'));
 });
 
-// New route to get Apex classes
 app.post('/get-apex-classes', async (req, res) => {
     const { accessToken, instanceUrl } = req.body;
-
     const conn = new jsforce.Connection({
         instanceUrl: instanceUrl,
         accessToken: accessToken
     });
-
     try {
         const apexClasses = await conn.metadata.list([{ type: 'ApexClass' }], '39.0');
         res.json(apexClasses);
@@ -172,17 +161,13 @@ app.post('/get-apex-classes', async (req, res) => {
     }
 });
 
-// Route to download selected metadata
 app.post('/downloadselectedmetadata', async (req, res) => {
     const { accessToken, instanceUrl, metadataType, fullName } = req.body;
-
     try {
         const metadata = await retrieveMetadata(accessToken, instanceUrl, metadataType, fullName);
-
         const fileName = `${fullName}.xml`;
         const filePath = path.join(__dirname, 'public', 'retrieved_metadata', fileName);
         fs.writeFileSync(filePath, metadata);
-
         res.json({ fileName });
     } catch (error) {
         console.log('Error retrieving metadata:', error);
@@ -190,18 +175,14 @@ app.post('/downloadselectedmetadata', async (req, res) => {
     }
 });
 
-// Route to download all Apex classes metadata
 app.post('/downloadallmetadata', async (req, res) => {
     const { accessToken, instanceUrl } = req.body;
-
     try {
         const conn = new jsforce.Connection({
             instanceUrl: instanceUrl,
             accessToken: accessToken
         });
-
         const apexClasses = await conn.metadata.list([{ type: 'ApexClass' }], '39.0');
-
         let fileNames = [];
         for (const apexClass of apexClasses) {
             const metadata = await retrieveMetadata(accessToken, instanceUrl, 'ApexClass', apexClass.fullName);
@@ -210,7 +191,6 @@ app.post('/downloadallmetadata', async (req, res) => {
             fs.writeFileSync(filePath, metadata);
             fileNames.push(fileName);
         }
-
         res.json({ fileNames });
     } catch (error) {
         console.log('Error retrieving all metadata:', error);
@@ -218,16 +198,13 @@ app.post('/downloadallmetadata', async (req, res) => {
     }
 });
 
-// Route to describe metadata
 app.post('/describemetadata', async (req, res) => {
     const { accessToken, instanceUrl } = req.body;
-
     try {
         const conn = new jsforce.Connection({
             instanceUrl: instanceUrl,
             accessToken: accessToken
         });
-
         conn.metadata.describe('52.0', (err, result) => {
             if (err) {
                 res.status(500).json({ error: err.message });
@@ -241,11 +218,11 @@ app.post('/describemetadata', async (req, res) => {
     }
 });
 
-// Serve the connectedretrieve.html
 app.get('/connectedretrieve', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connectedretrieve.html'));
 });
 
+// Start the server
 app.listen(port, () => {
     console.log(`App running at http://localhost:${port}`);
 });
