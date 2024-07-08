@@ -11,15 +11,14 @@ client.connect();
 
 exports.createDeployment = async (req, res) => {
     const { deploymentName, sourceOrg, targetOrg } = req.body;
-    const userId = 1; // Replace with actual user ID
 
     try {
         const query = `
-            INSERT INTO Deploiement (source_org_id, target_org_id, user_id, dep_name)
-            VALUES ($1, $2, $3, $4)
+            INSERT INTO Deploiement (source_org_id, target_org_id, dep_name)
+            VALUES ($1, $2, $3)
             RETURNING *
         `;
-        const values = [sourceOrg, targetOrg, userId, deploymentName];
+        const values = [sourceOrg, targetOrg, deploymentName];
         const result = await client.query(query, values);
 
         res.status(201).json(result.rows[0]);
@@ -28,6 +27,7 @@ exports.createDeployment = async (req, res) => {
         res.status(500).json({ error: 'Failed to create deployment' });
     }
 };
+
 
 exports.getDeployments = async (req, res) => {
     try {
