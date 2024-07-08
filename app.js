@@ -13,7 +13,7 @@ const { retrieveMetadata } = require('./services/metadataService');
 const orgController = require('./controllers/orgController');
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 const deploymentController = require('./controllers/deploymentController');
-const deploymentRoutes = require('./routes/deploymentRoutes');
+const deploymentRoutes = require('./routes/deploymentRoutres');
 const app = express();
 const port = process.env.PORT || 3000;
 
