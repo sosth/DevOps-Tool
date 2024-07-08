@@ -11,6 +11,9 @@ const authController = require('./controllers/authController');
 const getOrgIdApi = require('./services/getOrgIdApi');
 const { retrieveMetadata } = require('./services/metadataService');
 const orgController = require('./controllers/orgController');
+const deploymentController = require('./controllers/deploymentController');
+const metadataController = require('./controllers/metadataController');
+
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 
 const app = express();
@@ -49,6 +52,8 @@ app.get('/deleteorg', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'deleteOrg.html'));
 });
 
+app.post('/create-deployment', deploymentController.createDeployment);
+app.post('/retrieve-metadata', metadataController.retrieveMetadata);
 app.post('/retrieve-all-apex-classes', async (req, res) => {
     const { accessToken, instanceUrl } = req.body;
     try {

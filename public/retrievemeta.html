@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment and Metadata Retrieval</title>
+</head>
+<body>
+    <form id="deploymentForm">
+        <input type="number" id="orgId" placeholder="Organization ID" required>
+        <input type="number" id="userId" placeholder="User ID" required>
+        <input type="text" id="depName" placeholder="Deployment Name" required>
+        <button type="submit">Create Deployment</button>
+    </form>
+
+    <form id="metadataForm" style="display: none;">
+        <input type="text" id="retName" placeholder="Retrieve Name" required>
+        <select id="componentType">
+            <option value="ApexClass">Apex Class</option>
+            <option value="ApexTrigger">Apex Trigger</option>
+            <option value="CustomObject">Custom Object</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button type="submit">Retrieve Metadata</button>
+    </form>
+
+    <script>
+        let currentDepId;
+
+        document.getElementById('deploymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const orgId = document.getElementById('orgId').value;
+            const userId = document.getElementById('userId').value;
+            const depName = document.getElementById('depName').value;
+
+            fetch('/create-deployment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ orgId, userId, depName }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.depId) {
+                    currentDepId = data.depId;
+                    document.getElementById('metadataForm').style.display = 'block';
+                    alert('Deployment created successfully. You can now retrieve metadata.');
+                } else if (data.error) {
+                    throw new Error(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to create deployment: ' + error.message);
+            });
+        });
+
+        document.getElementById('metadataForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const componentType = document.getElementById('componentType').value;
+            const retName = document.getElementById('retName').value;
+
+            // Assuming you have stored the access token and instance URL
+            const accessToken = localStorage.getItem('accessToken');
+            const instanceUrl = localStorage.getItem('instanceUrl');
+
+            fetch('/retrieve-metadata', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ accessToken, instanceUrl, componentType, depId: currentDepId, retName }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                } else if (data.error) {
+                    throw new Error(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to retrieve metadata: ' + error.message);
+            });
+        });
+    </script>
+</body>
+</html>
