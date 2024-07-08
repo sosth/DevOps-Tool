@@ -11,16 +11,15 @@ client.connect();
 
 exports.createDeployment = async (req, res) => {
     const { deploymentName, sourceOrg, targetOrg } = req.body;
-    // Assuming you have a user_id, you might get this from the session or JWT
     const userId = 1; // Replace with actual user ID
 
     try {
         const query = `
-            INSERT INTO Deploiement (org_id, user_id, dep_name)
-            VALUES ($1, $2, $3)
+            INSERT INTO Deploiement (source_org_id, target_org_id, user_id, dep_name)
+            VALUES ($1, $2, $3, $4)
             RETURNING *
         `;
-        const values = [sourceOrg, userId, deploymentName];
+        const values = [sourceOrg, targetOrg, userId, deploymentName];
         const result = await client.query(query, values);
 
         res.status(201).json(result.rows[0]);
@@ -29,13 +28,14 @@ exports.createDeployment = async (req, res) => {
         res.status(500).json({ error: 'Failed to create deployment' });
     }
 };
+
 exports.getDeployments = async (req, res) => {
     try {
         const query = `
             SELECT d.*, o1.name as source_org_name, o2.name as target_org_name
             FROM Deploiement d
-            JOIN Organizations o1 ON d.org_id = o1.org_id
-            JOIN Organizations o2 ON d.org_id = o2.org_id
+            JOIN Organizations o1 ON d.source_org_id = o1.org_id
+            JOIN Organizations o2 ON d.target_org_id = o2.org_id
             ORDER BY d.created_date DESC
         `;
         const result = await client.query(query);
