@@ -11,7 +11,7 @@ const authController = require('./controllers/authController');
 const getOrgIdApi = require('./services/getOrgIdApi');
 const { retrieveMetadata } = require('./services/metadataService');
 const orgController = require('./controllers/orgController');
-const deploymentRoutes = require('./routes/deploymentRoutes');
+
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 
 const app = express();
@@ -19,10 +19,9 @@ const port = process.env.PORT || 3000;
 
 // Middleware setup
 app.use(session({
-    secret: process.env.SESSION_SECRET || 'your_secret_key',
+    secret: 'your_secret_key',
     resave: false,
-    saveUninitialized: true,
-    cookie: { secure: process.env.NODE_ENV === 'production' }
+    saveUninitialized: true
 }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
@@ -35,10 +34,9 @@ const client = new Client({
     }
 });
 
-client.connect().catch(err => console.error('Connection error', err.stack));
+client.connect();
 
 // Routes
-app.use('/api', deploymentRoutes);
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connect.html'));
 });
@@ -225,12 +223,6 @@ app.post('/describemetadata', async (req, res) => {
 
 app.get('/connectedretrieve', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connectedretrieve.html'));
-});
-
-// Error handling middleware
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).json({ error: 'Something went wrong!' });
 });
 
 // Start the server
