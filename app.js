@@ -11,6 +11,14 @@ const jsforce = require('jsforce');
 const fs = require('fs');
 const orgController = require('./controllers/orgController');
 
+// Middleware setup
+app.use(session({
+    secret: 'your_secret_key',
+    resave: false,
+    saveUninitialized: true
+}));
+app.use(bodyParser.json());
+app.use(express.static('public'));
 app.get('/listorg', orgController.listOrgs);
 app.post('/deleteorg/:id', orgController.deleteOrg);
 app.get('/deleteorg', (req, res) => {
