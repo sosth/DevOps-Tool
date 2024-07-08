@@ -11,8 +11,7 @@ const authController = require('./controllers/authController');
 const getOrgIdApi = require('./services/getOrgIdApi');
 const { retrieveMetadata } = require('./services/metadataService');
 const orgController = require('./controllers/orgController');
-const deploymentController = require('./controllers/deploymentController');
-const metadataController = require('./controllers/metadataController');
+const deploymentRoutes = require('./routes/deploymentRoutes');
 
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 
@@ -39,6 +38,7 @@ const client = new Client({
 client.connect();
 
 // Routes
+app.use('/api', deploymentRoutes);
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connect.html'));
 });
