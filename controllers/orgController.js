@@ -23,7 +23,7 @@ exports.deleteOrg = async (req, res) => {
     const orgId = req.params.id;
     try {
         await client.query('DELETE FROM organizations WHERE id = $1', [orgId]);
-        res.redirect('/listorg');
+        res.status(200).json({ message: 'Organization deleted successfully' });
     } catch (error) {
         console.error('Error deleting org:', error);
         res.status(500).json({ error: 'Failed to delete organization' });
