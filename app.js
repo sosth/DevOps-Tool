@@ -12,7 +12,8 @@ const getOrgIdApi = require('./services/getOrgIdApi');
 const { retrieveMetadata } = require('./services/metadataService');
 const orgController = require('./controllers/orgController');
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
-
+const deploymentController = require('./controllers/deploymentController');
+const deploymentRoutes = require('./routes/deploymentRoutes');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -48,7 +49,8 @@ app.post('/deleteorg/:id', orgController.deleteOrg);
 app.get('/deleteorg', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'deleteOrg.html'));
 });
-
+app.post('/create-deployment', deploymentController.createDeployment);
+app.use('/api/deployments', deploymentRoutes);
 app.post('/retrieve-all-apex-classes', async (req, res) => {
     const { accessToken, instanceUrl } = req.body;
     try {
