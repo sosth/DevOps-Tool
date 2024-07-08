@@ -22,10 +22,7 @@
             <label for="dep_name">Deployment Name:</label>
             <input type="text" id="dep_name" name="dep_name" required>
         </div>
-        <div>
-            <label for="dep_description">Deployment Description:</label>
-            <textarea id="dep_description" name="dep_description" required></textarea>
-        </div>
+    
         <button type="submit">Create Deployment</button>
     </form>
 
@@ -37,7 +34,7 @@
                 org_id: document.getElementById('org_id').value,
                 user_id: document.getElementById('user_id').value,
                 dep_name: document.getElementById('dep_name').value,
-                dep_description: document.getElementById('dep_description').value
+                
             };
 
             try {
