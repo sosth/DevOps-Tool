@@ -2,89 +2,22 @@
 <html>
 <head>
     <title>List Organizations</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 4px;
-            display: flex;
-            justify-content: space-between;
-        }
-        button {
-            background-color: #d9534f;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #c9302c;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Organizations</h1>
-        <ul id="orgList"></ul>
-    </div>
+    <h1>Organizations</h1>
+    <ul id="orgList"></ul>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('/connected-orgs')
-                .then(response => response.json())
-                .then(orgs => {
-                    const list = document.getElementById('orgList');
-                    orgs.forEach(org => {
-                        const li = document.createElement('li');
-                        li.textContent = `${org.name} (${org.org_id})`;
-                        const deleteButton = document.createElement('button');
-                        deleteButton.textContent = 'Delete';
-                        deleteButton.onclick = function() {
-                            fetch(`/deleteorg/${org.org_id}`, {
-                                method: 'POST'
-                            })
-                            .then(response => {
-                                if (response.ok) {
-                                    li.remove();
-                                } else {
-                                    alert('Failed to delete organization');
-                                }
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                                alert('Failed to delete organization');
-                            });
-                        };
-                        li.appendChild(deleteButton);
-                        list.appendChild(li);
-                    });
+        fetch('/connected-orgs')
+            .then(response => response.json())
+            .then(orgs => {
+                const list = document.getElementById('orgList');
+                orgs.forEach(org => {
+                    const li = document.createElement('li');
+                    li.textContent = `${org.name} (${org.id})`;
+                    list.appendChild(li);
                 });
-        });
+            });
     </script>
 </body>
 </html>
