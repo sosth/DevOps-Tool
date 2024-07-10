@@ -90,7 +90,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Fetch and populate organization options
             fetch('/connected-orgs')
                 .then(response => response.json())
                 .then(orgs => {
@@ -103,7 +102,6 @@
                     });
                 });
 
-            // Handle form submission
             document.getElementById('deploymentForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const formData = new FormData(this);
@@ -120,8 +118,8 @@
                 .then(data => {
                     console.log('Deployment created:', data);
                     alert('Deployment created successfully!');
-                    fetchDeployments(); // Refresh the deployments list
-                    this.reset(); // Reset the form
+                    fetchDeployments();
+                    this.reset();
                 })
                 .catch(error => {
                     console.error('Error:', error);
@@ -129,7 +127,6 @@
                 });
             });
 
-            // Fetch and display existing deployments
             function fetchDeployments() {
                 fetch('/api/deployments')
                     .then(response => response.json())
@@ -145,7 +142,6 @@
                     });
             }
 
-            // Initial fetch of deployments
             fetchDeployments();
         });
     </script>

@@ -14,11 +14,11 @@ exports.createDeployment = async (req, res) => {
 
     try {
         const query = `
-            INSERT INTO Deploiement (source_org_id, target_org_id, dep_name)
-            VALUES ($1, $2, $3)
+            INSERT INTO deployment (orgsource, orgtarget, datecreated)
+            VALUES ($1, $2, CURRENT_TIMESTAMP)
             RETURNING *
         `;
-        const values = [sourceOrg, targetOrg, deploymentName];
+        const values = [sourceOrg, targetOrg];
         const result = await client.query(query, values);
 
         res.status(201).json(result.rows[0]);
@@ -28,15 +28,14 @@ exports.createDeployment = async (req, res) => {
     }
 };
 
-
 exports.getDeployments = async (req, res) => {
     try {
         const query = `
             SELECT d.*, o1.name as source_org_name, o2.name as target_org_name
-            FROM Deploiement d
-            JOIN Organizations o1 ON d.source_org_id = o1.org_id
-            JOIN Organizations o2 ON d.target_org_id = o2.org_id
-            ORDER BY d.created_date DESC
+            FROM deployment d
+            JOIN organizations o1 ON d.orgsource = o1.org_id
+            JOIN organizations o2 ON d.orgtarget = o2.org_id
+            ORDER BY d.datecreated DESC
         `;
         const result = await client.query(query);
         res.status(200).json(result.rows);
