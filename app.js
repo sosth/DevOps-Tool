@@ -1,3 +1,5 @@
+import React from 'react';
+import { GoogleLogin } from '@react-oauth/google';
 require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
@@ -17,6 +19,25 @@ const deploymentRoutes = require('./routes/deploymentRoutres');
 const app = express();
 const port = process.env.PORT || 3000;
 
+
+// Google Login
+function App() {
+    const responseMessage = (response) => {
+        console.log(response);
+    };
+    const errorMessage = (error) => {
+        console.log(error);
+    };
+    return (
+        <div>
+            <h2>React Google Login</h2>
+            <br />
+            <br />
+            <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
+        </div>
+    )
+}
+export default App;
 // Middleware setup
 app.use(session({
     secret: 'your_secret_key',
