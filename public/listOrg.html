@@ -65,8 +65,8 @@
                         const deleteButton = document.createElement('button');
                         deleteButton.textContent = 'Delete';
                         deleteButton.onclick = function() {
-                            fetch(`/api/orgs/delete/${org.org_id}`, {
-                                method: 'DELETE'
+                            fetch(`/deleteorg/${org.org_id}`, {
+                                method: 'POST'
                             })
                             .then(response => {
                                 if (response.ok) {
