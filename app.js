@@ -13,7 +13,7 @@ const { retrieveMetadata } = require("./services/metadataService");
 const orgController = require("./controllers/orgController");
 const retrieveAllApexClasses = require("./services/retrieveAllApexClasses");
 const deploymentController = require("./controllers/deploymentController");
-const deploymentRoutes = require("./routes/deploymentRoutres");
+const deploymentRoutes = require("./routes/deploymentRoutes"); // Corrected typo here
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -105,43 +105,35 @@ app.get("/get-org-info", async (req, res) => {
       );
 
       const query = `
-  INSERT INTO Organizations (id, name, instance_name, organization_type, is_sandbox, primary_contact, country, default_locale, time_zone, language, access_token)
-  VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
-  ON CONFLICT (id) 
-  DO UPDATE SET 
-    name = EXCLUDED.name,
-    instance_name = EXCLUDED.instance_name,
-    organization_type = EXCLUDED.organization_type,
-    is_sandbox = EXCLUDED.is_sandbox,
-    primary_contact = EXCLUDED.primary_contact,
-    country = EXCLUDED.country,
-    default_locale = EXCLUDED.default_locale,
-    time_zone = EXCLUDED.time_zone,
-    language = EXCLUDED.language,
-    access_token = EXCLUDED.access_token;
-`;
+        INSERT INTO Organizations (id, name, instance_name, organization_type, is_sandbox, primary_contact, country, default_locale, time_zone, language, access_token)
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+        ON CONFLICT (id) 
+        DO UPDATE SET 
+          name = EXCLUDED.name,
+          instance_name = EXCLUDED.instance_name,
+          organization_type = EXCLUDED.organization_type,
+          is_sandbox = EXCLUDED.is_sandbox,
+          primary_contact = EXCLUDED.primary_contact,
+          country = EXCLUDED.country,
+          default_locale = EXCLUDED.default_locale,
+          time_zone = EXCLUDED.time_zone,
+          language = EXCLUDED.language,
+          access_token = EXCLUDED.access_token;
+      `;
 
       const values = [
-        id,
-        name,
-        instance_name,
-        organization_type,
-        is_sandbox,
-        primary_contact,
-        country,
-        default_locale,
-        time_zone,
-        language,
-        access_token,
+        orgInfo.id,
+        orgInfo.name,
+        orgInfo.instance_name,
+        orgInfo.organization_type,
+        orgInfo.is_sandbox,
+        orgInfo.primary_contact,
+        orgInfo.country,
+        orgInfo.default_locale,
+        orgInfo.time_zone,
+        orgInfo.language,
+        req.session.token,
       ];
-
-      client.query(query, values, (err, res) => {
-        if (err) {
-          console.error("Error executing query", err.stack);
-        } else {
-          console.log("Query result", res);
-        }
-      });
 
       await client.query(query, values);
 
