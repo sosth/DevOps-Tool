@@ -8,6 +8,7 @@ const CreateDeployment = () => {
   const [orgs, setOrgs] = useState([]);
 
   useEffect(() => {
+    // Fetch the list of organizations when the component mounts
     fetchOrgs();
   }, []);
 
@@ -51,7 +52,7 @@ const CreateDeployment = () => {
       >
         <option value="">Select Source Org</option>
         {orgs.map((org) => (
-          <option key={org.org_id} value={org.org_id}>
+          <option key={org.id} value={org.id}>
             {org.name}
           </option>
         ))}
@@ -63,7 +64,7 @@ const CreateDeployment = () => {
       >
         <option value="">Select Target Org</option>
         {orgs.map((org) => (
-          <option key={org.org_id} value={org.org_id}>
+          <option key={org.id} value={org.id}>
             {org.name}
           </option>
         ))}

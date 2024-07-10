@@ -14,14 +14,6 @@ const orgController = require('./controllers/orgController');
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 const deploymentController = require('./controllers/deploymentController');
 const deploymentRoutes = require('./routes/deploymentRoutres');
-
-const organizationsController = require('./controllers/organizationsController');
-const usersController = require('./controllers/usersController');
-const deploymentsController = require('./controllers/deploymentController');
-const retrievedItemsController = require('./controllers/retrievedItemsController');
-const deployedItemsController = require('./controllers/deployedItemsController');
-const retrieveController = require('./controllers/retrieveController');
-
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -45,12 +37,6 @@ const client = new Client({
 client.connect();
 
 // Routes
-app.use('/organizations', organizationsController);
-app.use('/users', usersController);
-app.use('/deployments', deploymentsController);
-app.use('/retrieveditems', retrievedItemsController);
-app.use('/deployeditems', deployedItemsController);
-app.use('/retrieve', retrieveController);
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connect.html'));
 });

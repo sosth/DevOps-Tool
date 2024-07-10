@@ -3,19 +3,16 @@
   "version": "1.0.0",
   "description": "A simple Salesforce app with OAuth2 and SFDX integration",
   "main": "app.js",
-  "type": "module",
   "scripts": {
-    "start": "node app.mjs"
+    "start": "node app.js"
   },
   "dependencies": {
-    "@react-oauth/google": "^0.2.8",
     "axios": "^1.7.2",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-session": "^1.18.0",
     "fs": "0.0.1-security",
-    "google-auth-library": "^7.10.2",
     "jsforce": "^1.11.1",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
