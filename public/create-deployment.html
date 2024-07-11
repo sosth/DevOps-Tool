@@ -107,7 +107,11 @@
             document.getElementById('deploymentForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const formData = new FormData(this);
-                const deploymentData = Object.fromEntries(formData);
+                const deploymentData = {
+                    deploymentName: formData.get('deploymentName'),
+                    sourceOrgId: formData.get('sourceOrg'), // Ensure these are the org_id values
+                    targetOrgId: formData.get('targetOrg')  // Ensure these are the org_id values
+                };
 
                 fetch('/api/deployments/create', {
                     method: 'POST',
