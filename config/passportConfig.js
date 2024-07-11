@@ -1,6 +1,8 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const { Client } = require('pg');
+// passportConfig.js
+const db = require('./db'); // Ensure this path is correct
 
 const client = new Client({
     connectionString: process.env.DATABASE_URL,
