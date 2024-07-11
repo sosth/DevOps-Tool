@@ -1,8 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const { Client } = require('pg');
-// passportConfig.js
-const db = require('./db'); // Ensure this path is correct
 
 const client = new Client({
     connectionString: process.env.DATABASE_URL,
@@ -16,7 +14,7 @@ client.connect();
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "/auth/google/callback"
+    callbackURL: "https://devto-f2687ab8b235.herokuapp.com/auth/google/callback"
 },
 async (accessToken, refreshToken, profile, done) => {
     const { id, name, emails } = profile;
