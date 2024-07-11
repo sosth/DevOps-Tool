@@ -24,17 +24,17 @@ const CreateDeployment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/deployments/create', {
-        deploymentName,
-        sourceOrgId: sourceOrg, // Ensure this is the org_id
-        targetOrgId: targetOrg  // Ensure this is the org_id
-      });
-      console.log('Deployment created:', response.data);
-      // Reset form or redirect user
+        const response = await axios.post('/api/deployments/create', {
+            deploymentName,
+            sourceOrgId: sourceOrg, // Ensure this is the org_id
+            targetOrgId: targetOrg  // Ensure this is the org_id
+        });
+        console.log('Deployment created:', response.data);
+        // Reset form or redirect user
     } catch (error) {
-      console.error('Error creating deployment:', error);
+        console.error('Error creating deployment:', error);
     }
-  };
+};
 
   return (
     <form onSubmit={handleSubmit}>
@@ -46,29 +46,30 @@ const CreateDeployment = () => {
         required
       />
       <select
-        value={sourceOrg}
-        onChange={(e) => setSourceOrg(e.target.value)}
-        required
-      >
-        <option value="">Select Source Org</option>
-        {orgs.map((org) => (
-          <option key={org.org_id} value={org.org_id}> {/* Use org_id here */}
+    value={sourceOrg}
+    onChange={(e) => setSourceOrg(e.target.value)}
+    required
+>
+    <option value="">Select Source Org</option>
+    {orgs.map((org) => (
+        <option key={org.org_id} value={org.org_id}> {/* Use org_id here */}
             {org.name}
-          </option>
-        ))}
-      </select>
-      <select
-        value={targetOrg}
-        onChange={(e) => setTargetOrg(e.target.value)}
-        required
-      >
-        <option value="">Select Target Org</option>
-        {orgs.map((org) => (
-          <option key={org.org_id} value={org.org_id}> {/* Use org_id here */}
+        </option>
+    ))}
+</select>
+<select
+    value={targetOrg}
+    onChange={(e) => setTargetOrg(e.target.value)}
+    required
+>
+    <option value="">Select Target Org</option>
+    {orgs.map((org) => (
+        <option key={org.org_id} value={org.org_id}> {/* Use org_id here */}
             {org.name}
-          </option>
-        ))}
-      </select>
+        </option>
+    ))}
+</select>
+
       <button type="submit">Create Deployment</button>
     </form>
   );
