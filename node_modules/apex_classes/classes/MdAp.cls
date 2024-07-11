@@ -1,5 +1,0 @@
-public class MdAp {
-  public static String sayHi() {
-    return 'Hello, Meta!';
-  }
-}

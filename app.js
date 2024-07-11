@@ -1,6 +1,8 @@
 require('dotenv').config();
+require('./config/passportConfig');
 const express = require('express');
 const session = require('express-session');
+const passport = require('passport');
 const bodyParser = require('body-parser');
 const path = require('path');
 const { Client } = require('pg');
@@ -16,7 +18,7 @@ const deploymentController = require('./controllers/deploymentController');
 const deploymentRoutes = require('./routes/deploymentRoutres');
 const app = express();
 const port = process.env.PORT || 3000;
-
+require('./config/passportConfig');
 // Middleware setup
 app.use(session({
     secret: 'your_secret_key',
@@ -25,7 +27,21 @@ app.use(session({
 }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.use(passport.initialize());
+app.use(passport.session());
 
+app.use('/auth', authRoutes);
+
+app.get('/', (req, res) => {
+    res.send('<a href="/auth/google">Login with Google</a>');
+});
+
+app.get('/dashboard', (req, res) => {
+    if (!req.isAuthenticated()) {
+        return res.redirect('/');
+    }
+    res.send(`Hello ${req.user.firstname}`);
+});
 // Database setup
 const client = new Client({
     connectionString: process.env.DATABASE_URL,
