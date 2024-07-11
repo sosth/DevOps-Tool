@@ -28,6 +28,7 @@ exports.createDeployment = async (req, res) => {
     }
 };
 
+
 exports.getDeployments = async (req, res) => {
     try {
         const query = `
