@@ -10,15 +10,15 @@ const client = new Client({
 client.connect();
 
 exports.createDeployment = async (req, res) => {
-    const { deploymentName, sourceOrg, targetOrg, sourceOrgId, targetOrgId } = req.body;
+    const { deploymentName, sourceOrgId, targetOrgId } = req.body;
 
     try {
         const query = `
-            INSERT INTO deployment (orgsource, orgtarget, dep_name, source_org_id, target_org_id)
-            VALUES ($1, $2, $3, $4, $5)
+            INSERT INTO deployment (dep_name, source_org_id, target_org_id)
+            VALUES ($1, $2, $3)
             RETURNING *
         `;
-        const values = [sourceOrg, targetOrg, deploymentName, sourceOrgId, targetOrgId];
+        const values = [deploymentName, sourceOrgId, targetOrgId];
         const result = await client.query(query, values);
 
         res.status(201).json(result.rows[0]);
