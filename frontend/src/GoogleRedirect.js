@@ -15,7 +15,7 @@ const GoogleRedirect = () => {
 
       if (token) {
         try {
-          const response = await axios.get(`https://testdevtospace3-41cb63a6d5d7.herokuapp.com/users/googleback?token=${token}`);
+          const response = await axios.get(`https://devto-f2687ab8b235.herokuapp.com/users/googleback?token=${token}`);
           console.log('Google login response:', response.data);
 
           if (response.status === 200) {

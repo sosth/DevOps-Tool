@@ -14,6 +14,7 @@ const orgController = require('./controllers/orgController');
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 const deploymentController = require('./controllers/deploymentController');
 const deploymentRoutes = require('./routes/deploymentRoutres');
+const authRoutes = require('./routes/authRoutes');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -25,7 +26,7 @@ app.use(session({
 }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
-
+app.use('/auth', authRoutes);
 // Database setup
 const client = new Client({
     connectionString: process.env.DATABASE_URL,
@@ -37,6 +38,13 @@ const client = new Client({
 client.connect();
 
 // Routes
+app.get('/', (req, res) => {
+    if (req.session.user) {
+        res.sendFile(path.join(__dirname, 'public', 'connect.html'));
+    } else {
+        res.sendFile(path.join(__dirname, 'public', 'login.html'));
+    }
+});
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connect.html'));
 });
