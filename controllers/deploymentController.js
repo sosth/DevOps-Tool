@@ -14,7 +14,7 @@ exports.createDeployment = async (req, res) => {
 
     try {
         const query = `
-            INSERT INTO Deploiement (source_org_id, target_org_id, dep_name)
+            INSERT INTO Deployment (source_org_id, target_org_id, dep_name)
             VALUES ($1, $2, $3)
             RETURNING *
         `;
@@ -33,7 +33,7 @@ exports.getDeployments = async (req, res) => {
     try {
         const query = `
             SELECT d.*, o1.name as source_org_name, o2.name as target_org_name
-            FROM Deploiement d
+            FROM Deployment d
             JOIN Organizations o1 ON d.source_org_id = o1.org_id
             JOIN Organizations o2 ON d.target_org_id = o2.org_id
             ORDER BY d.created_date DESC
