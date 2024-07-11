@@ -24,17 +24,17 @@ const CreateDeployment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/deployments/create', {
-        deploymentName,
-        sourceOrg,
-        targetOrg
-      });
-      console.log('Deployment created:', response.data);
-      // Reset form or redirect user
+        const response = await axios.post('/api/deployments/create', {
+            deploymentName,
+            sourceOrg,
+            targetOrg
+        });
+        console.log('Deployment created:', response.data);
+        // Reset form or redirect user
     } catch (error) {
-      console.error('Error creating deployment:', error);
+        console.error('Error creating deployment:', error);
     }
-  };
+};
 
   return (
     <form onSubmit={handleSubmit}>
