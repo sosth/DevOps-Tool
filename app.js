@@ -42,11 +42,8 @@ app.get('/', (req, res) => {
     if (req.session.user) {
         res.sendFile(path.join(__dirname, 'public', 'connect.html'));
     } else {
-        res.sendFile(path.join(__dirname, 'public', 'login.html'));
+        res.sendFile(path.path.join(__dirname, 'public', 'login.html'));
     }
-});
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'connect.html'));
 });
 
 app.get('/auth-url', authController.login);
