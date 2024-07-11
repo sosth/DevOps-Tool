@@ -107,12 +107,8 @@
             document.getElementById('deploymentForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const formData = new FormData(this);
-                const deploymentData = {
-                    deploymentName: formData.get('deploymentName'),
-                    sourceOrg: formData.get('sourceOrg'), // Ensure this matches the name in your HTML form
-                    targetOrg: formData.get('targetOrg')  // Ensure this matches the name in your HTML form
-                };
-        
+                const deploymentData = Object.fromEntries(formData);
+
                 fetch('/api/deployments/create', {
                     method: 'POST',
                     headers: {
@@ -132,7 +128,6 @@
                     alert('Failed to create deployment. Please try again.');
                 });
             });
-       
 
             // Fetch and display existing deployments
             function fetchDeployments() {
