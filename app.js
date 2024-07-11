@@ -1,8 +1,6 @@
 require('dotenv').config();
-require('./config/passportConfig');
 const express = require('express');
 const session = require('express-session');
-const passport = require('passport');
 const bodyParser = require('body-parser');
 const path = require('path');
 const { Client } = require('pg');
@@ -16,8 +14,6 @@ const orgController = require('./controllers/orgController');
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 const deploymentController = require('./controllers/deploymentController');
 const deploymentRoutes = require('./routes/deploymentRoutres');
-const authRoutes = require('./routes/authRoutes'); // Include authRoutes
-
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -29,31 +25,6 @@ app.use(session({
 }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
-app.use(passport.initialize());
-app.use(passport.session());
-
-// Serve the static files from the React app
-app.use(express.static(path.join(__dirname, '..', 'frontend', 'build')));
-
-// API routes
-app.use('/auth', require('./routes/auth'));
-
-// Handles any requests that don't match the ones above
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'frontend', 'build', 'index.html'));
-});
-app.use('/auth', authRoutes);
-
-app.get('/', (req, res) => {
-    res.send('<a href="/auth/google">Login with Google</a>');
-});
-
-app.get('/dashboard', (req, res) => {
-    if (!req.isAuthenticated()) {
-        return res.redirect('/');
-    }
-    res.send(`Hello ${req.user.firstname}`);
-});
 
 // Database setup
 const client = new Client({
