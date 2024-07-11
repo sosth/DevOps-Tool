@@ -1,6 +1,15 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const pool = require('./db'); // Assuming you have a db.js for database connection
+const { Client } = require('pg');
+
+const client = new Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
+
+client.connect();
 
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
@@ -14,18 +23,17 @@ async (accessToken, refreshToken, profile, done) => {
     const lastname = name.familyName;
 
     try {
-        // Check if user exists
-        let user = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+        const user = await client.query('SELECT * FROM users WHERE email = $1', [email]);
         if (user.rows.length === 0) {
-            // If user doesn't exist, insert new user
-            user = await pool.query(
+            const newUser = await client.query(
                 'INSERT INTO users (email, googlelogin, firstname, lastname, name) VALUES ($1, $2, $3, $4, $5) RETURNING *',
                 [email, true, firstname, lastname, `${firstname} ${lastname}`]
             );
+            return done(null, newUser.rows[0]);
         }
-        done(null, user.rows[0]);
+        return done(null, user.rows[0]);
     } catch (err) {
-        done(err, null);
+        return done(err, null);
     }
 }));
 
@@ -35,7 +43,7 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser(async (id, done) => {
     try {
-        const user = await pool.query('SELECT * FROM users WHERE id = $1', [id]);
+        const user = await client.query('SELECT * FROM users WHERE id = $1', [id]);
         done(null, user.rows[0]);
     } catch (err) {
         done(err, null);

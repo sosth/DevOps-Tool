@@ -16,9 +16,11 @@ const orgController = require('./controllers/orgController');
 const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 const deploymentController = require('./controllers/deploymentController');
 const deploymentRoutes = require('./routes/deploymentRoutres');
+const authRoutes = require('./routes/authRoutes'); // Include authRoutes
+
 const app = express();
 const port = process.env.PORT || 3000;
-require('./config/passportConfig');
+
 // Middleware setup
 app.use(session({
     secret: 'your_secret_key',
@@ -42,6 +44,7 @@ app.get('/dashboard', (req, res) => {
     }
     res.send(`Hello ${req.user.firstname}`);
 });
+
 // Database setup
 const client = new Client({
     connectionString: process.env.DATABASE_URL,
