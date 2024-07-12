@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
@@ -9,7 +8,7 @@ const fs = require('fs');
 const authController = require('./controllers/authController');
 const getOrgIdApi = require('./services/getOrgIdApi');
 const orgController = require('./controllers/orgController');
-const deploymentController = require('./controllers/deploymentController');
+const deploymentController = require('./controllers/deploymentController'); // Include deployment controller
 const deploymentRoutes = require('./routes/deploymentRoutres');
 const retrieveService = require('./services/retrieveService');
 const app = express();

@@ -52,6 +52,7 @@ exports.createDeployment = async (req, res) => {
         console.error('Error creating deployment:', error);
         res.status(500).json({ error: 'Failed to create deployment' });
     }
+    res.redirect('/connectedretrieve');
 };
 
 
