@@ -7,7 +7,7 @@ async function retrieveApexClasses(orgName) {
     const username = process.env.SALESFORCE_USERNAME;
     const password = process.env.SALESFORCE_PASSWORD;
     const loginUrl = process.env.SALESFORCE_LOGIN_URL;
-    const outputDir = path.join(__dirname, '../org_files', orgName, 'apexClasses');
+    const outputDir = path.join(__dirname, './org_files', orgName, 'apexClasses');
 
     // Create directory if it doesn't exist
     if (!fs.existsSync(outputDir)) {
