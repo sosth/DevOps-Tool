@@ -10,23 +10,21 @@ const client = new Client({
 client.connect();
 
 exports.createDeployment = async (req, res) => {
-    const { deploymentName, sourceOrgName, targetOrgName, sourceOrgId, targetOrgId } = req.body;
-
+    const { orgsource, orgtarget, createdby, deploystatus } = req.body;
     try {
-        const query = `
-            INSERT INTO deployment (orgsource, orgtarget, dep_name, source_org_id, target_org_id)
-            VALUES ($1, $2, $3, $4, $5)
-            RETURNING *
-        `;
-        const values = [sourceOrgName, targetOrgName, deploymentName, sourceOrgId, targetOrgId];
-        const result = await client.query(query, values);
-
-        res.status(201).json(result.rows[0]);
+      const newDeployment = await Deployment.create({
+        orgsource,
+        orgtarget,
+        createdby,
+        deploystatus
+      });
+      res.status(201).json(newDeployment);
     } catch (error) {
-        console.error('Error creating deployment:', error);
-        res.status(500).json({ error: 'Failed to create deployment' });
+      console.error("Error creating deployment:", error);
+      res.status(500).json({ message: "Error creating deployment", error });
     }
-};
+  };
+  
 
 
 exports.getDeployments = async (req, res) => {
