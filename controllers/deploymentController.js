@@ -47,12 +47,13 @@ exports.createDeployment = async (req, res) => {
         const values = [sourceOrg, targetOrg, deploymentName, sourceOrgName, targetOrgName];
         const result = await client.query(query, values);
 
-        res.status(201).json(result.rows[0]);
+        // Redirect after successful insertion
+        res.redirect('/connectedretrieve'); // Move this line here
+
     } catch (error) {
         console.error('Error creating deployment:', error);
         res.status(500).json({ error: 'Failed to create deployment' });
     }
-    res.redirect('/connectedretrieve');
 };
 
 
