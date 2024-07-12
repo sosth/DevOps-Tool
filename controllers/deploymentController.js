@@ -63,7 +63,7 @@ exports.getDeployments = async (req, res) => {
             FROM Deployment d
             JOIN Organizations o1 ON d.source_org_id = o1.org_id
             JOIN Organizations o2 ON d.target_org_id = o2.org_id
-            ORDER BY d.created_date DESC
+            ORDER BY d.datecreated DESC
         `;
         const result = await client.query(query);
         res.status(200).json(result.rows);
