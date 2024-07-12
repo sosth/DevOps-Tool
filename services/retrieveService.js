@@ -1,8 +1,12 @@
 const jsforce = require('jsforce');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config(); // Load environment variables
 
-async function retrieveApexClasses(username, password, loginUrl, orgName) {
+async function retrieveApexClasses(orgName) {
+    const username = process.env.SALESFORCE_USERNAME;
+    const password = process.env.SALESFORCE_PASSWORD;
+    const loginUrl = process.env.SALESFORCE_LOGIN_URL;
     const outputDir = path.join(__dirname, '../org_files', orgName, 'apexClasses');
 
     // Create directory if it doesn't exist

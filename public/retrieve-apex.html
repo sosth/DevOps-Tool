@@ -46,18 +46,6 @@
         <h2>Retrieve Apex Classes</h2>
         <form id="retrieveApexForm">
             <div class="form-group">
-                <label for="username">Salesforce Username</label>
-                <input type="email" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Salesforce Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="loginUrl">Login URL</label>
-                <input type="url" id="loginUrl" name="loginUrl" value="https://login.salesforce.com" required>
-            </div>
-            <div class="form-group">
                 <label for="orgName">Org Name</label>
                 <input type="text" id="orgName" name="orgName" required>
             </div>
@@ -71,9 +59,6 @@
     <script>
         document.getElementById('retrieveApexForm').addEventListener('submit', async function (e) {
             e.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const loginUrl = document.getElementById('loginUrl').value;
             const orgName = document.getElementById('orgName').value;
 
             try {
@@ -82,7 +67,7 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ username, password, loginUrl, orgName })
+                    body: JSON.stringify({ orgName })
                 });
 
                 const result = await response.json();
