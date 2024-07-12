@@ -2,26 +2,39 @@ const jsforce = require('jsforce');
 const fs = require('fs');
 const path = require('path');
 
-async function retrieveAndSaveComponents(accessToken, instanceUrl, componentType) {
-    const conn = new jsforce.Connection({
-        instanceUrl,
-        accessToken
-    });
+async function retrieveApexClasses(username, password, loginUrl, orgName) {
+    const outputDir = path.join(__dirname, '../org_files', orgName, 'apexClasses');
 
-    const components = await conn.metadata.list([{ type: componentType }], '39.0');
-
-    const outputDir = path.join(__dirname, '..', 'org_files', 'your_org_name', componentType);
+    // Create directory if it doesn't exist
     if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    for (const component of components) {
-        const componentMetadata = await conn.metadata.read(componentType, component.fullName);
-        const filePath = path.join(outputDir, `${component.fullName}.xml`);
-        fs.writeFileSync(filePath, componentMetadata);
+    // Connect to Salesforce
+    const conn = new jsforce.Connection({ loginUrl });
+
+    try {
+        await conn.login(username, password);
+        console.log('Connected to Salesforce');
+
+        // Query to retrieve all Apex classes
+        const query = 'SELECT Id, Name, Body FROM ApexClass';
+        const result = await conn.tooling.query(query);
+
+        // Download each Apex class
+        for (const apexClass of result.records) {
+            const filePath = path.join(outputDir, `${apexClass.Name}.cls`);
+            fs.writeFileSync(filePath, apexClass.Body);
+            console.log(`Downloaded: ${apexClass.Name}`);
+        }
+
+        console.log('All Apex classes downloaded successfully.');
+    } catch (err) {
+        console.error('Error fetching Apex classes:', err);
+        throw err;
     }
 }
 
 module.exports = {
-    retrieveAndSaveComponents
+    retrieveApexClasses
 };

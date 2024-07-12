@@ -11,6 +11,7 @@ const orgController = require('./controllers/orgController');
 const deploymentController = require('./controllers/deploymentController'); // Include deployment controller
 const deploymentRoutes = require('./routes/deploymentRoutres');
 const retrieveService = require('./services/retrieveService');
+const apexRoutes = require('./routes/apexRoutes'); // Import apex routes
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -48,10 +49,13 @@ app.get('/deleteorg', (req, res) => {
 });
 app.post('/create-deployment', deploymentController.createDeployment);
 app.use('/api/deployments', deploymentRoutes);
+app.use('/api/apex', apexRoutes);
 app.get('/create-deployment', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'create-deployment.html'));
 });
-
+app.get('/retrieve-apex', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'retrieve-apex.html'));
+});
 app.post('/retrieve-all-components', async (req, res) => {
     const { accessToken, instanceUrl, componentType } = req.body;
     try {
