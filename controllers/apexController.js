@@ -1,15 +1,25 @@
-const { retrieveApexClasses } = require('../services/retrieveService');
+const retrieveService = require('../services/retrieveService');
 
 exports.retrieveApexClasses = async (req, res) => {
-    const orgName = req.body.orgName; // Assume orgName is sent in the request body
-    if (!orgName) {
-        return res.status(400).send('Organization name is required.');
-    }
+    const { orgName } = req.body;
 
     try {
-        await retrieveApexClasses(orgName);
-        res.status(200).send(`Apex classes for org ${orgName} retrieved and written to files successfully.`);
+        await retrieveService.retrieveApexClasses(orgName);
+        res.status(200).json({ message: 'All Apex classes retrieved and saved successfully.' });
     } catch (error) {
-        res.status(500).send('Error retrieving Apex classes: ' + error.message);
+        console.error('Error retrieving Apex classes:', error);
+        res.status(500).json({ error: 'Failed to retrieve Apex classes' });
+    }
+};
+
+exports.retrieveApexClassesWithParams = async (req, res) => {
+    const { orgName, type, folderName } = req.body;
+
+    try {
+        await retrieveService.retrieveApexClasses(orgName, type, folderName);
+        res.status(200).json({ message: 'All Apex classes retrieved and saved successfully.' });
+    } catch (error) {
+        console.error('Error retrieving Apex classes:', error);
+        res.status(500).json({ error: 'Failed to retrieve Apex classes' });
     }
 };
