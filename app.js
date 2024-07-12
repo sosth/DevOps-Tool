@@ -4,16 +4,14 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
 const { Client } = require('pg');
-const jsforce = require('jsforce');
 const fs = require('fs');
 
 const authController = require('./controllers/authController');
 const getOrgIdApi = require('./services/getOrgIdApi');
-const { retrieveMetadata } = require('./services/metadataService');
 const orgController = require('./controllers/orgController');
-const retrieveAllApexClasses = require('./services/retrieveAllApexClasses');
 const deploymentController = require('./controllers/deploymentController');
 const deploymentRoutes = require('./routes/deploymentRoutres');
+const retrieveService = require('./services/retrieveService');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -54,14 +52,15 @@ app.use('/api/deployments', deploymentRoutes);
 app.get('/create-deployment', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'create-deployment.html'));
 });
-app.post('/retrieve-all-apex-classes', async (req, res) => {
-    const { accessToken, instanceUrl } = req.body;
+
+app.post('/retrieve-all-components', async (req, res) => {
+    const { accessToken, instanceUrl, componentType } = req.body;
     try {
-        await retrieveAllApexClasses(accessToken, instanceUrl);
-        res.status(200).json({ message: 'All Apex classes retrieved and saved successfully.' });
+        await retrieveService.retrieveAndSaveComponents(accessToken, instanceUrl, componentType);
+        res.status(200).json({ message: `All ${componentType} components retrieved and saved successfully.` });
     } catch (error) {
-        console.error('Error retrieving all Apex classes:', error);
-        res.status(500).json({ error: 'Failed to retrieve Apex classes' });
+        console.error(`Error retrieving ${componentType} components:`, error);
+        res.status(500).json({ error: `Failed to retrieve ${componentType} components` });
     }
 });
 
@@ -152,15 +151,15 @@ app.get('/orgs', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/connectorgs.html'));
 });
 
-app.post('/get-apex-classes', async (req, res) => {
-    const { accessToken, instanceUrl } = req.body;
+app.post('/get-components', async (req, res) => {
+    const { accessToken, instanceUrl, componentType } = req.body;
     const conn = new jsforce.Connection({
         instanceUrl: instanceUrl,
         accessToken: accessToken
     });
     try {
-        const apexClasses = await conn.metadata.list([{ type: 'ApexClass' }], '39.0');
-        res.json(apexClasses);
+        const components = await conn.metadata.list([{ type: componentType }], '39.0');
+        res.json(components);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -169,7 +168,7 @@ app.post('/get-apex-classes', async (req, res) => {
 app.post('/downloadselectedmetadata', async (req, res) => {
     const { accessToken, instanceUrl, metadataType, fullName } = req.body;
     try {
-        const metadata = await retrieveMetadata(accessToken, instanceUrl, metadataType, fullName);
+        const metadata = await retrieveService.retrieveAndSaveComponents(accessToken, instanceUrl, metadataType, fullName);
         const fileName = `${fullName}.xml`;
         const filePath = path.join(__dirname, 'public', 'retrieved_metadata', fileName);
         fs.writeFileSync(filePath, metadata);
@@ -181,22 +180,10 @@ app.post('/downloadselectedmetadata', async (req, res) => {
 });
 
 app.post('/downloadallmetadata', async (req, res) => {
-    const { accessToken, instanceUrl } = req.body;
+    const { accessToken, instanceUrl, componentType } = req.body;
     try {
-        const conn = new jsforce.Connection({
-            instanceUrl: instanceUrl,
-            accessToken: accessToken
-        });
-        const apexClasses = await conn.metadata.list([{ type: 'ApexClass' }], '39.0');
-        let fileNames = [];
-        for (const apexClass of apexClasses) {
-            const metadata = await retrieveMetadata(accessToken, instanceUrl, 'ApexClass', apexClass.fullName);
-            const fileName = `${apexClass.fullName}.xml`;
-            const filePath = path.join(__dirname, 'public', 'retrieved_metadata', fileName);
-            fs.writeFileSync(filePath, metadata);
-            fileNames.push(fileName);
-        }
-        res.json({ fileNames });
+        await retrieveService.retrieveAndSaveComponents(accessToken, instanceUrl, componentType);
+        res.status(200).json({ message: `All ${componentType} metadata retrieved and saved successfully.` });
     } catch (error) {
         console.log('Error retrieving all metadata:', error);
         res.status(500).json({ error: error.message });
@@ -225,6 +212,27 @@ app.post('/describemetadata', async (req, res) => {
 
 app.get('/connectedretrieve', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connectedretrieve.html'));
+});
+
+app.get('/metadata/:orgName/:componentType', (req, res) => {
+    const { orgName, componentType } = req.params;
+    const metadataDir = path.join(__dirname, 'org_files', orgName, componentType);
+
+    if (fs.existsSync(metadataDir)) {
+        fs.readdir(metadataDir, (err, files) => {
+            if (err) {
+                return res.status(500).json({ success: false, message: 'Failed to read metadata directory.' });
+            }
+            const metadata = files.map(file => {
+                const filePath = path.join(metadataDir, file);
+                const content = fs.readFileSync(filePath, 'utf8');
+                return { Name: file, Body: content };
+            });
+            res.status(200).json(metadata);
+        });
+    } else {
+        res.status(404).json({ success: false, message: 'Metadata directory not found.' });
+    }
 });
 
 // Start the server

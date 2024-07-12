@@ -1,5 +1,5 @@
 const { Client } = require('pg');
-
+const { retrieveAndSaveComponents } = require('../services/retrieveService');
 const client = new Client({
     connectionString: process.env.DATABASE_URL,
     ssl: {
@@ -9,6 +9,18 @@ const client = new Client({
 
 client.connect();
 
+
+exports.retrieveComponents = async (req, res) => {
+    const { orgId, orgName, componentType } = req.body;
+
+    try {
+        const result = await retrieveAndSaveComponents(orgId, orgName, componentType);
+        res.status(200).json(result);
+    } catch (error) {
+        console.error(`Error in retrieveComponents:`, error);
+        res.status(500).json({ success: false, message: `Failed to retrieve ${componentType} components.` });
+    }
+};
 exports.createDeployment = async (req, res) => {
     const { deploymentName, sourceOrg, targetOrg } = req.body;
 
