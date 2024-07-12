@@ -2,17 +2,17 @@ const fs = require('fs');
 const path = require('path');
 const { Connection, Org } = require('@salesforce/core');
 
-async function retrieveApexClasses() {
+async function retrieveApexClasses(orgName) {
     try {
-        const conn = await Org.create({ aliasOrUsername: 'DevSafa' }).then(org => org.getConnection());
-        console.log('Connected to Salesforce');
+        const conn = await Org.create({ aliasOrUsername: orgName }).then(org => org.getConnection());
+        console.log(`Connected to Salesforce Org: ${orgName}`);
 
         // Query to retrieve Apex Classes
         const query = 'SELECT Name, Body FROM ApexClass';
         const apexClasses = await conn.query(query);
 
         // Define the directory path
-        const directoryPath = path.join(__dirname, 'retrieveFolder', 'DevSafa', 'apexClasses');
+        const directoryPath = path.join(__dirname, 'retrieveFolder', orgName, 'apexClasses');
 
         // Create the directory if it doesn't exist
         if (!fs.existsSync(directoryPath)) {
