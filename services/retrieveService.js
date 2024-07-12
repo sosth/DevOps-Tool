@@ -7,12 +7,19 @@ async function retrieveApexClasses(orgName) {
     const username = process.env.SALESFORCE_USERNAME;
     const password = process.env.SALESFORCE_PASSWORD;
     const loginUrl = process.env.SALESFORCE_LOGIN_URL;
-    const outputDir = path.join(__dirname, './org_files', orgName, 'apexClasses');
+    const outputDir = path.join(__dirname, '../org_files', orgName, 'apexClasses');
 
     // Create directory if it doesn't exist
     if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir, { recursive: true });
-    }
+      try {
+          fs.mkdirSync(outputDir, { recursive: true });
+          console.log(`Directory created: ${outputDir}`);
+      } catch (error) {
+          console.error(`Failed to create directory: ${error.message}`);
+      }
+  } else {
+      console.log(`Directory already exists: ${outputDir}`);
+  }
 
     // Connect to Salesforce
     const conn = new jsforce.Connection({ loginUrl });
