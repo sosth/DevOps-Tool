@@ -1,0 +1,25 @@
+{
+  "fullName": "DataKitDeploymentLog",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "ComponentType"
+    },
+    {
+      "fullName": "DeployJob"
+    },
+    {
+      "fullName": "Name"
+    },
+    {
+      "fullName": "OwnerId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "TemplateVersion"
+    }
+  ],
+  "label": "Data Kit Deployment Log",
+  "sharingModel": "Private"
+}

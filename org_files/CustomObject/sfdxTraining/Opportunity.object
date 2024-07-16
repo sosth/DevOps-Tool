@@ -1,0 +1,369 @@
+{
+  "fullName": "Opportunity",
+  "actionOverrides": [
+    {
+      "actionName": "AddInfluence",
+      "type": "Default"
+    },
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "true",
+  "enableHistory": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Amount",
+      "trackFeedHistory": "true",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "CampaignId",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CloseDate",
+      "trackFeedHistory": "true",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "ContractId",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CurrentGenerators__c",
+      "externalId": "false",
+      "label": "Current Generator(s)",
+      "length": "100",
+      "required": "false",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Text",
+      "unique": "false"
+    },
+    {
+      "fullName": "DeliveryInstallationStatus__c",
+      "externalId": "false",
+      "label": "Delivery/Installation Status",
+      "required": "false",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Picklist",
+      "valueSet": {
+        "valueSetDefinition": {
+          "sorted": "false",
+          "value": [
+            {
+              "fullName": "In progress",
+              "default": "false",
+              "label": "In progress"
+            },
+            {
+              "fullName": "Yet to begin",
+              "default": "false",
+              "label": "Yet to begin"
+            },
+            {
+              "fullName": "Completed",
+              "default": "false",
+              "label": "Completed"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullName": "Description",
+      "trackFeedHistory": "false",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "ExpectedRevenue",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "IqScore"
+    },
+    {
+      "fullName": "IsPrivate",
+      "trackFeedHistory": "false",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "LeadSource",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "MainCompetitors__c",
+      "externalId": "false",
+      "label": "Main Competitor(s)",
+      "length": "100",
+      "required": "false",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Text",
+      "unique": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackFeedHistory": "true",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "NextStep",
+      "trackFeedHistory": "false",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "OrderNumber__c",
+      "externalId": "false",
+      "label": "Order Number",
+      "length": "8",
+      "required": "false",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Text",
+      "unique": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackFeedHistory": "true",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Pricebook2Id",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Probability",
+      "trackFeedHistory": "false",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "StageName",
+      "trackFeedHistory": "true",
+      "trackTrending": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "TotalOpportunityQuantity",
+      "trackFeedHistory": "false",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "TrackingNumber__c",
+      "externalId": "false",
+      "label": "Tracking Number",
+      "length": "12",
+      "required": "false",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Text",
+      "unique": "false"
+    },
+    {
+      "fullName": "Type",
+      "trackFeedHistory": "false",
+      "trackTrending": "false",
+      "type": "Picklist"
+    }
+  ],
+  "label": "Opportunity",
+  "listViews": [
+    {
+      "fullName": "AllOpportunities",
+      "filterScope": "Everything",
+      "label": "All Opportunities"
+    },
+    {
+      "fullName": "ClosingNextMonth",
+      "filterScope": "Everything",
+      "filters": [
+        {
+          "field": "OPPORTUNITY.CLOSED",
+          "operation": "equals",
+          "value": "0"
+        },
+        {
+          "field": "OPPORTUNITY.CLOSE_DATE",
+          "operation": "equals",
+          "value": "NEXT_MONTH"
+        }
+      ],
+      "label": "Closing Next Month"
+    },
+    {
+      "fullName": "ClosingThisMonth",
+      "filterScope": "Everything",
+      "filters": [
+        {
+          "field": "OPPORTUNITY.CLOSED",
+          "operation": "equals",
+          "value": "0"
+        },
+        {
+          "field": "OPPORTUNITY.CLOSE_DATE",
+          "operation": "equals",
+          "value": "THIS_MONTH"
+        }
+      ],
+      "label": "Closing This Month"
+    },
+    {
+      "fullName": "Default_Opportunity_Pipeline",
+      "filterScope": "Mine",
+      "filters": {
+        "field": "OPPORTUNITY.CLOSE_DATE",
+        "operation": "greaterOrEqual",
+        "value": "LAST_N_MONTHS:3"
+      },
+      "label": "Opportunity Pipeline"
+    },
+    {
+      "fullName": "MyOpportunities",
+      "filterScope": "Mine",
+      "label": "My Opportunities"
+    },
+    {
+      "fullName": "NewLastWeek",
+      "filterScope": "Everything",
+      "filters": {
+        "field": "OPPORTUNITY.CREATED_DATE",
+        "operation": "equals",
+        "value": "LAST_WEEK"
+      },
+      "label": "New Last Week"
+    },
+    {
+      "fullName": "NewThisWeek",
+      "filterScope": "Everything",
+      "filters": {
+        "field": "OPPORTUNITY.CREATED_DATE",
+        "operation": "equals",
+        "value": "THIS_WEEK"
+      },
+      "label": "New This Week"
+    },
+    {
+      "fullName": "Private",
+      "filterScope": "Everything",
+      "filters": {
+        "field": "OPPORTUNITY.PRIVATE",
+        "operation": "equals",
+        "value": "1"
+      },
+      "label": "Private"
+    },
+    {
+      "fullName": "Won",
+      "filterScope": "Everything",
+      "filters": [
+        {
+          "field": "OPPORTUNITY.CLOSED",
+          "operation": "equals",
+          "value": "1"
+        },
+        {
+          "field": "OPPORTUNITY.WON",
+          "operation": "equals",
+          "value": "1"
+        }
+      ],
+      "label": "Won"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "OPPORTUNITY.NAME",
+      "ACCOUNT.NAME",
+      "OPPORTUNITY.CLOSE_DATE"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "OPPORTUNITY.NAME",
+      "ACCOUNT.NAME",
+      "ACCOUNT.SITE"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "OPPORTUNITY.NAME",
+      "ACCOUNT.NAME",
+      "ACCOUNT.SITE"
+    ],
+    "searchResultsAdditionalFields": [
+      "OPPORTUNITY.NAME",
+      "ACCOUNT.NAME",
+      "ACCOUNT.SITE",
+      "OPPORTUNITY.STAGE_NAME",
+      "OPPORTUNITY.CLOSE_DATE",
+      "CORE.USERS.ALIAS"
+    ]
+  },
+  "sharingModel": "ReadWrite",
+  "webLinks": {
+    "fullName": "DeliveryStatus",
+    "availability": "online",
+    "displayType": "link",
+    "encodingKey": "UTF-8",
+    "hasMenubar": "true",
+    "hasScrollbars": "true",
+    "hasToolbar": "true",
+    "height": "600",
+    "isResizable": "true",
+    "linkType": "url",
+    "masterLabel": "Delivery Status",
+    "openType": "newWindow",
+    "position": "none",
+    "protected": "false",
+    "showsLocation": "true",
+    "showsStatus": "true",
+    "url": "http://www.fedex.com/cgi-bin/tracking?tracknumbers={!Opportunity_Tracking_Number}&action=track&language=english&cntry_code=us"
+  }
+}

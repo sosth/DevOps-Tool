@@ -1,0 +1,31 @@
+{
+  "fullName": "StreamActivityAccess",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "ActivityTeamId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ExternalResource",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsContentShared",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Stream Activity Access",
+  "sharingModel": "Private"
+}

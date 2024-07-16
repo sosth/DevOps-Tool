@@ -1,0 +1,58 @@
+{
+  "fullName": "PromotionSegmentSalesStore",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "PromotionSegmentId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "SalesStoreId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Promotion Segment Sales Store",
+  "sharingModel": "ControlledByParent"
+}

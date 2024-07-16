@@ -1,0 +1,86 @@
+{
+  "fullName": "ContactRequest",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "IsCallback"
+    },
+    {
+      "fullName": "OwnerId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PreferredChannel",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "PreferredPhone"
+    },
+    {
+      "fullName": "RequestDescription"
+    },
+    {
+      "fullName": "RequestReason",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Status",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "WhatId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "WhoId",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Contact Request",
+  "listViews": {
+    "fullName": "My_ContactRequests",
+    "filterScope": "Mine",
+    "label": "My Contact Requests"
+  },
+  "sharingModel": "ReadWrite"
+}

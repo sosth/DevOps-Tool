@@ -1,0 +1,86 @@
+{
+  "fullName": "AuthorizationFormDataUse",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AuthorizationFormId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "DataUsePurposeId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Authorization Form Data Use",
+  "listViews": {
+    "fullName": "All_AuthorizationFormDataUses",
+    "filterScope": "Everything",
+    "label": "All Authorization Form Data Uses"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "AuthorizationForm",
+      "DataUsePurpose",
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ],
+    "searchResultsAdditionalFields": [
+      "AuthorizationForm",
+      "DataUsePurpose",
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ]
+  },
+  "sharingModel": "Private"
+}

@@ -1,0 +1,336 @@
+{
+  "fullName": "ServiceAppointment",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "GeneratePdf",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ActualDuration",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ActualEndTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ActualStartTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AdditionalInformation",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Address",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AppointmentCategoryId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AppointmentInvitationId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AppointmentMode",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AppointmentType",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ApptBookingInfoUrl",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ArrivalWindowEndTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ArrivalWindowStartTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AttendeeCount"
+    },
+    {
+      "fullName": "AttendeeLimit",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "CancellationReason",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "CheckedInTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Comments",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ContactId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "DueDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Duration",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "DurationType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EarliestStartTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Email",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EngagementChannelTypeId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "GroupAppointmentAccessType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsAnonymousBooking",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsOffsiteAppointment",
+      "inlineHelpText": "Any type of work that can be done remotely.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentRecordId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentRecordStatusCategory"
+    },
+    {
+      "fullName": "ParentRecordType"
+    },
+    {
+      "fullName": "Phone",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "SchedEndTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "SchedStartTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ServiceNote",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ServiceTerritoryId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StatusCategory",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Subject",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "WorkTypeId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Service Appointment",
+  "listViews": [
+    {
+      "fullName": "All_ServiceAppointments",
+      "columns": [
+        "Name",
+        "SchedStartTime",
+        "SchedEndTime",
+        "ServiceTerritory",
+        "Status",
+        "WorkTypeName",
+        "WorkType",
+        "AdditionalInformation",
+        "Account",
+        "ParentRecord"
+      ],
+      "filterScope": "Everything",
+      "label": "All Service Appointments"
+    },
+    {
+      "fullName": "MyPendingAppointments",
+      "columns": [
+        "Name",
+        "SchedStartTime",
+        "SchedEndTime",
+        "ServiceTerritory",
+        "Status",
+        "WorkTypeName",
+        "WorkType",
+        "AdditionalInformation",
+        "Account",
+        "ParentRecord"
+      ],
+      "filterScope": "Mine",
+      "filters": [
+        {
+          "field": "SchedStartTime",
+          "operation": "equals"
+        },
+        {
+          "field": "StatusCategory",
+          "operation": "equals",
+          "value": "0"
+        }
+      ],
+      "label": "My Pending Service Appointments"
+    },
+    {
+      "fullName": "MyScheduledAppointments",
+      "columns": [
+        "Name",
+        "SchedStartTime",
+        "SchedEndTime",
+        "ServiceTerritory",
+        "Status",
+        "WorkTypeName",
+        "WorkType",
+        "AdditionalInformation",
+        "Account",
+        "ParentRecord"
+      ],
+      "filterScope": "Mine",
+      "filters": [
+        {
+          "field": "SchedStartTime",
+          "operation": "greaterOrEqual",
+          "value": "TODAY"
+        },
+        {
+          "field": "StatusCategory",
+          "operation": "notEqual",
+          "value": "6,4,5"
+        }
+      ],
+      "label": "My Scheduled Service Appointments"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "ParentRecord",
+      "ParentRecordType",
+      "Status",
+      "ArrivalWindowStartTime",
+      "ArrivalWindowEndTime"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "ParentRecord",
+      "ParentRecordType",
+      "Status",
+      "ArrivalWindowStartTime",
+      "ArrivalWindowEndTime"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "ParentRecord",
+      "ParentRecordType",
+      "Status",
+      "ArrivalWindowStartTime",
+      "ArrivalWindowEndTime",
+      "Phone"
+    ],
+    "searchResultsAdditionalFields": [
+      "ParentRecord",
+      "ParentRecordType",
+      "Status",
+      "ArrivalWindowStartTime",
+      "ArrivalWindowEndTime"
+    ]
+  },
+  "sharingModel": "ReadWrite"
+}

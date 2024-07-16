@@ -1,0 +1,62 @@
+{
+  "fullName": "PromotionMarketSegment",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "PromotionAssignSegment",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "PromotionId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "PromotionSegmentId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Promotion Market Segment",
+  "searchLayouts": {
+    "customTabListAdditionalFields": "Promotion",
+    "searchResultsAdditionalFields": "Promotion"
+  },
+  "sharingModel": "ControlledByParent"
+}

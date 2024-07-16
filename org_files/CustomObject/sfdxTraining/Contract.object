@@ -1,0 +1,236 @@
+{
+  "fullName": "Contract",
+  "actionOverrides": [
+    {
+      "actionName": "Activate",
+      "type": "Default"
+    },
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "ChangeStatus",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "Terminate",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "trackHistory": "true",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ActivatedById",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ActivatedDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "BillingAddress",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "CompanySignedDate",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "CompanySignedId",
+      "trackHistory": "true",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ContractTerm",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "CustomerSignedDate",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "CustomerSignedId",
+      "trackHistory": "true",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CustomerSignedTitle",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "EndDate",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "OwnerExpirationNotice",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "true",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Pricebook2Id",
+      "trackHistory": "true",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ShippingAddress",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "SpecialTerms",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "StartDate",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "true",
+      "type": "Picklist"
+    }
+  ],
+  "label": "Contract",
+  "listViews": [
+    {
+      "fullName": "AllActivatedContracts",
+      "filterScope": "Everything",
+      "filters": {
+        "field": "CONTRACT.STATUS_CODE",
+        "operation": "equals",
+        "value": "A"
+      },
+      "label": "All Activated Contracts"
+    },
+    {
+      "fullName": "AllContracts",
+      "filterScope": "Everything",
+      "label": "All Contracts"
+    },
+    {
+      "fullName": "AllDraftContracts",
+      "filterScope": "Everything",
+      "filters": {
+        "field": "CONTRACT.STATUS_CODE",
+        "operation": "equals",
+        "value": "D"
+      },
+      "label": "All Draft Contracts"
+    },
+    {
+      "fullName": "AllInApprovalContracts",
+      "filterScope": "Everything",
+      "filters": {
+        "field": "CONTRACT.STATUS_CODE",
+        "operation": "equals",
+        "value": "P"
+      },
+      "label": "All In Approval Contracts"
+    },
+    {
+      "fullName": "MyActivatedContracts",
+      "filterScope": "Mine",
+      "filters": {
+        "field": "CONTRACT.STATUS_CODE",
+        "operation": "equals",
+        "value": "A"
+      },
+      "label": "My Activated Contracts"
+    },
+    {
+      "fullName": "MyDraftContracts",
+      "filterScope": "Mine",
+      "filters": {
+        "field": "CONTRACT.STATUS_CODE",
+        "operation": "equals",
+        "value": "D"
+      },
+      "label": "My Draft Contracts"
+    },
+    {
+      "fullName": "MyInApprovalContracts",
+      "filterScope": "Mine",
+      "filters": {
+        "field": "CONTRACT.STATUS_CODE",
+        "operation": "equals",
+        "value": "P"
+      },
+      "label": "My In Approval Contracts"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "CONTRACT.CONTRACT_NUMBER",
+      "SALES.ACCOUNT.NAME",
+      "CONTRACT.STATUS"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "CONTRACT.CONTRACT_NUMBER",
+      "CORE.USERS.ALIAS"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "CONTRACT.CONTRACT_NUMBER",
+      "CORE.USERS.ALIAS"
+    ],
+    "searchResultsAdditionalFields": [
+      "CONTRACT.CONTRACT_NUMBER",
+      "SALES.ACCOUNT.NAME",
+      "CONTRACT.STATUS",
+      "CONTRACT.START_DATE",
+      "CONTRACT.END_DATE",
+      "CONTRACT_TERM"
+    ]
+  },
+  "sharingModel": "ReadWrite"
+}

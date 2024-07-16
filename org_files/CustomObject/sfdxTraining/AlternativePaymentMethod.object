@@ -1,0 +1,118 @@
+{
+  "fullName": "AlternativePaymentMethod",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AuditEmail"
+    },
+    {
+      "fullName": "BillingFirstName"
+    },
+    {
+      "fullName": "BillingLastName"
+    },
+    {
+      "fullName": "BillingName"
+    },
+    {
+      "fullName": "Comments"
+    },
+    {
+      "fullName": "CompanyName"
+    },
+    {
+      "fullName": "Email"
+    },
+    {
+      "fullName": "GatewayToken"
+    },
+    {
+      "fullName": "GatewayTokenDetails"
+    },
+    {
+      "fullName": "IpAddress"
+    },
+    {
+      "fullName": "IsAutoPayEnabled"
+    },
+    {
+      "fullName": "MacAddress"
+    },
+    {
+      "fullName": "NickName"
+    },
+    {
+      "fullName": "OwnerId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PaymentGatewayId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PaymentMethodDetails"
+    },
+    {
+      "fullName": "PaymentMethodSubType"
+    },
+    {
+      "fullName": "PaymentMethodType"
+    },
+    {
+      "fullName": "Phone"
+    },
+    {
+      "fullName": "ProcessingMode"
+    },
+    {
+      "fullName": "Status"
+    }
+  ],
+  "label": "Alternative Payment Method",
+  "listViews": {
+    "fullName": "AlternativePaymentMethod",
+    "filterScope": "Everything",
+    "label": "All"
+  },
+  "sharingModel": "Private"
+}

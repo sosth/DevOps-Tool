@@ -1,0 +1,76 @@
+{
+  "fullName": "AssignedResource",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "AssignedResourceNumber",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EventId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "IsRequiredResource",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Role",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ServiceAppointmentId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "ServiceResourceId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Assigned Resource",
+  "sharingModel": "ControlledByParent"
+}

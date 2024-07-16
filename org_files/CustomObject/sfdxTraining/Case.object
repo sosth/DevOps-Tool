@@ -1,0 +1,494 @@
+{
+  "fullName": "Case",
+  "actionOverrides": [
+    {
+      "actionName": "Accept",
+      "type": "Default"
+    },
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "ChangeStatus",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "CloneAsChild",
+      "type": "Default"
+    },
+    {
+      "actionName": "CloseCase",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "MassClose",
+      "type": "Default"
+    },
+    {
+      "actionName": "NewCase",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "true",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AssetId",
+      "trackFeedHistory": "false",
+      "trackHistory": "true",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "BusinessHoursId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ClosedDate",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "Comments",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "ContactEmail",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "ContactFax",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "ContactId",
+      "trackFeedHistory": "false",
+      "trackHistory": "true",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ContactMobile",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "ContactPhone",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "Description",
+      "trackFeedHistory": "false",
+      "trackHistory": "true",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "EngineeringReqNumber__c",
+      "externalId": "false",
+      "label": "Engineering Req Number",
+      "length": "12",
+      "required": "false",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Text",
+      "unique": "false"
+    },
+    {
+      "fullName": "EntitlementId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "IsClosedOnCreate",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "IsEscalated",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "IsStopped",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "MilestoneStatus",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "MilestoneStatusIcon",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "Origin",
+      "trackFeedHistory": "false",
+      "trackHistory": "true",
+      "trackTrending": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackFeedHistory": "true",
+      "trackHistory": "true",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PotentialLiability__c",
+      "externalId": "false",
+      "label": "Potential Liability",
+      "required": "false",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Picklist",
+      "valueSet": {
+        "valueSetDefinition": {
+          "sorted": "false",
+          "value": [
+            {
+              "fullName": "No",
+              "default": "false",
+              "label": "No"
+            },
+            {
+              "fullName": "Yes",
+              "default": "false",
+              "label": "Yes"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullName": "Priority",
+      "trackFeedHistory": "true",
+      "trackHistory": "true",
+      "trackTrending": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ProductId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Product__c",
+      "externalId": "false",
+      "label": "Product",
+      "required": "false",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Picklist",
+      "valueSet": {
+        "valueSetDefinition": {
+          "sorted": "false",
+          "value": [
+            {
+              "fullName": "GC1040",
+              "default": "false",
+              "label": "GC1040"
+            },
+            {
+              "fullName": "GC1060",
+              "default": "false",
+              "label": "GC1060"
+            },
+            {
+              "fullName": "GC3020",
+              "default": "false",
+              "label": "GC3020"
+            },
+            {
+              "fullName": "GC3040",
+              "default": "false",
+              "label": "GC3040"
+            },
+            {
+              "fullName": "GC3060",
+              "default": "false",
+              "label": "GC3060"
+            },
+            {
+              "fullName": "GC5020",
+              "default": "false",
+              "label": "GC5020"
+            },
+            {
+              "fullName": "GC5040",
+              "default": "false",
+              "label": "GC5040"
+            },
+            {
+              "fullName": "GC5060",
+              "default": "false",
+              "label": "GC5060"
+            },
+            {
+              "fullName": "GC1020",
+              "default": "false",
+              "label": "GC1020"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullName": "Reason",
+      "trackFeedHistory": "false",
+      "trackHistory": "true",
+      "trackTrending": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "SLAViolation__c",
+      "externalId": "false",
+      "label": "SLA Violation",
+      "required": "false",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Picklist",
+      "valueSet": {
+        "valueSetDefinition": {
+          "sorted": "false",
+          "value": [
+            {
+              "fullName": "No",
+              "default": "false",
+              "label": "No"
+            },
+            {
+              "fullName": "Yes",
+              "default": "false",
+              "label": "Yes"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullName": "ServiceContractId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "SlaExitDate",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "SlaStartDate",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "SourceId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "trackTrending": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Status",
+      "trackFeedHistory": "false",
+      "trackHistory": "true",
+      "trackTrending": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StopStartDate",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "Subject",
+      "trackFeedHistory": "false",
+      "trackHistory": "true",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "SuppliedCompany",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "SuppliedEmail",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "SuppliedName",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "SuppliedPhone",
+      "trackTrending": "false"
+    },
+    {
+      "fullName": "Type",
+      "trackFeedHistory": "false",
+      "trackHistory": "true",
+      "trackTrending": "false",
+      "type": "Picklist"
+    }
+  ],
+  "label": "Case",
+  "listViews": [
+    {
+      "fullName": "AllClosedCases",
+      "columns": [
+        "CASES.CASE_NUMBER",
+        "NAME",
+        "CASES.SUBJECT",
+        "CASES.STATUS",
+        "CASES.PRIORITY",
+        "CASES.CREATED_DATE",
+        "CORE.USERS.ALIAS"
+      ],
+      "filterScope": "Everything",
+      "filters": {
+        "field": "CASES.CLOSED",
+        "operation": "equals",
+        "value": "1"
+      },
+      "label": "All Closed Cases"
+    },
+    {
+      "fullName": "AllOpenCases",
+      "filterScope": "Everything",
+      "filters": [
+        {
+          "field": "CASES.CREATED_DATE_DATE_ONLY",
+          "operation": "equals",
+          "value": "LAST_N_DAYS:30"
+        },
+        {
+          "field": "CASES.CLOSED",
+          "operation": "equals",
+          "value": "0"
+        }
+      ],
+      "label": "All Open Cases"
+    },
+    {
+      "fullName": "MyCases",
+      "filterScope": "Mine",
+      "label": "My Cases"
+    },
+    {
+      "fullName": "MyOpenCases",
+      "filterScope": "Mine",
+      "filters": {
+        "field": "CASES.CLOSED",
+        "operation": "equals",
+        "value": "0"
+      },
+      "label": "My Open Cases"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "CASES.CASE_NUMBER",
+      "CASES.SUBJECT",
+      "CASES.CREATED_DATE",
+      "CASES.PRIORITY"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "CASES.CASE_NUMBER",
+      "CASES.SUBJECT",
+      "NAME",
+      "ACCOUNT.NAME",
+      "CASES.STATUS"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "CASES.CASE_NUMBER",
+      "CASES.SUBJECT",
+      "NAME",
+      "ACCOUNT.NAME",
+      "CASES.STATUS"
+    ],
+    "searchResultsAdditionalFields": [
+      "CASES.CASE_NUMBER",
+      "CASES.SUBJECT",
+      "CASES.STATUS",
+      "CASES.CREATED_DATE",
+      "CORE.USERS.ALIAS"
+    ]
+  },
+  "sharingModel": "ReadWriteTransfer",
+  "webLinks": {
+    "fullName": "UpsellCrosssellOpportunity",
+    "availability": "online",
+    "displayType": "link",
+    "encodingKey": "UTF-8",
+    "hasMenubar": "true",
+    "hasScrollbars": "true",
+    "hasToolbar": "true",
+    "height": "600",
+    "isResizable": "true",
+    "linkType": "url",
+    "masterLabel": "Up-sell / Cross-sell Opportunity",
+    "openType": "newWindow",
+    "position": "none",
+    "protected": "false",
+    "showsLocation": "true",
+    "showsStatus": "true",
+    "url": "https://na1.salesforce.com/opp/oppedit.jsp?accid={!Account_ID}&opp3=Up-sell+/+Cross-sell&opp5=Existing+Customer&opp6=Customer+Support"
+  }
+}

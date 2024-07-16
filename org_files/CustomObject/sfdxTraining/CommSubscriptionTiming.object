@@ -1,0 +1,88 @@
+{
+  "fullName": "CommSubscriptionTiming",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "CommSubscriptionConsentId",
+      "inlineHelpText": "The communication subscription consent record associated with the communication subscription timing.",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "Offset",
+      "inlineHelpText": "The amount of time before or after an event or the specific day of the week that you should communicate with the contact point. Set the unit of time in Unit. For example, if you set Unit as \"Week\" and Offset as \"-4\" communicate with the contact point four weeks before the event. If you set Offset as \"4\" communicate with the contact point four weeks after the event. If you set Unit as \"Day of Week\" and Offset as \"1,\" communicate with the contact point on Monday. If you set Offset as \"7\" communicate with the contact point on Sunday.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "PreferredTimeEnd",
+      "inlineHelpText": "End of the preferred time span in which to reach the contact point.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "PreferredTimeStart",
+      "inlineHelpText": "Start of the preferred time span in which to reach the contact point.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "PreferredTimeZone",
+      "inlineHelpText": "Time zone of the preferred time span.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Unit",
+      "inlineHelpText": "The unit of time that works with Offset to determine the communication timing.",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Communication Subscription Timing",
+  "listViews": {
+    "fullName": "All_CommSubscriptionTimings",
+    "filterScope": "Everything",
+    "label": "All Communication Subscription Timings"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": "Unit",
+    "searchResultsAdditionalFields": "Unit"
+  },
+  "sharingModel": "ControlledByParent"
+}

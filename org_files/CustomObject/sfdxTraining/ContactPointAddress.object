@@ -1,0 +1,138 @@
+{
+  "fullName": "ContactPointAddress",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "ActiveFromDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ActiveToDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Address",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AddressType",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "BestTimeToContactEndTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "BestTimeToContactStartTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "BestTimeToContactTimezone",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ContactPointPhoneId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "IsDefault",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsPrimary",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsThirdPartyAddress",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "PreferenceRank",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "UsageType",
+      "trackHistory": "false",
+      "type": "Picklist"
+    }
+  ],
+  "label": "Contact Point Address",
+  "listViews": {
+    "fullName": "All_ContactPointAddresses",
+    "filterScope": "Everything",
+    "label": "All Contact Point Addresses"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Parent",
+      "ActiveFromDate",
+      "ActiveToDate",
+      "IsPrimary",
+      "IsDefault"
+    ],
+    "searchResultsAdditionalFields": [
+      "Parent",
+      "ActiveFromDate",
+      "ActiveToDate",
+      "IsPrimary",
+      "IsDefault"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

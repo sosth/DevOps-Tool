@@ -1,0 +1,102 @@
+{
+  "fullName": "LegalEntity",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "CompanyName",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LegalEntityAddress",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Legal Entity",
+  "listViews": {
+    "fullName": "mine",
+    "columns": [
+      "Name",
+      "CompanyName",
+      "Description",
+      "Status"
+    ],
+    "filterScope": "Mine",
+    "label": "My Legal Entities"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ],
+    "searchResultsAdditionalFields": [
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ]
+  },
+  "sharingModel": "Private"
+}

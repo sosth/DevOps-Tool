@@ -1,0 +1,143 @@
+{
+  "fullName": "WorkStep",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    },
+    {
+      "actionName": "WorkStepComplete",
+      "type": "Default"
+    },
+    {
+      "actionName": "WorkStepNotApplicable",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "ActionDefinition",
+      "inlineHelpText": "Find and select the associated global action, quick action, screen flow, or mobile flow.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ActionType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EndTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ExecutionOrder",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ParentRecordId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentRecordType"
+    },
+    {
+      "fullName": "PausedFlowInterviewId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "StartTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StatusCategory",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "WorkOrderId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "WorkOrderLineItemId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "WorkPlanExecutionOrder"
+    },
+    {
+      "fullName": "WorkPlanId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    }
+  ],
+  "label": "Work Step",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Description",
+      "ActionDefinition"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Description",
+      "ActionDefinition"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Description",
+      "ActionDefinition"
+    ],
+    "searchResultsAdditionalFields": [
+      "Description",
+      "ActionDefinition"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

@@ -1,0 +1,105 @@
+{
+  "fullName": "CaseMilestone",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "fields": [
+    {
+      "fullName": "BusinessHoursId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CaseId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CompletionDate"
+    },
+    {
+      "fullName": "ElapsedTimeInDays"
+    },
+    {
+      "fullName": "ElapsedTimeInHrs"
+    },
+    {
+      "fullName": "ElapsedTimeInMins"
+    },
+    {
+      "fullName": "IsCompleted"
+    },
+    {
+      "fullName": "IsViolated"
+    },
+    {
+      "fullName": "MilestoneId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "SlaProcessId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "StartDate"
+    },
+    {
+      "fullName": "TargetDate"
+    },
+    {
+      "fullName": "TargetResponseInDays"
+    },
+    {
+      "fullName": "TargetResponseInHrs"
+    },
+    {
+      "fullName": "TargetResponseInMins"
+    },
+    {
+      "fullName": "TimeRemainingInDays"
+    },
+    {
+      "fullName": "TimeRemainingInHrs"
+    },
+    {
+      "fullName": "TimeRemainingInMins"
+    },
+    {
+      "fullName": "TimeSinceTargetInDays"
+    },
+    {
+      "fullName": "TimeSinceTargetInHrs"
+    },
+    {
+      "fullName": "TimeSinceTargetInMins"
+    }
+  ],
+  "label": "Case Milestone"
+}

@@ -1,0 +1,80 @@
+{
+  "fullName": "IncidentRelatedItem",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "NewIRI",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "AssetId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Comment",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ImpactLevel",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ImpactType",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "IncidentId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Product2Id",
+      "trackHistory": "false",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Incident Related Item",
+  "sharingModel": "ControlledByParent"
+}

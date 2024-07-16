@@ -1,0 +1,253 @@
+{
+  "fullName": "WorkOrder",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "GeneratePdf",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Address",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AssetId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "BusinessHoursId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CaseId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ContactId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Discount"
+    },
+    {
+      "fullName": "Duration",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "DurationType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EndDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EntitlementId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "GrandTotal"
+    },
+    {
+      "fullName": "IsClosed",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsStopped",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LineItemCount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LocationId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "MilestoneStatus"
+    },
+    {
+      "fullName": "MilestoneStatusIcon"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentWorkOrderId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Pricebook2Id",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Priority",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "RootWorkOrderId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ServiceAppointmentCount"
+    },
+    {
+      "fullName": "ServiceContractId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ServiceTerritoryId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "SlaExitDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "SlaStartDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "StartDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StatusCategory",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "StopStartDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Subject",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Subtotal",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Tax",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalPrice",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "WorkTypeId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Work Order",
+  "listViews": [
+    {
+      "fullName": "All_WorkOrders",
+      "filterScope": "Everything",
+      "label": "All Work Orders"
+    },
+    {
+      "fullName": "My_WorkOrders",
+      "filterScope": "Mine",
+      "label": "My Work Orders"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Subject",
+      "Account",
+      "Priority",
+      "Status"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Subject",
+      "Account",
+      "Priority",
+      "Status"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Subject",
+      "Account",
+      "Priority",
+      "Status"
+    ],
+    "searchResultsAdditionalFields": [
+      "Subject",
+      "Account",
+      "Priority",
+      "Status"
+    ]
+  },
+  "sharingModel": "Private"
+}

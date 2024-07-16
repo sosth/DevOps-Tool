@@ -1,0 +1,46 @@
+{
+  "fullName": "FlowOrchestrationInstance",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "OrchestrationDeveloperName"
+    },
+    {
+      "fullName": "OwnerId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Status"
+    }
+  ],
+  "label": "Orchestration Run",
+  "listViews": {
+    "fullName": "All_Orchestration_Instances",
+    "filterScope": "Everything",
+    "label": "All Orchestration Runs"
+  },
+  "sharingModel": "Private"
+}

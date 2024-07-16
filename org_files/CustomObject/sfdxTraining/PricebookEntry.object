@@ -1,0 +1,81 @@
+{
+  "fullName": "PricebookEntry",
+  "actionOverrides": [
+    {
+      "actionName": "AddPricebookEntry",
+      "type": "Default"
+    },
+    {
+      "actionName": "AddPricebookEntryOnPricebook",
+      "type": "Default"
+    },
+    {
+      "actionName": "AddPricebookEntryOnProduct",
+      "type": "Default"
+    },
+    {
+      "actionName": "AddStandardPrice",
+      "type": "Default"
+    },
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "fields": [
+    {
+      "fullName": "IsActive",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Pricebook2Id",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Product2Id",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ProductCode"
+    },
+    {
+      "fullName": "StandardPrice"
+    },
+    {
+      "fullName": "UnitPrice",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "UseStandardPrice",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Price Book Entry",
+  "searchLayouts": {
+    "searchResultsAdditionalFields": [
+      "PRODUCT.NAME",
+      "PRODUCT.CUSTOMER_PRODUCT_ID",
+      "PRODUCT.DEFAULT_PRICE",
+      "PRODUCT2.DESCRIPTION",
+      "PRODUCT2.FAMILY_ENUM"
+    ]
+  }
+}

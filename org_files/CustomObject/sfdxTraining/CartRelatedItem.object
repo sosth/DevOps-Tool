@@ -1,0 +1,7 @@
+{
+  "fullName": "CartRelatedItem",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "label": "Cart Related Item",
+  "sharingModel": "ControlledByParent"
+}

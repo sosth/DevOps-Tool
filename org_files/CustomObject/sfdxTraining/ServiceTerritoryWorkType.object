@@ -1,0 +1,68 @@
+{
+  "fullName": "ServiceTerritoryWorkType",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "ServiceTerritoryId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "WorkTypeId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    }
+  ],
+  "label": "Service Territory Work Type",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "ServiceTerritory",
+      "WorkType"
+    ],
+    "searchResultsAdditionalFields": [
+      "ServiceTerritory",
+      "WorkType"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

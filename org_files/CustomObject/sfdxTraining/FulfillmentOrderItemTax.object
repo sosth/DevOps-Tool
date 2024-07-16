@@ -1,0 +1,29 @@
+{
+  "fullName": "FulfillmentOrderItemTax",
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "Amount"
+    },
+    {
+      "fullName": "Description"
+    },
+    {
+      "fullName": "FulfillmentOrderItemAdjustId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Rate"
+    },
+    {
+      "fullName": "TaxEffectiveDate"
+    },
+    {
+      "fullName": "Type"
+    }
+  ],
+  "label": "Fulfillment Order Item Tax",
+  "sharingModel": "ControlledByParent"
+}

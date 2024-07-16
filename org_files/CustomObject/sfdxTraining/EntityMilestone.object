@@ -1,0 +1,106 @@
+{
+  "fullName": "EntityMilestone",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ReadWrite",
+  "fields": [
+    {
+      "fullName": "BusinessHoursId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CompletionDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ElapsedTimeInDays"
+    },
+    {
+      "fullName": "ElapsedTimeInHrs"
+    },
+    {
+      "fullName": "ElapsedTimeInMins",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsCompleted"
+    },
+    {
+      "fullName": "IsViolated"
+    },
+    {
+      "fullName": "MilestoneId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentEntityId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "SlaProcessId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "StartDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TargetDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TargetResponseInDays"
+    },
+    {
+      "fullName": "TargetResponseInHrs"
+    },
+    {
+      "fullName": "TargetResponseInMins",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TimeRemainingInDays"
+    },
+    {
+      "fullName": "TimeRemainingInHrs"
+    },
+    {
+      "fullName": "TimeRemainingInMins"
+    },
+    {
+      "fullName": "TimeSinceTargetInDays"
+    },
+    {
+      "fullName": "TimeSinceTargetInHrs"
+    },
+    {
+      "fullName": "TimeSinceTargetInMins"
+    }
+  ],
+  "label": "Object Milestone",
+  "sharingModel": "ReadWrite"
+}

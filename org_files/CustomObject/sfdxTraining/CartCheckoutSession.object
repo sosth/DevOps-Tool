@@ -1,0 +1,7 @@
+{
+  "fullName": "CartCheckoutSession",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "label": "Cart Checkout Session",
+  "sharingModel": "ControlledByParent"
+}

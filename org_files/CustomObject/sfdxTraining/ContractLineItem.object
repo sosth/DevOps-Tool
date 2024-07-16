@@ -1,0 +1,124 @@
+{
+  "fullName": "ContractLineItem",
+  "actionOverrides": [
+    {
+      "actionName": "AddContractLine",
+      "type": "Default"
+    },
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "AssetId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Discount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EndDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ListPrice",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LocationId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentContractLineItemId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PricebookEntryId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Product2Id",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Quantity",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "RootContractLineItemId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ServiceContractId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "StartDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "StatusIndicator",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Subtotal",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalPrice",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "UnitPrice",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Contract Line Item",
+  "searchLayouts": {
+    "searchResultsAdditionalFields": [
+      "LINEITEM.NAME",
+      "PRODUCT.NAME",
+      "LINEITEM.STARTDATE",
+      "LINEITEM.ENDDATE",
+      "LINEITEM.STATUS",
+      "ASSET.NAME"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

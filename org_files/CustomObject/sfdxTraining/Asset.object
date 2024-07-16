@@ -1,0 +1,249 @@
+{
+  "fullName": "Asset",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Address",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AssetLevel",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AssetProvidedById",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AssetServicedById",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ConsequenceOfFailure",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ContactId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CurrentAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "CurrentLifecycleEndDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "CurrentMrr",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "CurrentQuantity",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "DigitalAssetStatus",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ExternalIdentifier",
+      "inlineHelpText": "ID of matching record in an external system.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "HasLifecycleManagement"
+    },
+    {
+      "fullName": "InstallDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsCompetitorProduct",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsInternal",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LifecycleEndDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LifecycleStartDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LocationId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ManufactureDate",
+      "inlineHelpText": "Date when the asset was manufactured.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Price",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Product2Id",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ProductCode"
+    },
+    {
+      "fullName": "ProductDescription"
+    },
+    {
+      "fullName": "ProductFamily",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "PurchaseDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Quantity",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "RootAssetId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "SerialNumber",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StatusReason",
+      "inlineHelpText": "Explanation of the device status.",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StockKeepingUnit"
+    },
+    {
+      "fullName": "TotalLifecycleAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "UsageEndDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Uuid",
+      "inlineHelpText": "Unique string identifying the asset.",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Asset",
+  "listViews": {
+    "fullName": "AllAssets",
+    "filterScope": "Everything",
+    "label": "All Assets"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "ASSET.NAME",
+      "ASSET.SERIAL_NUMBER",
+      "ASSET.INSTALL_DATE",
+      "ACCOUNT.NAME",
+      "CONTACT.NAME",
+      "PRODUCT2.NAME"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "ASSET.NAME",
+      "ASSET.SERIAL_NUMBER",
+      "ASSET.INSTALL_DATE",
+      "ACCOUNT.NAME",
+      "CONTACT.NAME"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "ASSET.NAME",
+      "ASSET.SERIAL_NUMBER",
+      "ASSET.INSTALL_DATE",
+      "ACCOUNT.NAME",
+      "CONTACT.NAME"
+    ],
+    "searchResultsAdditionalFields": [
+      "ASSET.NAME",
+      "ASSET.SERIAL_NUMBER",
+      "ASSET.INSTALL_DATE",
+      "ACCOUNT.NAME",
+      "CONTACT.NAME"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

@@ -1,0 +1,7 @@
+{
+  "fullName": "ShippingRateGroup",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "label": "Shipping Rate Group",
+  "sharingModel": "ControlledByParent"
+}

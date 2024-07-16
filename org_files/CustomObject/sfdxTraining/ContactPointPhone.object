@@ -1,0 +1,152 @@
+{
+  "fullName": "ContactPointPhone",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "ActiveFromDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ActiveToDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AreaCode",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "BestTimeToContactEndTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "BestTimeToContactStartTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "BestTimeToContactTimezone",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ExtensionNumber",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "FormattedInternationalPhoneNumber",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "FormattedNationalPhoneNumber",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsBusinessPhone",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsFaxCapable",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsPersonalPhone",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsPrimary",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsSmsCapable",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "PhoneType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "PreferenceRank",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TelephoneNumber",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "UsageType",
+      "trackHistory": "false",
+      "type": "Picklist"
+    }
+  ],
+  "label": "Contact Point Phone",
+  "listViews": {
+    "fullName": "All_ContactPointPhones",
+    "filterScope": "Everything",
+    "label": "All Contact Point Phones"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "TelephoneNumber",
+      "ActiveFromDate",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "Parent"
+    ],
+    "searchResultsAdditionalFields": [
+      "TelephoneNumber",
+      "ActiveFromDate",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "Parent"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

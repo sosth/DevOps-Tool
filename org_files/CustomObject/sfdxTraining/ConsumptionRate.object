@@ -1,0 +1,87 @@
+{
+  "fullName": "ConsumptionRate",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "ConsumptionScheduleId",
+      "inlineHelpText": "This rate is a part of of this schedule.",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LowerBound",
+      "inlineHelpText": "The lowest quantity of usage for this consumption rate.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Price",
+      "inlineHelpText": "The price for usage that falls within this consumption rate's bounds.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "PricingMethod",
+      "inlineHelpText": "Choose whether the usage is priced per unit or quantity or as a flat fee",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ProcessingOrder",
+      "inlineHelpText": "The order for processing the usage rate across multiple rates. Consumption Rates are evaluated beginning with the lowest processing order.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "UpperBound",
+      "inlineHelpText": "The highest quantity of usage for this consumption rate.",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Consumption Rate",
+  "sharingModel": "ControlledByParent"
+}

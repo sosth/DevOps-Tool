@@ -1,0 +1,142 @@
+{
+  "fullName": "Product2",
+  "actionOverrides": [
+    {
+      "actionName": "Add",
+      "type": "Default"
+    },
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ReadWrite",
+  "fields": [
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "DisplayUrl",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ExternalDataSourceId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ExternalId",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Family",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "IsActive",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ProductClass",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ProductCode",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "QuantityUnitOfMeasure",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "SellerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "SourceProductId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "StockKeepingUnit",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Type",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Product",
+  "listViews": {
+    "fullName": "AllProducts",
+    "filterScope": "Everything",
+    "label": "All Products"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "PRODUCT2.NAME",
+      "PRODUCT2.CUSTOMER_PRODUCT_ID",
+      "PRODUCT2.DESCRIPTION"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "PRODUCT2.NAME",
+      "PRODUCT2.PRODUCT_CLASS",
+      "PRODUCT2.CUSTOMER_PRODUCT_ID",
+      "PRODUCT2.DESCRIPTION",
+      "PRODUCT2.FAMILY"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "PRODUCT2.NAME",
+      "PRODUCT2.PRODUCT_CLASS",
+      "PRODUCT2.CUSTOMER_PRODUCT_ID",
+      "PRODUCT2.DESCRIPTION",
+      "PRODUCT2.FAMILY"
+    ],
+    "searchResultsAdditionalFields": [
+      "PRODUCT2.NAME",
+      "PRODUCT2.PRODUCT_CLASS",
+      "PRODUCT2.CUSTOMER_PRODUCT_ID",
+      "PRODUCT2.DESCRIPTION",
+      "PRODUCT2.FAMILY"
+    ]
+  },
+  "sharingModel": "ReadWrite"
+}

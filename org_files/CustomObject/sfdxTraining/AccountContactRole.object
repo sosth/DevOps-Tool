@@ -1,0 +1,11 @@
+{
+  "fullName": "AccountContactRole",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": {
+    "fullName": "Role",
+    "type": "Picklist"
+  },
+  "label": "Account Contact Role",
+  "sharingModel": "ControlledByParent"
+}

@@ -1,0 +1,147 @@
+{
+  "fullName": "Problem",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "true",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "Category",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Description",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Impact",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentProblemId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Hierarchy"
+    },
+    {
+      "fullName": "Priority",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "PriorityOverrideReason",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ResolutionDateTime",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ResolutionSummary",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ResolvedById",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "RootCauseSummary",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Status",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StatusCode"
+    },
+    {
+      "fullName": "SubCategory",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Subject",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Urgency",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    }
+  ],
+  "label": "Problem",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Subject",
+      "Status",
+      "Priority"
+    ],
+    "searchResultsAdditionalFields": [
+      "Subject",
+      "Status",
+      "Priority"
+    ]
+  },
+  "sharingModel": "Private"
+}

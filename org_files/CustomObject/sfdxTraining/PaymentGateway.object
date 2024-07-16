@@ -1,0 +1,69 @@
+{
+  "fullName": "PaymentGateway",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ReadWrite",
+  "fields": [
+    {
+      "fullName": "Comments"
+    },
+    {
+      "fullName": "ExternalReference"
+    },
+    {
+      "fullName": "MerchantCredentialId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PaymentGatewayName"
+    },
+    {
+      "fullName": "PaymentGatewayProviderId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Status"
+    }
+  ],
+  "label": "Payment Gateway",
+  "listViews": {
+    "fullName": "PaymentGateway",
+    "filterScope": "Everything",
+    "label": "All"
+  },
+  "sharingModel": "ReadWrite"
+}

@@ -1,0 +1,74 @@
+{
+  "fullName": "Customer",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "CustomerStatusType"
+    },
+    {
+      "fullName": "Name"
+    },
+    {
+      "fullName": "OwnerId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PartyId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "TotalLifeTimeValue"
+    }
+  ],
+  "label": "Customer",
+  "listViews": {
+    "fullName": "All_Customers",
+    "filterScope": "Everything",
+    "label": "All Customers"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": "TotalLifeTimeValue",
+    "searchResultsAdditionalFields": "TotalLifeTimeValue"
+  },
+  "sharingModel": "Private"
+}

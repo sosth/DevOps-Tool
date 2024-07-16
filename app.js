@@ -12,6 +12,7 @@ const deploymentController = require('./controllers/deploymentController'); // I
 const deploymentRoutes = require('./routes/deploymentRoutres');
 const retrieveService = require('./services/retrieveService');
 const apexRoutes = require('./routes/apexRoutes'); // Import apex routes
+const deployScript = require('./deployitem');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -35,6 +36,15 @@ const client = new Client({
 client.connect();
 
 // Routes
+app.post('/deploy', async (req, res) => {
+    try {
+        await deployScript(); // Call the deployment script function
+        res.status(200).send('Deployment successful!');
+    } catch (error) {
+        res.status(500).send(`Deployment failed: ${error.message}`);
+    }
+});
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connect.html'));
 });

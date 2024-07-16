@@ -1,25 +1,18 @@
-const retrieveService = require('../services/retrieveService');
+// controllers/metadataController.js
 
-exports.retrieveApexClasses = async (req, res) => {
-    const { orgName } = req.body;
+const apexService = require('../services/apexService');
 
-    try {
-        await retrieveService.retrieveApexClasses(orgName);
-        res.status(200).json({ message: 'All Apex classes retrieved and saved successfully.' });
-    } catch (error) {
-        console.error('Error retrieving Apex classes:', error);
-        res.status(500).json({ error: 'Failed to retrieve Apex classes' });
-    }
-};
-
-exports.retrieveApexClassesWithParams = async (req, res) => {
-    const { orgName, type, folderName } = req.body;
+const apexController = {
+  retrieveMetadata: async (req, res) => {
+    const { type, folderorg } = req.params;
 
     try {
-        await retrieveService.retrieveApexClasses(orgName, type, folderName);
-        res.status(200).json({ message: 'All Apex classes retrieved and saved successfully.' });
+      const result = await apexService.retrieveAndSaveMetadata(type, folderorg);
+      res.status(200).json({ message: `${type} récupérés avec succès`, data: result });
     } catch (error) {
-        console.error('Error retrieving Apex classes:', error);
-        res.status(500).json({ error: 'Failed to retrieve Apex classes' });
+      res.status(500).json({ error: error.message });
     }
+  }
 };
+
+module.exports = apexController;

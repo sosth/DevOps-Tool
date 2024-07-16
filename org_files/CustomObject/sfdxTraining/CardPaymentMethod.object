@@ -1,0 +1,163 @@
+{
+  "fullName": "CardPaymentMethod",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ReadWrite",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AuditEmail"
+    },
+    {
+      "fullName": "AutoCardType"
+    },
+    {
+      "fullName": "CardBin"
+    },
+    {
+      "fullName": "CardCategory"
+    },
+    {
+      "fullName": "CardHolderFirstName"
+    },
+    {
+      "fullName": "CardHolderLastName"
+    },
+    {
+      "fullName": "CardHolderName"
+    },
+    {
+      "fullName": "CardLastFour"
+    },
+    {
+      "fullName": "CardType",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Comments"
+    },
+    {
+      "fullName": "CompanyName"
+    },
+    {
+      "fullName": "DisplayCardNumber"
+    },
+    {
+      "fullName": "Email"
+    },
+    {
+      "fullName": "ExpiryMonth"
+    },
+    {
+      "fullName": "ExpiryYear"
+    },
+    {
+      "fullName": "GatewayDate"
+    },
+    {
+      "fullName": "GatewayResultCode"
+    },
+    {
+      "fullName": "GatewayResultCodeDescription"
+    },
+    {
+      "fullName": "GatewayToken"
+    },
+    {
+      "fullName": "GatewayTokenDetails"
+    },
+    {
+      "fullName": "GatewayTokenEncrypted"
+    },
+    {
+      "fullName": "InputCardNumber"
+    },
+    {
+      "fullName": "IpAddress"
+    },
+    {
+      "fullName": "IsAutoPayEnabled"
+    },
+    {
+      "fullName": "MacAddress"
+    },
+    {
+      "fullName": "NickName"
+    },
+    {
+      "fullName": "PaymentGatewayId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PaymentMethodDetails"
+    },
+    {
+      "fullName": "PaymentMethodSubType"
+    },
+    {
+      "fullName": "PaymentMethodType"
+    },
+    {
+      "fullName": "Phone"
+    },
+    {
+      "fullName": "ProcessingMode"
+    },
+    {
+      "fullName": "SfResultCode"
+    },
+    {
+      "fullName": "StartMonth"
+    },
+    {
+      "fullName": "StartYear"
+    },
+    {
+      "fullName": "Status"
+    }
+  ],
+  "label": "Card Payment Method",
+  "listViews": {
+    "fullName": "CardPaymentMethod",
+    "filterScope": "Everything",
+    "label": "All"
+  },
+  "sharingModel": "ReadWrite"
+}

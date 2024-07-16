@@ -1,0 +1,76 @@
+{
+  "fullName": "PrivacyRTBFRequest",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "JobRecord",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PolicyNameId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Privacy RTBF Request",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "PolicyName",
+      "JobRecord",
+      "Status",
+      "Description"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "PolicyName",
+      "JobRecord",
+      "Status",
+      "Description"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "PolicyName",
+      "JobRecord",
+      "Status",
+      "Description"
+    ],
+    "searchResultsAdditionalFields": [
+      "PolicyName",
+      "JobRecord",
+      "Status",
+      "Description"
+    ]
+  },
+  "sharingModel": "Private"
+}

@@ -1,0 +1,118 @@
+{
+  "fullName": "ServiceTerritoryMember",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "Address",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EffectiveEndDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EffectiveStartDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OperatingHoursId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Role",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ServiceResourceId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ServiceTerritoryId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "TerritoryType",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Service Territory Member",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "ServiceResource",
+      "ServiceTerritory",
+      "TerritoryType",
+      "EffectiveStartDate",
+      "EffectiveEndDate",
+      "Role"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "ServiceResource",
+      "ServiceTerritory",
+      "TerritoryType",
+      "EffectiveStartDate",
+      "EffectiveEndDate",
+      "Role"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "ServiceResource",
+      "ServiceTerritory",
+      "TerritoryType",
+      "EffectiveStartDate",
+      "EffectiveEndDate",
+      "Role"
+    ],
+    "searchResultsAdditionalFields": [
+      "ServiceResource",
+      "ServiceTerritory",
+      "TerritoryType",
+      "EffectiveStartDate",
+      "EffectiveEndDate",
+      "Role"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}
