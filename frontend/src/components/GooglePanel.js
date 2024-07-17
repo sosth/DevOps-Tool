@@ -9,15 +9,34 @@ const GooglePanel = (props) => {
     const handleLoginSuccess = (googleUser) => {
         const idToken = googleUser.getAuthResponse().id_token;
         const googleEmail = googleUser.profileObj.email;
-
+    
         console.log('The id_token is ' + idToken);
-        console.log('User Data: ', JSON.stringify(googleUser, null, 2));
-
-        localStorage.setItem('idToken', idToken);
-        localStorage.setItem('googleEmail', googleEmail);
-        setUserData(googleUser);
-
-        navigate(props.onLogin);
+    
+        // Send the token to your backend
+        fetch('/api/google/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ token: idToken }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('Backend authentication successful:', data.userId);
+                localStorage.setItem('idToken', idToken);
+                localStorage.setItem('googleEmail', googleEmail);
+                setUserData(googleUser);
+                navigate(props.onLogin);
+            } else {
+                console.error('Backend authentication failed');
+                handleLoginFailure(new Error('Backend authentication failed'));
+            }
+        })
+        .catch(error => {
+            console.error('Error during backend authentication:', error);
+            handleLoginFailure(error);
+        });
     };
 
     const handleLoginFailure = (error) => {
@@ -26,11 +45,30 @@ const GooglePanel = (props) => {
 
     const handleLogoutSuccess = () => {
         console.log('Logged out');
-
+    
+        // Inform backend about logout
+        fetch('/api/google/logout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('Backend logout successful');
+            } else {
+                console.error('Backend logout failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error during backend logout:', error);
+        });
+    
         localStorage.removeItem('idToken');
         localStorage.removeItem('googleEmail');
         setUserData(null);
-
+    
         navigate(props.onLogout);
     };
 

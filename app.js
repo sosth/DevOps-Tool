@@ -13,6 +13,7 @@ const deploymentRoutes = require('./routes/deploymentRoutres');
 const retrieveService = require('./services/retrieveService');
 const apexRoutes = require('./routes/apexRoutes'); // Import apex routes
 const deployScript = require('./deployitem');
+const googleAuthRoutes = require('./routes/googleAuthRoutes');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -36,6 +37,8 @@ const client = new Client({
 client.connect();
 
 // Routes
+app.use(express.static(path.join(__dirname, 'frontend')));
+app.use('/api/google', googleAuthRoutes);
 app.post('/deploy', async (req, res) => {
     try {
         await deployScript(); // Call the deployment script function
