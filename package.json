@@ -4,7 +4,8 @@
   "description": "A simple Salesforce app with OAuth2 and SFDX integration",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "dependencies": {
     "axios": "^1.7.2",

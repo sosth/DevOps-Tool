@@ -38,9 +38,6 @@ client.connect();
 
 // Routes
 app.use(express.static(path.join(__dirname, 'frontend', 'build')));
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
-  });
 app.use('/api/google', googleAuthRoutes);
 app.post('/deploy', async (req, res) => {
     try {
@@ -253,7 +250,9 @@ app.get('/metadata/:orgName/:componentType', (req, res) => {
         res.status(404).json({ success: false, message: 'Metadata directory not found.' });
     }
 });
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+  });
 // Start the server
 app.listen(port, () => {
     console.log(`App running at http://localhost:${port}`);
