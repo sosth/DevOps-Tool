@@ -15,7 +15,9 @@ client.connect();
 const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 async function storeUserInfo(userInfo) {
-    const { email, given_name, family_name, name } = userInfo;
+    const { email, given_name, family_name } = userInfo;
+    const name = `${given_name} ${family_name}`.trim(); // Combine first and last name
+    
     const query = `
         INSERT INTO users (email, emaillogin, fblogin, firstname, googlelogin, lastname, name)
         VALUES ($1, false, false, $2, true, $3, $4)
@@ -51,7 +53,12 @@ router.post('/login', async (req, res) => {
         req.session.userId = userId;
         req.session.email = payload['email'];
 
-        res.json({ success: true, userId: userId, email: payload['email'] });
+        res.json({ 
+            success: true, 
+            userId: userId, 
+            email: payload['email'],
+            name: `${payload['given_name']} ${payload['family_name']}`.trim()
+        });
     } catch (error) {
         console.error('Error verifying Google token:', error);
         res.status(400).json({ success: false, message: 'Invalid token' });
