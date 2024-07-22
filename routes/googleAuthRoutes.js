@@ -1,68 +1,59 @@
 const express = require('express');
 const router = express.Router();
 const { OAuth2Client } = require('google-auth-library');
-const { Client } = require('pg');
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+const { Client } = require('pg');  // Assuming you're using PostgreSQL
 
-const client = new Client({
+// Database setup
+const dbClient = new Client({
     connectionString: process.env.DATABASE_URL,
     ssl: {
         rejectUnauthorized: false
     }
 });
 
-client.connect();
+dbClient.connect();
 
-const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+router.post('/login', async (req, res) => {
+  const { token } = req.body;
+  try {
+    const ticket = await client.verifyIdToken({
+      idToken: token,
+      audience: process.env.GOOGLE_CLIENT_ID,
+    });
+    const payload = ticket.getPayload();
+    const userid = payload['sub'];
+    const email = payload['email'];
+    const firstName = payload['given_name'] || '';
+    const lastName = payload['family_name'] || '';
+    const name = `${firstName} ${lastName}`.trim();
 
-async function storeUserInfo(userInfo) {
-    const { email, given_name, family_name } = userInfo;
-    const name = `${given_name} ${family_name}`.trim(); // Combine first and last name
-    
+    // Insert or update user in the database
     const query = `
-        INSERT INTO users (email, emaillogin, fblogin, firstname, googlelogin, lastname, name)
-        VALUES ($1, false, false, $2, true, $3, $4)
-        ON CONFLICT (email) DO UPDATE SET
-        googlelogin = true,
+      INSERT INTO users (id, email, googlelogin, firstname, lastname, name, emaillogin, fblogin)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+      ON CONFLICT (id) DO UPDATE SET
+        email = EXCLUDED.email,
+        googlelogin = EXCLUDED.googlelogin,
         firstname = EXCLUDED.firstname,
         lastname = EXCLUDED.lastname,
         name = EXCLUDED.name
-        RETURNING id;
+      RETURNING *;
     `;
-    try {
-        const result = await client.query(query, [email, given_name, family_name, name]);
-        return result.rows[0].id;
-    } catch (error) {
-        console.error('Error storing user info:', error);
-        throw error;
-    }
-}
+    const values = [userid, email, true, firstName, lastName, name, false, false];
 
-router.post('/login', async (req, res) => {
-    const { token } = req.body;
-    try {
-        const ticket = await googleClient.verifyIdToken({
-            idToken: token,
-            audience: process.env.GOOGLE_CLIENT_ID,
-        });
-        const payload = ticket.getPayload();
-        
-        // Store user info in the database
-        const userId = await storeUserInfo(payload);
-        
-        // Set session data
-        req.session.userId = userId;
-        req.session.email = payload['email'];
+    const result = await dbClient.query(query, values);
+    const user = result.rows[0];
 
-        res.json({ 
-            success: true, 
-            userId: userId, 
-            email: payload['email'],
-            name: `${payload['given_name']} ${payload['family_name']}`.trim()
-        });
-    } catch (error) {
-        console.error('Error verifying Google token:', error);
-        res.status(400).json({ success: false, message: 'Invalid token' });
-    }
+    // Create a session or JWT for the user
+    req.session.userId = userid;
+    req.session.email = email;
+
+    res.json({ success: true, user: user });
+  } catch (error) {
+    console.error('Error verifying Google token:', error);
+    res.status(400).json({ success: false, message: 'Invalid token' });
+  }
 });
 
 module.exports = router;
