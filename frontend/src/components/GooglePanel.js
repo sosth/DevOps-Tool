@@ -10,9 +10,6 @@ const GooglePanel = (props) => {
         const idToken = googleUser.getAuthResponse().id_token;
         const googleEmail = googleUser.profileObj.email;
     
-        console.log('The id_token is ' + idToken);
-    
-        // Send the token to your backend
         fetch('/api/google/login', {
             method: 'POST',
             headers: {
@@ -23,10 +20,10 @@ const GooglePanel = (props) => {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                console.log('Backend authentication successful:', data.userId);
+                console.log('Backend authentication successful:', data.user);
                 localStorage.setItem('idToken', idToken);
                 localStorage.setItem('googleEmail', googleEmail);
-                setUserData(googleUser);
+                setUserData(data.user);
                 navigate(props.onLogin);
             } else {
                 console.error('Backend authentication failed');
