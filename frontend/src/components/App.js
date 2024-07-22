@@ -7,22 +7,22 @@ function App() {
   const [profile, setProfile] = useState(null);
 
   const login = useGoogleLogin({
-    onSuccess: async codeResponse => {
-      setUser(codeResponse);
-      const profileResponse = await axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`);
-      setProfile(profileResponse.data);
-      
-      // Send user data to backend
-      await axios.post('/api/google/save-user', {
-        id: profileResponse.data.id,
-        email: profileResponse.data.email,
-        firstName: profileResponse.data.given_name,
-        lastName: profileResponse.data.family_name,
-        googleLogin: true,
-      });
-    },
+    onSuccess: codeResponse => setUser(codeResponse),
     onError: error => console.log('Login Failed:', error),
   });
+
+  useEffect(() => {
+    if (user) {
+      axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`)
+        .then(res => {
+          setProfile(res.data);
+          // Send the profile data to your backend
+          axios.post('/api/auth/google', res.data)
+            .catch(err => console.log('Error saving user data:', err));
+        })
+        .catch(err => console.log(err));
+    }
+  }, [user]);
 
   const logOut = () => {
     googleLogout();
@@ -43,6 +43,7 @@ function App() {
           <p>Locale: {profile.locale}</p>
           <p>Verified: {profile.verified_email ? "Yes" : "No"}</p>
           <p>Domain: {profile.hd}</p>
+
           <button onClick={logOut}>Logout</button>
         </div>
       ) : (

@@ -12,27 +12,27 @@ const client = new Client({
 
 client.connect();
 
-router.post('/save-user', async (req, res) => {
-  const { id, email, firstName, lastName, googleLogin } = req.body;
-
-  try {
-    const query = `
-      INSERT INTO users (id, email, firstname, lastname, googlelogin)
-      VALUES ($1, $2, $3, $4, $5)
-      ON CONFLICT (email) DO UPDATE SET
-        firstname = EXCLUDED.firstname,
-        lastname = EXCLUDED.lastname,
-        googlelogin = EXCLUDED.googlelogin;
-    `;
-    const values = [id, email, firstName, lastName, googleLogin];
-
-    await client.query(query, values);
-
-    res.status(200).json({ success: true, message: 'User saved successfully' });
-  } catch (error) {
-    console.error('Error saving user:', error);
-    res.status(500).json({ success: false, message: 'Error saving user' });
-  }
-});
-
-module.exports = router;
+router.post('/google', async (req, res) => {
+    const { email, given_name, family_name } = req.body;
+    const googleLogin = true;
+    const fbLogin = false;
+    const emailLogin = false;
+  
+    try {
+      const newUser = await pool.query(
+        `INSERT INTO users (email, firstname, lastname, googlelogin, fblogin, emaillogin)
+         VALUES ($1, $2, $3, $4, $5, $6)
+         ON CONFLICT (email) DO UPDATE 
+         SET googlelogin = $4, firstname = $2, lastname = $3
+         RETURNING *`,
+        [email, given_name, family_name, googleLogin, fbLogin, emailLogin]
+      );
+  
+      res.json(newUser.rows[0]);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server error');
+    }
+  });
+  
+  module.exports = router;
