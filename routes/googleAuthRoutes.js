@@ -13,18 +13,18 @@ const client = new Client({
 client.connect();
 
 router.post('/save-user', async (req, res) => {
-  const { email, firstName, lastName, googleLogin } = req.body;
+  const { id, email, firstName, lastName, googleLogin } = req.body;
 
   try {
     const query = `
-      INSERT INTO users (email, firstname, lastname, googlelogin)
-      VALUES ($1, $2, $3, $4)
+      INSERT INTO users (id, email, firstname, lastname, googlelogin)
+      VALUES ($1, $2, $3, $4, $5)
       ON CONFLICT (email) DO UPDATE SET
         firstname = EXCLUDED.firstname,
         lastname = EXCLUDED.lastname,
         googlelogin = EXCLUDED.googlelogin;
     `;
-    const values = [email, firstName, lastName, googleLogin];
+    const values = [id, email, firstName, lastName, googleLogin];
 
     await client.query(query, values);
 

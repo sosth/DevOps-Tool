@@ -14,6 +14,7 @@ function App() {
       
       // Send user data to backend
       await axios.post('/api/google/save-user', {
+        id: profileResponse.data.id,
         email: profileResponse.data.email,
         firstName: profileResponse.data.given_name,
         lastName: profileResponse.data.family_name,
