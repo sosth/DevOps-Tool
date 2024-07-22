@@ -1,57 +1,37 @@
 const express = require('express');
-const router = express.Router();
-const { OAuth2Client } = require('google-auth-library');
-const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const { Client } = require('pg');
+const router = express.Router();
 
-const dbClient = new Client({
+// Database setup
+const client = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: {
-    rejectUnauthorized: false,
-  },
+    rejectUnauthorized: false
+  }
 });
 
-dbClient.connect();
+client.connect();
 
-router.post('/login', async (req, res) => {
-  const { token } = req.body;
+router.post('/save-user', async (req, res) => {
+  const { email, firstName, lastName, googleLogin } = req.body;
+
   try {
-    const ticket = await client.verifyIdToken({
-      idToken: token,
-      audience: process.env.GOOGLE_CLIENT_ID,
-    });
-    const payload = ticket.getPayload();
-    const userid = payload['sub'];
-    const email = payload['email'];
-    const firstName = payload['given_name'] || '';
-    const lastName = payload['family_name'] || '';
-    const name = `${firstName} ${lastName}`.trim();
-
-    // Insert or update user in the database
     const query = `
-      INSERT INTO users (id, email, googlelogin, firstname, lastname, name, emaillogin, fblogin)
-      VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-      ON CONFLICT (id) DO UPDATE SET
-        email = EXCLUDED.email,
-        googlelogin = EXCLUDED.googlelogin,
+      INSERT INTO users (email, firstname, lastname, googlelogin)
+      VALUES ($1, $2, $3, $4)
+      ON CONFLICT (email) DO UPDATE SET
         firstname = EXCLUDED.firstname,
         lastname = EXCLUDED.lastname,
-        name = EXCLUDED.name
-      RETURNING *;
+        googlelogin = EXCLUDED.googlelogin;
     `;
-    const values = [userid, email, true, firstName, lastName, name, false, false];
+    const values = [email, firstName, lastName, googleLogin];
 
-    const result = await dbClient.query(query, values);
-    const user = result.rows[0];
+    await client.query(query, values);
 
-    // Create a session for the user
-    req.session.userId = userid;
-    req.session.email = email;
-
-    res.json({ success: true, user: user });
+    res.status(200).json({ success: true, message: 'User saved successfully' });
   } catch (error) {
-    console.error('Error verifying Google token:', error);
-    res.status(400).json({ success: false, message: 'Invalid token' });
+    console.error('Error saving user:', error);
+    res.status(500).json({ success: false, message: 'Error saving user' });
   }
 });
 
