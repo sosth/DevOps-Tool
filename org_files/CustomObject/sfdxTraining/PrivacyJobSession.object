@@ -39,6 +39,9 @@
   "externalSharingModel": "Private",
   "fields": [
     {
+      "fullName": "EndTime"
+    },
+    {
       "fullName": "JobStatus"
     },
     {

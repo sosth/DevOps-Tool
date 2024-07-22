@@ -4,7 +4,16 @@
   "externalSharingModel": "Private",
   "fields": [
     {
+      "fullName": "BundleName"
+    },
+    {
+      "fullName": "ComponentName"
+    },
+    {
       "fullName": "ComponentType"
+    },
+    {
+      "fullName": "DataSpaceName"
     },
     {
       "fullName": "DeployJob"
