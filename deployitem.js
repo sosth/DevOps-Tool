@@ -5,7 +5,7 @@ const xml2js = require('xml2js');
 
 // Salesforce instance URL and access token
 const instanceUrl = 'https://devsara2-dev-ed.develop.my.salesforce.com';
-const accessToken = '00Dd2000000pqKC!AQEAQFRkDzy2yMOIqtQlplEjpulXsu6pL8csR6tOVZrvoGYjc.glDNNaNfZqxkzsdTmv01hdNxuVzLNZAN1vAZpYqEIDzVq3'
+const accessToken = '00Dd2000000pqKC!AQEAQKrRJFUtnss_MLIuaHSZQyiyEU0HPGz4rXKm41Yb57f7sJW9bniUkkiRBLv1bd9xrYYx8ahV6MicLozOTko2hNoqTbHL'
 // Path to the deploy folder and package.xml file
 const deployFolderPath = path.join(__dirname, 'deploy');
 const packageXmlPath = path.join(deployFolderPath, 'package.xml');
