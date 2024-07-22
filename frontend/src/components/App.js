@@ -28,7 +28,6 @@ function App() {
         .catch(err => console.log(err));
     }
   }, [user]);
-  
 
   const logOut = () => {
     googleLogout();
