@@ -2,8 +2,16 @@ const express = require('express');
 const router = express.Router();
 const { OAuth2Client } = require('google-auth-library');
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+const { Client } = require('pg');
 
+const dbClient = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+});
 
+dbClient.connect();
 
 router.post('/login', async (req, res) => {
   const { token } = req.body;
@@ -36,7 +44,7 @@ router.post('/login', async (req, res) => {
     const result = await dbClient.query(query, values);
     const user = result.rows[0];
 
-    // Create a session or JWT for the user
+    // Create a session for the user
     req.session.userId = userid;
     req.session.email = email;
 
