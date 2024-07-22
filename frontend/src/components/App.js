@@ -1,62 +1,54 @@
-/*App.js*/
-
-import React, { useState, useEffect } from 'react';
-import { googleLogout, useGoogleLogin } from '@react-oauth/google';
+import { GoogleLogin, googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 
 function App() {
-    const [ user, setUser ] = useState([]);
-    const [ profile, setProfile ] = useState([]);
+  const [user, setUser] = useState(null);
+  const [profile, setProfile] = useState(null);
 
-    const login = useGoogleLogin({
-        onSuccess: (codeResponse) => setUser(codeResponse),
-        onError: (error) => console.log('Login Failed:', error)
-    });
+  const login = useGoogleLogin({
+    onSuccess: async codeResponse => {
+      setUser(codeResponse);
+      const profileResponse = await axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`);
+      setProfile(profileResponse.data);
+      
+      // Send user data to backend
+      await axios.post('/api/google/save-user', {
+        email: profileResponse.data.email,
+        firstName: profileResponse.data.given_name,
+        lastName: profileResponse.data.family_name,
+        googleLogin: true,
+      });
+    },
+    onError: error => console.log('Login Failed:', error),
+  });
 
-    useEffect(
-        () => {
-            if (user) {
-                axios
-                    .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
-                        headers: {
-                            Authorization: `Bearer ${user.access_token}`,
-                            Accept: 'application/json'
-                        }
-                    })
-                    .then((res) => {
-                        setProfile(res.data);
-                    })
-                    .catch((err) => console.log(err));
-            }
-        },
-        [ user ]
-    );
+  const logOut = () => {
+    googleLogout();
+    setProfile(null);
+  };
 
-    // log out function to log the user out of google and set the profile array to null
-    const logOut = () => {
-        googleLogout();
-        setProfile(null);
-    };
-
-    return (
+  return (
+    <div>
+      <h2>React Google Login</h2>
+      {profile ? (
         <div>
-            <h2>React Google Login</h2>
-            <br />
-            <br />
-            {profile ? (
-                <div>
-                    <img src={profile.picture} alt="user image" />
-                    <h3>User Logged in</h3>
-                    <p>Name: {profile.name}</p>
-                    <p>Email Address: {profile.email}</p>
-                    <br />
-                    <br />
-                    <button onClick={logOut}>Log out</button>
-                </div>
-            ) : (
-                <button onClick={login}>Sign in with Google 🚀 </button>
-            )}
+          <img src={profile.picture} alt="user profile" />
+          <h3>Welcome, {profile.name}</h3>
+          <p>Email: {profile.email}</p>
+          <p>ID: {profile.id}</p>
+          <p>First Name: {profile.given_name}</p>
+          <p>Last Name: {profile.family_name}</p>
+          <p>Locale: {profile.locale}</p>
+          <p>Verified: {profile.verified_email ? "Yes" : "No"}</p>
+          <p>Domain: {profile.hd}</p>
+          <button onClick={logOut}>Logout</button>
         </div>
-    );
+      ) : (
+        <button onClick={login}>Login with Google</button>
+      )}
+    </div>
+  );
 }
+
 export default App;
