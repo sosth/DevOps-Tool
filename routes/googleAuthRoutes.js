@@ -12,7 +12,7 @@ const client = new Client({
 
 client.connect();
 
-router.post('/google', async (req, res) => {
+router.post('/api/google', async (req, res) => {
   const { email, given_name, family_name, id } = req.body;
   const googleLogin = true;
   const fbLogin = false;

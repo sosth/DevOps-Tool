@@ -17,7 +17,7 @@ function App() {
         .then(res => {
           setProfile(res.data);
           // Send the profile data to your backend, including the Google ID
-          axios.post('/api/auth/google', {
+          axios.post('/api/google', {
             email: res.data.email,
             given_name: res.data.given_name,
             family_name: res.data.family_name,
