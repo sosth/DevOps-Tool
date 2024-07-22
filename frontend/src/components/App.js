@@ -23,7 +23,12 @@ function App() {
             family_name: res.data.family_name,
             id: res.data.id // Google ID
           })
-          .catch(err => console.log('Error saving user data:', err));
+          .then(response => console.log('User data saved:', response.data))
+          .catch(err => {
+  console.log('Error saving user data:', err.response ? err.response.data : err.message);
+  console.log('Full error object:', err);
+});
+        
         })
         .catch(err => console.log(err));
     }

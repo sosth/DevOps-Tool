@@ -13,6 +13,7 @@ const client = new Client({
 client.connect();
 
 router.post('/api/google', async (req, res) => {
+    console.log('Received Google login request:', req.body);
   const { email, given_name, family_name, id } = req.body;
   const googleLogin = true;
   const fbLogin = false;
