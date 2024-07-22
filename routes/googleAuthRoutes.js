@@ -13,19 +13,19 @@ const client = new Client({
 client.connect();
 
 router.post('/google', async (req, res) => {
-    const { email, given_name, family_name } = req.body;
+    const { email, given_name, family_name, id } = req.body;
     const googleLogin = true;
     const fbLogin = false;
     const emailLogin = false;
   
     try {
       const newUser = await pool.query(
-        `INSERT INTO users (email, firstname, lastname, googlelogin, fblogin, emaillogin)
-         VALUES ($1, $2, $3, $4, $5, $6)
+        `INSERT INTO users (id, email, firstname, lastname, googlelogin, fblogin, emaillogin)
+         VALUES ($1, $2, $3, $4, $5, $6, $7)
          ON CONFLICT (email) DO UPDATE 
-         SET googlelogin = $4, firstname = $2, lastname = $3
+         SET googlelogin = $5, firstname = $3, lastname = $4, id = $1
          RETURNING *`,
-        [email, given_name, family_name, googleLogin, fbLogin, emailLogin]
+        [id, email, given_name, family_name, googleLogin, fbLogin, emailLogin]
       );
   
       res.json(newUser.rows[0]);

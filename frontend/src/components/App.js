@@ -16,13 +16,19 @@ function App() {
       axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`)
         .then(res => {
           setProfile(res.data);
-          // Send the profile data to your backend
-          axios.post('/api/auth/google', res.data)
-            .catch(err => console.log('Error saving user data:', err));
+          // Send the profile data to your backend, including the Google ID
+          axios.post('/api/auth/google', {
+            email: res.data.email,
+            given_name: res.data.given_name,
+            family_name: res.data.family_name,
+            id: res.data.id // Google ID
+          })
+          .catch(err => console.log('Error saving user data:', err));
         })
         .catch(err => console.log(err));
     }
   }, [user]);
+  
 
   const logOut = () => {
     googleLogout();
