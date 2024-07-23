@@ -10,8 +10,11 @@ router.post('/google', async (req, res) => {
     const emailLogin = false;
 
     try {
+        console.log('Attempting to connect to database...');
         const client = await pool.connect();
+        console.log('Connected to database successfully');
         try {
+            console.log('Executing database query...');
             const result = await client.query(
                 `INSERT INTO users (id, email, firstname, lastname, googlelogin, fblogin, emaillogin)
                  VALUES ($1, $2, $3, $4, $5, $6, $7)
@@ -20,16 +23,18 @@ router.post('/google', async (req, res) => {
                  RETURNING *`,
                 [id, email, given_name, family_name, googleLogin, fbLogin, emailLogin]
             );
-
-            console.log('User inserted/updated:', result.rows[0]);
+            console.log('Query executed successfully. Result:', result.rows[0]);
             res.json(result.rows[0]);
+        } catch (queryError) {
+            console.error('Error executing query:', queryError);
+            res.status(500).json({ error: 'Database query error', details: queryError.message });
         } finally {
             client.release();
+            console.log('Database connection released');
         }
-    } catch (err) {
-        console.error('Error in /google route:', err);
-        res.status(500).json({ error: 'Server error', details: err.message });
+    } catch (connectionError) {
+        console.error('Error connecting to database:', connectionError);
+        res.status(500).json({ error: 'Database connection error', details: connectionError.message });
     }
 });
-
 module.exports = router;

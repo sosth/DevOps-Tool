@@ -1,36 +1,42 @@
-import { GoogleLogin, googleLogout, useGoogleLogin } from '@react-oauth/google';
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import { GoogleLogin, googleLogout, useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 
 function App() {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
 
   const login = useGoogleLogin({
-    onSuccess: codeResponse => setUser(codeResponse),
-    onError: error => console.log('Login Failed:', error),
+    onSuccess: (codeResponse) => setUser(codeResponse),
+    onError: (error) => console.log("Login Failed:", error),
   });
 
   useEffect(() => {
     if (user) {
-      axios.get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`)
-        .then(res => {
+      axios
+        .get(
+          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`
+        )
+        .then((res) => {
           setProfile(res.data);
           // Send the profile data to your backend, including the Google ID
-          axios.post('https://devto-f2687ab8b235.herokuapp.com/api/google', {
+          axios.post('/api/google', {
             email: res.data.email,
             given_name: res.data.given_name,
             family_name: res.data.family_name,
             id: res.data.id // Google ID
           })
-          .then(response => console.log('User data saved:', response.data))
+          .then(response => {
+            console.log('User data saved successfully:', response.data);
+            // Update your app state here
+          })
           .catch(err => {
-  console.log('Error saving user data:', err.response ? err.response.data : err.message);
-  console.log('Full error object:', err);
-});
-        
+            console.error('Error saving user data:', err.response ? err.response.data : err.message);
+            console.error('Full error object:', err);
+            // Show an error message to the user
+          });
         })
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     }
   }, [user]);
 
