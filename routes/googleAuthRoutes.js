@@ -2,7 +2,7 @@ const express = require('express');
 const { pool } = require('../db'); // Assume you have a centralized db.js file
 const router = express.Router();
 
-router.post('/google', async (req, res) => {
+router.post('/', async (req, res) => {
     console.log('Received Google login request:', req.body);
     const { email, given_name, family_name, id } = req.body;
     const googleLogin = true;
