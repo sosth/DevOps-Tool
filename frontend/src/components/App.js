@@ -20,7 +20,7 @@ function App() {
         .then((res) => {
           setProfile(res.data);
           // Send the profile data to your backend, including the Google ID
-          axios.post('/api/google', {
+          axios.post('https://devto-f2687ab8b235.herokuapp.com/api/google', {
             email: res.data.email,
             given_name: res.data.given_name,
             family_name: res.data.family_name,
