@@ -35,7 +35,7 @@ const client = new Client({
 });
 
 client.connect();
-
+app.locals.dbClient = client;
 // Routes
 app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 app.use('/api/google', googleAuthRoutes);
