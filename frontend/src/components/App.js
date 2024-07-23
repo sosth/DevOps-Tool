@@ -20,7 +20,7 @@ function App() {
         .then((res) => {
           setProfile(res.data);
           // Send the profile data to your backend, including the Google ID
-          axios.post('https://devto-f2687ab8b235.herokuapp.com/api/google', {
+          axios.post('https://devto-f2687ab8b235.herokuapp.com/api/google', { // Ensure this URL matches your backend URL
             email: res.data.email,
             given_name: res.data.given_name,
             family_name: res.data.family_name,
@@ -28,12 +28,12 @@ function App() {
           })
           .then(response => {
             console.log('User data saved successfully:', response.data);
-            // Update your app state here
+            // Update your app state here if needed
           })
           .catch(err => {
             console.error('Error saving user data:', err.response ? err.response.data : err.message);
             console.error('Full error object:', err);
-            // Show an error message to the user
+            // Show an error message to the user if needed
           });
         })
         .catch((err) => console.log(err));
