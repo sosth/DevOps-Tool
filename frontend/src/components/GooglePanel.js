@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { GoogleLogin, GoogleLogout } from '@react-oauth/google';
 import { useNavigate } from 'react-router-dom';
 
 const GooglePanel = (props) => {
