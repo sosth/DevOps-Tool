@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import illustration from '../images/dev.PNG'; // Make sure this path is correct
+import illustration from './images/dev.PNG'; // Make sure this path is correct
 
 const HomePage = ({ login, isLoggedIn }) => {
   const navigate = useNavigate();
