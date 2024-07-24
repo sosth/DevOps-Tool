@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GoogleLogin } from '@react-oauth/google';
+import { GoogleLogin } from 'react-google-login';
 
 const GoogleLoginComponent = () => {
   const [loginData, setLoginData] = useState(null);

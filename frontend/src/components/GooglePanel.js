@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GoogleLogin, GoogleLogout } from '@react-oauth/google';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
 
 const GooglePanel = (props) => {
@@ -10,31 +10,29 @@ const GooglePanel = (props) => {
         const idToken = googleUser.getAuthResponse().id_token;
         const googleEmail = googleUser.profileObj.email;
     
-        fetch('/api/google', {
+        console.log('The id_token is ' + idToken);
+    
+        // Send the token to your backend
+        fetch('/api/google/login', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-              email: googleUser.profileObj.email,
-              given_name: googleUser.profileObj.givenName,
-              family_name: googleUser.profileObj.familyName,
-              id: googleUser.profileObj.googleId
-            }),
-          })
-          .then(response => response.json())
-          .then(data => {
-            if (data.email) {  // Check for a property that should exist in the user object
-              console.log('Backend authentication successful:', data);
-              localStorage.setItem('idToken', idToken);
-              localStorage.setItem('googleEmail', data.email);
-              setUserData(data);
-              navigate(props.onLogin);
+            body: JSON.stringify({ token: idToken }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log('Backend authentication successful:', data.userId);
+                localStorage.setItem('idToken', idToken);
+                localStorage.setItem('googleEmail', googleEmail);
+                setUserData(googleUser);
+                navigate(props.onLogin);
             } else {
-              console.error('Backend authentication failed');
-              handleLoginFailure(new Error('Backend authentication failed'));
+                console.error('Backend authentication failed');
+                handleLoginFailure(new Error('Backend authentication failed'));
             }
-          })
+        })
         .catch(error => {
             console.error('Error during backend authentication:', error);
             handleLoginFailure(error);
