@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { googleLogout } from '@react-oauth/google';
+import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import HomePage from './components/HomePage';
 
 function App() {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
+
+  const login = useGoogleLogin({
+    onSuccess: (codeResponse) => setUser(codeResponse),
+    onError: (error) => console.log('Login Failed:', error)
+  });
 
   useEffect(() => {
     if (user) {
@@ -25,20 +30,59 @@ function App() {
   }, [user]);
 
   const sendTokenToBackend = (token) => {
-    // Your backend authentication logic here
+    fetch('/api/google/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token: token }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          console.log('Backend authentication successful:', data.userId);
+        } else {
+          console.error('Backend authentication failed');
+        }
+      })
+      .catch(error => {
+        console.error('Error during backend authentication:', error);
+      });
   };
 
   const logOut = () => {
     googleLogout();
     setProfile(null);
     setUser(null);
-    // Your backend logout logic here
+    fetch('/api/google/logout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          console.log('Backend logout successful');
+        } else {
+          console.error('Backend logout failed');
+        }
+      })
+      .catch(error => {
+        console.error('Error during backend logout:', error);
+      });
   };
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={
+          profile ? (
+            <Navigate to="/dashboard" />
+          ) : (
+            <HomePage login={login} />
+          )
+        } />
         <Route path="/dashboard" element={
           profile ? (
             <div>
