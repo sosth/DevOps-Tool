@@ -1,11 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useGoogleLogin } from '@react-oauth/google';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+    const navigate = useNavigate();
+
+    const login = useGoogleLogin({
+        onSuccess: (codeResponse) => {
+            console.log('Login Success:', codeResponse);
+            navigate('/dashboard');
+        },
+        onError: (error) => console.log('Login Failed:', error)
+    });
+
     return (
         <div>
             <h1>Welcome to Our App</h1>
-            <Link to="/login">Login with Google</Link>
+            <button onClick={() => login()}>Sign in with Google 🚀</button>
         </div>
     );
 };
