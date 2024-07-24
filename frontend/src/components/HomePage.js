@@ -8,7 +8,9 @@ const HomePage = ({ login }) => {
       <header className="w-full flex justify-between items-center px-8 py-4">
         <h1 className="text-2xl font-bold">DEVO<span className="text-yellow-500">SPACE</span></h1>
         <div>
-        <button className="bg-yellow-500 font-bold text-black px-4 py-2 rounded">Login</button>
+        <button onClick={login} className="bg-yellow-500 font-bold text-black px-4 py-2 rounded">
+            Login
+          </button>
         </div>
       </header>
       <main className="flex-grow flex items-center px-8 py-12">
@@ -25,6 +27,9 @@ const HomePage = ({ login }) => {
             automation, integration, and continuous delivery for
             Salesforce.
           </p>
+          <button onClick={login} className="bg-yellow-500 text-black px-6 py-3 rounded-full text-lg font-semibold flex items-center">
+            Get Started Now <FaArrowRight className="ml-2" />
+          </button>
         </div>
         <div className="w-1/2">
           <img src={illustration} alt="DevOps illustration" className="w-full max-w-md ml-auto"/>
