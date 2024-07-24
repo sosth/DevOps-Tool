@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import HomePage from './components/HomePage';
-import Dashboard from './components/Dashboard';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -80,7 +79,19 @@ function App() {
         <Route path="/" element={<HomePage login={login} isLoggedIn={!!profile} />} />
         <Route path="/dashboard" element={
           profile ? (
-            <Dashboard profile={profile} logOut={logOut} />
+            <div>
+              <h2>Welcome to Your Dashboard</h2>
+              <img src={profile.picture} alt="user profile" />
+              <h3>Welcome, {profile.name}</h3>
+              <p>Email: {profile.email}</p>
+              <p>ID: {profile.id}</p>
+              <p>First Name: {profile.given_name}</p>
+              <p>Last Name: {profile.family_name}</p>
+              <p>Locale: {profile.locale}</p>
+              <p>Verified: {profile.verified_email ? "Yes" : "No"}</p>
+              <p>Domain: {profile.hd}</p>
+              <button onClick={logOut}>Logout</button>
+            </div>
           ) : (
             <Navigate to="/" />
           )
