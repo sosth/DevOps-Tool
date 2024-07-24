@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import App from './App';
+import './tailwind.css';
 
 ReactDOM.render(
     <GoogleOAuthProvider clientId="1089760997462-176kp1tfghagho1rp91ir4t1bbn2ucrf.apps.googleusercontent.com">
