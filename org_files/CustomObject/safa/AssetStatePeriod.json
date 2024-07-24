@@ -1,0 +1,106 @@
+{
+  "fullName": "AssetStatePeriod",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "Amount"
+    },
+    {
+      "fullName": "AssetId",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "EndDate"
+    },
+    {
+      "fullName": "Mrr"
+    },
+    {
+      "fullName": "Quantity"
+    },
+    {
+      "fullName": "StartDate"
+    }
+  ],
+  "label": "Asset State Period",
+  "listViews": {
+    "fullName": "AssetStatePeriod",
+    "filterScope": "Everything",
+    "label": "All"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Asset",
+      "StartDate",
+      "EndDate",
+      "Quantity",
+      "Amount",
+      "Mrr"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Asset",
+      "StartDate",
+      "EndDate",
+      "Quantity",
+      "Amount",
+      "Mrr"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Asset",
+      "StartDate",
+      "EndDate",
+      "Quantity",
+      "Amount",
+      "Mrr"
+    ],
+    "searchResultsAdditionalFields": [
+      "Asset",
+      "StartDate",
+      "EndDate",
+      "Quantity",
+      "Amount",
+      "Mrr"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

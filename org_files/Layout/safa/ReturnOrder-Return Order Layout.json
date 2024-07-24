@@ -1,0 +1,131 @@
+{
+  "fullName": "ReturnOrder-Return Order Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "ReturnOrderNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CaseId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AccountId"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "ReturnedById"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Status"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ContactId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "OwnerId"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Shipping Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "SourceLocationId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ShipmentType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ExpectedArrivalDate"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "DestinationLocationId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ShipFromAddress"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Description",
+      "layoutColumns": {
+        "layoutItems": {
+          "behavior": "Edit",
+          "field": "Description"
+        }
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

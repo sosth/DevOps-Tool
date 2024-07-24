@@ -1,0 +1,271 @@
+{
+  "fullName": "FinanceTransaction",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "inlineHelpText": "Parent account of the reference entity",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AdjustmentAmount",
+      "inlineHelpText": "The adjustment contributing to the transaction's subtotal"
+    },
+    {
+      "fullName": "BaseCurrencyAmount",
+      "inlineHelpText": "Define this value based on any currency conversion needed for the total amount with tax."
+    },
+    {
+      "fullName": "BaseCurrencyBalance",
+      "inlineHelpText": "Define this value based on any currency conversion needed for the resulting balance."
+    },
+    {
+      "fullName": "BaseCurrencyFxDate",
+      "inlineHelpText": "Date used to determine the foreign exchange rate. Define this value to use later when you calculate currency conversions."
+    },
+    {
+      "fullName": "BaseCurrencyFxRate",
+      "inlineHelpText": "Rate of exchange according to the Base Currency FX Date. Define this value to use later when you calculate currency conversions."
+    },
+    {
+      "fullName": "BaseCurrencyIsoCode",
+      "inlineHelpText": "Currency of the country defined for this account. Define this value to use later when you calculate currency conversions."
+    },
+    {
+      "fullName": "ChargeAmount",
+      "inlineHelpText": "The charge contributing to the transaction's subtotal"
+    },
+    {
+      "fullName": "CreationMode",
+      "inlineHelpText": "The process used to create the finance transactions"
+    },
+    {
+      "fullName": "DestinationEntityId",
+      "inlineHelpText": "Target entity for reference entities that have made allocations",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "DueDate",
+      "inlineHelpText": "Date when the invoice is due"
+    },
+    {
+      "fullName": "EffectiveDate",
+      "inlineHelpText": "The date when the financial transaction takes effect"
+    },
+    {
+      "fullName": "EventAction",
+      "inlineHelpText": "The financial action that caused the finance transaction",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "EventType",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "FinanceSystemIntegrationMode",
+      "inlineHelpText": "The type of the external financial system used to recognize the finance transaction."
+    },
+    {
+      "fullName": "FinanceSystemIntegrationStatus"
+    },
+    {
+      "fullName": "FinanceSystemName",
+      "inlineHelpText": "The name of the external financial system used to recognize the finance transaction."
+    },
+    {
+      "fullName": "FinanceSystemTransactionNumber"
+    },
+    {
+      "fullName": "ImpactAmount",
+      "inlineHelpText": "The finance transaction's impact on the customer's finances"
+    },
+    {
+      "fullName": "LegalEntityId",
+      "inlineHelpText": "Legal entity associated with the finance transaction. This is an optional lookup that you can add to associate the finance transaction to GL rules for external ledger processing.",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "OriginalCreditGlAccountName",
+      "inlineHelpText": "The finance transaction's credit GL account name when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalCreditGlAccountNumber",
+      "inlineHelpText": "The finance transaction's credit GL account number when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalDebitGlAccountName",
+      "inlineHelpText": "The finance transaction's debit GL account name when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalDebitGlAccountNumber",
+      "inlineHelpText": "The finance transaction's debit GL account number when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalEventAction",
+      "inlineHelpText": "The finance transaction's event action when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalEventType",
+      "inlineHelpText": "The finance transaction's event type when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalFinanceBookName",
+      "inlineHelpText": "The finance transaction's finance book name when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalFinancePeriodEndDate",
+      "inlineHelpText": "The finance transaction's finance period end date when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalFinancePeriodName",
+      "inlineHelpText": "The finance transaction's finance period name when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalFinancePeriodStartDate",
+      "inlineHelpText": "The finance transaction's finance period start date when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalFinancePeriodStatus",
+      "inlineHelpText": "The finance transaction's finance period status when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalGlRuleName",
+      "inlineHelpText": "The finance transaction's GL rule name when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalGlTreatmentName",
+      "inlineHelpText": "The finance transaction's GL treatment name when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalReferenceEntityType",
+      "inlineHelpText": "The finance transaction's reference entity type when the finance transaction was created."
+    },
+    {
+      "fullName": "OwnerId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentReferenceEntityId",
+      "inlineHelpText": "The parent object of the reference entity",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ReferenceEntityId",
+      "inlineHelpText": "The financial object that was created or updated as a result of a customer action",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ReferenceEntityType",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ResultingBalance",
+      "inlineHelpText": "The balance of your reference entity as a result of the event action"
+    },
+    {
+      "fullName": "SourceEntityId",
+      "inlineHelpText": "Source entity for reference entities that have made allocations",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Subtotal",
+      "inlineHelpText": "Total of the charge amount and adjustment. Doesn't include the tax amount."
+    },
+    {
+      "fullName": "TaxAmount",
+      "inlineHelpText": "The total amount of tax for the change made to your reference entity as a result of the event action"
+    },
+    {
+      "fullName": "TotalAmountWithTax",
+      "inlineHelpText": "The subtotal plus the tax amount"
+    },
+    {
+      "fullName": "TransactionDate",
+      "inlineHelpText": "The date when the finance transaction occurred"
+    }
+  ],
+  "label": "Finance Transaction",
+  "listViews": {
+    "fullName": "mine",
+    "columns": [
+      "Name",
+      "TotalAmountWithTax",
+      "ReferenceEntity",
+      "TransactionDate",
+      "EffectiveDate"
+    ],
+    "filterScope": "Mine",
+    "label": "My Finance Transactions"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Account",
+      "ReferenceEntity",
+      "EventAction",
+      "EventType",
+      "EffectiveDate",
+      "ImpactAmount"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Account",
+      "ReferenceEntity",
+      "EventAction",
+      "EventType",
+      "EffectiveDate",
+      "ImpactAmount"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Account",
+      "ReferenceEntity",
+      "EventAction",
+      "EventType",
+      "EffectiveDate",
+      "ImpactAmount"
+    ],
+    "searchResultsAdditionalFields": [
+      "Account",
+      "ReferenceEntity",
+      "EventAction",
+      "EventType",
+      "EffectiveDate",
+      "ImpactAmount"
+    ]
+  },
+  "sharingModel": "Private"
+}

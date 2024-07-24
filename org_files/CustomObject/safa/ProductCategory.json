@@ -1,0 +1,122 @@
+{
+  "fullName": "ProductCategory",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "CatalogId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsNavigational",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ParentCategoryId",
+      "trackHistory": "false",
+      "type": "Hierarchy"
+    },
+    {
+      "fullName": "SortOrder",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Category",
+  "listViews": [
+    {
+      "fullName": "All_Product_Categories_List_View",
+      "filterScope": "Everything",
+      "label": "All Categories"
+    },
+    {
+      "fullName": "Category_Hierarchy_SM",
+      "columns": "Name",
+      "filterScope": "Everything",
+      "label": "Subscription Management Categories"
+    },
+    {
+      "fullName": "Org_ProductCategory_Hierarchy",
+      "columns": [
+        "Name",
+        "IsNavigational"
+      ],
+      "filterScope": "Everything",
+      "label": "Category Hierarchies"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Catalog",
+      "ParentCategory",
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Catalog",
+      "ParentCategory",
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Catalog",
+      "ParentCategory",
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ],
+    "searchResultsAdditionalFields": [
+      "Catalog",
+      "ParentCategory",
+      "LastModifiedDate",
+      "LastModifiedBy"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

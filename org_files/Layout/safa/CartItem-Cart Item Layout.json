@@ -1,0 +1,187 @@
+{
+  "fullName": "CartItem-Cart Item Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": {
+        "layoutItems": [
+          {
+            "behavior": "Required",
+            "field": "Name"
+          },
+          {
+            "behavior": "Required",
+            "field": "CartId"
+          },
+          {
+            "behavior": "Required",
+            "field": "CartDeliveryGroupId"
+          },
+          {
+            "behavior": "Required",
+            "field": "CreatedDate"
+          },
+          {
+            "behavior": "Required",
+            "field": "Product2Id"
+          },
+          {
+            "behavior": "Required",
+            "field": "LastModifiedDate"
+          },
+          {
+            "behavior": "Required",
+            "field": "ListPrice"
+          },
+          {
+            "behavior": "Required",
+            "field": "Quantity"
+          },
+          {
+            "behavior": "Required",
+            "field": "SalesPrice"
+          },
+          {
+            "behavior": "Required",
+            "field": "Sku"
+          },
+          {
+            "behavior": "Required",
+            "field": "AdjustmentAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "AdjustmentTaxAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalAdjustmentAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalPriceAfterAllAdjustments"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "TotalPromoAdjustmentAmount"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "TotalPromoAdjustmentTaxAmount"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "ItemizedAdjustmentAmount"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "DistributedAdjustmentAmount"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "ItemizedAdjustmentTaxAmount"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "DistributedAdjustmentTaxAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalLineAmount"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "TotalLineTaxAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalListPrice"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalPrice"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalTaxAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "UnitAdjustedPrice"
+          },
+          {
+            "behavior": "Required",
+            "field": "UnitAdjustmentAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalLineNetAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalLineGrossAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "TotalPriceTaxAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "NetUnitPrice"
+          },
+          {
+            "behavior": "Required",
+            "field": "GrossUnitPrice"
+          },
+          {
+            "behavior": "Required",
+            "field": "NetAdjustmentAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "GrossAdjustmentAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "UnitItemAdjustmentAmount"
+          },
+          {
+            "behavior": "Required",
+            "field": "UnitAdjustedPriceWithItemAdj"
+          }
+        ]
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "miniLayout": {
+    "fields": [
+      "TotalLineNetAmount",
+      "TotalLineGrossAmount",
+      "TotalPriceTaxAmount",
+      "NetUnitPrice",
+      "GrossUnitPrice",
+      "NetAdjustmentAmount",
+      "GrossAdjustmentAmount",
+      "UnitItemAdjustmentAmount",
+      "UnitAdjustedPriceWithItemAdj"
+    ]
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

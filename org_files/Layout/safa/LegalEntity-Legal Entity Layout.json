@@ -1,0 +1,52 @@
+{
+  "fullName": "LegalEntity-Legal Entity Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Edit",
+              "field": "LegalEntityAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Status"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "CompanyName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsTopToBottom"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

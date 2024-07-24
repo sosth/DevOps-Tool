@@ -1,0 +1,123 @@
+{
+  "fullName": "ReturnOrderLineItem-Return Order Line Item Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "ReturnOrderLineItemNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Product2Id"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AssetId"
+            },
+            {
+              "behavior": "Required",
+              "field": "QuantityReturned"
+            },
+            {
+              "behavior": "Edit",
+              "field": "QuantityUnitOfMeasure"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "ReturnOrderId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ReasonForReturn"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ProcessingPlan"
+            },
+            {
+              "behavior": "Edit",
+              "field": "RepaymentMethod"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Shipping Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "SourceLocationId"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "DestinationLocationId"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Description",
+      "layoutColumns": {
+        "layoutItems": {
+          "behavior": "Edit",
+          "field": "Description"
+        }
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

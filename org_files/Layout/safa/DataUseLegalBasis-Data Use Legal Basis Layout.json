@@ -1,0 +1,54 @@
+{
+  "fullName": "DataUseLegalBasis-Data Use Legal Basis Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "Source"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": [
+    {
+      "fields": [
+        "Name",
+        "CanDataSubjectOptOut"
+      ],
+      "relatedList": "DataUsePurposeRelatedList"
+    },
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

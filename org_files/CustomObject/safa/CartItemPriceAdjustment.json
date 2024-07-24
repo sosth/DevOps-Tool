@@ -1,0 +1,62 @@
+{
+  "fullName": "CartItemPriceAdjustment",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "AdjustmentAmountScope"
+    },
+    {
+      "fullName": "AdjustmentBasisReferenceId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AdjustmentSource"
+    },
+    {
+      "fullName": "AdjustmentTargetType"
+    },
+    {
+      "fullName": "AdjustmentType"
+    },
+    {
+      "fullName": "AdjustmentValue"
+    },
+    {
+      "fullName": "CartId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CartItemId",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "Description"
+    },
+    {
+      "fullName": "PriceAdjustmentCauseId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Priority"
+    },
+    {
+      "fullName": "TotalAmount"
+    },
+    {
+      "fullName": "TotalGrossAmount"
+    },
+    {
+      "fullName": "TotalNetAmount"
+    },
+    {
+      "fullName": "TotalTax"
+    },
+    {
+      "fullName": "WebCartAdjustmentGroupId",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Cart Item Price Adjustment",
+  "sharingModel": "ControlledByParent"
+}

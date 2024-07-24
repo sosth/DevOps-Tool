@@ -1,0 +1,176 @@
+{
+  "fullName": "InvoiceLine-Invoice Line Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Required",
+              "field": "InvoiceLineStartDate"
+            },
+            {
+              "behavior": "Required",
+              "field": "InvoiceLineEndDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ReferenceEntityItemId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "RelatedLineId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "InvoiceId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ReferenceEntityItemType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ReferenceEntityItemTypeCode"
+            },
+            {
+              "behavior": "Required",
+              "field": "Type"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "InvoiceLineAmountInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "Product2Id"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Quantity"
+            },
+            {
+              "behavior": "Edit",
+              "field": "UnitPrice"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ChargeAmount"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AdjustmentAmount"
+            },
+            {
+              "behavior": "Edit",
+              "field": "TaxAmount"
+            }
+          ]
+        },
+        ""
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "TaxInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "TaxRate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "TaxName"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "TaxEffectiveDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "TaxCode"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "SystemInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "CreatedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "CreatedDate"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedDate"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

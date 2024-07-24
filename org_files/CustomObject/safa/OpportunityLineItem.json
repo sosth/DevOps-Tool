@@ -1,0 +1,80 @@
+{
+  "fullName": "OpportunityLineItem",
+  "actionOverrides": [
+    {
+      "actionName": "AddProduct",
+      "type": "Default"
+    },
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "ChoosePricebook",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "EditAllProduct",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "fields": [
+    {
+      "fullName": "Description"
+    },
+    {
+      "fullName": "Discount"
+    },
+    {
+      "fullName": "ListPrice"
+    },
+    {
+      "fullName": "Name"
+    },
+    {
+      "fullName": "OpportunityId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Product2Id",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ProductCode"
+    },
+    {
+      "fullName": "Quantity"
+    },
+    {
+      "fullName": "ServiceDate"
+    },
+    {
+      "fullName": "Subtotal"
+    },
+    {
+      "fullName": "TotalPrice"
+    },
+    {
+      "fullName": "UnitPrice"
+    }
+  ],
+  "label": "Opportunity Product"
+}

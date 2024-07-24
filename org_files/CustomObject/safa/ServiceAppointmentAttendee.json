@@ -1,0 +1,88 @@
+{
+  "fullName": "ServiceAppointmentAttendee",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AttendeeId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Email",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "HasAttended",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ServiceAppointmentId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Service Appointment Attendee",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Attendee",
+      "ServiceAppointment"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Attendee",
+      "ServiceAppointment"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Attendee",
+      "ServiceAppointment"
+    ],
+    "searchResultsAdditionalFields": [
+      "Attendee",
+      "ServiceAppointment"
+    ]
+  },
+  "sharingModel": "Private"
+}

@@ -1,0 +1,11 @@
+{
+  "fullName": "Opportunity.MainCompetitors__c",
+  "externalId": "false",
+  "label": "Main Competitor(s)",
+  "length": "100",
+  "required": "false",
+  "trackFeedHistory": "false",
+  "trackTrending": "false",
+  "type": "Text",
+  "unique": "false"
+}

@@ -1,0 +1,135 @@
+{
+  "fullName": "Invoice-Invoice Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "DocumentNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "InvoiceNumber"
+            },
+            {
+              "behavior": "Required",
+              "field": "BillingAccountId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ReferenceEntityId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "BillToContactId"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "InvoiceDate"
+            },
+            {
+              "behavior": "Required",
+              "field": "DueDate"
+            },
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "InvoiceAmountInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "TotalChargeAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAdjustmentAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalTaxAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAmountWithTax"
+            }
+          ]
+        },
+        ""
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "SystemInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "CreatedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "CreatedDate"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedDate"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

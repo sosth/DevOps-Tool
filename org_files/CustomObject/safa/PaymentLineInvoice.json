@@ -1,0 +1,94 @@
+{
+  "fullName": "PaymentLineInvoice",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "Amount"
+    },
+    {
+      "fullName": "AppliedDate"
+    },
+    {
+      "fullName": "AssociatedAccountId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AssociatedPaymentLineId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Comments"
+    },
+    {
+      "fullName": "Date"
+    },
+    {
+      "fullName": "EffectiveDate"
+    },
+    {
+      "fullName": "EffectiveImpactAmount"
+    },
+    {
+      "fullName": "HasBeenUnapplied"
+    },
+    {
+      "fullName": "ImpactAmount"
+    },
+    {
+      "fullName": "InvoiceId",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "PaymentBalance"
+    },
+    {
+      "fullName": "PaymentId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Type"
+    },
+    {
+      "fullName": "UnappliedDate"
+    }
+  ],
+  "label": "Payment Line Invoice",
+  "listViews": {
+    "fullName": "PaymentLineInvoice",
+    "filterScope": "Everything",
+    "label": "All"
+  },
+  "sharingModel": "ControlledByParent"
+}

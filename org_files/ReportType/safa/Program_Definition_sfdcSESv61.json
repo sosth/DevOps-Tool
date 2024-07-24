@@ -1,0 +1,11 @@
+{
+  "fullName": "Program_Definition_sfdcSESv61",
+  "baseObject": "",
+  "category": "other",
+  "deployed": "true",
+  "description": "Review your analytics with a program-like structure. See each program task, target day, results, and more directly in a report and dashboard.",
+  "label": "Program Definition Summer '24",
+  "sections": {
+    "masterLabel": "Program Task Definitions"
+  }
+}

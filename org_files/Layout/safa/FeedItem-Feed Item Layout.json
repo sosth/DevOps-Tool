@@ -1,0 +1,9 @@
+{
+  "fullName": "FeedItem-Feed Item Layout",
+  "relatedLists": {
+    "relatedList": "AssignedTopicsRelatedList"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

@@ -1,0 +1,86 @@
+{
+  "fullName": "ContactPointPhone-Contact Point Phone Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "IsPrimary"
+            },
+            {
+              "behavior": "Required",
+              "field": "TelephoneNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AreaCode"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PhoneType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "IsPersonalPhone"
+            },
+            {
+              "behavior": "Edit",
+              "field": "IsSmsCapable"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ParentId"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "ExtensionNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "IsBusinessPhone"
+            },
+            {
+              "behavior": "Edit",
+              "field": "IsFaxCapable"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsTopToBottom"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": [
+    {
+      "fields": [
+        "Name",
+        "ContactPoint",
+        "DataUsePurpose",
+        "PrivacyConsentStatus"
+      ],
+      "relatedList": "ContactPointConsents"
+    },
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

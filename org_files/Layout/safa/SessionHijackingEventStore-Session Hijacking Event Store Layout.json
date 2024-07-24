@@ -1,0 +1,141 @@
+{
+  "fullName": "SessionHijackingEventStore-Session Hijacking Event Store Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "false",
+      "label": "Event Details",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "SessionHijackingEventNumber"
+            },
+            {
+              "behavior": "Required",
+              "field": "EventIdentifier"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Summary"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "EventDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Score"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "false",
+      "label": "Event Data",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "CurrentIp"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CurrentPlatform"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CurrentScreen"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CurrentWindow"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CurrentUserAgent"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SecurityEventData"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "PreviousIp"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PreviousPlatform"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PreviousScreen"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PreviousWindow"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PreviousUserAgent"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "false",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "UserId"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "SourceIp"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": {
+    "fields": [
+      "Name",
+      "Response"
+    ],
+    "relatedList": "RelatedFeedback"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

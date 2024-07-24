@@ -1,0 +1,45 @@
+{
+  "fullName": "AuthorizationFormDataUse-Authorization Form Data Use Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Required",
+              "field": "DataUsePurposeId"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "AuthorizationFormId"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": {
+    "relatedList": "RelatedEntityHistoryList"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

@@ -1,0 +1,64 @@
+{
+  "fullName": "ReturnOrderItemTax-Return Order Item Tax Layout",
+  "layoutSections": [
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Return Order Item Tax Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "ReturnOrderLineItemId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ReturnOrderItemAdjustmentId"
+            },
+            {
+              "behavior": "Required",
+              "field": "Type"
+            },
+            {
+              "behavior": "Required",
+              "field": "TaxEffectiveDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "ReturnOrderId"
+            },
+            {
+              "behavior": "Required",
+              "field": "Amount"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Rate"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

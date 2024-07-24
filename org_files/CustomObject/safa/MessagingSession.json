@@ -1,0 +1,171 @@
+{
+  "fullName": "MessagingSession",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AcceptTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AgentMessageCount"
+    },
+    {
+      "fullName": "CaseId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ChannelKey"
+    },
+    {
+      "fullName": "ChannelName"
+    },
+    {
+      "fullName": "ChannelType"
+    },
+    {
+      "fullName": "ConversationId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "EndTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EndUserAccountId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "EndUserContactId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "EndUserLanguage",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EndUserMessageCount"
+    },
+    {
+      "fullName": "EndedByType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ErrorReason",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LeadId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "MessagingChannelId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "MessagingEndUserId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "OpportunityId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Origin",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PreviewDetails"
+    },
+    {
+      "fullName": "StartTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Messaging Session",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "MessagingChannel",
+      "MessagingEndUser",
+      "Owner",
+      "PlatformType",
+      "Status",
+      "StartTime",
+      "EndTime"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "MessagingChannel",
+      "MessagingEndUser",
+      "Owner",
+      "PlatformType",
+      "Status",
+      "StartTime",
+      "EndTime"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "MessagingChannel",
+      "MessagingEndUser",
+      "Owner",
+      "PlatformType",
+      "Status",
+      "StartTime",
+      "EndTime"
+    ],
+    "searchResultsAdditionalFields": [
+      "MessagingChannel",
+      "MessagingEndUser",
+      "Owner",
+      "PlatformType",
+      "Status",
+      "StartTime",
+      "EndTime"
+    ]
+  },
+  "sharingModel": "ReadWrite"
+}

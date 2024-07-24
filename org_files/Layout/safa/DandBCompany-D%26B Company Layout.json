@@ -1,0 +1,415 @@
+{
+  "fullName": "DandBCompany-D%26B Company Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "DandBDescription",
+      "layoutColumns": {
+        "layoutItems": {
+          "behavior": "Edit",
+          "field": "Description"
+        }
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "DandBPrimary",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Address"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Phone"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CountryAccessCode"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SalesVolume"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CurrencyCode"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PublicIndicator"
+            },
+            {
+              "behavior": "Edit",
+              "field": "StockExchange"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FipsMsaCode"
+            },
+            {
+              "behavior": "Edit",
+              "field": "TradeStyle1"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PrimarySic"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PrimaryNaics"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Longitude"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "URL"
+            },
+            {
+              "behavior": "Edit",
+              "field": "MailingAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Fax"
+            },
+            {
+              "behavior": "Edit",
+              "field": "YearStarted"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SalesVolumeReliability"
+            },
+            {
+              "behavior": "Edit",
+              "field": "LocationStatus"
+            },
+            {
+              "behavior": "Edit",
+              "field": "OutOfBusiness"
+            },
+            {
+              "behavior": "Edit",
+              "field": "StockSymbol"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FipsMsaDesc"
+            },
+            {
+              "behavior": "Required",
+              "field": "DunsNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PrimarySicDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PrimaryNaicsDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Latitude"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "DandBAdditionaClassification",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "SecondSic"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ThirdSic"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FourthSic"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FifthSic"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SixthSic"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SecondNaics"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ThirdNaics"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FourthNaics"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FifthNaics"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SixthNaics"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "SecondSicDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ThirdSicDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FourthSicDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FifthSicDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SixthSicDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SecondNaicsDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ThirdNaicsDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FourthNaicsDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FifthNaicsDesc"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SixthNaicsDesc"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "DandBFirmographic",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "EmployeesTotal"
+            },
+            {
+              "behavior": "Edit",
+              "field": "EmployeesHere"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FamilyMembers"
+            },
+            {
+              "behavior": "Edit",
+              "field": "LegalStatus"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ImportExportAgent"
+            },
+            {
+              "behavior": "Edit",
+              "field": "WomenOwned"
+            },
+            {
+              "behavior": "Edit",
+              "field": "OwnOrRent"
+            },
+            {
+              "behavior": "Edit",
+              "field": "NationalId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "GeoCodeAccuracy"
+            },
+            {
+              "behavior": "Edit",
+              "field": "TradeStyle2"
+            },
+            {
+              "behavior": "Edit",
+              "field": "TradeStyle4"
+            },
+            {
+              "behavior": "Edit",
+              "field": "MarketingSegmentationCluster"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "EmployeesTotalReliability"
+            },
+            {
+              "behavior": "Edit",
+              "field": "EmployeesHereReliability"
+            },
+            {
+              "behavior": "Edit",
+              "field": "GlobalUltimateTotalEmployees"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Subsidiary"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SmallBusiness"
+            },
+            {
+              "behavior": "Edit",
+              "field": "MinorityOwned"
+            },
+            {
+              "behavior": "Edit",
+              "field": "UsTaxId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "NationalIdType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "MarketingPreScreen"
+            },
+            {
+              "behavior": "Edit",
+              "field": "TradeStyle3"
+            },
+            {
+              "behavior": "Edit",
+              "field": "TradeStyle5"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "DandBAdditionalParentCompany",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "GlobalUltimateBusinessName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ParentOrHqBusinessName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "DomesticUltimateBusinessName"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "GlobalUltimateDunsNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ParentOrHqDunsNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "DomesticUltimateDunsNumber"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "miniLayout": {
+    "fields": [
+      "Name",
+      "DunsNumber",
+      "Phone",
+      "Address"
+    ]
+  },
+  "relatedLists": {
+    "fields": [
+      "ACCOUNT.NAME",
+      "ACCOUNT.SITE",
+      "ACCOUNT.ADDRESS1_STATE",
+      "ACCOUNT.PHONE1",
+      "ACCOUNT.TYPE",
+      "CORE.USERS.ALIAS"
+    ],
+    "relatedList": "RelatedAccountList"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

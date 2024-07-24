@@ -1,0 +1,36 @@
+{
+  "fullName": "ShippingConfigurationSet-Shipping Configuration Set Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "TargetRecordId"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "IsDefault"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

@@ -1,0 +1,99 @@
+{
+  "fullName": "Image",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AlternateText",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "CapturedAngle",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ContentDocumentId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ImageClass",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ImageClassObjectType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ImageViewType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsActive",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Title",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Url",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Image",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "LastModifiedBy",
+      "LastModifiedDate"
+    ],
+    "searchResultsAdditionalFields": [
+      "LastModifiedBy",
+      "LastModifiedDate"
+    ]
+  },
+  "sharingModel": "Private"
+}

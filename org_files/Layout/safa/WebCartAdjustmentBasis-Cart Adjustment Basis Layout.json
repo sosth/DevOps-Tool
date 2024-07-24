@@ -1,0 +1,38 @@
+{
+  "fullName": "WebCartAdjustmentBasis-Cart Adjustment Basis Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": {
+        "layoutItems": [
+          {
+            "behavior": "Required",
+            "field": "WebCartId"
+          },
+          {
+            "behavior": "Required",
+            "field": "AdjustmentBasisDetail"
+          },
+          {
+            "behavior": "Required",
+            "field": "AdjustmentBasisReferenceId"
+          }
+        ]
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

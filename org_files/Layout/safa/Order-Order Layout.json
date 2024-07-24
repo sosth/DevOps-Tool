@@ -1,0 +1,183 @@
+{
+  "fullName": "Order-Order Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "true",
+      "label": "Order Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "OwnerId"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "OrderNumber"
+            },
+            {
+              "behavior": "Required",
+              "field": "AccountId"
+            },
+            {
+              "behavior": "Required",
+              "field": "EffectiveDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CustomerAuthorizedById"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CompanyAuthorizedById"
+            },
+            {
+              "behavior": "Edit",
+              "field": "BillingAddress"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "ActivatedById"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "ContractId"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAmount"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Type"
+            },
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ShippingAddress"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "ActivatedDate"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsTopToBottom"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsTopToBottom"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Description Information",
+      "layoutColumns": {
+        "layoutItems": {
+          "behavior": "Edit",
+          "field": "Description"
+        }
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Additional Information",
+      "layoutColumns": [
+        "",
+        ""
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": [
+    {
+      "fields": [
+        "Product2",
+        "ProductCode",
+        "Quantity",
+        "UnitPrice",
+        "TotalPrice",
+        "Description"
+      ],
+      "relatedList": "RelatedOrderItemList"
+    },
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    },
+    {
+      "fields": [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME"
+      ],
+      "relatedList": "RelatedActivityList"
+    },
+    {
+      "fields": [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE"
+      ],
+      "relatedList": "RelatedHistoryList"
+    },
+    {
+      "relatedList": "RelatedNoteList"
+    }
+  ],
+  "relatedObjects": [
+    "ContractId",
+    "AccountId"
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

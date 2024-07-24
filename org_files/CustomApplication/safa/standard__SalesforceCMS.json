@@ -1,0 +1,29 @@
+{
+  "fullName": "standard__SalesforceCMS",
+  "formFactors": "Large",
+  "label": "Salesforce CMS",
+  "navType": "Console",
+  "tabs": [
+    "standard-CmsAuthorHome",
+    "standard-CmsChannel",
+    "standard-CmsWorkspaces",
+    "standard-CmsExperiences"
+  ],
+  "uiType": "Lightning",
+  "workspaceConfig": {
+    "mappings": [
+      {
+        "tab": "standard-CmsAuthorHome"
+      },
+      {
+        "tab": "standard-CmsChannel"
+      },
+      {
+        "tab": "standard-CmsExperiences"
+      },
+      {
+        "tab": "standard-CmsWorkspaces"
+      }
+    ]
+  }
+}

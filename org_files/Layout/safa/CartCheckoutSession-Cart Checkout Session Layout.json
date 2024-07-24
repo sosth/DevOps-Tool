@@ -1,0 +1,42 @@
+{
+  "fullName": "CartCheckoutSession-Cart Checkout Session Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "WebCartId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "IsProcessing"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "State"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

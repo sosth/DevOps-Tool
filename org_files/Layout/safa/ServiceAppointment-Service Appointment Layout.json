@@ -1,0 +1,273 @@
+{
+  "fullName": "ServiceAppointment-Service Appointment Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "General Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "AppointmentNumber"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "AccountId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ContactId"
+            },
+            {
+              "behavior": "Required",
+              "field": "ParentRecordId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Duration"
+            },
+            {
+              "behavior": "Edit",
+              "field": "DurationType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Subject"
+            },
+            {
+              "behavior": "Edit",
+              "field": "WorkTypeId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AdditionalInformation"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Comments"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            },
+            {
+              "behavior": "Required",
+              "field": "EarliestStartTime"
+            },
+            {
+              "behavior": "Required",
+              "field": "DueDate"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "ParentRecordType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Address"
+            },
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "StatusCategory"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AppointmentType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CancellationReason"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Scheduled Times",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "ArrivalWindowStartTime"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ArrivalWindowEndTime"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "SchedStartTime"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SchedEndTime"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Actual Times",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "ActualStartTime"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ActualEndTime"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "ActualDuration"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Contact Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "Phone"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "Email"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "OwnerId"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "CreatedById"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "quickActionList": "",
+  "relatedLists": [
+    {
+      "fields": [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME"
+      ],
+      "relatedList": "RelatedActivityList"
+    },
+    {
+      "fields": [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE"
+      ],
+      "relatedList": "RelatedHistoryList"
+    },
+    {
+      "relatedList": "RelatedNoteList"
+    },
+    {
+      "relatedList": "RelatedFileList"
+    },
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    },
+    {
+      "fields": [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments"
+      ],
+      "relatedList": "RelatedProcessHistoryList"
+    },
+    {
+      "fields": [
+        "ServiceResource",
+        "Event"
+      ],
+      "relatedList": "AssignedResources"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

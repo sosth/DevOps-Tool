@@ -1,0 +1,138 @@
+{
+  "fullName": "CampaignMember-Campaign Member Page Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "true",
+      "label": "Campaign Member Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "CampaignId"
+            },
+            {
+              "behavior": "Required",
+              "field": "ContactId"
+            },
+            {
+              "behavior": "Required",
+              "field": "LeadId"
+            },
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "HasResponded"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "emptySpace": "true"
+            },
+            {
+              "emptySpace": "true"
+            },
+            {
+              "emptySpace": "true"
+            },
+            {
+              "emptySpace": "true"
+            },
+            {
+              "emptySpace": "true"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Detail Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "CompanyOrAccount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "Title"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "Phone"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "Email"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "emptySpace": "true"
+            },
+            {
+              "emptySpace": "true"
+            },
+            {
+              "emptySpace": "true"
+            },
+            {
+              "emptySpace": "true"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsTopToBottom"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

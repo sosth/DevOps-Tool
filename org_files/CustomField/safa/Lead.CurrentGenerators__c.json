@@ -1,0 +1,10 @@
+{
+  "fullName": "Lead.CurrentGenerators__c",
+  "externalId": "false",
+  "label": "Current Generator(s)",
+  "length": "100",
+  "required": "false",
+  "trackFeedHistory": "false",
+  "type": "Text",
+  "unique": "false"
+}

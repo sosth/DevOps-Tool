@@ -1,0 +1,8 @@
+{
+  "fullName": "Account.SLAExpirationDate__c",
+  "externalId": "false",
+  "label": "SLA Expiration Date",
+  "required": "false",
+  "trackFeedHistory": "false",
+  "type": "Date"
+}

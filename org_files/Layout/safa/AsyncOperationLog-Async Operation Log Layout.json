@@ -1,0 +1,89 @@
+{
+  "fullName": "AsyncOperationLog-Async Operation Log Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "AsyncOperationLogInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "AsyncOperationNumber"
+            },
+            {
+              "behavior": "Required",
+              "field": "Type"
+            },
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Error"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Response"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "ExternalReference"
+            },
+            {
+              "behavior": "Edit",
+              "field": "StartedAt"
+            },
+            {
+              "behavior": "Edit",
+              "field": "LastStatusUpdateAt"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FinishedAt"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

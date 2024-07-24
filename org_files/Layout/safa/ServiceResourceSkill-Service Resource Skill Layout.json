@@ -1,0 +1,94 @@
+{
+  "fullName": "ServiceResourceSkill-Service Resource Skill Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": {
+        "layoutItems": [
+          {
+            "behavior": "Readonly",
+            "field": "SkillNumber"
+          },
+          {
+            "behavior": "Required",
+            "field": "ServiceResourceId"
+          },
+          {
+            "behavior": "Required",
+            "field": "SkillId"
+          },
+          {
+            "behavior": "Edit",
+            "field": "SkillLevel"
+          },
+          {
+            "behavior": "Required",
+            "field": "EffectiveStartDate"
+          },
+          {
+            "behavior": "Edit",
+            "field": "EffectiveEndDate"
+          }
+        ]
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": [
+    {
+      "relatedList": "RelatedFileList"
+    },
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    },
+    {
+      "fields": [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments"
+      ],
+      "relatedList": "RelatedProcessHistoryList"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

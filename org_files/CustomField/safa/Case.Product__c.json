@@ -1,0 +1,62 @@
+{
+  "fullName": "Case.Product__c",
+  "externalId": "false",
+  "label": "Product",
+  "required": "false",
+  "trackFeedHistory": "false",
+  "trackHistory": "false",
+  "trackTrending": "false",
+  "type": "Picklist",
+  "valueSet": {
+    "valueSetDefinition": {
+      "sorted": "false",
+      "value": [
+        {
+          "fullName": "GC1040",
+          "default": "false",
+          "label": "GC1040"
+        },
+        {
+          "fullName": "GC1060",
+          "default": "false",
+          "label": "GC1060"
+        },
+        {
+          "fullName": "GC3020",
+          "default": "false",
+          "label": "GC3020"
+        },
+        {
+          "fullName": "GC3040",
+          "default": "false",
+          "label": "GC3040"
+        },
+        {
+          "fullName": "GC3060",
+          "default": "false",
+          "label": "GC3060"
+        },
+        {
+          "fullName": "GC5020",
+          "default": "false",
+          "label": "GC5020"
+        },
+        {
+          "fullName": "GC5040",
+          "default": "false",
+          "label": "GC5040"
+        },
+        {
+          "fullName": "GC5060",
+          "default": "false",
+          "label": "GC5060"
+        },
+        {
+          "fullName": "GC1020",
+          "default": "false",
+          "label": "GC1020"
+        }
+      ]
+    }
+  }
+}

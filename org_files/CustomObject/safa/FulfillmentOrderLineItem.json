@@ -1,0 +1,109 @@
+{
+  "fullName": "FulfillmentOrderLineItem",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "Description"
+    },
+    {
+      "fullName": "EndDate"
+    },
+    {
+      "fullName": "FulfillmentOrderId",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "GrossUnitPrice"
+    },
+    {
+      "fullName": "IsReship"
+    },
+    {
+      "fullName": "OrderItemId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "OriginalQuantity"
+    },
+    {
+      "fullName": "Quantity"
+    },
+    {
+      "fullName": "QuantityUnitOfMeasure"
+    },
+    {
+      "fullName": "RejectReason",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "RejectedQuantity"
+    },
+    {
+      "fullName": "ReshipReason",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ServiceDate"
+    },
+    {
+      "fullName": "TotalAdjustmentAmount"
+    },
+    {
+      "fullName": "TotalAdjustmentAmountWithTax"
+    },
+    {
+      "fullName": "TotalAdjustmentTaxAmount"
+    },
+    {
+      "fullName": "TotalAmount"
+    },
+    {
+      "fullName": "TotalLineAmount"
+    },
+    {
+      "fullName": "TotalLineAmountWithTax"
+    },
+    {
+      "fullName": "TotalLineTaxAmount"
+    },
+    {
+      "fullName": "TotalPrice"
+    },
+    {
+      "fullName": "TotalTaxAmount"
+    },
+    {
+      "fullName": "UnitPrice"
+    }
+  ],
+  "label": "Fulfillment Order Product",
+  "sharingModel": "ControlledByParent"
+}

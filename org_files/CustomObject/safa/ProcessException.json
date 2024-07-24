@@ -1,0 +1,124 @@
+{
+  "fullName": "ProcessException",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AttachedToId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CaseId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Category",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Description"
+    },
+    {
+      "fullName": "ExternalReference"
+    },
+    {
+      "fullName": "Message"
+    },
+    {
+      "fullName": "OwnerId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Priority",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Severity",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Status",
+      "type": "Picklist"
+    }
+  ],
+  "label": "Process Exception",
+  "listViews": {
+    "fullName": "all_process_exceptions",
+    "filterScope": "Everything",
+    "label": "All Process Exceptions"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "CreatedDate",
+      "Status",
+      "Category",
+      "Severity",
+      "Priority",
+      "Owner"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "CreatedDate",
+      "Status",
+      "Category",
+      "Severity",
+      "Priority",
+      "Owner"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "CreatedDate",
+      "Status",
+      "Category",
+      "Severity",
+      "Priority",
+      "Owner"
+    ],
+    "searchResultsAdditionalFields": [
+      "CreatedDate",
+      "Status",
+      "Category",
+      "Severity",
+      "Priority",
+      "Owner"
+    ]
+  },
+  "sharingModel": "Private"
+}

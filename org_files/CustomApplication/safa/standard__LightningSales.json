@@ -1,0 +1,31 @@
+{
+  "fullName": "standard__LightningSales",
+  "formFactors": [
+    "Small",
+    "Medium",
+    "Large"
+  ],
+  "label": "Sales",
+  "navType": "Standard",
+  "tabs": [
+    "standard-home",
+    "standard-WaveHome",
+    "standard-Opportunity",
+    "standard-Lead",
+    "standard-Task",
+    "standard-File",
+    "standard-Account",
+    "standard-Contact",
+    "standard-Campaign",
+    "standard-Dashboard",
+    "standard-report",
+    "standard-Feed",
+    "standard-CollaborationGroup",
+    "standard-Event",
+    "standard-OtherUserProfile",
+    "standard-Case",
+    "standard-Forecasting3"
+  ],
+  "uiType": "Lightning",
+  "utilityBar": "LightningSales_UtilityBar"
+}

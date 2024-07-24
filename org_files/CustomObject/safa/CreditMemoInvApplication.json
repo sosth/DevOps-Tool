@@ -1,0 +1,96 @@
+{
+  "fullName": "CreditMemoInvApplication",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "Amount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AppliedDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "AssociatedLineId",
+      "inlineHelpText": "The application that this credit memo invoice application has unapplied.",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CreditMemoId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Date",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EffectiveDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "HasBeenUnapplied",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ImpactAmount",
+      "inlineHelpText": "Impact on the balance of the credit memo and invoice. Unapplied-type applications have a negative impact, while Applied-type applications have a positive impact."
+    },
+    {
+      "fullName": "InvoiceId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "Type",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "UnappliedDate",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Credit Memo Invoice Application",
+  "searchLayouts": {
+    "searchResultsAdditionalFields": [
+      "Amount",
+      "Type",
+      "AppliedDate",
+      "UnappliedDate"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

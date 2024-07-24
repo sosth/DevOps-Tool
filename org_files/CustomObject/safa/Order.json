@@ -1,0 +1,242 @@
+{
+  "fullName": "Order",
+  "actionOverrides": [
+    {
+      "actionName": "Activate",
+      "type": "Default"
+    },
+    {
+      "actionName": "Approve",
+      "type": "Default"
+    },
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Deactivate",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "NewReduction",
+      "type": "Default"
+    },
+    {
+      "actionName": "ReduceOrder",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AccountNumber"
+    },
+    {
+      "fullName": "ActivatedById",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ActivatedDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "BillToContactId",
+      "trackHistory": "true",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "BillingAddress",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "CompanyAuthorizedById",
+      "trackHistory": "true",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CompanyAuthorizedDate",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "ContractEndDate"
+    },
+    {
+      "fullName": "ContractId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ContractName"
+    },
+    {
+      "fullName": "CustomerAuthorizedById",
+      "trackHistory": "true",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CustomerAuthorizedDate",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "EffectiveDate",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "EndDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsReductionOrder"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "OpportunityId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "OrderReferenceNumber",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "OriginalOrderId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PoDate",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "PoNumber",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "Pricebook2Id",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ShipToContactId",
+      "trackHistory": "true",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ShippingAddress",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "TotalAmount",
+      "trackHistory": "true"
+    },
+    {
+      "fullName": "Type",
+      "trackHistory": "true",
+      "type": "Picklist"
+    }
+  ],
+  "label": "Order",
+  "listViews": [
+    {
+      "fullName": "AllActivatedOrders",
+      "filterScope": "Everything",
+      "filters": {
+        "field": "ORDERS.STATUS_CODE",
+        "operation": "equals",
+        "value": "A"
+      },
+      "label": "All Activated Orders"
+    },
+    {
+      "fullName": "AllDraftOrders",
+      "filterScope": "Everything",
+      "filters": {
+        "field": "ORDERS.STATUS_CODE",
+        "operation": "equals",
+        "value": "D"
+      },
+      "label": "All Draft Orders"
+    },
+    {
+      "fullName": "AllOrders",
+      "filterScope": "Everything",
+      "label": "All Orders"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "ORDERS.ORDER_NUMBER",
+      "SALES.ACCOUNT.NAME",
+      "ORDERS.STATUS",
+      "ORDERS.TOTAL_AMOUNT"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "ORDERS.ORDER_NUMBER",
+      "CONTRACT.OWNERALIAS"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "ORDERS.ORDER_NUMBER",
+      "CONTRACT.OWNERALIAS"
+    ],
+    "searchResultsAdditionalFields": [
+      "ORDERS.ORDER_NUMBER",
+      "SALES.ACCOUNT.NAME",
+      "ORDERS.TOTAL_AMOUNT",
+      "ORDERS.EFFECTIVE_DATE",
+      "ORDERS.STATUS",
+      "CONTRACT.CONTRACT_NUMBER"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

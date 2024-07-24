@@ -1,0 +1,111 @@
+{
+  "fullName": "DigitalWallet",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ReadWrite",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AuditEmail"
+    },
+    {
+      "fullName": "Comments"
+    },
+    {
+      "fullName": "CompanyName"
+    },
+    {
+      "fullName": "Customer"
+    },
+    {
+      "fullName": "Email"
+    },
+    {
+      "fullName": "GatewayToken"
+    },
+    {
+      "fullName": "GatewayTokenDetails"
+    },
+    {
+      "fullName": "GatewayTokenEncrypted"
+    },
+    {
+      "fullName": "IpAddress"
+    },
+    {
+      "fullName": "IsAutoPayEnabled"
+    },
+    {
+      "fullName": "MacAddress"
+    },
+    {
+      "fullName": "NickName"
+    },
+    {
+      "fullName": "PaymentGatewayId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PaymentMethodDetails"
+    },
+    {
+      "fullName": "PaymentMethodSubType"
+    },
+    {
+      "fullName": "PaymentMethodType"
+    },
+    {
+      "fullName": "Phone"
+    },
+    {
+      "fullName": "ProcessingMode"
+    },
+    {
+      "fullName": "Status"
+    }
+  ],
+  "label": "Digital Wallet",
+  "listViews": {
+    "fullName": "DigitalWallet",
+    "filterScope": "Everything",
+    "label": "All"
+  },
+  "sharingModel": "ReadWrite"
+}

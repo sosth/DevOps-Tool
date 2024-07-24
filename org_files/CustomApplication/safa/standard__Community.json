@@ -1,0 +1,14 @@
+{
+  "fullName": "standard__Community",
+  "defaultLandingTab": "standard-home",
+  "formFactors": "Large",
+  "tabs": [
+    "standard-Chatter",
+    "standard-Contact",
+    "standard-Account",
+    "standard-Idea",
+    "standard-IdeaTheme",
+    "standard-report",
+    "standard-Dashboard"
+  ]
+}

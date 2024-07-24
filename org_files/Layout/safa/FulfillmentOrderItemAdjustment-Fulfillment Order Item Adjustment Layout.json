@@ -1,0 +1,69 @@
+{
+  "fullName": "FulfillmentOrderItemAdjustment-Fulfillment Order Item Adjustment Layout",
+  "layoutSections": [
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Fulfillment Order Item Adjustment Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "CouponName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "CampaignName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PromotionName"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Totals",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "TotalTaxAmount"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "Amount"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

@@ -1,0 +1,11 @@
+{
+  "fullName": "Opportunity.TrackingNumber__c",
+  "externalId": "false",
+  "label": "Tracking Number",
+  "length": "12",
+  "required": "false",
+  "trackFeedHistory": "false",
+  "trackTrending": "false",
+  "type": "Text",
+  "unique": "false"
+}

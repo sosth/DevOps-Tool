@@ -1,0 +1,105 @@
+{
+  "fullName": "AppointmentInvitation-Appointment Invitation Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "General Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "OwnerId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "BookingStartDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "BookingEndDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AppointmentTopicId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ServiceTerritoryId"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "InvitationNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "InvitationIdentifier"
+            },
+            {
+              "behavior": "Edit",
+              "field": "InvitationUrl"
+            },
+            {
+              "behavior": "Edit",
+              "field": "UrlExpiryDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "IsActive"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": {
+    "fields": [
+      "Name",
+      "ParticipantServiceResource"
+    ],
+    "relatedList": "AppointmentInvitees"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

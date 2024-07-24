@@ -1,0 +1,67 @@
+{
+  "fullName": "AuthorizationFormConsent-Authorization Form Consent Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AuthorizationFormTextId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ConsentCapturedSourceType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ConsentCapturedDateTime"
+            },
+            {
+              "behavior": "Edit",
+              "field": "DocumentVersionId"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "ConsentGiverId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ConsentCapturedSource"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Status"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": {
+    "relatedList": "RelatedEntityHistoryList"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

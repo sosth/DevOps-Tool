@@ -1,0 +1,82 @@
+{
+  "fullName": "Recommendation",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ReadWrite",
+  "fields": [
+    {
+      "fullName": "AcceptanceLabel"
+    },
+    {
+      "fullName": "ActionReference"
+    },
+    {
+      "fullName": "Description"
+    },
+    {
+      "fullName": "ImageId",
+      "inlineHelpText": "For best results, use a 1000 px x 380 px image at 72 dpi or one with a similar ratio.",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "IsActionActive"
+    },
+    {
+      "fullName": "Name"
+    },
+    {
+      "fullName": "RejectionLabel"
+    }
+  ],
+  "label": "Recommendation",
+  "listViews": {
+    "fullName": "All_Recommendations",
+    "filterScope": "Everything",
+    "label": "All Recommendations"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": "Description",
+    "lookupDialogsAdditionalFields": "Description",
+    "lookupPhoneDialogsAdditionalFields": "Description",
+    "searchResultsAdditionalFields": "Description"
+  },
+  "sharingModel": "ReadWrite"
+}

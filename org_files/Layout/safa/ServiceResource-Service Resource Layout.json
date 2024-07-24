@@ -1,0 +1,168 @@
+{
+  "fullName": "ServiceResource-Service Resource Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Edit",
+              "field": "RelatedRecordId"
+            },
+            {
+              "behavior": "Required",
+              "field": "ResourceType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "IsActive"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "CreatedById"
+            },
+            {
+              "behavior": "Edit",
+              "field": "OwnerId"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": [
+    {
+      "fields": "ServiceAppointment",
+      "relatedList": "ServiceAppointments"
+    },
+    {
+      "fields": [
+        "SkillMasterLabel",
+        "SkillLevel",
+        "EffectiveStartDate",
+        "EffectiveEndDate"
+      ],
+      "relatedList": "ServiceResourceSkills"
+    },
+    {
+      "fields": [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME"
+      ],
+      "relatedList": "RelatedActivityList"
+    },
+    {
+      "fields": [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE"
+      ],
+      "relatedList": "RelatedHistoryList"
+    },
+    {
+      "fields": [
+        "Name",
+        "ServiceTerritory",
+        "TerritoryType",
+        "EffectiveStartDate",
+        "EffectiveEndDate"
+      ],
+      "relatedList": "ServiceTerritoryRelatedList"
+    },
+    {
+      "relatedList": "RelatedNoteList"
+    },
+    {
+      "relatedList": "RelatedFileList"
+    },
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    },
+    {
+      "fields": [
+        "Start",
+        "End",
+        "Type"
+      ],
+      "relatedList": "ResourceAbsences"
+    },
+    {
+      "fields": [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments"
+      ],
+      "relatedList": "RelatedProcessHistoryList"
+    },
+    {
+      "fields": [
+        "Name",
+        "StartTime",
+        "EndTime",
+        "Status",
+        "Label",
+        "Type"
+      ],
+      "relatedList": "ServiceResourceShifts"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

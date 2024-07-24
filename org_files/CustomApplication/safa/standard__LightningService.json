@@ -1,0 +1,54 @@
+{
+  "fullName": "standard__LightningService",
+  "formFactors": [
+    "Small",
+    "Large"
+  ],
+  "label": "Service Console",
+  "navType": "Console",
+  "setupExperience": "service",
+  "tabs": [
+    "standard-Case",
+    "standard-Contact",
+    "standard-Account",
+    "standard-report",
+    "standard-Dashboard",
+    "standard-home",
+    "standard-Incident",
+    "standard-Problem",
+    "standard-ChangeRequest"
+  ],
+  "uiType": "Lightning",
+  "utilityBar": "LightningService_UtilityBar",
+  "workspaceConfig": {
+    "mappings": [
+      {
+        "tab": "standard-Account"
+      },
+      {
+        "tab": "standard-Case"
+      },
+      {
+        "tab": "standard-ChangeRequest"
+      },
+      {
+        "tab": "standard-Contact"
+      },
+      {
+        "tab": "standard-Dashboard"
+      },
+      {
+        "tab": "standard-Incident"
+      },
+      {
+        "tab": "standard-Problem"
+      },
+      {
+        "tab": "standard-home"
+      },
+      {
+        "tab": "standard-report"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "fullName": "CartTax-Cart Tax Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "CartItemId"
+            },
+            {
+              "behavior": "Required",
+              "field": "CartId"
+            },
+            {
+              "behavior": "Required",
+              "field": "CreatedDate"
+            },
+            {
+              "behavior": "Required",
+              "field": "CartItemPriceAdjustmentId"
+            },
+            {
+              "behavior": "Required",
+              "field": "TaxType"
+            },
+            {
+              "behavior": "Required",
+              "field": "TaxCalculationDate"
+            },
+            {
+              "behavior": "Required",
+              "field": "Amount"
+            },
+            {
+              "behavior": "Required",
+              "field": "TaxRate"
+            },
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Required",
+              "field": "Description"
+            }
+          ]
+        },
+        ""
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "miniLayout": {
+    "fields": [
+      "CartItemId",
+      "CartId",
+      "CreatedDate",
+      "CartItemPriceAdjustmentId",
+      "TaxType",
+      "TaxCalculationDate",
+      "Amount",
+      "TaxRate",
+      "Name",
+      "Description"
+    ]
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

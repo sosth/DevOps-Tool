@@ -1,0 +1,75 @@
+{
+  "fullName": "ProblemRelatedItem",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "AssetId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Comment",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ImpactLevel",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ImpactType",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ProblemId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    }
+  ],
+  "label": "Problem Related Item",
+  "sharingModel": "ControlledByParent"
+}

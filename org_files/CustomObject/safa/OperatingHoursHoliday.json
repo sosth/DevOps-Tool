@@ -1,0 +1,77 @@
+{
+  "fullName": "OperatingHoursHoliday",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "DateAndTime"
+    },
+    {
+      "fullName": "HolidayId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "OperatingHoursId",
+      "type": "MasterDetail"
+    }
+  ],
+  "label": "Operating Hours Holiday",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Holiday",
+      "OperatingHours"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Holiday",
+      "OperatingHours"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Holiday",
+      "OperatingHours"
+    ],
+    "searchResultsAdditionalFields": [
+      "Holiday",
+      "OperatingHours"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

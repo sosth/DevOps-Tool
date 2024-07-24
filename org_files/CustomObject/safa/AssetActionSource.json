@@ -1,0 +1,100 @@
+{
+  "fullName": "AssetActionSource",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "ActualTax"
+    },
+    {
+      "fullName": "AdjustmentAmount"
+    },
+    {
+      "fullName": "AssetActionId",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "EndDate"
+    },
+    {
+      "fullName": "EstimatedTax"
+    },
+    {
+      "fullName": "ExternalReference"
+    },
+    {
+      "fullName": "ExternalReferenceDataSource"
+    },
+    {
+      "fullName": "ProductAmount"
+    },
+    {
+      "fullName": "Quantity"
+    },
+    {
+      "fullName": "ReferenceEntityItemId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "StartDate"
+    },
+    {
+      "fullName": "Subtotal"
+    },
+    {
+      "fullName": "TransactionDate"
+    }
+  ],
+  "label": "Asset Action Source",
+  "listViews": {
+    "fullName": "AssetActionSource",
+    "filterScope": "Everything",
+    "label": "All"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": "AssetAction",
+    "lookupDialogsAdditionalFields": "AssetAction",
+    "lookupPhoneDialogsAdditionalFields": "AssetAction",
+    "searchResultsAdditionalFields": "AssetAction"
+  },
+  "sharingModel": "ControlledByParent"
+}

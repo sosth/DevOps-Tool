@@ -1,0 +1,9 @@
+{
+  "fullName": "CollaborationGroupMember",
+  "actionOverrides": {
+    "actionName": "Delete",
+    "type": "Default"
+  },
+  "enableFeeds": "false",
+  "label": "Group Member"
+}

@@ -1,0 +1,124 @@
+{
+  "fullName": "FulfillmentOrderLineItem-Fulfillment Order Product Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "FulfillmentOrderLineItemInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "OrderItemId"
+            },
+            {
+              "behavior": "Required",
+              "field": "Quantity"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "OriginalQuantity"
+            },
+            {
+              "behavior": "Edit",
+              "field": "QuantityUnitOfMeasure"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Totals",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "UnitPrice"
+            },
+            {
+              "behavior": "Edit",
+              "field": "TotalLineAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAdjustmentAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalPrice"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "TotalLineTaxAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAdjustmentTaxAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalTaxAmount"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "TotalsWithTax",
+      "layoutColumns": {
+        "layoutItems": [
+          {
+            "behavior": "Edit",
+            "field": "GrossUnitPrice"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "TotalLineAmountWithTax"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "TotalAdjustmentAmountWithTax"
+          },
+          {
+            "behavior": "Readonly",
+            "field": "TotalAmount"
+          }
+        ]
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

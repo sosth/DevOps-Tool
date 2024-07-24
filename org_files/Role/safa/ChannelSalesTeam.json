@@ -1,0 +1,10 @@
+{
+  "fullName": "ChannelSalesTeam",
+  "caseAccessLevel": "Edit",
+  "contactAccessLevel": "Edit",
+  "description": "Channel Sales Team",
+  "mayForecastManagerShare": "false",
+  "name": "Channel Sales Team",
+  "opportunityAccessLevel": "Edit",
+  "parentRole": "DirectorChannelSales"
+}

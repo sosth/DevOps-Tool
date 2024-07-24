@@ -1,0 +1,128 @@
+{
+  "fullName": "CampaignMember",
+  "actionOverrides": [
+    {
+      "actionName": "AddCampaign",
+      "type": "Default"
+    },
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "ConvertLead",
+      "type": "Default"
+    },
+    {
+      "actionName": "CreateOpportunity",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "fields": [
+    {
+      "fullName": "CampaignId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "City"
+    },
+    {
+      "fullName": "CompanyOrAccount"
+    },
+    {
+      "fullName": "ContactId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Country"
+    },
+    {
+      "fullName": "Description"
+    },
+    {
+      "fullName": "DoNotCall"
+    },
+    {
+      "fullName": "Email"
+    },
+    {
+      "fullName": "Fax"
+    },
+    {
+      "fullName": "FirstName"
+    },
+    {
+      "fullName": "FirstRespondedDate"
+    },
+    {
+      "fullName": "HasOptedOutOfEmail"
+    },
+    {
+      "fullName": "HasOptedOutOfFax"
+    },
+    {
+      "fullName": "HasResponded"
+    },
+    {
+      "fullName": "LastName"
+    },
+    {
+      "fullName": "LeadId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "LeadSource",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "MobilePhone"
+    },
+    {
+      "fullName": "Phone"
+    },
+    {
+      "fullName": "PostalCode"
+    },
+    {
+      "fullName": "Salutation",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "State"
+    },
+    {
+      "fullName": "Status",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Street"
+    },
+    {
+      "fullName": "Title"
+    }
+  ],
+  "label": "Campaign Member",
+  "sharingModel": "ControlledByCampaign"
+}

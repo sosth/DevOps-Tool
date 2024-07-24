@@ -1,0 +1,49 @@
+{
+  "fullName": "CartDeliveryGroupMethod",
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "AdjustedShippingFee"
+    },
+    {
+      "fullName": "Carrier",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "CartCheckoutSessionId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CartDeliveryGroupId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ClassOfService",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "IsActive"
+    },
+    {
+      "fullName": "ProductId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ReferenceNumber"
+    },
+    {
+      "fullName": "ShippingFee"
+    },
+    {
+      "fullName": "TotalAdjustmentAmount"
+    },
+    {
+      "fullName": "WebCartId",
+      "type": "MasterDetail"
+    }
+  ],
+  "label": "Cart Delivery Group Method",
+  "sharingModel": "ControlledByParent"
+}

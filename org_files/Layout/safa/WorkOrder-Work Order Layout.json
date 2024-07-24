@@ -1,0 +1,230 @@
+{
+  "fullName": "WorkOrder-Work Order Layout",
+  "excludeButtons": "Submit",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "WorkOrderNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Status"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ParentWorkOrderId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AccountId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CaseId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ServiceContractId"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "OwnerId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Priority"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ContactId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AssetId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "EntitlementId"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Description",
+      "layoutColumns": {
+        "layoutItems": [
+          {
+            "behavior": "Edit",
+            "field": "Subject"
+          },
+          {
+            "behavior": "Edit",
+            "field": "Description"
+          }
+        ]
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "miniLayout": {
+    "fields": [
+      "WorkOrderNumber",
+      "Subject",
+      "AccountId",
+      "Priority",
+      "Status"
+    ]
+  },
+  "relatedLists": [
+    {
+      "fields": [
+        "Name",
+        "ExecutionOrder"
+      ],
+      "relatedList": "NewWorkPlans"
+    },
+    {
+      "fields": [
+        "Name",
+        "Status",
+        "ExecutionOrder"
+      ],
+      "relatedList": "NewWorkSteps"
+    },
+    {
+      "fields": [
+        "Name",
+        "ExecutionOrder",
+        "WorkOrderLineItem"
+      ],
+      "relatedList": "WorkPlans"
+    },
+    {
+      "fields": [
+        "Name",
+        "Status",
+        "ExecutionOrder"
+      ],
+      "relatedList": "WorkSteps"
+    },
+    {
+      "fields": [
+        "Name",
+        "Asset"
+      ],
+      "relatedList": "WorkOrderLineItems"
+    },
+    {
+      "fields": [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "TASK.STATUS",
+        "TASK.PRIORITY",
+        "CORE.USERS.FULL_NAME"
+      ],
+      "relatedList": "RelatedActivityList"
+    },
+    {
+      "fields": [
+        "TASK.SUBJECT",
+        "TASK.WHO_NAME",
+        "ACTIVITY.TASK",
+        "TASK.DUE_DATE",
+        "CORE.USERS.FULL_NAME",
+        "TASK.LAST_UPDATE"
+      ],
+      "relatedList": "RelatedHistoryList"
+    },
+    {
+      "relatedList": "RelatedNoteList"
+    },
+    {
+      "relatedList": "RelatedFileList"
+    },
+    {
+      "fields": [
+        "Name",
+        "Subject",
+        "Account",
+        "Priority",
+        "Status"
+      ],
+      "relatedList": "ChildWorkOrders"
+    },
+    {
+      "fields": [
+        "Name",
+        "Contact",
+        "Account",
+        "Status",
+        "SchedStartTime",
+        "SchedEndTime",
+        "EarliestStartTime"
+      ],
+      "relatedList": "ServiceAppointments"
+    },
+    {
+      "fields": [
+        "Skill",
+        "SkillLevel"
+      ],
+      "relatedList": "SkillRequirements"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showHighlightsPanel": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

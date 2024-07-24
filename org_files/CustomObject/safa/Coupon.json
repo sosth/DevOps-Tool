@@ -1,0 +1,122 @@
+{
+  "fullName": "Coupon",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "CouponCode",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EndDateTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "PromotionId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "RedemptionLimitAllBuyers",
+      "inlineHelpText": "Number of times this coupon can be used in total.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "RedemptionLimitPerBuyer",
+      "inlineHelpText": "Number of times this coupon can be used per customer.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "StartDateTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Coupon",
+  "listViews": {
+    "fullName": "ALL_Coupons",
+    "filterScope": "Everything",
+    "label": "All Coupons"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "CouponCode",
+      "Description",
+      "Promotion",
+      "Status",
+      "StartDateTime",
+      "EndDateTime"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "CouponCode",
+      "Description",
+      "Promotion",
+      "Status",
+      "StartDateTime",
+      "EndDateTime"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "CouponCode",
+      "Description",
+      "Promotion",
+      "Status",
+      "StartDateTime",
+      "EndDateTime"
+    ],
+    "searchResultsAdditionalFields": [
+      "CouponCode",
+      "Description",
+      "Promotion",
+      "Status",
+      "StartDateTime",
+      "EndDateTime"
+    ]
+  },
+  "sharingModel": "Private"
+}

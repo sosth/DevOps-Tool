@@ -1,0 +1,19 @@
+{
+  "fullName": "FeedItem",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "EditTopics",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    }
+  ],
+  "enableFeeds": "false",
+  "label": "Feed Item"
+}

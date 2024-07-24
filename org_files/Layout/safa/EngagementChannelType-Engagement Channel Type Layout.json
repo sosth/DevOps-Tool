@@ -1,0 +1,65 @@
+{
+  "fullName": "EngagementChannelType-Engagement Channel Type Layout",
+  "excludeButtons": "Submit",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ContactPointType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "IsActive"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "OwnerId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "UsageType"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsTopToBottom"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": {
+    "fields": [
+      "Name",
+      "Shift"
+    ],
+    "relatedList": "ShiftEngagementChannels"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

@@ -1,0 +1,218 @@
+{
+  "fullName": "WebCart-Cart Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "TotalProductLineItemCount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalLineItemsWithErrors"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAdjustmentAmount"
+            },
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Edit",
+              "field": "LastModifiedDate"
+            },
+            {
+              "behavior": "Required",
+              "field": "WebStoreId"
+            },
+            {
+              "behavior": "Required",
+              "field": "PoNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CreatedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalProductCount"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "OwnerId"
+            },
+            {
+              "behavior": "Required",
+              "field": "AccountId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "BillingAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CreatedDate"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "UniqueProductCount"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "AdditionalInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TaxLocaleType"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Type"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "IsSecondary"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "PaymentInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "PaymentMethodId"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "IsRepricingNeeded"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "LastRepricingDate"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "PaymentGroupId"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "CostInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "TotalListAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalProductAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalProductTaxAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "GrandTotalAmount"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "TotalChargeAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalChargeTaxAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalTaxAmount"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "miniLayout": {
+    "fields": [
+      "TotalProductLineItemCount",
+      "TotalLineItemsWithErrors",
+      "TotalAdjustmentAmount"
+    ]
+  },
+  "relatedLists": {
+    "fields": [
+      "Name",
+      "Product2",
+      "Quantity",
+      "SalesPrice",
+      "CreatedDate"
+    ],
+    "relatedList": "CartItems"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

@@ -1,0 +1,223 @@
+{
+  "fullName": "ReturnOrder",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CaseId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ContactId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "DestinationLocationId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ExpectedArrivalDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ExpirationDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "GrandTotalAmount"
+    },
+    {
+      "fullName": "LifeCycleType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OrderId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ReturnedById",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ShipFromAddress",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ShipmentType",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "SourceLocationId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StatusCategory",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TaxLocaleType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalDeliveryAdjustAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalDeliveryAdjustAmtWithTax"
+    },
+    {
+      "fullName": "TotalDeliveryAdjustTaxAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalDeliveryAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalDeliveryAmtWithTax"
+    },
+    {
+      "fullName": "TotalDeliveryTaxAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalProductAdjustAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalProductAdjustAmtWithTax"
+    },
+    {
+      "fullName": "TotalProductAdjustTaxAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalProductAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalProductAmtWithTax"
+    },
+    {
+      "fullName": "TotalProductTaxAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TotalTaxAmount",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Return Order",
+  "listViews": [
+    {
+      "fullName": "All_ReturnOrders",
+      "filterScope": "Everything",
+      "label": "All Return Orders"
+    },
+    {
+      "fullName": "My_ReturnOrders",
+      "filterScope": "Mine",
+      "label": "My Return Orders"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Account",
+      "Contact",
+      "Case",
+      "SourceLocation",
+      "ReturnedBy"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Account",
+      "Contact",
+      "Case",
+      "SourceLocation",
+      "ReturnedBy"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Account",
+      "Contact",
+      "Case",
+      "SourceLocation",
+      "ReturnedBy"
+    ],
+    "searchResultsAdditionalFields": [
+      "Account",
+      "Contact",
+      "Case",
+      "SourceLocation",
+      "ReturnedBy"
+    ]
+  },
+  "sharingModel": "Private"
+}

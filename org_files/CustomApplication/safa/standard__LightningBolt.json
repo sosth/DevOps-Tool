@@ -1,0 +1,8 @@
+{
+  "fullName": "standard__LightningBolt",
+  "formFactors": "Large",
+  "label": "LightningBolt",
+  "navType": "Standard",
+  "tabs": "standard-LightningBoltHome",
+  "uiType": "Lightning"
+}

@@ -1,0 +1,12 @@
+{
+  "fullName": "standard__FlowsApp",
+  "formFactors": "Large",
+  "label": "FlowsApp",
+  "navType": "Standard",
+  "tabs": [
+    "standard-home",
+    "standard-FlowRecord"
+  ],
+  "uiType": "Lightning",
+  "utilityBar": "FlowsApp_UtilityBar"
+}

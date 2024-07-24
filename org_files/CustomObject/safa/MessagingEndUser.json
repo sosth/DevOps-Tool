@@ -1,0 +1,154 @@
+{
+  "fullName": "MessagingEndUser",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ContactId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "HasInitialResponseSent",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsFullyOptedIn"
+    },
+    {
+      "fullName": "LeadId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Locale",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "MessageType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "MessagingChannelId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "MessagingConsentStatus",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "MessagingPlatformKey",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ProfilePictureUrl",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Messaging User",
+  "listViews": {
+    "fullName": "BulkMessageMessagingEndUsers",
+    "columns": [
+      "Name",
+      "Account",
+      "MessagingPlatformKey",
+      "CONTACT.LAST_ACTIVITY",
+      "MessagingChannel",
+      "MessageType",
+      "IsFullyOptedIn"
+    ],
+    "filterScope": "Everything",
+    "filters": [
+      {
+        "field": "MessageType",
+        "operation": "equals",
+        "value": "0"
+      },
+      {
+        "field": "IsFullyOptedIn",
+        "operation": "equals",
+        "value": "1"
+      }
+    ],
+    "label": "Bulk_SMS_Messaging_End_Users"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "MessagingPlatformKey",
+      "MessagingChannel",
+      "MessageType",
+      "Locale",
+      "MessagingConsentStatus"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "MessagingPlatformKey",
+      "MessagingChannel",
+      "MessageType",
+      "Locale",
+      "MessagingConsentStatus"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "MessagingPlatformKey",
+      "MessagingChannel",
+      "MessageType",
+      "Locale",
+      "MessagingConsentStatus",
+      "CONTACT.PHONE3",
+      "CONTACT.PHONE5"
+    ],
+    "searchResultsAdditionalFields": [
+      "MessagingPlatformKey",
+      "MessagingChannel",
+      "MessageType",
+      "Locale",
+      "MessagingConsentStatus"
+    ]
+  },
+  "sharingModel": "ReadWrite"
+}

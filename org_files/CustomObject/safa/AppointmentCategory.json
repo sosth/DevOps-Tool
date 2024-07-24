@@ -1,0 +1,90 @@
+{
+  "fullName": "AppointmentCategory",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ReadWrite",
+  "fields": [
+    {
+      "fullName": "IsDropIn",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsGroup",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsScheduled",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Appointment Category",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "LastModifiedBy",
+      "LastModifiedDate",
+      "IsScheduled",
+      "IsDropIn"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "LastModifiedBy",
+      "LastModifiedDate",
+      "IsScheduled",
+      "IsDropIn"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "LastModifiedBy",
+      "LastModifiedDate",
+      "IsScheduled",
+      "IsDropIn"
+    ],
+    "searchResultsAdditionalFields": [
+      "LastModifiedBy",
+      "LastModifiedDate",
+      "IsScheduled",
+      "IsDropIn"
+    ]
+  },
+  "sharingModel": "ReadWrite"
+}

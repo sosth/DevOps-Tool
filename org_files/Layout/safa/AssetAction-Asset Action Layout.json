@@ -1,0 +1,124 @@
+{
+  "fullName": "AssetAction-Asset Action Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "CategoryEnum"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "AssetActionNumber"
+            },
+            {
+              "behavior": "Required",
+              "field": "Type"
+            },
+            {
+              "behavior": "Required",
+              "field": "ActionDate"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "ProductAmountChange"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "EstimatedTaxChange"
+            },
+            {
+              "behavior": "Required",
+              "field": "QuantityChange"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "SubtotalChange"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "AssetId"
+            },
+            {
+              "behavior": "Required",
+              "field": "Category"
+            },
+            {
+              "behavior": "Required",
+              "field": "Amount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "AdjustmentAmountChange"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "ActualTaxChange"
+            },
+            {
+              "behavior": "Required",
+              "field": "MrrChange"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "SystemInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "CreatedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "CreatedDate"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedDate"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "miniLayout": {
+    "fields": "CategoryEnum"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

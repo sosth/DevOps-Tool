@@ -1,0 +1,10 @@
+{
+  "fullName": "CFO",
+  "caseAccessLevel": "Edit",
+  "contactAccessLevel": "Edit",
+  "description": "CFO",
+  "mayForecastManagerShare": "false",
+  "name": "CFO",
+  "opportunityAccessLevel": "Edit",
+  "parentRole": "CEO"
+}

@@ -1,0 +1,55 @@
+{
+  "fullName": "ContactPointEmail-Contact Point Email Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "IsPrimary"
+            },
+            {
+              "behavior": "Required",
+              "field": "EmailAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ParentId"
+            }
+          ]
+        },
+        ""
+      ],
+      "style": "TwoColumnsTopToBottom"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": [
+    {
+      "fields": [
+        "Name",
+        "ContactPoint",
+        "DataUsePurpose",
+        "PrivacyConsentStatus"
+      ],
+      "relatedList": "ContactPointConsents"
+    },
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

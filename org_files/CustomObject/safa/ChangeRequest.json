@@ -1,0 +1,161 @@
+{
+  "fullName": "ChangeRequest",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "true",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "BusinessJustification",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "BusinessReason",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Category",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "ChangeType",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Description",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EstimatedEndTime",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EstimatedStartTime",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "FinalReviewDateTime",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "FinalReviewNotes",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Impact",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Priority",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "RemediationPlan",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ReviewerId",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "RiskImpactAnalysis",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "RiskLevel",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Status",
+      "trackFeedHistory": "false",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StatusCode"
+    },
+    {
+      "fullName": "Subject",
+      "trackFeedHistory": "false",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Change Request",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Subject",
+      "Status",
+      "Priority"
+    ],
+    "searchResultsAdditionalFields": [
+      "Subject",
+      "Status",
+      "Priority"
+    ]
+  },
+  "sharingModel": "Private"
+}

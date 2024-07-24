@@ -1,0 +1,100 @@
+{
+  "fullName": "DigitalWallet-Digital Wallet Layout",
+  "layoutSections": [
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Digital Wallet",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "NickName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Customer"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "Email"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AccountId"
+            },
+            {
+              "behavior": "Required",
+              "field": "Status"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "GatewayDetails",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "PaymentGatewayId"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "GatewayToken"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "AdditionalInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "CompanyName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Comments"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "PaymentMethodAddress"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

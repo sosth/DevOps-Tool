@@ -1,0 +1,11 @@
+{
+  "fullName": "standard__Platform",
+  "defaultLandingTab": "standard-home",
+  "tabs": [
+    "standard-Chatter",
+    "standard-Account",
+    "standard-Contact",
+    "standard-report",
+    "standard-Dashboard"
+  ]
+}

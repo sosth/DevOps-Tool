@@ -1,0 +1,154 @@
+{
+  "fullName": "CardPaymentMethod-Card Payment Method Layout",
+  "layoutSections": [
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Card Payment Method",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "NickName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "InputCardNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CardType"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CardHolderName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ExpiryMonth"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CardBin"
+            },
+            {
+              "behavior": "Edit",
+              "field": "StartMonth"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CardHolderFirstName"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "CardCategory"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "DisplayCardNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AutoCardType"
+            },
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ExpiryYear"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CardLastFour"
+            },
+            {
+              "behavior": "Edit",
+              "field": "StartYear"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CardHolderLastName"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "GatewayDetails",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "PaymentGatewayId"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "GatewayToken"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "AdditionalInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "CompanyName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PaymentMethodAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Email"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "AccountId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Comments"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

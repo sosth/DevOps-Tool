@@ -1,0 +1,100 @@
+{
+  "fullName": "LocationGroup",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "Description",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ExternalReference",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "IsEnabled",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "LocationGroupName",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ShouldSyncWithOci",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Location Group",
+  "listViews": {
+    "fullName": "LocationGroup",
+    "filterScope": "Everything",
+    "label": "All"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "ExternalReference",
+      "IsEnabled",
+      "ShouldSyncWithOci"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "ExternalReference",
+      "IsEnabled",
+      "ShouldSyncWithOci"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "ExternalReference",
+      "IsEnabled",
+      "ShouldSyncWithOci"
+    ],
+    "searchResultsAdditionalFields": [
+      "ExternalReference",
+      "IsEnabled",
+      "ShouldSyncWithOci"
+    ]
+  },
+  "sharingModel": "ReadWrite"
+}

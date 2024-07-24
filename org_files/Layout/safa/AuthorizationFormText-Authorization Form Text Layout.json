@@ -1,0 +1,73 @@
+{
+  "fullName": "AuthorizationFormText-Authorization Form Text Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Name"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FullAuthorizationFormUrl"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SummaryAuthFormText"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ContentDocumentId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "DetailAuthorizationFormText"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "AuthorizationFormId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Locale"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": [
+    {
+      "fields": [
+        "Name",
+        "ConsentGiver",
+        "Status"
+      ],
+      "relatedList": "AuthorizationFormConsentRelatedList"
+    },
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

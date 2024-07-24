@@ -1,0 +1,52 @@
+{
+  "fullName": "FulfillmentOrderItemTax-Fulfillment Order Item Tax Layout",
+  "layoutSections": [
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Fulfillment Order Item Tax Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Type"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "FulfillmentOrderItemAdjustId"
+            },
+            {
+              "behavior": "Required",
+              "field": "Amount"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Rate"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

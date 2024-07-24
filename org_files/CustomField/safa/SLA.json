@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "type": "CustomField",
+    "url": "/services/data/v42.0/tooling/sobjects/CustomField/00NQy000003KwJ6MAK"
+  },
+  "Id": "00NQy000003KwJ6MAK",
+  "DeveloperName": "SLA",
+  "NamespacePrefix": null,
+  "TableEnumOrId": "Account"
+}

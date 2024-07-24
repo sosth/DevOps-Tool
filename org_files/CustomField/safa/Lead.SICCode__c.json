@@ -1,0 +1,10 @@
+{
+  "fullName": "Lead.SICCode__c",
+  "externalId": "false",
+  "label": "SIC Code",
+  "length": "15",
+  "required": "false",
+  "trackFeedHistory": "false",
+  "type": "Text",
+  "unique": "false"
+}

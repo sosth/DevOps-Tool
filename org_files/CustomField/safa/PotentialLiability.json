@@ -1,0 +1,10 @@
+{
+  "attributes": {
+    "type": "CustomField",
+    "url": "/services/data/v42.0/tooling/sobjects/CustomField/00NQy000003KwJBMA0"
+  },
+  "Id": "00NQy000003KwJBMA0",
+  "DeveloperName": "PotentialLiability",
+  "NamespacePrefix": null,
+  "TableEnumOrId": "Case"
+}

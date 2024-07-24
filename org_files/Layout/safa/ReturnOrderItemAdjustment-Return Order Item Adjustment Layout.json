@@ -1,0 +1,80 @@
+{
+  "fullName": "ReturnOrderItemAdjustment-Return Order Item Adjustment Layout",
+  "layoutSections": [
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Return Order Item Adjustment Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "ReturnOrderLineItemId"
+          }
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "ReturnOrderId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Description"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Return Order Item Adjustment Totals",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Amount"
+            },
+            {
+              "behavior": "Required",
+              "field": "TotalAmtWithTax"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "TotalTaxAmount"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": {
+    "fields": [
+      "Name",
+      "Type",
+      "Amount",
+      "Rate",
+      "TaxEffectiveDate",
+      "Description"
+    ],
+    "relatedList": "ReturnOrderItemTaxes"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

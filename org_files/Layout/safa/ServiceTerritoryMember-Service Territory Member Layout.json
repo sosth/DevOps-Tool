@@ -1,0 +1,109 @@
+{
+  "fullName": "ServiceTerritoryMember-Service Territory Member Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": {
+        "layoutItems": [
+          {
+            "behavior": "Readonly",
+            "field": "MemberNumber"
+          },
+          {
+            "behavior": "Required",
+            "field": "ServiceResourceId"
+          },
+          {
+            "behavior": "Required",
+            "field": "ServiceTerritoryId"
+          },
+          {
+            "behavior": "Required",
+            "field": "TerritoryType"
+          },
+          {
+            "behavior": "Edit",
+            "field": "Address"
+          },
+          {
+            "behavior": "Edit",
+            "field": "OperatingHoursId"
+          },
+          {
+            "behavior": "Edit",
+            "field": "Role"
+          }
+        ]
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "EffectiveDuration",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "EffectiveStartDate"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "EffectiveEndDate"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": [
+    {
+      "relatedList": "RelatedFileList"
+    },
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

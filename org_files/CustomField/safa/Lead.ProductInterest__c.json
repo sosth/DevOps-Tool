@@ -1,0 +1,30 @@
+{
+  "fullName": "Lead.ProductInterest__c",
+  "externalId": "false",
+  "label": "Product Interest",
+  "required": "false",
+  "trackFeedHistory": "false",
+  "type": "Picklist",
+  "valueSet": {
+    "valueSetDefinition": {
+      "sorted": "false",
+      "value": [
+        {
+          "fullName": "GC1000 series",
+          "default": "false",
+          "label": "GC1000 series"
+        },
+        {
+          "fullName": "GC5000 series",
+          "default": "false",
+          "label": "GC5000 series"
+        },
+        {
+          "fullName": "GC3000 series",
+          "default": "false",
+          "label": "GC3000 series"
+        }
+      ]
+    }
+  }
+}

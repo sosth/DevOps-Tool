@@ -1,0 +1,104 @@
+{
+  "fullName": "EngagementChannelWorkType",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "AreAllEngmtChnlSupported",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EngagementChannelTypeId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "WorkTypeId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    }
+  ],
+  "label": "Engagement Channel Work Type",
+  "listViews": [
+    {
+      "fullName": "All_EngagementChannelWorkTypes",
+      "filterScope": "Everything",
+      "label": "All Engagement Channel Work Types"
+    },
+    {
+      "fullName": "My_EngagementChannelWorkTypes",
+      "filterScope": "Mine",
+      "label": "My Engagement Channel Work Types"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "WorkType",
+      "EngagementChannelType",
+      "AreAllEngmtChnlSupported"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "WorkType",
+      "EngagementChannelType",
+      "AreAllEngmtChnlSupported"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "WorkType",
+      "EngagementChannelType",
+      "AreAllEngmtChnlSupported"
+    ],
+    "searchResultsAdditionalFields": [
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "WorkType",
+      "EngagementChannelType",
+      "AreAllEngmtChnlSupported"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

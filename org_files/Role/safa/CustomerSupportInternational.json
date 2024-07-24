@@ -1,0 +1,10 @@
+{
+  "fullName": "CustomerSupportInternational",
+  "caseAccessLevel": "Edit",
+  "contactAccessLevel": "Edit",
+  "description": "Customer Support, International",
+  "mayForecastManagerShare": "false",
+  "name": "Customer Support, International",
+  "opportunityAccessLevel": "Edit",
+  "parentRole": "SVPCustomerServiceSupport"
+}

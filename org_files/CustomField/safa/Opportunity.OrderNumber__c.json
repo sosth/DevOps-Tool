@@ -1,0 +1,11 @@
+{
+  "fullName": "Opportunity.OrderNumber__c",
+  "externalId": "false",
+  "label": "Order Number",
+  "length": "8",
+  "required": "false",
+  "trackFeedHistory": "false",
+  "trackTrending": "false",
+  "type": "Text",
+  "unique": "false"
+}

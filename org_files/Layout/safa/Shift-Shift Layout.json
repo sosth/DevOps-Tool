@@ -1,0 +1,69 @@
+{
+  "fullName": "Shift-Shift Layout",
+  "excludeButtons": "Submit",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "true",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "StartTime"
+            },
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ServiceTerritoryId"
+            },
+            {
+              "behavior": "Required",
+              "field": "TimeSlotType"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "EndTime"
+            },
+            {
+              "behavior": "Edit",
+              "field": "WorkTypeGroupId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "ServiceResourceId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Label"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

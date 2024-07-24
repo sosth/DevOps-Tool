@@ -1,0 +1,32 @@
+{
+  "fullName": "CaseClose-Close Case Layout",
+  "layoutSections": {
+    "customLabel": "false",
+    "detailHeading": "false",
+    "editHeading": "true",
+    "label": "Case Information",
+    "layoutColumns": {
+      "layoutItems": [
+        {
+          "behavior": "Required",
+          "field": "Status"
+        },
+        {
+          "behavior": "Required",
+          "field": "Reason"
+        },
+        {
+          "behavior": "Edit",
+          "field": "Comments"
+        }
+      ]
+    },
+    "style": "OneColumn"
+  },
+  "runAssignmentRulesDefault": "false",
+  "showEmailCheckbox": "false",
+  "showHighlightsPanel": "false",
+  "showInteractionLogPanel": "false",
+  "showSolutionSection": "true",
+  "showSubmitAndAttachButton": "false"
+}

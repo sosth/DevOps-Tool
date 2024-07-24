@@ -1,0 +1,7 @@
+{
+  "fullName": "StandardShippingRate",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "label": "Standard Shipping Rate",
+  "sharingModel": "ControlledByParent"
+}

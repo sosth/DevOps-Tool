@@ -1,0 +1,56 @@
+{
+  "fullName": "ReportAnomalyEventStore",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "ProvideFeedbackAction",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    }
+  ],
+  "enableFeeds": "false",
+  "externalSharingModel": "ReadWrite",
+  "fields": [
+    {
+      "fullName": "EventDate"
+    },
+    {
+      "fullName": "EventIdentifier"
+    },
+    {
+      "fullName": "Report"
+    },
+    {
+      "fullName": "Score"
+    },
+    {
+      "fullName": "SecurityEventData"
+    },
+    {
+      "fullName": "SourceIp"
+    },
+    {
+      "fullName": "Summary"
+    },
+    {
+      "fullName": "UserId",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Report Anomaly Event Store",
+  "sharingModel": "ReadWrite"
+}

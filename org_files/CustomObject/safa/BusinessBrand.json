@@ -1,0 +1,71 @@
+{
+  "fullName": "BusinessBrand",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "Name"
+    },
+    {
+      "fullName": "OrgId"
+    },
+    {
+      "fullName": "OwnerId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ParentId",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Business Brand",
+  "listViews": {
+    "fullName": "All_BusinessBrands",
+    "filterScope": "Everything",
+    "label": "All Business Brands"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": "OrgId",
+    "searchResultsAdditionalFields": "OrgId"
+  },
+  "sharingModel": "Private"
+}

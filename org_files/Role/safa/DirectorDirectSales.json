@@ -1,0 +1,10 @@
+{
+  "fullName": "DirectorDirectSales",
+  "caseAccessLevel": "Edit",
+  "contactAccessLevel": "Edit",
+  "description": "Director, Direct Sales",
+  "mayForecastManagerShare": "false",
+  "name": "Director, Direct Sales",
+  "opportunityAccessLevel": "Edit",
+  "parentRole": "VPNorthAmericanSales"
+}

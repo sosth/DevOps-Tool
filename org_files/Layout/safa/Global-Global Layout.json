@@ -1,0 +1,119 @@
+{
+  "fullName": "Global-Global Layout",
+  "platformActionList": {
+    "actionListContext": "Global",
+    "platformActionListItems": [
+      {
+        "actionName": "FeedItem.TextPost",
+        "actionType": "QuickAction",
+        "sortOrder": "0"
+      },
+      {
+        "actionName": "FeedItem.ContentPost",
+        "actionType": "QuickAction",
+        "sortOrder": "1"
+      },
+      {
+        "actionName": "NewEvent",
+        "actionType": "QuickAction",
+        "sortOrder": "2"
+      },
+      {
+        "actionName": "NewTask",
+        "actionType": "QuickAction",
+        "sortOrder": "3"
+      },
+      {
+        "actionName": "NewContact",
+        "actionType": "QuickAction",
+        "sortOrder": "4"
+      },
+      {
+        "actionName": "LogACall",
+        "actionType": "QuickAction",
+        "sortOrder": "5"
+      },
+      {
+        "actionName": "NewOpportunity",
+        "actionType": "QuickAction",
+        "sortOrder": "6"
+      },
+      {
+        "actionName": "NewCase",
+        "actionType": "QuickAction",
+        "sortOrder": "7"
+      },
+      {
+        "actionName": "NewLead",
+        "actionType": "QuickAction",
+        "sortOrder": "8"
+      },
+      {
+        "actionName": "FeedItem.LinkPost",
+        "actionType": "QuickAction",
+        "sortOrder": "9"
+      },
+      {
+        "actionName": "FeedItem.PollPost",
+        "actionType": "QuickAction",
+        "sortOrder": "10"
+      },
+      {
+        "actionName": "FeedItem.QuestionPost",
+        "actionType": "QuickAction",
+        "sortOrder": "11"
+      },
+      {
+        "actionName": "SendEmail",
+        "actionType": "QuickAction",
+        "sortOrder": "12"
+      }
+    ]
+  },
+  "quickActionList": {
+    "quickActionListItems": [
+      {
+        "quickActionName": "FeedItem.TextPost"
+      },
+      {
+        "quickActionName": "FeedItem.ContentPost"
+      },
+      {
+        "quickActionName": "NewEvent"
+      },
+      {
+        "quickActionName": "NewTask"
+      },
+      {
+        "quickActionName": "NewContact"
+      },
+      {
+        "quickActionName": "LogACall"
+      },
+      {
+        "quickActionName": "NewOpportunity"
+      },
+      {
+        "quickActionName": "NewCase"
+      },
+      {
+        "quickActionName": "NewLead"
+      },
+      {
+        "quickActionName": "FeedItem.LinkPost"
+      },
+      {
+        "quickActionName": "FeedItem.PollPost"
+      },
+      {
+        "quickActionName": "FeedItem.QuestionPost"
+      },
+      {
+        "quickActionName": "SendEmail"
+      }
+    ]
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

@@ -1,0 +1,92 @@
+{
+  "fullName": "PromotionQualifier",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "MinimumAmount",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "MinimumQuantity",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "PromotionId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "PromotionTierId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "QualifierId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "QualifierOperator",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "QualifierProductCategoryName"
+    },
+    {
+      "fullName": "QualifierProductName"
+    },
+    {
+      "fullName": "QualifierProductSku"
+    },
+    {
+      "fullName": "QualifierType",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Promotion Qualifier",
+  "sharingModel": "ControlledByParent"
+}

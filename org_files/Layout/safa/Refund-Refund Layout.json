@@ -1,0 +1,225 @@
+{
+  "fullName": "Refund-Refund Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "RefundNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AccountId"
+            },
+            {
+              "behavior": "Required",
+              "field": "Amount"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PaymentGroupId"
+            },
+            {
+              "behavior": "Required",
+              "field": "ProcessingMode"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalApplied"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "NetApplied"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Date"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Required",
+              "field": "Type"
+            },
+            {
+              "behavior": "Edit",
+              "field": "PaymentMethodId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "EffectiveDate"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalUnapplied"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "Balance"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Comments"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "AdditionalInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "ImpactAmount"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CancellationDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "SfResultCode"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CancellationSfResultCode"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Edit",
+            "field": "CancellationEffectiveDate"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "GatewayDetails",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "PaymentGatewayId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "GatewayResultCode"
+            },
+            {
+              "behavior": "Edit",
+              "field": "GatewayRefNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CancellationGatewayDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CancellationGatewayRefNumber"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "GatewayDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "GatewayResultCodeDescription"
+            },
+            {
+              "behavior": "Edit",
+              "field": "CancellationGatewayResultCode"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "SystemInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "CreatedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "CreatedDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "MacAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Phone"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "IpAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Email"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

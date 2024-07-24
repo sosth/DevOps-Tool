@@ -1,0 +1,182 @@
+{
+  "fullName": "Shift",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AppointmentCategoryId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "BackgroundColor",
+      "inlineHelpText": "Set a background color to highlight shifts in the schedule view.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EndTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Label",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "RecurrenceEndDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "RecurrencePattern",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "RecurrenceStartDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ServiceResourceId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ServiceTerritoryId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "StartTime",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Status",
+      "trackHistory": "false",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "StatusCategory",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "TimeSlotType",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "Type",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "WorkTypeGroupId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "WorkTypeId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    }
+  ],
+  "label": "Shift",
+  "listViews": [
+    {
+      "fullName": "All_Shifts",
+      "filterScope": "Everything",
+      "label": "All Shifts"
+    },
+    {
+      "fullName": "My_Shifts",
+      "filterScope": "Mine",
+      "label": "My Shifts"
+    }
+  ],
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "StartTime",
+      "EndTime",
+      "Status",
+      "ServiceResource",
+      "ServiceTerritory",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "BackgroundColor",
+      "Type"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "StartTime",
+      "EndTime",
+      "Status",
+      "ServiceResource",
+      "ServiceTerritory",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "BackgroundColor",
+      "Type"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "StartTime",
+      "EndTime",
+      "Status",
+      "ServiceResource",
+      "ServiceTerritory",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "BackgroundColor",
+      "Type"
+    ],
+    "searchResultsAdditionalFields": [
+      "StartTime",
+      "EndTime",
+      "Status",
+      "ServiceResource",
+      "ServiceTerritory",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "BackgroundColor",
+      "Type"
+    ]
+  },
+  "sharingModel": "Private"
+}

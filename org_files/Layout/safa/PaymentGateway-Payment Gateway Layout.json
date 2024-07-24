@@ -1,0 +1,50 @@
+{
+  "fullName": "PaymentGateway-Payment Gateway Layout",
+  "layoutSections": [
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Payment Gateway",
+      "layoutColumns": {
+        "layoutItems": [
+          {
+            "behavior": "Required",
+            "field": "PaymentGatewayName"
+          },
+          {
+            "behavior": "Edit",
+            "field": "PaymentGatewayProviderId"
+          },
+          {
+            "behavior": "Edit",
+            "field": "MerchantCredentialId"
+          },
+          {
+            "behavior": "Required",
+            "field": "Status"
+          },
+          {
+            "behavior": "Edit",
+            "field": "ExternalReference"
+          },
+          {
+            "behavior": "Edit",
+            "field": "Comments"
+          }
+        ]
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

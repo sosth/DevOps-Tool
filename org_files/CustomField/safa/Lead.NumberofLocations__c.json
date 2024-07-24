@@ -1,0 +1,11 @@
+{
+  "fullName": "Lead.NumberofLocations__c",
+  "externalId": "false",
+  "label": "Number of Locations",
+  "precision": "3",
+  "required": "false",
+  "scale": "0",
+  "trackFeedHistory": "false",
+  "type": "Number",
+  "unique": "false"
+}

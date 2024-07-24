@@ -1,0 +1,104 @@
+{
+  "fullName": "OrderItem-Order Product Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "true",
+      "label": "Product Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "OrderId"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "Product2Id"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "ProductCode"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "ListPrice"
+            },
+            {
+              "behavior": "Required",
+              "field": "UnitPrice"
+            },
+            {
+              "behavior": "Required",
+              "field": "Quantity"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "TotalPrice"
+          }
+        }
+      ],
+      "style": "TwoColumnsTopToBottom"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "CreatedById"
+          }
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsTopToBottom"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Description Information",
+      "layoutColumns": {
+        "layoutItems": {
+          "behavior": "Edit",
+          "field": "Description"
+        }
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Additional Information",
+      "layoutColumns": [
+        "",
+        ""
+      ],
+      "style": "TwoColumnsLeftToRight"
+    }
+  ],
+  "multilineLayoutFields": [
+    "Product2Id",
+    "Quantity",
+    "UnitPrice",
+    "ListPrice",
+    "Description",
+    "OrderId"
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

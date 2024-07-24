@@ -1,0 +1,41 @@
+{
+  "fullName": "FlowOrchestrationStageInstance",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "Label"
+    },
+    {
+      "fullName": "OrchestrationInstanceId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Status"
+    }
+  ],
+  "label": "Orchestration Stage Run",
+  "sharingModel": "Private"
+}

@@ -1,0 +1,11 @@
+{
+  "fullName": "standard__Content",
+  "defaultLandingTab": "standard-home",
+  "formFactors": "Large",
+  "tabs": [
+    "standard-Chatter",
+    "standard-Workspace",
+    "standard-ContentSearch",
+    "standard-ContentSubscriptions"
+  ]
+}

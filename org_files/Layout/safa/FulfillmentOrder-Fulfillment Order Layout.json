@@ -1,0 +1,149 @@
+{
+  "fullName": "FulfillmentOrder-Fulfillment Order Layout",
+  "layoutSections": [
+    {
+      "customLabel": "true",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Fulfillment Order Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "AccountId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "InvoiceId"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Type"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "Status"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Shipping Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "FulfilledToAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FulfilledToEmailAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FulfilledFromLocationId"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "FulfilledToName"
+            },
+            {
+              "behavior": "Edit",
+              "field": "FulfilledToPhone"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Totals",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "ItemCount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalProductTaxAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalDeliveryTaxAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAdjustmentTaxAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalTaxAmount"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "TotalProductAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalDeliveryAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAdjustmentAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "TotalAmount"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "GrandTotalAmount"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": {
+    "fields": [
+      "Name",
+      "Product2",
+      "Quantity",
+      "TotalAmount"
+    ],
+    "relatedList": "FulfillmentOrderLineItems"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

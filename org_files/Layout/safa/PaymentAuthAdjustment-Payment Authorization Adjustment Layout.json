@@ -1,0 +1,174 @@
+{
+  "fullName": "PaymentAuthAdjustment-Payment Authorization Adjustment Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "true",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "PaymentAuthAdjustmentNumber"
+            },
+            {
+              "behavior": "Edit",
+              "field": "AccountId"
+            },
+            {
+              "behavior": "Required",
+              "field": "Amount"
+            },
+            {
+              "behavior": "Required",
+              "field": "Type"
+            },
+            {
+              "behavior": "Edit",
+              "field": "EffectiveDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Comments"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Required",
+              "field": "Status"
+            },
+            {
+              "behavior": "Required",
+              "field": "PaymentAuthorizationId"
+            },
+            {
+              "behavior": "Required",
+              "field": "ProcessingMode"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Date"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "AdditionalInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "SfResultCode"
+          }
+        },
+        ""
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "GatewayDetails",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "GatewayDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "GatewayResultCode"
+            },
+            {
+              "behavior": "Edit",
+              "field": "GatewayRefNumber"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Edit",
+              "field": "GatewayResultCodeDescription"
+            },
+            {
+              "behavior": "Edit",
+              "field": "GatewayRefDetails"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "SystemInformation",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "CreatedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "CreatedDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "MacAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Phone"
+            }
+          ]
+        },
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedById"
+            },
+            {
+              "behavior": "Readonly",
+              "field": "LastModifiedDate"
+            },
+            {
+              "behavior": "Edit",
+              "field": "IpAddress"
+            },
+            {
+              "behavior": "Edit",
+              "field": "Email"
+            }
+          ]
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

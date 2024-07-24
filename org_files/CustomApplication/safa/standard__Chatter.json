@@ -1,0 +1,12 @@
+{
+  "fullName": "standard__Chatter",
+  "defaultLandingTab": "standard-home",
+  "formFactors": "Large",
+  "tabs": [
+    "standard-Chatter",
+    "standard-UserProfile",
+    "standard-OtherUserProfile",
+    "standard-CollaborationGroup",
+    "standard-File"
+  ]
+}

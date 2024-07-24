@@ -1,0 +1,169 @@
+{
+  "fullName": "FulfillmentOrder",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ActivatedDate"
+    },
+    {
+      "fullName": "BillToContactId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ClosedDate"
+    },
+    {
+      "fullName": "FulfilledFromLocationId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "FulfilledToEmailAddress"
+    },
+    {
+      "fullName": "FulfilledToName"
+    },
+    {
+      "fullName": "FulfilledToPhone"
+    },
+    {
+      "fullName": "GrandTotalAmount"
+    },
+    {
+      "fullName": "InvoiceId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "IsReship"
+    },
+    {
+      "fullName": "IsSuspended"
+    },
+    {
+      "fullName": "ItemCount"
+    },
+    {
+      "fullName": "Status",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "TaxLocaleType"
+    },
+    {
+      "fullName": "TotalAdjustmentAmount"
+    },
+    {
+      "fullName": "TotalAdjustmentAmtWithTax"
+    },
+    {
+      "fullName": "TotalAdjustmentTaxAmount"
+    },
+    {
+      "fullName": "TotalAmount"
+    },
+    {
+      "fullName": "TotalDeliveryAdjustAmount"
+    },
+    {
+      "fullName": "TotalDeliveryAdjustAmtWithTax"
+    },
+    {
+      "fullName": "TotalDeliveryAdjustTaxAmount"
+    },
+    {
+      "fullName": "TotalDeliveryAmount"
+    },
+    {
+      "fullName": "TotalDeliveryAmtWithTax"
+    },
+    {
+      "fullName": "TotalDeliveryTaxAmount"
+    },
+    {
+      "fullName": "TotalProductAmount"
+    },
+    {
+      "fullName": "TotalProductAmtWithTax"
+    },
+    {
+      "fullName": "TotalProductTaxAmount"
+    },
+    {
+      "fullName": "TotalTaxAmount"
+    },
+    {
+      "fullName": "Type",
+      "type": "Picklist"
+    }
+  ],
+  "label": "Fulfillment Order",
+  "listViews": {
+    "fullName": "all_fulfillment_orders",
+    "filterScope": "Everything",
+    "filters": {
+      "field": "IsArchived",
+      "operation": "equals",
+      "value": "0"
+    },
+    "label": "All Fulfillment Orders"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Status",
+      "FulfilledToName",
+      "FulfilledFromLocation",
+      "Invoice"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Status",
+      "FulfilledToName",
+      "FulfilledFromLocation",
+      "Invoice"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Status",
+      "FulfilledToName",
+      "FulfilledFromLocation",
+      "Invoice",
+      "FulfilledToPhone"
+    ],
+    "searchResultsAdditionalFields": [
+      "Status",
+      "FulfilledToName",
+      "FulfilledFromLocation",
+      "Invoice"
+    ]
+  },
+  "sharingModel": "ReadWrite"
+}

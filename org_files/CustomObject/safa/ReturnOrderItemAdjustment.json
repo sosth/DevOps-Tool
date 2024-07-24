@@ -1,0 +1,68 @@
+{
+  "fullName": "ReturnOrderItemAdjustment",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "Amount"
+    },
+    {
+      "fullName": "Description"
+    },
+    {
+      "fullName": "ReturnOrderId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ReturnOrderLineItemId",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "TotalAmtWithTax"
+    },
+    {
+      "fullName": "TotalTaxAmount"
+    }
+  ],
+  "label": "Return Order Item Adjustment",
+  "sharingModel": "ControlledByParent"
+}

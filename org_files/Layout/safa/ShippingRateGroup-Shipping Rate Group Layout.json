@@ -1,0 +1,31 @@
+{
+  "fullName": "ShippingRateGroup-Shipping Rate Group Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Information",
+      "layoutColumns": [
+        {
+          "layoutItems": {
+            "behavior": "Required",
+            "field": "ShippingProfileId"
+          }
+        },
+        ""
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "layoutColumns": "",
+      "style": "CustomLinks"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

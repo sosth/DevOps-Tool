@@ -12,6 +12,18 @@ const deploymentController = require('./controllers/deploymentController'); // I
 const deploymentRoutes = require('./routes/deploymentRoutres');
 const retrieveService = require('./services/retrieveService');
 const apexRoutes = require('./routes/apexRoutes'); // Import apex routes
+const customObjectRoutes = require('./routes/customObjectRoutes');
+const securityRoutes = require('./routes/securityRoutes');
+const automationRoutes = require('./routes/automationRoutes');
+const analyticsRoutes = require('./routes/analyticsRoutes');
+const dataRoutes = require('./routes/dataRoutes');
+const layoutRoutes = require('./routes/layoutRoutes');
+const serviceCloudRoutes = require('./routes/serviceCloudRoutes');
+const communityRoutes = require('./routes/communityRoutes');
+const integrationRoutes = require('./routes/integrationRoutes');
+const customPermissionRoutes = require('./routes/customPermissionRoutes');
+const translationRoutes = require('./routes/translationRoutes');
+
 const deployScript = require('./deployitem');
 const googleAuthRoutes = require('./routes/googleAuthRoutes');
 const app = express();
@@ -62,7 +74,20 @@ app.get('/deleteorg', (req, res) => {
 });
 app.post('/create-deployment', deploymentController.createDeployment);
 app.use('/api/deployments', deploymentRoutes);
+// Retrieve Routes
 app.use('/api/apex', apexRoutes);
+app.use('/api/customObject', customObjectRoutes);
+app.use('/api/security', securityRoutes);
+app.use('/api/automation', automationRoutes);
+app.use('/api/analytics', analyticsRoutes);
+app.use('/api/data', dataRoutes);
+app.use('/api/layout', layoutRoutes);
+app.use('/api/serviceCloud', serviceCloudRoutes);
+app.use('/api/community', communityRoutes);
+app.use('/api/integration', integrationRoutes);
+app.use('/api/custompermissions', customPermissionRoutes);
+app.use('/api/translations', translationRoutes);
+
 app.get('/create-deployment', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'create-deployment.html'));
 });

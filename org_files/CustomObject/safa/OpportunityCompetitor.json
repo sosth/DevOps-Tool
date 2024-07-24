@@ -1,0 +1,35 @@
+{
+  "fullName": "OpportunityCompetitor",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "CreateOppCompetitor",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    }
+  ],
+  "enableFeeds": "false",
+  "fields": {
+    "fullName": "CompetitorName",
+    "type": "Picklist"
+  },
+  "label": "Opportunity: Competitor"
+}

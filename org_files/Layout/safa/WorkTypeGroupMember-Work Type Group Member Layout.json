@@ -1,0 +1,46 @@
+{
+  "fullName": "WorkTypeGroupMember-Work Type Group Member Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Description",
+      "layoutColumns": {
+        "layoutItems": [
+          {
+            "behavior": "Readonly",
+            "field": "Name"
+          },
+          {
+            "behavior": "Required",
+            "field": "WorkTypeGroupId"
+          },
+          {
+            "behavior": "Required",
+            "field": "WorkTypeId"
+          }
+        ]
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": {
+    "relatedList": "RelatedEntityHistoryList"
+  },
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

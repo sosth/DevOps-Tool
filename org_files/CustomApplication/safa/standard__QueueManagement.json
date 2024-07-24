@@ -1,0 +1,8 @@
+{
+  "fullName": "standard__QueueManagement",
+  "formFactors": "Large",
+  "label": "Queue Management",
+  "navType": "Standard",
+  "tabs": "standard-Location",
+  "uiType": "Lightning"
+}

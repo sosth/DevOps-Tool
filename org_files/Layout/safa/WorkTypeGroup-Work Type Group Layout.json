@@ -1,0 +1,103 @@
+{
+  "fullName": "WorkTypeGroup-Work Type Group Layout",
+  "layoutSections": [
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "Description",
+      "layoutColumns": {
+        "layoutItems": [
+          {
+            "behavior": "Required",
+            "field": "Name"
+          },
+          {
+            "behavior": "Edit",
+            "field": "Description"
+          },
+          {
+            "behavior": "Required",
+            "field": "GroupType"
+          },
+          {
+            "behavior": "Edit",
+            "field": "IsActive"
+          },
+          {
+            "behavior": "Edit",
+            "field": "AdditionalInformation"
+          }
+        ]
+      },
+      "style": "OneColumn"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "true",
+      "editHeading": "true",
+      "label": "System Information",
+      "layoutColumns": [
+        {
+          "layoutItems": [
+            {
+              "behavior": "Readonly",
+              "field": "CreatedById"
+            },
+            {
+              "behavior": "Edit",
+              "field": "OwnerId"
+            }
+          ]
+        },
+        {
+          "layoutItems": {
+            "behavior": "Readonly",
+            "field": "LastModifiedById"
+          }
+        }
+      ],
+      "style": "TwoColumnsLeftToRight"
+    },
+    {
+      "customLabel": "false",
+      "detailHeading": "false",
+      "editHeading": "false",
+      "label": "Custom Links",
+      "layoutColumns": [
+        "",
+        "",
+        ""
+      ],
+      "style": "CustomLinks"
+    }
+  ],
+  "relatedLists": [
+    {
+      "relatedList": "RelatedEntityHistoryList"
+    },
+    {
+      "fields": [
+        "CreatedDate",
+        "StepStatus",
+        "OriginalActor",
+        "Actor",
+        "Comments"
+      ],
+      "relatedList": "RelatedProcessHistoryList"
+    },
+    {
+      "relatedList": "RelatedFileList"
+    },
+    {
+      "fields": [
+        "Name",
+        "WorkType"
+      ],
+      "relatedList": "WorkTypeGroupMembers"
+    }
+  ],
+  "showEmailCheckbox": "false",
+  "showRunAssignmentRulesCheckbox": "false",
+  "showSubmitAndAttachButton": "false"
+}

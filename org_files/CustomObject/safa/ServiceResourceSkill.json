@@ -1,0 +1,104 @@
+{
+  "fullName": "ServiceResourceSkill",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "ControlledByParent",
+  "fields": [
+    {
+      "fullName": "EffectiveEndDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EffectiveStartDate",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ServiceResourceId",
+      "trackHistory": "false",
+      "type": "MasterDetail"
+    },
+    {
+      "fullName": "SkillId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "SkillLevel",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Service Resource Skill",
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "SkillMasterLabel",
+      "SkillLevel",
+      "EffectiveStartDate",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "ServiceResource"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "SkillMasterLabel",
+      "SkillLevel",
+      "EffectiveStartDate",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "ServiceResource"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "SkillMasterLabel",
+      "SkillLevel",
+      "EffectiveStartDate",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "ServiceResource"
+    ],
+    "searchResultsAdditionalFields": [
+      "SkillMasterLabel",
+      "SkillLevel",
+      "EffectiveStartDate",
+      "LastModifiedDate",
+      "LastModifiedBy",
+      "ServiceResource"
+    ]
+  },
+  "sharingModel": "ControlledByParent"
+}

@@ -1,0 +1,144 @@
+{
+  "fullName": "CommSubscriptionConsent",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Clone",
+      "type": "Default"
+    },
+    {
+      "actionName": "Delete",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "List",
+      "type": "Default"
+    },
+    {
+      "actionName": "New",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Tab",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "BusinessBrandId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "CommSubscriptionChannelTypeId",
+      "inlineHelpText": "The communication subscription channel type record associated with the communication subscription consent.",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ConsentCapturedDateTime",
+      "inlineHelpText": "Date and time that consent was given.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ConsentCapturedSource",
+      "inlineHelpText": "Source through which consent was captured. For example, user@example.com or www.example.com.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "ConsentGiverId",
+      "inlineHelpText": "The person consenting to the communication subscription.",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ContactPointId",
+      "inlineHelpText": "The contact point record associated with the communication subscription consent.",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "DataUsePurposeId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "EffectiveFromDate",
+      "inlineHelpText": "Date when consent starts.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EffectiveToDate",
+      "inlineHelpText": "Date when consent ends.",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "EngagementChannelTypeId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "Name",
+      "trackHistory": "false"
+    },
+    {
+      "fullName": "OwnerId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PartyId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PartyRoleId",
+      "trackHistory": "false",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "PrivacyConsentStatus",
+      "trackHistory": "false"
+    }
+  ],
+  "label": "Communication Subscription Consent",
+  "listViews": {
+    "fullName": "All_CommSubscriptionConsents",
+    "filterScope": "Everything",
+    "label": "All Communication Subscription Consents"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "ConsentGiver",
+      "ContactPoint",
+      "EffectiveFromDate",
+      "ConsentCapturedDateTime",
+      "ConsentCapturedSource"
+    ],
+    "searchResultsAdditionalFields": [
+      "ConsentGiver",
+      "ContactPoint",
+      "EffectiveFromDate",
+      "ConsentCapturedDateTime",
+      "ConsentCapturedSource"
+    ]
+  },
+  "sharingModel": "Private"
+}

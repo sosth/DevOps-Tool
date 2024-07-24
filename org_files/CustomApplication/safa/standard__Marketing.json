@@ -1,0 +1,14 @@
+{
+  "fullName": "standard__Marketing",
+  "defaultLandingTab": "standard-home",
+  "formFactors": "Large",
+  "tabs": [
+    "standard-Chatter",
+    "standard-Campaign",
+    "standard-Lead",
+    "standard-Contact",
+    "standard-Opportunity",
+    "standard-report",
+    "standard-Dashboard"
+  ]
+}

@@ -1,0 +1,6755 @@
+{
+  "fullName": "Analytics Cloud Integration User",
+  "applicationVisibilities": [
+    {
+      "application": "standard__AllTabSet",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__AppLauncher",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__Chatter",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__Community",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__Content",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__DataManager",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__FlowsApp",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__Insights",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__LightningBolt",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__LightningInstrumentation",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__LightningSales",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__LightningSalesConsole",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__LightningScheduler",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__LightningService",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__Marketing",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__Platform",
+      "default": "true",
+      "visible": "true"
+    },
+    {
+      "application": "standard__QueueManagement",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__RevenueCloudConsole",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__Sales",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__SalesforceCMS",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__Service",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__ServiceConsole",
+      "default": "false",
+      "visible": "false"
+    },
+    {
+      "application": "standard__Sites",
+      "default": "false",
+      "visible": "false"
+    }
+  ],
+  "classAccesses": [
+    {
+      "apexClass": "HelloWorld",
+      "enabled": "false"
+    },
+    {
+      "apexClass": "MdAp",
+      "enabled": "false"
+    },
+    {
+      "apexClass": "Test",
+      "enabled": "false"
+    },
+    {
+      "apexClass": "Tool",
+      "enabled": "false"
+    },
+    {
+      "apexClass": "Vendredi",
+      "enabled": "false"
+    },
+    {
+      "apexClass": "VsClass",
+      "enabled": "false"
+    },
+    {
+      "apexClass": "YourClassName",
+      "enabled": "false"
+    },
+    {
+      "apexClass": "sfClass",
+      "enabled": "false"
+    }
+  ],
+  "custom": "false",
+  "fieldPermissions": [
+    {
+      "editable": "true",
+      "field": "Account.AccountNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.AccountSource",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Active__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.AnnualRevenue",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.BillingAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Account.CleanStatus",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.CustomerPriority__c",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Account.DandbCompanyId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Account.DunsNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Fax",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Industry",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Jigsaw",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Account.NaicsCode",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Account.NaicsDesc",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.NumberOfEmployees",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.NumberofLocations__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.OperatingHoursId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Ownership",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.ParentId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Phone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Rating",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.SLAExpirationDate__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.SLASerialNumber__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.SLA__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.ShippingAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Sic",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.SicDesc",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Site",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.TickerSymbol",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Account.Tradestyle",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Type",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.UpsellOpportunity__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Account.Website",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Account.YearStarted",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitation.AppointmentTopicId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitation.AppointmentType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitation.BookingEndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitation.BookingStartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitation.InvitationUrl",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitation.IsActive",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitation.ServiceTerritoryId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitation.UrlExpiryDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitee.IsRequiredResource",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AppointmentInvitee.ParticipantServiceResourceId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.AssetLevel",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.AssetProvidedById",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.AssetServicedById",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Asset.ConsequenceOfFailure",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.ContactId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.CurrentAmount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.CurrentLifecycleEndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.CurrentMrr",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.CurrentQuantity",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Asset.DigitalAssetStatus",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Asset.ExternalIdentifier",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.HasLifecycleManagement",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.InstallDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.IsCompetitorProduct",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.IsInternal",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.LifecycleEndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.LifecycleStartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Asset.LocationId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Asset.ManufactureDate",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.Price",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.Product2Id",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.ProductCode",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Asset.ProductDescription",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Asset.ProductFamily",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.PurchaseDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.Quantity",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.SerialNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Asset.StatusReason",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.StockKeepingUnit",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.TotalLifecycleAmount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Asset.UsageEndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Asset.Uuid",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "AssetRelationship.RelationshipType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AssignedResource.EventId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AssignedResource.IsRequiredResource",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AssignedResource.Role",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationForm.DefaultAuthFormTextId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationForm.EffectiveFromDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationForm.EffectiveToDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationForm.IsSignatureRequired",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationForm.RevisionNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationFormConsent.DocumentVersionId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationFormConsent.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationFormText.ContentDocumentId",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "AuthorizationFormText.DetailAuthorizationFormText",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationFormText.FullAuthorizationFormUrl",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationFormText.Locale",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "AuthorizationFormText.SummaryAuthFormText",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "BusinessBrand.OrgId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "BusinessBrand.ParentId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.ActualCost",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.AmountAllOpportunities",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.AmountWonOpportunities",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.BudgetedCost",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.EndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.ExpectedResponse",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.ExpectedRevenue",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyActualCost",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyAmountAllOpportunities",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyAmountWonOpportunities",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyBudgetedCost",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyExpectedRevenue",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyNumberOfContacts",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyNumberOfConvertedLeads",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyNumberOfLeads",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyNumberOfOpportunities",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyNumberOfResponses",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyNumberOfWonOpportunities",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Campaign.HierarchyNumberSent",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.IsActive",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.NumberOfContacts",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.NumberOfConvertedLeads",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.NumberOfLeads",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.NumberOfOpportunities",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.NumberOfResponses",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.NumberOfWonOpportunities",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.NumberSent",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.ParentId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.StartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Campaign.Type",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Case.AssetId",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.BusinessHoursId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Case.ClosedDate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.ClosedOnCreate",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Case.ContactId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Case.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Case.EngineeringReqNumber__c",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.EntitlementId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Case.IsClosedOnCreate",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Case.IsEscalated",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.IsStopped",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Case.MilestoneStatus",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Case.MilestoneStatusIcon",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Case.Origin",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.ParentId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Case.PotentialLiability__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Case.Priority",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.ProductId",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Case.Product__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Case.Reason",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Case.SLAViolation__c",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.ServiceContractId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Case.SlaExitDate",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Case.SlaStartDate",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Case.SourceId",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.StopStartDate",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Case.Subject",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.SuppliedCompany",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.SuppliedEmail",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.SuppliedName",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Case.SuppliedPhone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Case.Type",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.BusinessJustification",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.BusinessReason",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.Category",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.ChangeType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.EstimatedEndTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.EstimatedStartTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.FinalReviewDateTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.FinalReviewNotes",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.RelatedIssueAutonumberMaster",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.RelatedItemAutonumberMaster",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.RemediationPlan",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.ReviewerId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequest.RiskImpactAnalysis",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ChangeRequestRelatedItem.Comment",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "CommSubscription.DataUsePurposeId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "CommSubscription.IsDefault",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "CommSubscriptionConsent.EffectiveToDate",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "CommSubscriptionTiming.Offset",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "CommSubscriptionTiming.PreferredTimeEnd",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "CommSubscriptionTiming.PreferredTimeStart",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "CommSubscriptionTiming.PreferredTimeZone",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "ConsumptionRate.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ConsumptionRate.UpperBound",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ConsumptionSchedule.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ConsumptionSchedule.IsActive",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ConsumptionSchedule.MatchingAttribute",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ConsumptionSchedule.UnitOfMeasure",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.AssistantName",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.AssistantPhone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Birthdate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Contact.CleanStatus",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Department",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Contact.DoNotCall",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Email",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Fax",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Contact.GenderIdentity",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Contact.HasOptedOutOfEmail",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Contact.HasOptedOutOfFax",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.HomePhone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Jigsaw",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Languages__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.LeadSource",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Level__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.MailingAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.MobilePhone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.OtherAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.OtherPhone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Phone",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Contact.Pronouns",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.ReportsToId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contact.Title",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.ActiveFromDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.ActiveToDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.Address",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.AddressType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.BestTimeToContactEndTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.BestTimeToContactStartTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.BestTimeToContactTimezone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.ContactPointPhoneId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.IsDefault",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.IsPrimary",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.IsThirdPartyAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.ParentId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.PreferenceRank",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointAddress.UsageType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointConsent.ContactPointTypeConsentId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointConsent.DataUsePurposeId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointConsent.DoubleConsentCaptureDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointConsent.EffectiveFrom",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointConsent.EffectiveTo",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "ContactPointConsent.EngagementChannelTypeId",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.ActiveFromDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.ActiveToDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.BestTimeToContactEndTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.BestTimeToContactStartTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.BestTimeToContactTimezone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.EmailDomain",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.EmailLatestBounceDateTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.EmailLatestBounceReasonText",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.EmailMailBox",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.IsPrimary",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.ParentId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.PreferenceRank",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointEmail.UsageType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.ActiveFromDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.AreaCode",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.BestTimeToContactEndTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.BestTimeToContactStartTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.BestTimeToContactTimezone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.ExtensionNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.FormattedInternationalPhoneNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.FormattedNationalPhoneNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.IsBusinessPhone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.IsFaxCapable",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.IsPersonalPhone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.IsPrimary",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.IsSmsCapable",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.ParentId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.PhoneType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.PreferenceRank",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointPhone.UsageType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointTypeConsent.DataUsePurposeId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointTypeConsent.DoubleConsentCaptureDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointTypeConsent.EffectiveFrom",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContactPointTypeConsent.EffectiveTo",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "ContactPointTypeConsent.EngagementChannelTypeId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Contract.ActivatedById",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Contract.ActivatedDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.BillingAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.CompanySignedDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.CompanySignedId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.ContractTerm",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.CustomerSignedDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.CustomerSignedId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.CustomerSignedTitle",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Contract.EndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Contract.Name",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.OwnerExpirationNotice",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.Pricebook2Id",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Contract.ShippingAddress",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.SpecialTerms",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Contract.StartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.AssetId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.Discount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.EndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.ListPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.LocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.ParentContractLineItemId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.RootContractLineItemId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.StartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.StatusIndicator",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.Subtotal",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ContractLineItem.TotalPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Customer.CustomerStatusType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Customer.TotalLifeTimeValue",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "DataUseLegalBasis.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "DataUseLegalBasis.Source",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "DataUsePurpose.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "DataUsePurpose.IsMaintainablePerContactPoint",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "DataUsePurpose.IsMaintainablePerParty",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "DataUsePurpose.IsMaintainablePerType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "DataUsePurpose.LegalBasisId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.AssetId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.BusinessHoursId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.CasesPerEntitlement",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.ContractLineItemId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.EndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.IsPerIncident",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.LocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.RemainingCases",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.RemainingWorkOrders",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.ServiceContractId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.SlaProcessId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.StartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.StatusIndicator",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.SvcApptBookingWindowsId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.Type",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Entitlement.WorkOrdersPerEntitlement",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Event.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Event.IsAllDayEvent",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Event.Location",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Event.Type",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Event.WhatId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Event.WhoId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "FulfillmentOrder.FulfilledFromLocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "FulfillmentOrder.FulfilledToAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "FulfillmentOrder.FulfilledToEmailAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "FulfillmentOrder.FulfilledToPhone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "FulfillmentOrder.TotalProductAmount",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Idea.Attachment",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Idea.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.BusinessHoursId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.Category",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.DetectedDateTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.EndDateTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.EntitlementId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.IsClosed",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.IsMajorIncident",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.IsStopped",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.MilestoneStatus",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.ParentIncidentId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.PriorityOverrideReason",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.RelatedItemAutonumberMaster",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.ReportedMethod",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.ResolutionDateTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.ResolutionSummary",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.ResolvedById",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.SlaExitDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.SlaStartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.StartDateTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.StopStartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.SubCategory",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Incident.Type",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "IncidentRelatedItem.Comment",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.BirthDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.CanStorePiiElsewhere",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.ChildrenCount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.ConsumerCreditScore",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.ConsumerCreditScoreProviderName",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.ConvictionsCount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.DeathDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.HasOptedOutGeoTracking",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.HasOptedOutProcessing",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.HasOptedOutProfiling",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.HasOptedOutSolicit",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.HasOptedOutTracking",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.IndividualsAge",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.InfluencerRating",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.IsHomeOwner",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.MasterRecordId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.MilitaryService",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.Occupation",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.SendIndividualData",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.ShouldForget",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Individual.Website",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Address",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.AnnualRevenue",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Lead.CleanStatus",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Lead.CompanyDunsNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.CurrentGenerators__c",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Lead.DandbCompanyId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Lead.DoNotCall",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Email",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Fax",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Lead.GenderIdentity",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Lead.HasOptedOutOfEmail",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Lead.HasOptedOutOfFax",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Industry",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Jigsaw",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Lead.LastTransferDate",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.LeadSource",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.MobilePhone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.NumberOfEmployees",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.NumberofLocations__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Phone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Primary__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.ProductInterest__c",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Lead.Pronouns",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Rating",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.SICCode__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Title",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Lead.Website",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "LegalEntity.CompanyName",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "LegalEntity.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "LegalEntity.LegalEntityAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "LegalEntity.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.CloseDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.ConstructionEndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.ConstructionStartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.DrivingDirections",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.Location",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.LocationLevel",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.OpenDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.ParentLocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.PossessionDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.RemodelEndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.RemodelStartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.TimeZone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Location.VisitorAddressId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "MessagingEndUser.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "MessagingEndUser.ContactId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "MessagingEndUser.HasInitialResponseSent",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "MessagingEndUser.IsOptedOut",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "MessagingEndUser.LeadId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "MessagingSession.CaseId",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "MessagingSession.EndUserLanguage",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "MessagingSession.LeadId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "MessagingSession.OpportunityId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.Amount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.CampaignId",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Opportunity.ContractId",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.CurrentGenerators__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.DeliveryInstallationStatus__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.ExpectedRevenue",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.IsPrivate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.LeadSource",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.MainCompetitors__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.NextStep",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.OrderNumber__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.Probability",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.TotalOpportunityQuantity",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.TrackingNumber__c",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Opportunity.Type",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "OpportunityLineItem.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "OpportunityLineItem.Discount",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "OpportunityLineItem.ListPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "OpportunityLineItem.ProductCode",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "OpportunityLineItem.ServiceDate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "OpportunityLineItem.Subtotal",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "OpportunityLineItem.TotalPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Order.ActivatedById",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Order.ActivatedDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.BillToContactId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.BillingAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.CompanyAuthorizedById",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.CompanyAuthorizedDate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Order.ContractEndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Order.ContractName",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.CustomerAuthorizedById",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.CustomerAuthorizedDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.Name",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Order.OpportunityId",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Order.OrderReferenceNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.PoDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.PoNumber",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.ShipToContactId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.ShippingAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Order.TotalAmount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Order.Type",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "OrderItem.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "OrderItem.EndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "OrderItem.ListPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "OrderItem.ProductCode",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "OrderItem.ServiceDate",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "OrderItem.SubscriptionTerm",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "PartyConsent.DoubleConsentCaptureDate",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "PartyConsent.EffectiveFrom",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "PartyConsent.EffectiveTo",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.Category",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.ParentProblemId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.PriorityOverrideReason",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.RelatedItemAutonumberMaster",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.ResolutionDateTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.ResolutionSummary",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.ResolvedById",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.RootCauseSummary",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Problem.SubCategory",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ProblemRelatedItem.Comment",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Product2.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Product2.DisplayUrl",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Product2.ExternalDataSourceId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Product2.ExternalId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Product2.Family",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Product2.ProductCode",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Product2.QuantityUnitOfMeasure",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Product2.SellerId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Product2.SourceProductId",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Product2.StockKeepingUnit",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.AreQualItemsExclFromDiscounts",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.DiscountOrder",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.DiscountRestriction",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.DisplayName",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.EndDateTime",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.ExclusivityType",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.IsAutomatic",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.IsCommercePromotion",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.IsQualCriteriaNotRequiredPerApplication",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.IsTiered",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.MaximumUsageCount",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.PriorityNumber",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.QualifierCriteria",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.StartDateTime",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.TargetCriteria",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Promotion.TermsAndConditions",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "PromotionQualifier.ExternalQualifier",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "PromotionTarget.ExternalTarget",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "PromotionTarget.IsMinItemCountRequired",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "ResourceAbsence.Address",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ResourceAbsence.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.CaseId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.ContactId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.DestinationLocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.ExpectedArrivalDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.OrderId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.ReturnedById",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.ShipFromAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.ShipmentType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.SourceLocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrder.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrderLineItem.AssetId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrderLineItem.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrderLineItem.DestinationLocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrderLineItem.OrderItemId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrderLineItem.ProcessingPlan",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrderLineItem.QuantityUnitOfMeasure",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrderLineItem.ReasonForReturn",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrderLineItem.RepaymentMethod",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ReturnOrderLineItem.SourceLocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Seller.ActiveFromDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Seller.ActiveToDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Seller.SalesAmount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Seller.SellerTier",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Seller.SellerType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.ActualDuration",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.ActualEndTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.ActualStartTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.AdditionalInformation",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.Address",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.AppointmentInvitationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.AppointmentType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.ApptBookingInfoUrl",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.ArrivalWindowEndTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.ArrivalWindowStartTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.CancellationReason",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.Comments",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.ContactId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.Email",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.IsAnonymousBooking",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.IsOffsiteAppointment",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.Phone",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.SchedEndTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.SchedStartTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.ServiceNote",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.ServiceTerritoryId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.StatusCategory",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.Subject",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceAppointment.WorkTypeId",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "ServiceAppointmentAttendee.HasAttended",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "ServiceAppointmentAttendee.Status",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.ActivationDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.AdditionalDiscount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.ApprovalStatus",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.BillingAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.ContactId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.Discount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.EndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.GrandTotal",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.ParentServiceContractId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.RootServiceContractId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.ShippingAddress",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.ShippingHandling",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.SpecialTerms",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.StartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.StatusIndicator",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.Subtotal",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.Tax",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.Term",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceContract.TotalPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceResource.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceResource.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceResource.IsActive",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceResource.LocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceResourceSkill.EffectiveEndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceResourceSkill.SkillLevel",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceTerritory.Address",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceTerritory.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceTerritory.IsActive",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceTerritory.TopLevelTerritoryId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceTerritory.TypicalInTerritoryTravelTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceTerritoryMember.Address",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceTerritoryMember.EffectiveEndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceTerritoryMember.OperatingHoursId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "ServiceTerritoryMember.Role",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Shift.BackgroundColor",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Shift.Label",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Shift.ServiceResourceId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Shift.ServiceTerritoryId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Shift.WorkTypeGroupId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Shift.WorkTypeId",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "ShiftWorkTopic.AttendeeLimit",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.ActualDeliveryDate",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.DeliveredToId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.Description",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.ExpectedDeliveryDate",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.FulfillmentOrderId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.Provider",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.ReturnOrderId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.ShipFromAddress",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.ShipToAddress",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.Status",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.TrackingNumber",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "Shipment.TrackingUrl",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "ShipmentItem.FulfillmentOrderLineItemId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "ShipmentItem.ReturnOrderLineItemId",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "SkillRequirement.SkillLevel",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "SocialPersona.SourceApp",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Solution.IsPublished",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Solution.IsPublishedInPublicKb",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Solution.SolutionNote",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Task.ActivityDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Task.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "Task.Type",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "Task.WhatId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "Task.WhoId",
+      "readable": "true"
+    },
+    {
+      "editable": "false",
+      "field": "TimeSlot.MaxAppointments",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "TimeSlot.WorkTypeGroupId",
+      "readable": "false"
+    },
+    {
+      "editable": "false",
+      "field": "WebStoreInventorySource.IsEnabled",
+      "readable": "false"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.AccountId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Address",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.AssetId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.BusinessHoursId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.CaseId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.ContactId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Discount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Duration",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.DurationInMinutes",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.DurationType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.EndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.EntitlementId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.GrandTotal",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.IsClosed",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.IsStopped",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.LineItemCount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.LocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.MilestoneStatus",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.MilestoneStatusIcon",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.ParentWorkOrderId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Pricebook2Id",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Priority",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.RootWorkOrderId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.ServiceAppointmentCount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.ServiceContractId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.ServiceTerritoryId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.SlaExitDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.SlaStartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.StartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.StatusCategory",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.StopStartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Subject",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Subtotal",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.Tax",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.TotalPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrder.WorkTypeId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.Address",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.AssetId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.Discount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.EndDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.IsClosed",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.ListPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.LocationId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.OrderId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.ParentWorkOrderLineItemId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.PricebookEntryId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.Priority",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.Product2Id",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.Quantity",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.RootWorkOrderLineItemId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.ServiceAppointmentCount",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.ServiceTerritoryId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.StartDate",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.Status",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.StatusCategory",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.Subject",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.Subtotal",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.TotalPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.UnitPrice",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkOrderLineItem.WorkTypeId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkPlan.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkPlan.WorkOrderLineItemId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkPlan.WorkPlanTemplateId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkPlanTemplate.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkPlanTemplate.IsActive",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkPlanTemplate.RelativeExecutionOrder",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkPlanTemplateEntry.ExecutionOrder",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStep.ActionDefinition",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStep.ActionType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStep.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStep.EndTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStep.PausedFlowInterviewId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStep.StartTime",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStep.WorkOrderLineItemId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStep.WorkPlanExecutionOrder",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStepTemplate.ActionDefinition",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStepTemplate.ActionType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStepTemplate.Description",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkStepTemplate.IsActive",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.BlockTimeAfterAppointment",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.BlockTimeAfterUnit",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.BlockTimeBeforeAppointment",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.BlockTimeBeforeUnit",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.DefaultAppointmentType",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.OperatingHoursId",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.TimeFrameEndUnit",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.TimeFrameStartUnit",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.TimeframeEnd",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkType.TimeframeStart",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkTypeGroup.AdditionalInformation",
+      "readable": "true"
+    },
+    {
+      "editable": "true",
+      "field": "WorkTypeGroup.IsActive",
+      "readable": "true"
+    }
+  ],
+  "layoutAssignments": [
+    {
+      "layout": "Account-Account Layout"
+    },
+    {
+      "layout": "AlternativePaymentMethod-Alternative Payment Method Layout"
+    },
+    {
+      "layout": "ApiAnomalyEventStore-API Anomaly Event Store Layout"
+    },
+    {
+      "layout": "AppointmentInvitation-Appointment Invitation Layout"
+    },
+    {
+      "layout": "Asset-Asset Layout"
+    },
+    {
+      "layout": "AssetAction-Asset Action Layout"
+    },
+    {
+      "layout": "AssetActionSource-Asset Action Source Layout"
+    },
+    {
+      "layout": "AssetRelationship-Asset Relationship Layout"
+    },
+    {
+      "layout": "AssetStatePeriod-Asset State Period Layout"
+    },
+    {
+      "layout": "AssignedResource-Assigned Resource Layout"
+    },
+    {
+      "layout": "AssociatedLocation-Associated Location Layout"
+    },
+    {
+      "layout": "AsyncOperationLog-Async Operation Log Layout"
+    },
+    {
+      "layout": "AuthorizationForm-Authorization Form Layout"
+    },
+    {
+      "layout": "AuthorizationFormConsent-Authorization Form Consent Layout"
+    },
+    {
+      "layout": "AuthorizationFormDataUse-Authorization Form Data Use Layout"
+    },
+    {
+      "layout": "AuthorizationFormText-Authorization Form Text Layout"
+    },
+    {
+      "layout": "BusinessBrand-Business Brand Layout"
+    },
+    {
+      "layout": "Campaign-Campaign Layout"
+    },
+    {
+      "layout": "CampaignMember-Campaign Member Page Layout"
+    },
+    {
+      "layout": "CardPaymentMethod-Card Payment Method Layout"
+    },
+    {
+      "layout": "CartCheckoutSession-Cart Checkout Session Layout"
+    },
+    {
+      "layout": "CartDeliveryGroup-Cart Delivery Group Layout"
+    },
+    {
+      "layout": "CartDeliveryGroupMethod-Cart Delivery Group Method Layout"
+    },
+    {
+      "layout": "CartItem-Cart Item Layout"
+    },
+    {
+      "layout": "CartTax-Cart Tax Layout"
+    },
+    {
+      "layout": "CartValidationOutput-Cart Validation Output Layout"
+    },
+    {
+      "layout": "Case-Case Layout"
+    },
+    {
+      "layout": "CaseClose-Close Case Layout"
+    },
+    {
+      "layout": "CaseMilestone-Présentation du jalon de requête"
+    },
+    {
+      "layout": "CommunityMemberLayout-Community Member Layout"
+    },
+    {
+      "layout": "ConsumptionRate-Consumption Rate Layout"
+    },
+    {
+      "layout": "ConsumptionSchedule-Consumption Schedule Layout"
+    },
+    {
+      "layout": "Contact-Contact Layout"
+    },
+    {
+      "layout": "ContactPointAddress-Contact Point Address Layout"
+    },
+    {
+      "layout": "ContactPointEmail-Contact Point Email Layout"
+    },
+    {
+      "layout": "ContactPointPhone-Contact Point Phone Layout"
+    },
+    {
+      "layout": "ContactPointTypeConsent-Contact Point Type Consent Layout"
+    },
+    {
+      "layout": "ContentVersion-Content Version Layout"
+    },
+    {
+      "layout": "Contract-Contract Layout"
+    },
+    {
+      "layout": "ContractLineItem-Présentation de l%27élément de ligne de contrat"
+    },
+    {
+      "layout": "CredentialStuffingEventStore-Credential Stuffing Event Store Layout"
+    },
+    {
+      "layout": "CreditMemo-Credit Memo Layout"
+    },
+    {
+      "layout": "CreditMemoInvApplication-Credit Memo Invoice Application Layout"
+    },
+    {
+      "layout": "CreditMemoLine-Credit Memo Line Layout"
+    },
+    {
+      "layout": "Customer-Customer Layout"
+    },
+    {
+      "layout": "DandBCompany-D%26B Company Layout"
+    },
+    {
+      "layout": "DataUseLegalBasis-Data Use Legal Basis Layout"
+    },
+    {
+      "layout": "DataUsePurpose-Data Use Purpose Layout"
+    },
+    {
+      "layout": "DigitalWallet-Digital Wallet Layout"
+    },
+    {
+      "layout": "DuplicateRecordSet-Duplicate Record Set Layout"
+    },
+    {
+      "layout": "EmailMessage-Email Message Layout"
+    },
+    {
+      "layout": "EngagementChannelType-Engagement Channel Type Layout"
+    },
+    {
+      "layout": "Entitlement-Présentation de l%27autorisation"
+    },
+    {
+      "layout": "EntityMilestone-Présentation du jalon d%27objet"
+    },
+    {
+      "layout": "Event-Event Layout"
+    },
+    {
+      "layout": "FeedItem-Feed Item Layout"
+    },
+    {
+      "layout": "FinanceBalanceSnapshot-Finance Balance Snapshot Layout"
+    },
+    {
+      "layout": "FinanceTransaction-Finance Transaction Layout"
+    },
+    {
+      "layout": "FulfillmentOrder-Fulfillment Order Layout"
+    },
+    {
+      "layout": "FulfillmentOrderItemAdjustment-Fulfillment Order Item Adjustment Layout"
+    },
+    {
+      "layout": "FulfillmentOrderItemTax-Fulfillment Order Item Tax Layout"
+    },
+    {
+      "layout": "FulfillmentOrderLineItem-Fulfillment Order Product Layout"
+    },
+    {
+      "layout": "Global-Global Layout"
+    },
+    {
+      "layout": "GuestUserAnomalyEventStore-Guest User Anomaly Event Store Layout"
+    },
+    {
+      "layout": "Idea-Idea Layout"
+    },
+    {
+      "layout": "Individual-Individual Layout"
+    },
+    {
+      "layout": "Invoice-Invoice Layout"
+    },
+    {
+      "layout": "InvoiceLine-Invoice Line Layout"
+    },
+    {
+      "layout": "Lead-Lead Layout"
+    },
+    {
+      "layout": "LegalEntity-Legal Entity Layout"
+    },
+    {
+      "layout": "Location-Location Layout"
+    },
+    {
+      "layout": "LocationGroup-Location Group Layout"
+    },
+    {
+      "layout": "LocationGroupAssignment-Location Group Assignment Layout"
+    },
+    {
+      "layout": "Macro-Macro Layout"
+    },
+    {
+      "layout": "OperatingHours-Operating Hours Layout"
+    },
+    {
+      "layout": "Opportunity-Opportunity Layout"
+    },
+    {
+      "layout": "OpportunityLineItem-Opportunity Product Layout"
+    },
+    {
+      "layout": "Order-Order Layout"
+    },
+    {
+      "layout": "OrderItem-Order Product Layout"
+    },
+    {
+      "layout": "Payment-Payment Layout"
+    },
+    {
+      "layout": "PaymentAuthAdjustment-Payment Authorization Adjustment Layout"
+    },
+    {
+      "layout": "PaymentAuthorization-Payment Authorization Layout"
+    },
+    {
+      "layout": "PaymentGateway-Payment Gateway Layout"
+    },
+    {
+      "layout": "PaymentGatewayLog-Payment Gateway Log Layout"
+    },
+    {
+      "layout": "PaymentGroup-Payment Group Layout"
+    },
+    {
+      "layout": "PaymentLineInvoice-Payment Line Invoice Layout"
+    },
+    {
+      "layout": "Pricebook2-Price Book Layout"
+    },
+    {
+      "layout": "PricebookEntry-Price Book Entry Layout"
+    },
+    {
+      "layout": "ProcessException-Process Exception Layout"
+    },
+    {
+      "layout": "Product2-Product Layout"
+    },
+    {
+      "layout": "ProductConsumptionSchedule-Product Consumption Schedule Layout"
+    },
+    {
+      "layout": "QuickText-Quick Text Layout"
+    },
+    {
+      "layout": "Refund-Refund Layout"
+    },
+    {
+      "layout": "RefundLinePayment-Refund Line Payment Layout"
+    },
+    {
+      "layout": "ReportAnomalyEventStore-Report Anomaly Event Store Layout"
+    },
+    {
+      "layout": "ResourceAbsence-Resource Absence Layout"
+    },
+    {
+      "layout": "ResourcePreference-Resource Preference Layout"
+    },
+    {
+      "layout": "ReturnOrder-Return Order Layout"
+    },
+    {
+      "layout": "ReturnOrderItemAdjustment-Return Order Item Adjustment Layout"
+    },
+    {
+      "layout": "ReturnOrderItemTax-Return Order Item Tax Layout"
+    },
+    {
+      "layout": "ReturnOrderLineItem-Return Order Line Item Layout"
+    },
+    {
+      "layout": "Scorecard-Scorecard Layout"
+    },
+    {
+      "layout": "ScorecardAssociation-Scorecard Association Layout"
+    },
+    {
+      "layout": "ScorecardMetric-Scorecard Metric Layout"
+    },
+    {
+      "layout": "Seller-Seller Layout"
+    },
+    {
+      "layout": "ServiceAppointment-Service Appointment Layout"
+    },
+    {
+      "layout": "ServiceContract-Présentation du contrat de service"
+    },
+    {
+      "layout": "ServiceResource-Service Resource Layout"
+    },
+    {
+      "layout": "ServiceResourceSkill-Service Resource Skill Layout"
+    },
+    {
+      "layout": "ServiceTerritory-Service Territory Layout"
+    },
+    {
+      "layout": "ServiceTerritoryMember-Service Territory Member Layout"
+    },
+    {
+      "layout": "SessionHijackingEventStore-Session Hijacking Event Store Layout"
+    },
+    {
+      "layout": "Shift-Shift Layout"
+    },
+    {
+      "layout": "ShiftWorkTopic-Shift Work Topic Layout"
+    },
+    {
+      "layout": "ShippingConfigurationSet-Shipping Configuration Set Layout"
+    },
+    {
+      "layout": "ShippingRateArea-Shipping Rate Area Layout"
+    },
+    {
+      "layout": "ShippingRateGroup-Shipping Rate Group Layout"
+    },
+    {
+      "layout": "SkillRequirement-Skill Requirement Layout"
+    },
+    {
+      "layout": "SocialPersona-Social Persona Layout"
+    },
+    {
+      "layout": "Solution-Solution Layout"
+    },
+    {
+      "layout": "StandardShippingRate-Standard Shipping Rate Layout"
+    },
+    {
+      "layout": "Task-Task Layout"
+    },
+    {
+      "layout": "ThreatDetectionFeedback-Threat Detection Feedback Layout"
+    },
+    {
+      "layout": "TimeSlot-Time Slot Layout"
+    },
+    {
+      "layout": "User-User Layout"
+    },
+    {
+      "layout": "UserAlt-User Profile Layout"
+    },
+    {
+      "layout": "UserProvAccount-User Provisioning Account Layout"
+    },
+    {
+      "layout": "UserProvisioningLog-User Provisioning Log Layout"
+    },
+    {
+      "layout": "UserProvisioningRequest-User Provisioning Request Layout"
+    },
+    {
+      "layout": "Waitlist-%5F%5FMISSING LABEL%5F%5F PropertyFile - val Waitlist not found in section StandardLayouts"
+    },
+    {
+      "layout": "WebCart-Cart Layout"
+    },
+    {
+      "layout": "WebCartAdjustmentBasis-Cart Adjustment Basis Layout"
+    },
+    {
+      "layout": "WebCartAdjustmentGroup-Cart Adjustment Group Layout"
+    },
+    {
+      "layout": "WebStore-Store Layout"
+    },
+    {
+      "layout": "WorkOrder-Work Order Layout"
+    },
+    {
+      "layout": "WorkOrderLineItem-Work Order Line Item Layout"
+    },
+    {
+      "layout": "WorkPlan-Work Plan Layout"
+    },
+    {
+      "layout": "WorkPlanTemplate-Work Plan Template Layout"
+    },
+    {
+      "layout": "WorkPlanTemplateEntry-Work Plan Template Entry Layout"
+    },
+    {
+      "layout": "WorkStep-Work Step Layout"
+    },
+    {
+      "layout": "WorkStepTemplate-Work Step Template Layout"
+    },
+    {
+      "layout": "WorkType-Work Type Layout"
+    },
+    {
+      "layout": "WorkTypeGroup-Work Type Group Layout"
+    },
+    {
+      "layout": "WorkTypeGroupMember-Work Type Group Member Layout"
+    }
+  ],
+  "objectPermissions": [
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AIInsightReason",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AIRecordInsight",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Account",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Address",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AlternativePaymentMethod",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ApiAnomalyEventStore",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AppAnalyticsQueryRequest",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AppUsageAssignment",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AppointmentCategory",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AppointmentInvitation",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AppointmentScheduleAggr",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AppointmentScheduleLog",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AppointmentTopicTimeSlot",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Asset",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AssetAction",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AssetActionSource",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AssetStatePeriod",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AsyncOperationLog",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AuthorizationForm",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AuthorizationFormConsent",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AuthorizationFormDataUse",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "AuthorizationFormText",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "BackgroundOperation",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "BusinessBrand",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "BuyerGroup",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Campaign",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "CardPaymentMethod",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Case",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ChangeRequest",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "CommSubscription",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "CommSubscriptionChannelType",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "CommSubscriptionConsent",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "CommSubscriptionTiming",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ConsumptionSchedule",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Contact",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ContactPointAddress",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ContactPointConsent",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ContactPointEmail",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ContactPointPhone",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ContactPointTypeConsent",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ContactRequest",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Contract",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ContractLineItem",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Coupon",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "CredentialStuffingEventStore",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "CreditMemo",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "CreditMemoInvApplication",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Customer",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "true",
+      "allowDelete": "true",
+      "allowEdit": "true",
+      "allowRead": "true",
+      "modifyAllRecords": "true",
+      "object": "DandBCompany",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "DataKitDeploymentLog",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "DataUseLegalBasis",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "DataUsePurpose",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "DigitalWallet",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Document",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "DuplicateRecordSet",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "EngagementChannelType",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Entitlement",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "EntitlementContact",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "FinanceBalanceSnapshot",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "FinanceTransaction",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "FulfillmentOrder",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "GtwyProvPaymentMethodType",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "GuestUserAnomalyEventStore",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Idea",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Image",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Incident",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Individual",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "InventoryItemReservation",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "InventoryReservation",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Invoice",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Lead",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "LegalEntity",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Location",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "LocationGroup",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "LocationGroupAssignment",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Macro",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "MessagingEndUser",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "MessagingSession",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "OperatingHours",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Opportunity",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Order",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PartyConsent",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Payment",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PaymentAuthAdjustment",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PaymentAuthorization",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PaymentGateway",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PaymentGatewayLog",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PaymentGroup",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PaymentLineInvoice",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PendingOrdSumProcEvent",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PendingOrderSummary",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Pricebook2",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PrivacyConsent",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PrivacyJobSession",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PrivacyObjectSession",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PrivacyPolicy",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PrivacyRTBFRequest",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PrivacySessionRecordFailure",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Problem",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ProcessException",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Product2",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ProductCatalog",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ProductCategory",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ProductCategoryProduct",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Promotion",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PromotionLineItemRule",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PromotionMarketSegment",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PromotionQualifier",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PromotionSegment",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PromotionTarget",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PromotionTier",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "PushTopic",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "QuickText",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Refund",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "RefundLinePayment",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ReportAnomalyEventStore",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ReturnOrder",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Scorecard",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ScorecardAssociation",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ScorecardMetric",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Seller",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ServiceAppointment",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ServiceAppointmentAttendee",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ServiceContract",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ServiceResource",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ServiceTerritory",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "SessionHijackingEventStore",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Shift",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Shipment",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ShippingCarrier",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ShippingCarrierMethod",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "ShippingConfigurationSet",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "SocialPersona",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Solution",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "StreamingChannel",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "UserDefinedLabel",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "UserExternalCredential",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "Waitlist",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WebCart",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WebStore",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WebStoreBuyerGroup",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WebStoreCatalog",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WebStoreInventorySource",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WorkOrder",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WorkPlan",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WorkPlanTemplate",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WorkStepTemplate",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WorkType",
+      "viewAllRecords": "true"
+    },
+    {
+      "allowCreate": "false",
+      "allowDelete": "false",
+      "allowEdit": "false",
+      "allowRead": "true",
+      "modifyAllRecords": "false",
+      "object": "WorkTypeGroup",
+      "viewAllRecords": "true"
+    }
+  ],
+  "recordTypeVisibilities": {
+    "default": "false",
+    "recordType": "Idea.InternalIdeasIdeaRecordType",
+    "visible": "false"
+  },
+  "tabVisibilities": [
+    {
+      "tab": "standard-Account",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-AccountInsight",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ActionCadence",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-AlternativePaymentMethod",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-AppLauncher",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-AppointmentCategory",
+      "visibility": "DefaultOff"
+    },
+    {
+      "tab": "standard-AppointmentInvitation",
+      "visibility": "DefaultOff"
+    },
+    {
+      "tab": "standard-AssessmentIndicatorDefinition",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-AssessmentTask",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Asset",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-AssetAction",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-AssetActionSource",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-AssetStatePeriod",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Assortment",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-AsyncOperationLog",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Audience360",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-AuthorizationForm",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-AuthorizationFormConsent",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-AuthorizationFormDataUse",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-AuthorizationFormText",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Award",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-B2bAutomation",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bContent",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bEmail",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bEngagementStudio",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bHome",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bMarketablePeople",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bPardotCampaigns",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bPardotEmail",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bPardotReports",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bPardotSettings",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-B2bSocialSearch",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-BusinessBrand",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-BusinessObjectivesRecommendations",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-BuyerGroup",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-C360ProfileSearch",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Calibration",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-CallTemplate",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Campaign",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-CampaignInsight",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-CardPaymentMethod",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Case",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ChangeRequest",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Chatter",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ClaimAdjuster",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Coaching",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-CollaborationGroup",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-CommSubscription",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-CommSubscriptionChannelType",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-CommSubscriptionConsent",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-CommSubscriptionTiming",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-CommerceEntitlementPolicy",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ConsumptionSchedule",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Contact",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ContactPointConsent",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ContactPointTypeConsent",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ContactRequest",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ContactSuggestionInsight",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ContentDocumentListViewMapping",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ContentNote",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ContentSearch",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ContentSubscriptions",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Contract",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ContractLineItem",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Coupon",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-CreditMemo",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Customer",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-DandBCompany",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Dashboard",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-DataGraph",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-DataMaskJobSession",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-DataMaskPolicy",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-DataQueryWorkspace",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-DataUseLegalBasis",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-DataUsePurpose",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-DelegatedAccount",
+      "visibility": "DefaultOff"
+    },
+    {
+      "tab": "standard-DeleteEvent",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-DigitalWallet",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-DiscoveryForAccounts",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Document",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-DuplicateRecordSet",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-EinsteinAssistant",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-EinsteinInsights",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-EmailTemplate",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-EnablementMeasureDefinition",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-EnablementProgram",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-EngagementChannelType",
+      "visibility": "DefaultOff"
+    },
+    {
+      "tab": "standard-EngagementProgram",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-EnhancedEmailTemplate",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-EnhancedLetterhead",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Entitlement",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Event",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Feed",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-File",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-FinanceBalanceSnapshot",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-FinanceTransaction",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-FlowInterview",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-FlowOrchestrationInstance",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-FlowOrchestrationWorkItem",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-FlowRecord",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Forecasting3",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ForecastingLightning",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-FulfillmentOrder",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-GeolocationBasedAction",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-GoalV2",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-HvsWaveLightning",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Idea",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-IdeaTheme",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-IdentityDocument",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Image",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Incident",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Individual",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-InventoryItemReservation",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-InventoryReservation",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Invoice",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-JigsawSearch",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-LandingPageContent",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Lead",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-LearningItem",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LegalEntity",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-LightningBoltHome",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LightningInstrumentation",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LightningQuickText",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ListEmail",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Location",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LocationGroup",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LoyaltyMemberCurrency",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LoyaltyMemberTier",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LoyaltyPartnerProduct",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LoyaltyProgram",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LoyaltyProgramCurrency",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LoyaltyProgramMember",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LoyaltyProgramPartner",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LoyaltyTier",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-LoyaltyTierGroup",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Macro",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Metric",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-News",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-OmniSupervisorLightning",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-OperatingHours",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Opportunity",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-OpportunityContactRoleSuggestionInsight",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-OpportunityInsight",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Order",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-OrgManagement",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-OrgMetric",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-OtherUserProfile",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-PartyConsent",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Payment",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-PaymentAuthAdjustment",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-PaymentAuthorization",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-PaymentGateway",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-PaymentGatewayLog",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-PaymentLineInvoice",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-PersonEducation",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-PersonEmployment",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-PriceAdjustmentSchedule",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Pricebook2",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Problem",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ProcessException",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ProcessInstanceWorkitem",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Product2",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ProductCatalog",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ProductCategory",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ProfilePlatformCoaching",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ProfilePlatformFeed",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ProfilePlatformFeedback",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ProfilePlatformGoals",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ProfilePlatformOverview",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ProfileSkill",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Promotion",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-PromotionSegment",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Recognition",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Recommendation",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Refund",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-RefundLinePayment",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-RetailExecution",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-RetailLocationGroup",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-RetailStore",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-RetailStoreKpi",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ReturnOrder",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-SalesCoachHome",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Scorecard",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-SecurityCenterCustomMetrics",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-SecurityCenterNotification",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-SecurityCenterPolicies",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-SecurityHealthCheck",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-SecurityHub",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Seller",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ServiceAppointment",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ServiceAppointmentGroup",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-ServiceContract",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ServiceResource",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ServiceTerritory",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-ServiceTerritoryRelationship",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Shift",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Sites",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Snippet",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Solution",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-StreamingChannel",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Task",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Today",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-UserDefinedLabel",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-UserProfile",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-UserProvisioningRequest",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Visit",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-Waitlist",
+      "visibility": "DefaultOff"
+    },
+    {
+      "tab": "standard-WaveHome",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-WaveHomeLightning",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WaveHomeLightningEacFree",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WebStoreInventorySource",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-WorkBadge",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkBadgeDefinition",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkFeedbackRequest",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkOrder",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-WorkPerformanceCycle",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkPlan",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-WorkPlanTemplate",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-WorkProcedure",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkProcedureStep",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkQueue",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkRewardFund",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkRewardFundType",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkStepTemplate",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-WorkType",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-WorkTypeExtension",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-WorkTypeGroup",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-Workspace",
+      "visibility": "Hidden"
+    },
+    {
+      "tab": "standard-home",
+      "visibility": "DefaultOn"
+    },
+    {
+      "tab": "standard-report",
+      "visibility": "DefaultOn"
+    }
+  ],
+  "userLicense": "Analytics Cloud Integration User",
+  "userPermissions": [
+    {
+      "enabled": "true",
+      "name": "ActivitiesAccess"
+    },
+    {
+      "enabled": "true",
+      "name": "AddDirectMessageMembers"
+    },
+    {
+      "enabled": "true",
+      "name": "AllowViewKnowledge"
+    },
+    {
+      "enabled": "true",
+      "name": "ApexRestServices"
+    },
+    {
+      "enabled": "true",
+      "name": "ApiEnabled"
+    },
+    {
+      "enabled": "true",
+      "name": "ApiUserOnly"
+    },
+    {
+      "enabled": "true",
+      "name": "CampaignInfluence2"
+    },
+    {
+      "enabled": "true",
+      "name": "EnableCommunityAppLauncher"
+    },
+    {
+      "enabled": "true",
+      "name": "InsightsAppAdmin"
+    },
+    {
+      "enabled": "true",
+      "name": "InsightsAppUser"
+    },
+    {
+      "enabled": "true",
+      "name": "PasswordNeverExpires"
+    },
+    {
+      "enabled": "true",
+      "name": "QueryAllFiles"
+    },
+    {
+      "enabled": "true",
+      "name": "RecordVisibilityAPI"
+    },
+    {
+      "enabled": "true",
+      "name": "RemoveDirectMessageMembers"
+    },
+    {
+      "enabled": "true",
+      "name": "RunReports"
+    },
+    {
+      "enabled": "true",
+      "name": "ShowCompanyNameAsUserBadge"
+    },
+    {
+      "enabled": "true",
+      "name": "UseWebLink"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewAllData"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewAllProfiles"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewAllUsers"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewDataLeakageEvents"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewDeveloperName"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewEventLogFiles"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewPlatformEvents"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewPublicDashboards"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewPublicReports"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewRoles"
+    },
+    {
+      "enabled": "true",
+      "name": "ViewSetup"
+    },
+    {
+      "enabled": "true",
+      "name": "WorkDotComUserPerm"
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "fullName": "FinanceBalanceSnapshot",
+  "actionOverrides": [
+    {
+      "actionName": "CancelEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "Edit",
+      "type": "Default"
+    },
+    {
+      "actionName": "SaveEdit",
+      "type": "Default"
+    },
+    {
+      "actionName": "View",
+      "type": "Default"
+    }
+  ],
+  "compactLayoutAssignment": "SYSTEM",
+  "enableFeeds": "false",
+  "externalSharingModel": "Private",
+  "fields": [
+    {
+      "fullName": "AccountId",
+      "inlineHelpText": "Parent account of the reference entity",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "AdjustmentAmount",
+      "inlineHelpText": "The adjustment contributing to the transaction's subtotal"
+    },
+    {
+      "fullName": "Balance",
+      "inlineHelpText": "Final balance of the snapshot's reference entity. Inherited from the finance transaction's resulting balance if the finance transaction's reference entity is a credit memo, debit memo, invoice, payment, or refund."
+    },
+    {
+      "fullName": "BaseCurrencyAmount",
+      "inlineHelpText": "Define this value based on any currency conversion needed for the total amount with tax."
+    },
+    {
+      "fullName": "BaseCurrencyBalance",
+      "inlineHelpText": "Define this value based on any currency conversion needed for the resulting balance."
+    },
+    {
+      "fullName": "BaseCurrencyFxDate",
+      "inlineHelpText": "Date used to determine the foreign exchange rate. Define this value to use later when you calculate currency conversions."
+    },
+    {
+      "fullName": "BaseCurrencyFxRate",
+      "inlineHelpText": "Rate of exchange according to the Base Currency FX Date. Define this value to use later when you calculate currency conversions."
+    },
+    {
+      "fullName": "BaseCurrencyIsoCode",
+      "inlineHelpText": "Currency of the country defined for this account. Define this value to use later when you calculate currency conversions."
+    },
+    {
+      "fullName": "ChargeAmount",
+      "inlineHelpText": "The charge contributing to the transaction's subtotal"
+    },
+    {
+      "fullName": "DueDate",
+      "inlineHelpText": "Date when the invoice is due"
+    },
+    {
+      "fullName": "EffectiveDate",
+      "inlineHelpText": "The date when the financial transaction takes effect"
+    },
+    {
+      "fullName": "EventType",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "FinanceSystemIntegrationMode",
+      "inlineHelpText": "The type of the external financial system used to recognize the finance transaction."
+    },
+    {
+      "fullName": "FinanceSystemIntegrationStatus"
+    },
+    {
+      "fullName": "FinanceSystemName",
+      "inlineHelpText": "The name of the external financial system used to recognize the finance transaction."
+    },
+    {
+      "fullName": "FinanceSystemTransactionNumber"
+    },
+    {
+      "fullName": "FinanceTransactionId",
+      "inlineHelpText": "Parent finance transaction for the snapshot. The snapshot's fields inherit the transaction's values only if the finance transaction's reference entity type is an invoice, payment, credit memo, debit memo, or refund.",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ImpactAmount",
+      "inlineHelpText": "The finance transaction's impact on the customer's finances"
+    },
+    {
+      "fullName": "LegalEntityId",
+      "inlineHelpText": "Legal entity associated with the finance transaction. This is an optional lookup that you can add to associate the finance transaction to GL rules for external ledger processing.",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "OriginalEventType",
+      "inlineHelpText": "The finance transaction's event type when the finance transaction was created."
+    },
+    {
+      "fullName": "OriginalReferenceEntityType",
+      "inlineHelpText": "The finance transaction's reference entity type when the finance transaction was created."
+    },
+    {
+      "fullName": "OwnerId",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ReferenceEntityId",
+      "inlineHelpText": "The financial object that was created or updated as a result of a customer action",
+      "type": "Lookup"
+    },
+    {
+      "fullName": "ReferenceEntityType",
+      "type": "Picklist"
+    },
+    {
+      "fullName": "Subtotal",
+      "inlineHelpText": "Total of the charge amount and adjustment. Doesn't include the tax amount."
+    },
+    {
+      "fullName": "TaxAmount",
+      "inlineHelpText": "The total amount of tax for the change made to your reference entity as a result of the event action"
+    },
+    {
+      "fullName": "TotalAmountWithTax",
+      "inlineHelpText": "The subtotal plus the tax amount"
+    },
+    {
+      "fullName": "TransactionDate",
+      "inlineHelpText": "The date when the finance transaction occurred"
+    }
+  ],
+  "label": "Finance Balance Snapshot",
+  "listViews": {
+    "fullName": "mine",
+    "columns": [
+      "Name",
+      "Balance",
+      "ReferenceEntity",
+      "TransactionDate",
+      "EffectiveDate"
+    ],
+    "filterScope": "Mine",
+    "label": "My Finance Balance Snapshots"
+  },
+  "searchLayouts": {
+    "customTabListAdditionalFields": [
+      "Account",
+      "ReferenceEntity",
+      "EventType",
+      "EffectiveDate",
+      "ImpactAmount"
+    ],
+    "lookupDialogsAdditionalFields": [
+      "Account",
+      "ReferenceEntity",
+      "EventType",
+      "EffectiveDate",
+      "ImpactAmount"
+    ],
+    "lookupPhoneDialogsAdditionalFields": [
+      "Account",
+      "ReferenceEntity",
+      "EventType",
+      "EffectiveDate",
+      "ImpactAmount"
+    ],
+    "searchResultsAdditionalFields": [
+      "Account",
+      "ReferenceEntity",
+      "EventType",
+      "EffectiveDate",
+      "ImpactAmount"
+    ]
+  },
+  "sharingModel": "Private"
+}

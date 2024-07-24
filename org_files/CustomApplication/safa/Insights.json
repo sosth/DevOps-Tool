@@ -1,0 +1,9 @@
+{
+  "attributes": {
+    "type": "CustomApplication",
+    "url": "/services/data/v42.0/tooling/sobjects/CustomApplication/02uQy000004fSwEIAU"
+  },
+  "Id": "02uQy000004fSwEIAU",
+  "DeveloperName": "Insights",
+  "NamespacePrefix": "standard"
+}
