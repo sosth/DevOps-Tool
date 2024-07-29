@@ -1,7 +1,6 @@
-// routes/googleAuthRoutes.js
 const express = require('express');
 const { OAuth2Client } = require('google-auth-library');
-const { saveUser } = require('../services/userService'); // We'll create this service
+const { saveUser } = require('../services/userService');
 
 const router = express.Router();
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
