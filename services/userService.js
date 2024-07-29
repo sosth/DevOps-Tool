@@ -1,4 +1,4 @@
-// services/insertdbuser.js
+// services/userService.js
 const { Pool } = require('pg');
 
 const pool = new Pool({
@@ -8,7 +8,7 @@ const pool = new Pool({
   }
 });
 
-const insertUser = async (userData) => {
+const saveUser = async (userData) => {
   const client = await pool.connect();
   try {
     const query = `
@@ -34,4 +34,4 @@ const insertUser = async (userData) => {
   }
 };
 
-module.exports = { insertUser };
+module.exports = { saveUser };
