@@ -7,14 +7,12 @@ const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 router.post('/login', async (req, res) => {
   const { token } = req.body;
-
   try {
     console.log('Received token:', token);
     const ticket = await client.verifyIdToken({
       idToken: token,
       audience: process.env.GOOGLE_CLIENT_ID,
     });
-
     const payload = ticket.getPayload();
     console.log('Google payload:', payload);
     const userData = {

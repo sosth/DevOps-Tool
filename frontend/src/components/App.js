@@ -10,7 +10,13 @@ function App() {
   const [profile, setProfile] = useState(null);
 
   const login = useGoogleLogin({
-    onSuccess: (codeResponse) => setUser(codeResponse),
+    onSuccess: (tokenResponse) => {
+      console.log(tokenResponse);
+      sendTokenToBackend(tokenResponse);
+    },
+    flow: 'auth-code',
+    scope: 'openid profile email',
+  
     onError: (error) => console.log('Login Failed:', error)
   });
 
@@ -30,13 +36,14 @@ function App() {
     }
   }, [user]);
 
-  const sendTokenToBackend = (token) => {
+  const sendTokenToBackend = (tokenResponse) => {
+    const idToken = tokenResponse.id_token; // Use the ID token, not the access token
     fetch('/api/google/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ token: token }),
+      body: JSON.stringify({ token: idToken }),
     })
       .then(response => response.json())
       .then(data => {
