@@ -1,11 +1,11 @@
-// services/metadataService.js
+// services/apexService.js
 
 const jsforce = require('jsforce');
 const fs = require('fs');
 const path = require('path');
 
 const apexService = {
-  retrieveAndSaveMetadata: async (type, folderorg) => {
+  retrieveAndSaveApexItems: async (folderorg, type) => {
     const outputDir = path.join(__dirname, '..', 'org_files', type, folderorg);
 
     if (!fs.existsSync(outputDir)) {
@@ -16,38 +16,62 @@ const apexService = {
     
     try {
       await conn.login(process.env.SALESFORCE_USERNAME, process.env.SALESFORCE_PASSWORD);
-      console.log('Connecté à Salesforce');
+      console.log('Connected to Salesforce');
 
       let query, result;
-      if (type === 'ApexClass') {
-        query = 'SELECT Id, Name, Body FROM ApexClass';
-        result = await conn.tooling.query(query);
-      } else if (type === 'CustomObject') {
-        result = await conn.metadata.list([{ type: 'CustomObject' }], '51.0');
+      switch(type) {
+        case 'ApexClass':
+          query = 'SELECT Id, Name, Body FROM ApexClass';
+          result = await conn.tooling.query(query);
+          break;
+        case 'ApexTrigger':
+          query = 'SELECT Id, Name, Body FROM ApexTrigger';
+          result = await conn.tooling.query(query);
+          break;
+        case 'ApexPage':
+          query = 'SELECT Id, Name, Markup FROM ApexPage';
+          result = await conn.tooling.query(query);
+          break;
+        case 'ApexComponent':
+          query = 'SELECT Id, Name, Markup FROM ApexComponent';
+          result = await conn.tooling.query(query);
+          break;
+        default:
+          throw new Error('Invalid Apex item type');
       }
 
       const downloadedItems = [];
-      for (const item of result.records || result) {
+      for (const item of result.records) {
         let fileName, content;
-        if (type === 'ApexClass') {
-          fileName = `${item.Name}.cls`;
-          content = item.Body;
-        } else if (type === 'CustomObject') {
-          fileName = `${item.fullName}.object`;
-          const metadata = await conn.metadata.read('CustomObject', item.fullName);
-          content = JSON.stringify(metadata, null, 2);
+        switch(type) {
+          case 'ApexClass':
+            fileName = `${item.Name}.cls`;
+            content = item.Body;
+            break;
+          case 'ApexTrigger':
+            fileName = `${item.Name}.trigger`;
+            content = item.Body;
+            break;
+          case 'ApexPage':
+            fileName = `${item.Name}.page`;
+            content = item.Markup;
+            break;
+          case 'ApexComponent':
+            fileName = `${item.Name}.component`;
+            content = item.Markup;
+            break;
         }
 
         const filePath = path.join(outputDir, fileName);
         fs.writeFileSync(filePath, content);
-        downloadedItems.push(item.Name || item.fullName);
-        console.log(`Téléchargé: ${fileName}`);
+        downloadedItems.push(item.Name);
+        console.log(`Downloaded: ${fileName}`);
       }
 
-      console.log(`Tous les ${type} ont été téléchargés avec succès.`);
+      console.log(`All ${type} items have been downloaded successfully.`);
       return downloadedItems;
     } catch (err) {
-      console.error(`Erreur lors de la récupération des ${type}:`, err);
+      console.error(`Error retrieving ${type} items:`, err);
       throw err;
     } finally {
       conn.logout();

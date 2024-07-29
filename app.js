@@ -11,8 +11,22 @@ const orgController = require('./controllers/orgController');
 const deploymentController = require('./controllers/deploymentController'); // Include deployment controller
 const deploymentRoutes = require('./routes/deploymentRoutres');
 const retrieveService = require('./services/retrieveService');
-const apexRoutes = require('./routes/apexRoutes'); // Import apex routes
-const deployScript = require('./deployitem');
+// Retrieve Routes
+const apexRoutes = require('./routes/apexRoutes'); 
+const customObjectRoutes = require('./routes/customObjectRoutes');
+const securityRoutes = require('./routes/securityRoutes');
+const automationRoutes = require('./routes/automationRoutes');
+const analyticsRoutes = require('./routes/analyticsRoutes');
+const dataRoutes = require('./routes/dataRoutes');
+const layoutRoutes = require('./routes/layoutRoutes');
+const serviceCloudRoutes = require('./routes/serviceCloudRoutes');
+const communityRoutes = require('./routes/communityRoutes');
+const integrationRoutes = require('./routes/integrationRoutes');
+const customPermissionRoutes = require('./routes/customPermissionRoutes');
+const translationRoutes = require('./routes/translationRoutes');
+
+
+// Google Login routes
 const googleAuthRoutes = require('./routes/googleAuthRoutes');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -35,19 +49,10 @@ const client = new Client({
 });
 
 client.connect();
-
+app.locals.dbClient = client;
 // Routes
 app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 app.use('/api/google', googleAuthRoutes);
-app.post('/deploy', async (req, res) => {
-    try {
-        await deployScript(); // Call the deployment script function
-        res.status(200).send('Deployment successful!');
-    } catch (error) {
-        res.status(500).send(`Deployment failed: ${error.message}`);
-    }
-});
-
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connect.html'));
 });
@@ -62,7 +67,21 @@ app.get('/deleteorg', (req, res) => {
 });
 app.post('/create-deployment', deploymentController.createDeployment);
 app.use('/api/deployments', deploymentRoutes);
+// Retrieve Routes
 app.use('/api/apex', apexRoutes);
+app.use('/api/customObject', customObjectRoutes);
+app.use('/api/security', securityRoutes);
+app.use('/api/automation', automationRoutes);
+app.use('/api/analytics', analyticsRoutes);
+app.use('/api/data', dataRoutes);
+app.use('/api/layout', layoutRoutes);
+app.use('/api/serviceCloud', serviceCloudRoutes);
+app.use('/api/community', communityRoutes);
+app.use('/api/integration', integrationRoutes);
+app.use('/api/custompermissions', customPermissionRoutes);
+app.use('/api/translations', translationRoutes);
+
+// Create Deployment Routes
 app.get('/create-deployment', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'create-deployment.html'));
 });

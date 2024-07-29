@@ -19,48 +19,67 @@ const customObjectService = {
       console.log('Connected to Salesforce');
 
       let result;
-      if (type === 'CustomObject') {
-        // Use Metadata API for CustomObjects
-        result = await conn.metadata.list([{ type: 'CustomObject' }], '51.0');
-      } else {
-        // Use Tooling API for other types
-        let query;
-        switch(type) {
-          case 'CustomField':
-            query = "SELECT Id, DeveloperName, NamespacePrefix, TableEnumOrId FROM CustomField";
-            break;
+      switch(type) {
+        case 'CustomObject':
+        case 'CustomField':
+        case 'CustomApplication':
           case 'CustomTab':
-            query = "SELECT Id, DeveloperName, NamespacePrefix FROM CustomTab";
+            result = await conn.metadata.list([{ type: type }], '51.0');
+            console.log('CustomTab result:', JSON.stringify(result, null, 2));
             break;
-          case 'CustomApplication':
-            query = "SELECT Id, DeveloperName, NamespacePrefix FROM CustomApplication";
-            break;
-          case 'CustomLabel':
-            query = "SELECT Id, Name, Category, Value, Language FROM ExternalString";
-            break;
-          default:
-            throw new Error('Invalid Custom item type');
-        }
-        result = await conn.tooling.query(query);
-        result = result.records;
+        case 'CustomLabel':
+          // Custom Labels are nested within a CustomLabels parent
+          result = await conn.metadata.read('CustomLabels', 'CustomLabels');
+          break;
+        default:
+          throw new Error('Invalid Custom item type');
       }
 
       const downloadedItems = [];
-      for (const record of result) {
-        let fileName, content;
-        if (type === 'CustomObject') {
-          const metadata = await conn.metadata.read('CustomObject', record.fullName);
-          content = JSON.stringify(metadata, null, 2);
-          fileName = `${record.fullName}.json`;
-        } else {
-          fileName = type === 'CustomLabel' ? `${record.Name}.json` : `${record.DeveloperName}.json`;
-          content = JSON.stringify(record, null, 2);
+      if (type === 'CustomLabel') {
+        // Handle Custom Labels separately
+        const labels = result.labels || [];
+        for (const label of labels) {
+          const fileName = `${label.fullName}.json`;
+          const content = JSON.stringify(label, null, 2);
+          const filePath = path.join(outputDir, fileName);
+          fs.writeFileSync(filePath, content);
+          downloadedItems.push(label.fullName);
+          console.log(`Downloaded: ${fileName}`);
         }
-
-        const filePath = path.join(outputDir, fileName);
-        fs.writeFileSync(filePath, content);
-        downloadedItems.push(record.fullName || record.Name || record.DeveloperName);
-        console.log(`Downloaded: ${fileName}`);
+      } else {
+        // Handle other types
+        for (const item of Array.isArray(result) ? result : [result]) {
+          if (!item || typeof item !== 'object') {
+            console.log(`Skipping invalid item:`, item);
+            continue;
+          }
+        
+          if (!item.fullName) {
+            console.log(`Item missing fullName:`, item);
+            continue;
+          }
+        
+          let metadata;
+          try {
+            metadata = await conn.metadata.read(type, item.fullName);
+          } catch (readError) {
+            console.error(`Error reading metadata for ${item.fullName}:`, readError);
+            continue;
+          }
+        
+          if (!metadata) {
+            console.log(`No metadata found for ${item.fullName}`);
+            continue;
+          }
+        
+          const content = JSON.stringify(metadata, null, 2);
+          const fileName = `${item.fullName}.json`;
+          const filePath = path.join(outputDir, fileName);
+          fs.writeFileSync(filePath, content);
+          downloadedItems.push(item.fullName);
+          console.log(`Downloaded: ${fileName}`);
+        }
       }
 
       console.log(`All ${type} items have been downloaded successfully.`);

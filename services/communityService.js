@@ -27,16 +27,28 @@ const communityService = {
           result = await conn.metadata.list([{ type: 'CustomSite' }], '51.0');
           break;
         case 'ChatterGroup':
-          // Chatter Groups are not directly accessible via Metadata API
-          // We'll use SOQL query to get the list of public Chatter Groups
           result = await conn.query('SELECT Id, Name, Description FROM CollaborationGroup WHERE IsArchived = false');
           break;
         default:
           throw new Error('Invalid Community item type');
       }
 
+      console.log(`Result for ${type}:`, JSON.stringify(result, null, 2));
+
+      let items = [];
+      if (result && result.records) {
+        items = result.records;
+      } else if (Array.isArray(result)) {
+        items = result;
+      } else if (result) {
+        items = [result];
+      } else {
+        console.log(`No ${type} items found.`);
+        return [];
+      }
+
       const downloadedItems = [];
-      for (const item of result.records || result) {
+      for (const item of items) {
         let metadata, content, fileName;
         
         switch(type) {
@@ -51,7 +63,6 @@ const communityService = {
             fileName = `${item.fullName}_Site.json`;
             break;
           case 'ChatterGroup':
-            // For Chatter Groups, we'll just save the basic info we got from the query
             content = JSON.stringify(item, null, 2);
             fileName = `${item.Name}_ChatterGroup.json`;
             break;
@@ -69,7 +80,7 @@ const communityService = {
       console.error(`Error retrieving ${type} items:`, err);
       throw err;
     } finally {
-      conn.logout();
+      await conn.logout();
     }
   }
 };
