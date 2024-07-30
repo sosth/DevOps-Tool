@@ -1,10 +1,6 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 
-const Profile = () => {
-  const location = useLocation();
-  const profile = location.state?.profile;
-
+const Profile = ({ profile }) => {
   if (!profile) {
     return <div>Loading profile...</div>;
   }

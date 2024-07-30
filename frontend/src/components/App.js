@@ -111,9 +111,9 @@ function App() {
           }
         />
         <Route
-          path="/profile"
-          element={profile ? <Profile /> : <Navigate to="/" />}
-        />
+  path="/profile"
+  element={profile ? <Profile profile={profile} /> : <Navigate to="/" />}
+/>
       </Routes>
     </Router>
   );
