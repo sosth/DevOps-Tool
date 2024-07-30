@@ -17,7 +17,7 @@ const Dashboard = ({ profile, logOut }) => {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-64 bg-gray-900 text-white">
+      <div className="w-64 bg-black text-white">
         <div className="p-4 text-2xl font-bold">
           DEVO<span className="text-yellow-500">SPACE</span>
         </div>
