@@ -11,9 +11,7 @@ const Dashboard = ({ profile, logOut }) => {
     logOut();
     navigate('/');
   };
-  const viewProfile = () => {
-    navigate('/profile', { state: { profile } });
-  };
+  
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -55,7 +53,7 @@ const Dashboard = ({ profile, logOut }) => {
               <FaUserCircle className="text-gray-500 text-2xl cursor-pointer" onClick={() => setShowUserMenu(!showUserMenu)} />
               {showUserMenu && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-                  <a href="#" onClick={viewProfile} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
                   <a href="#" onClick={handleLogout} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
                 </div>
               )}
