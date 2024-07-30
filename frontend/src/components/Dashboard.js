@@ -10,11 +10,15 @@ const Dashboard = ({ profile, logOut }) => {
     logOut();
     navigate('/');
   };
+  const viewProfile = () => {
+    profile();
+    navigate('/Profile.js');
+  };
 
   return (
-    <div className="flex h-screen bg-[#FFFFFF]">
+    <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-64 bg-[#FFFFFF] text-white">
+      <div className="w-64 bg-gray-900 text-white">
         <div className="p-4 text-2xl font-bold">
           DEVO<span className="text-yellow-500">SPACE</span>
         </div>
@@ -38,7 +42,7 @@ const Dashboard = ({ profile, logOut }) => {
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top Navigation */}
-        <header className="bg-[#FFFFFF] shadow-md p-4 flex justify-between items-center">
+        <header className="bg-white shadow-md p-4 flex justify-between items-center">
           <div className="flex items-center">
             <h2 className="text-xl font-semibold">Home</h2>
           </div>
