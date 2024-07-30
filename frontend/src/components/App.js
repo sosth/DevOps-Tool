@@ -4,7 +4,8 @@ import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import HomePage from './components/HomePage';
 import Dashboard from './components/Dashboard';
-import AuthenticatedHome from './components/AuthenticatedHome';
+import Profile from './components/Profile'; 
+
 function App() {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
@@ -83,17 +84,10 @@ function App() {
 
   return (
     <Router>
-      <Routes>
-      <Route path="/" element={
-          profile ? <Navigate to="/home" /> : <HomePage login={login} />
-        } />
-        <Route path="/home" element={
-          profile ? <AuthenticatedHome profile={profile} logOut={logOut} /> : <Navigate to="/" />
-        } />
-        <Route path="/dashboard" element={
-          profile ? <Dashboard profile={profile} logOut={logOut} /> : <Navigate to="/" />
-        } />
-      </Routes>
+      <Route path="/" element={profile ? <Navigate to="/dashboard" /> : <HomePage login={login} />} />
+        <Route path="/dashboard" element={profile ? <Dashboard profile={profile} logOut={logOut} /> : <Navigate to="/" />} />
+        <Route path="/profile" element={profile ? <Profile /> : <Navigate to="/" />} /> {/* Add the profile route */}
+      
     </Router>
   );
 }
