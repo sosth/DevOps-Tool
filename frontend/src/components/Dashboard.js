@@ -11,8 +11,7 @@ const Dashboard = ({ profile, logOut }) => {
     navigate('/');
   };
   const viewProfile = () => {
-    profile();
-    navigate('/Profile.js');
+    navigate('/profile'); // Changed this line
   };
 
   return (
