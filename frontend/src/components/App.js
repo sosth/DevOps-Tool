@@ -92,7 +92,7 @@ function App() {
           profile ? <Dashboard profile={profile} logOut={logOut} /> : <Navigate to="/" />
         } />
         <Route path="/profile" element={
-          profile ? <Profile profile={profile} /> : <Navigate to="/" />
+          profile ? <Profile /> : <Navigate to="/" />
         } />
       </Routes>
     </Router>

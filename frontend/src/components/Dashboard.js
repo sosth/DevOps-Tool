@@ -11,9 +11,8 @@ const Dashboard = ({ profile, logOut }) => {
     navigate('/');
   };
   const viewProfile = () => {
-    navigate('/profile'); // Changed this line
+    navigate('/profile', { state: { profile } });
   };
-
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}

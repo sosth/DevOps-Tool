@@ -1,11 +1,17 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-const Profile = ({ profile}) => {
-  
+const Profile = () => {
+  const location = useLocation();
+  const profile = location.state?.profile;
+
+  if (!profile) {
+    return <div>Loading profile...</div>;
+  }
 
   return (
     <div className="bg-[#191919] min-h-screen flex flex-col items-center justify-center text-white">
-      <h2 className="text-3xl font-bold mb-4">Welcome to Your Dashboard</h2>
+      <h2 className="text-3xl font-bold mb-4">Your Profile</h2>
       <img src={profile.picture} alt="user profile" className="w-24 h-24 rounded-full mb-4"/>
       <h3 className="text-xl mb-2">Welcome, {profile.name}</h3>
       <p className="mb-1">Email: {profile.email}</p>
