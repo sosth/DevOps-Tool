@@ -86,7 +86,7 @@ function App() {
     <Router>
       <Route path="/" element={profile ? <Navigate to="/dashboard" /> : <HomePage login={login} />} />
         <Route path="/dashboard" element={profile ? <Dashboard profile={profile} logOut={logOut} /> : <Navigate to="/" />} />
-        <Route path="/profile" element={profile ? <Profile /> : <Navigate to="/" />} /> {/* Add the profile route */}
+        <Route path="/profile" element={profile ? <Profile /> : <Navigate to="/" />} /> 
       
     </Router>
   );
