@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaHome, FaCog, FaClipboardList, FaRocket, FaUsers, FaHistory, FaBell, FaSearch, FaUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import illustration from './images/home.PNG';
 
@@ -52,11 +53,11 @@ const Dashboard = ({ profile, logOut }) => {
             <div className="relative">
               <FaUserCircle className="text-gray-500 text-2xl cursor-pointer" onClick={() => setShowUserMenu(!showUserMenu)} />
               {showUserMenu && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
-                  <a href="#" onClick={handleLogout} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
-                </div>
-              )}
+      <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
+        <Link to="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</Link>
+        <a href="#" onClick={handleLogout} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
+      </div>
+    )}
             </div>
           </div>
         </header>

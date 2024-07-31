@@ -1,25 +1,61 @@
-// Profile.js
+// src/components/Profile.js
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
-const Profile = () => {
-  const location = useLocation();
-  const { profile } = location.state;
+const Profile = ({ profile, logOut }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logOut();
+    navigate('/');
+  };
 
   return (
-    <div className="bg-[#191919] min-h-screen flex flex-col items-center justify-center text-white">
-      <h2 className="text-3xl font-bold mb-4">User Profile</h2>
-      <img src={profile.picture} alt="user profile" className="w-24 h-24 rounded-full mb-4" />
-      <h3 className="text-xl mb-2">Name: {profile.name}</h3>
-      <p className="mb-1">Email: {profile.email}</p>
-      <p className="mb-1">ID: {profile.id}</p>
-      <p className="mb-1">First Name: {profile.given_name}</p>
-      <p className="mb-1">Last Name: {profile.family_name}</p>
-      <p className="mb-1">Locale: {profile.locale}</p>
-      <p className="mb-1">Verified: {profile.verified_email ? "Yes" : "No"}</p>
-      <p className="mb-4">Domain: {profile.hd}</p>
+    <div className="bg-gray-100 min-h-screen p-8">
+      <button 
+        onClick={() => navigate('/dashboard')} 
+        className="mb-6 flex items-center text-blue-600 hover:text-blue-800"
+      >
+        <FaArrowLeft className="mr-2" /> Back to Dashboard
+      </button>
+      
+      <div className="bg-white rounded-lg shadow-md p-8 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold mb-6 text-center">User Profile</h2>
+        
+        <div className="flex justify-center mb-6">
+          <img src={profile.picture} alt="Profile" className="w-32 h-32 rounded-full" />
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ProfileField label="Name" value={profile.name} />
+          <ProfileField label="Email" value={profile.email} />
+          <ProfileField label="ID" value={profile.id} />
+          <ProfileField label="First Name" value={profile.given_name} />
+          <ProfileField label="Last Name" value={profile.family_name} />
+          <ProfileField label="Locale" value={profile.locale} />
+          <ProfileField label="Verified" value={profile.verified_email ? "Yes" : "No"} />
+          <ProfileField label="Domain" value={profile.hd || 'N/A'} />
+        </div>
+        
+        <div className="mt-8 flex justify-center">
+          <button 
+            onClick={handleLogout}
+            className="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition duration-300"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+const ProfileField = ({ label, value }) => (
+  <div className="mb-4">
+    <h3 className="text-sm font-semibold text-gray-600">{label}</h3>
+    <p className="text-lg">{value}</p>
+  </div>
+);
 
 export default Profile;
