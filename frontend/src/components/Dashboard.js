@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHome, FaCog, FaClipboardList, FaRocket, FaUsers, FaHistory, FaBell, FaSearch, FaUserCircle } from 'react-icons/fa';
+import { FaHome, FaCog, FaClipboardList, FaRocket, FaUsers, FaHistory, FaBell, FaSearch, FaUserCircle, FaSyncAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import illustration from './images/home.PNG';
@@ -81,10 +81,11 @@ const Dashboard = ({ profile, logOut }) => {
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-semibold">Activity</h3>
               <div className="flex items-center">
-                <select className="mr-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+                <select className="mr-2 p-2 border rounded-md border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
                   <option>Select Widgets</option>
                 </select>
-                <button className="bg-gray-200 px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-gray-500">
+                <button className="flex items-center bg-gray-200 px-4 py-2 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                  <FaSyncAlt className="mr-2" />
                   Refresh
                 </button>
               </div>
