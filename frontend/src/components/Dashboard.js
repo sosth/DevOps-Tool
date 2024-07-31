@@ -80,11 +80,13 @@ const Dashboard = ({ profile, logOut }) => {
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-semibold">Activity</h3>
-              <div>
-                <select className="mr-2 p-2 border rounded">
+              <div className="flex items-center">
+                <select className="mr-2 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
                   <option>Select Widgets</option>
                 </select>
-                <button className="bg-gray-200 px-4 py-2 rounded">Refresh</button>
+                <button className="bg-gray-200 px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-gray-500">
+                  Refresh
+                </button>
               </div>
             </div>
             <div className="flex space-x-4 mb-4">
