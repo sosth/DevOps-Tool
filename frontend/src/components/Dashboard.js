@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FaHome, FaCog, FaClipboardList, FaRocket, FaUsers, FaHistory, FaBell, FaSearch, FaUserCircle, FaSyncAlt, FaCheck, FaArrowUp, FaArrowRight, FaCloud, FaUser } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes, BrowserRouter } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import illustration from './images/home.PNG';
+import DeploymentPage from './components/DeploymentPage'; 
+import { Router } from 'express';
 
 const Dashboard = ({ profile, logOut }) => {
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -14,6 +16,7 @@ const Dashboard = ({ profile, logOut }) => {
   };
 
   return (
+    <Router>
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
       <div className="w-64 bg-black text-white relative">
@@ -25,7 +28,7 @@ const Dashboard = ({ profile, logOut }) => {
           <SidebarLink icon={FaHome} text="Home" active />
           <SidebarLink icon={FaCog} text="CI Jobs" />
           <SidebarLink icon={FaClipboardList} text="Work Items" />
-          <SidebarLink icon={FaRocket} text="Deployments" />
+          <SidebarLink to="/deployments" icon={FaRocket} text="Deployments" />
           <SidebarLink icon={FaUsers} text="Organization" />
           <SidebarLink icon={FaHistory} text="History" />
         </nav>
@@ -142,9 +145,12 @@ const Dashboard = ({ profile, logOut }) => {
               </div>
             </div>
           </div>
+          <Route path="/deployments" element={<DeploymentPage profile={profile} logOut={logOut} />} />
+          
         </main>
       </div>
     </div>
+  </Router>
   );
 };
 
