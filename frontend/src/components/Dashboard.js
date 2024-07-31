@@ -16,11 +16,12 @@ const Dashboard = ({ profile, logOut }) => {
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-64 bg-black text-white">
+      <div className="w-64 bg-black text-white relative">
         <div className="p-4 text-2xl font-bold">
           DEVO<span className="text-yellow-500">SPACE</span>
         </div>
-        <nav className="mt-8">
+        <div className="border-b border-gray-700 mx-4 mb-4"></div>
+        <nav className="mt-4">
           <SidebarLink icon={FaHome} text="Home" active />
           <SidebarLink icon={FaCog} text="CI Jobs" />
           <SidebarLink icon={FaClipboardList} text="Work Items" />
@@ -28,7 +29,7 @@ const Dashboard = ({ profile, logOut }) => {
           <SidebarLink icon={FaUsers} text="Organization" />
           <SidebarLink icon={FaHistory} text="History" />
         </nav>
-        <div className="absolute bottom-0 left-0 w-64 p-4">
+        <div className="absolute bottom-0 left-0 w-full p-4">
           <div className="bg-gray-800 p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Upgrade to Pro</h3>
             <p className="text-sm mb-4">Unlock all features and get unlimited access to our support team.</p>
@@ -118,9 +119,9 @@ const Dashboard = ({ profile, logOut }) => {
 };
 
 const SidebarLink = ({ icon: Icon, text, active }) => (
-  <a href="#" className={`flex items-center space-x-2 p-4 ${active ? 'bg-gray-800' : 'hover:bg-gray-800'}`}>
-    <Icon className={active ? 'text-yellow-500' : ''} />
-    <span className={active ? 'text-yellow-500' : ''}>{text}</span>
+  <a href="#" className={`flex items-center space-x-2 p-4 rounded ${active ? 'bg-yellow-500 text-black' : 'hover:bg-gray-800'}`}>
+    <Icon className={`text-lg ${active ? 'text-black' : 'text-white'}`} />
+    <span className={active ? 'font-semibold text-black' : 'text-white'}>{text}</span>
   </a>
 );
 
