@@ -20,7 +20,7 @@ const Dashboard = ({ profile, logOut }) => {
         <div className="p-4 text-2xl font-bold">
           DEVO<span className="text-yellow-500">SPACE</span>
         </div>
-        <div className="border-b border-white mx-4 mb-4"></div>
+        <div className="border-b border-gray-700 mx-4 mb-4"></div>
         <nav className="mt-4">
           <SidebarLink icon={FaHome} text="Home" active />
           <SidebarLink icon={FaCog} text="CI Jobs" />
@@ -89,7 +89,7 @@ const Dashboard = ({ profile, logOut }) => {
             </div>
             <div className="flex space-x-4 mb-4">
               <button className="bg-gray-200 px-4 py-2 rounded">Team Activity</button>
-              <button className="bg-gray-200 px-4 py-2 rounded">My Activity</button>
+              <button className="bg-black text-white px-4 py-2 rounded">My Activity</button>
             </div>
             <div className="flex">
               <div className="w-1/2 pr-4">
@@ -98,17 +98,26 @@ const Dashboard = ({ profile, logOut }) => {
               </div>
               <div className="w-1/2 pl-4">
                 <h4 className="font-semibold mb-2">Completed</h4>
-                {/* You can map through completed activities here */}
-                <div className="bg-gray-100 p-2 rounded mb-2">
-                  <div className="flex justify-between items-center">
-                    <span>Target org deployment</span>
-                    <span className="text-sm text-gray-500">02/06/2024 at 08:22 AM</span>
-                  </div>
-                  <div className="text-sm text-gray-600">
-                    Deploy • Dev Copado Demo → Default.org • {profile.name}
-                  </div>
+                <div className="space-y-4">
+                  {/* You can map through completed activities here */}
+                  {[1, 2, 3, 4].map((activity, index) => (
+                    <div key={index} className="bg-white border rounded-lg p-4 shadow-sm flex justify-between items-center">
+                      <div className="flex items-center space-x-2">
+                        <div className="text-yellow-500">
+                          <FaRocket />
+                        </div>
+                        <div>
+                          <div className="font-semibold">Target org deployment</div>
+                          <div className="text-sm text-gray-500">Deploy • Dev Copado Demo → Default.org • {profile.name}</div>
+                        </div>
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        02/06/2024 at 08:22 AM
+                      </div>
+                    </div>
+                  ))}
+                  {/* Repeat for more activities */}
                 </div>
-                {/* Repeat for more activities */}
               </div>
             </div>
           </div>
