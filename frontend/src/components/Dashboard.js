@@ -75,56 +75,49 @@ const Dashboard = ({ profile, logOut }) => {
         </header>
 
         {/* Dashboard Content */}
-        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 p-6">
-          <h2 className="text-2xl font-semibold mb-4">Welcome back, {profile.name}</h2>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold">Activity</h3>
-              <div className="flex items-center">
-                <select className="mr-2 p-2 border rounded-md border-gray-700 text-gray-700">
-                  <option>Select Widgets</option>
-                </select>
-                <button className="flex items-center bg-white px-2 py-2 rounded-md border border-gray-700 text-gray-700">
-                  <FaSyncAlt className="mr-2 text-gray-700" />
-                  Refresh
-                </button>
-              </div>
-            </div>
-            <div className="flex space-x-4 mb-4">
-              <button className="bg-gray-200 px-4 py-2 rounded">Team Activity</button>
-              <button className="bg-black text-white px-4 py-2 rounded">My Activity</button>
-            </div>
-            <div className="flex">
-              <div className="w-1/2 pr-4">
-                <h4 className="font-semibold mb-2">Upcoming</h4>
-                <img src={illustration} alt="No upcoming activities" className="w-full" />
-              </div>
-              <div className="w-1/2 pl-4">
-                <h4 className="font-semibold mb-2">Completed</h4>
-                <div className="space-y-4">
-                  {/* You can map through completed activities here */}
-                  {[1, 2, 3, 4].map((activity, index) => (
-                    <div key={index} className="bg-white border rounded-lg p-4 shadow-sm flex justify-between items-center">
-                      <div className="flex items-center space-x-2">
-                        <div className="text-yellow-500">
-                          <FaRocket />
-                        </div>
-                        <div>
-                          <div className="font-semibold">Target org deployment</div>
-                          <div className="text-sm text-gray-500">Deploy • Dev Copado Demo → Default.org • {profile.name}</div>
-                        </div>
-                      </div>
-                      <div className="text-sm text-gray-500">
-                        02/06/2024 at 08:22 AM
-                      </div>
-                    </div>
-                  ))}
-                  {/* Repeat for more activities */}
+<main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 p-6">
+  <h2 className="text-2xl font-semibold mb-4">Welcome back, {profile.name}</h2>
+  <div className="bg-white rounded-lg shadow-md p-6">
+    <h3 className="text-xl font-semibold mb-4">Activity</h3>
+    <div className="flex space-x-4 mb-4">
+      <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded-full flex items-center">
+        <FaUsers className="mr-2" />
+        Team Activity
+      </button>
+      <button className="bg-black text-white px-4 py-2 rounded-full flex items-center">
+        <FaUserCircle className="mr-2" />
+        My Activity
+      </button>
+    </div>
+    <div className="flex">
+      <div className="w-1/2 pr-4">
+        <h4 className="font-semibold mb-2">Upcoming</h4>
+        <img src={illustration} alt="No upcoming activities" className="w-full" />
+      </div>
+      <div className="w-1/2 pl-4">
+        <h4 className="font-semibold mb-2">Completed</h4>
+        <div className="space-y-4">
+          {[1, 2, 3, 4].map((activity, index) => (
+            <div key={index} className="bg-white border rounded-lg p-4 shadow-sm flex justify-between items-center">
+              <div className="flex items-center space-x-2">
+                <div className="bg-yellow-500 rounded-full p-2">
+                  <FaRocket className="text-white" />
+                </div>
+                <div>
+                  <div className="font-semibold">Target org deployment</div>
+                  <div className="text-sm text-gray-500">Deploy • Dev Copado Demo → Default.org • {profile.name}</div>
                 </div>
               </div>
+              <div className="text-sm text-gray-500">
+                02/06/2024 at 08:22 AM
+              </div>
             </div>
-          </div>
-        </main>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
       </div>
     </div>
   );
