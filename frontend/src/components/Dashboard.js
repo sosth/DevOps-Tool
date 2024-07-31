@@ -89,7 +89,7 @@ const Dashboard = ({ profile, logOut }) => {
             </div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="flex justify-between items-center mb-4 border-b border-gray-200 pb-2">
+            <div className="flex justify-between items-center mb-4 border-b border-gray-900 pb-2">
               <h3 className="text-xl font-semibold">Activity</h3>
               <div className="flex items-center space-x-2">
                 <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-full">
@@ -103,7 +103,7 @@ const Dashboard = ({ profile, logOut }) => {
               </div>
             </div>
             <div className="flex">
-              <div className="w-1/2 pr-4 border-r border-gray-200">
+              <div className="w-1/2 pr-4 border-r border-gray-900">
                 <h4 className="font-semibold mb-2">Upcoming</h4>
                 <img src={illustration} alt="No upcoming activities" className="w-full" />
               </div>
@@ -111,7 +111,7 @@ const Dashboard = ({ profile, logOut }) => {
                 <h4 className="font-semibold mb-2">Completed</h4>
                 <div className="space-y-4">
                   {[1, 2, 3, 4].map((activity, index) => (
-                    <div key={index} className="border-b border-gray-200 pb-4">
+                    <div key={index} className="border-b border-gray-900 pb-4">
                       <div className="flex justify-between items-center">
                         <div className="flex items-center space-x-3">
                           <div className="bg-yellow-100 rounded-full p-2">
