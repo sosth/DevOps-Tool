@@ -41,7 +41,7 @@ const Dashboard = ({ profile, logOut }) => {
         {/* Top Navigation */}
         <header className="bg-black shadow-md p-4 flex justify-between items-center">
           <div className="flex items-center">
-            <h2 className="text-xl font-semibold">Home</h2>
+            <h2 className="text-xl text-white font-semibold">Home</h2>
           </div>
           <div className="flex items-center space-x-4">
             <div className="relative">
