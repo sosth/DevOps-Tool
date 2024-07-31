@@ -25,7 +25,7 @@ const Dashboard = ({ profile, logOut }) => {
           <SidebarLink icon={FaHome} text="Home" active />
           <SidebarLink icon={FaCog} text="CI Jobs" />
           <SidebarLink icon={FaClipboardList} text="Work Items" />
-          <SidebarLink icon={FaRocket} text="Deployments" to="/deployments" />
+          <SidebarLink icon={FaRocket} text="Deployments" to="/deploymentsfr" />
           <SidebarLink icon={FaUsers} text="Organization" />
           <SidebarLink icon={FaHistory} text="History" />
         </nav>

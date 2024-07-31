@@ -59,7 +59,7 @@ function App() {
         <Route path="/profile" element={
           profile ? <Profile profile={profile} logOut={logOut} /> : <Navigate to="/" />
         } />
-        <Route path="/deployments" element={
+        <Route path="/deploymentsfr" element={
           profile ? <Deployments profile={profile} logOut={logOut} /> : <Navigate to="/" />
         } />
       </Routes>

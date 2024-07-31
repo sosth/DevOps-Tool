@@ -12,7 +12,7 @@ const Deployments = ({ profile, logOut }) => {
   };
 
   // Mock data for deployments
-  const deployments = [
+  const deploymentsfr = [
     { id: 1, name: 'Project Alpha', status: 'Completed', date: '2024-07-25' },
     { id: 2, name: 'Project Beta', status: 'In Progress', date: '2024-07-28' },
     { id: 3, name: 'Project Gamma', status: 'Failed', date: '2024-07-26' },
@@ -67,7 +67,7 @@ const Deployments = ({ profile, logOut }) => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {deployments.map((deployment) => (
+              {deploymentsfr.map((deployment) => (
                 <tr key={deployment.id}>
                   <td className="px-6 py-4 whitespace-nowrap">{deployment.name}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
