@@ -52,7 +52,7 @@ client.connect();
 app.locals.dbClient = client;
 // Routes
 app.use(express.static(path.join(__dirname, 'frontend', 'build')));
-app.use('/api/google', googleAuthRoutes);
+app.use('/api/google/login', googleAuthRoutes);
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'connect.html'));
 });
