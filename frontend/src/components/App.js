@@ -5,8 +5,7 @@ import axios from 'axios';
 import HomePage from './components/HomePage';
 import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
-import DeploymentPage from './components/DeploymentPage'; // Update the path as needed
-
+import Deployments from './components/Deployments'; 
 
 function App() {
   const [user, setUser] = useState(null);
@@ -96,7 +95,9 @@ function App() {
         <Route path="/profile" element={
           profile ? <Profile profile={profile} logOut={logOut} /> : <Navigate to="/" />
         } />
-          <Route path="/deployments" element={<DeploymentPage profile={profile} logOut={logOut} />} />
+        <Route path="/deployments" element={
+          profile ? <Deployments profile={profile} logOut={logOut} /> : <Navigate to="/" />
+        } />
       </Routes>
     </Router>
   );
