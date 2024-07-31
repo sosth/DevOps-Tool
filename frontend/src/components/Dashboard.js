@@ -20,7 +20,7 @@ const Dashboard = ({ profile, logOut }) => {
         <div className="p-4 text-2xl font-bold">
           DEVO<span className="text-yellow-500">SPACE</span>
         </div>
-        <div className="border-b border-gray-700 mx-4 mb-4"></div>
+        <div className="border-b border-white mx-4 mb-4"></div>
         <nav className="mt-4">
           <SidebarLink icon={FaHome} text="Home" active />
           <SidebarLink icon={FaCog} text="CI Jobs" />
