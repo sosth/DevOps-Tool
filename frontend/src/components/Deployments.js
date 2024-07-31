@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaBell, FaSearch, FaUserCircle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Deployments = ({ profile, logOut }) => {
-  const [showUserMenu, setShowUserMenu] = useState(false);
+  const [showUserMenu, setShowUserMenu] = React.useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -50,7 +50,8 @@ const Deployments = ({ profile, logOut }) => {
       {/* Deployments Content */}
       <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-6">
         <h1 className="text-2xl font-semibold mb-4">Deployments</h1>
-        {/* Add your deployments content here */}
+        <p>This is the Deployments page. Add your deployment-related content here.</p>
+        {/* Add more deployment-related components and logic here */}
       </main>
     </div>
   );
