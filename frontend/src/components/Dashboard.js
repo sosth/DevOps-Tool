@@ -20,7 +20,7 @@ const Dashboard = ({ profile, logOut }) => {
         <div className="p-4 text-2xl font-bold">
           DEVO<span className="text-yellow-500">SPACE</span>
         </div>
-        <div className="border-b border-white mx-4 mb-4"></div>
+        <div className="border-b border-gray-700 mx-4 mb-4"></div>
         <nav className="mt-4">
           <SidebarLink icon={FaHome} text="Home" active />
           <SidebarLink icon={FaCog} text="CI Jobs" />
@@ -111,7 +111,7 @@ const Dashboard = ({ profile, logOut }) => {
                 <h4 className="font-semibold mb-2">Completed</h4>
                 <div className="space-y-4">
                   {[1, 2, 3, 4].map((activity, index) => (
-                    <div key={index} className="bg-white border-b border-gray pb-4">
+                    <div key={index} className="bg-white pb-4 border-t border-gray-200">
                       <div className="flex justify-between items-center">
                         <div className="flex items-center space-x-3">
                           <div className="bg-yellow-100 rounded-full p-2">
