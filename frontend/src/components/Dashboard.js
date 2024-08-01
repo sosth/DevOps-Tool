@@ -38,18 +38,13 @@ const Dashboard = ({ profile, logOut }) => {
         </div>
         <div className="border-b border-white mx-4 mb-4"></div>
         <nav className="mt-4 px-4">
-          <SidebarLink icon={FaHome} text="Home" active />
-          <SidebarLink icon={FaCog} text="CI Jobs" />
-          <SidebarLink icon={FaClipboardList} text="Work Items" />
-          <SidebarLink
-            as={Link}
-            to="/create-deployment"
-            icon={FaRocket}
-            text="Deployments"
-          />
-          <SidebarLink icon={FaUsers} text="Organization" />
-          <SidebarLink icon={FaHistory} text="History" />
-        </nav>
+  <SidebarLink as={Link} to="/dashboard" icon={FaHome} text="Home" active />
+  <SidebarLink as={Link} to="/ci-jobs" icon={FaCog} text="CI Jobs" />
+  <SidebarLink as={Link} to="/work-items" icon={FaClipboardList} text="Work Items" />
+  <SidebarLink as={Link} to="/create-deployment" icon={FaRocket} text="Deployments" />
+  <SidebarLink as={Link} to="/organization" icon={FaUsers} text="Organization" />
+  <SidebarLink as={Link} to="/history" icon={FaHistory} text="History" />
+</nav>
         <div className="absolute bottom-0 left-0 w-full p-4">
           <div className="bg-gray-800 p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Upgrade to Pro</h3>
@@ -186,16 +181,16 @@ const Dashboard = ({ profile, logOut }) => {
   );
 };
 
-const SidebarLink = ({ as: Component = 'a', icon: Icon, text, active, ...props }) => (
+const SidebarLink = ({ as: Component = 'a', to, icon: Icon, text, active, ...props }) => (
   <Component
     className={`flex items-center space-x-2 p-4 rounded ${
       active ? 'bg-yellow-500 text-black' : 'hover:bg-gray-800'
     }`}
+    {...(to ? { to } : {})}
     {...props}
   >
     <Icon className={`text-lg ${active ? 'text-black' : 'text-white'}`} />
     <span className={active ? 'font-semibold text-black' : 'text-white'}>{text}</span>
   </Component>
 );
-
 export default Dashboard;
