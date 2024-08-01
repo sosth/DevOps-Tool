@@ -5,7 +5,7 @@ import axios from 'axios';
 import HomePage from './components/HomePage';
 import Dashboard from './components/Dashboard';
 import Profile from './components/Profile';
-import CreateDeployment from '../services/CreateDeployment';
+import CreateDeployment from '../../services/CreateDeployment';
 function App() {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
