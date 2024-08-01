@@ -10,10 +10,12 @@ const oauth2Client = new OAuth2Client(
 );
 
 router.post('/login', async (req, res) => {
+  console.log('Received request body:', req.body);
   const { code } = req.body;
-  console.log('Received code:', code);
+  console.log('Extracted code:', code);
   
   if (!code) {
+    console.log('No code provided in the request');
     return res.status(400).json({ success: false, error: 'No code provided' });
   }
 

@@ -13,13 +13,18 @@ function App() {
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => {
       console.log('Google Login Success:', codeResponse);
-      sendCodeToBackend(codeResponse.code);
+      if (codeResponse.code) {
+        console.log('Sending code to backend:', codeResponse.code);
+        sendCodeToBackend(codeResponse.code);
+      } else {
+        console.error('No code received from Google');
+      }
     },
     flow: 'auth-code',
     scope: 'openid profile email',
-    client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID, // Make sure this is set in your .env file
     onError: (error) => console.log('Login Failed:', error)
   });
+  
 
   useEffect(() => {
     if (user) {
@@ -63,7 +68,9 @@ function App() {
         console.error('Error during backend authentication:', error);
       });
   };
+  
   const sendCodeToBackend = (code) => {
+    console.log('Sending code to backend:', code);
     fetch('/api/google/login', {
       method: 'POST',
       headers: {
@@ -71,18 +78,18 @@ function App() {
       },
       body: JSON.stringify({ code: code }),
     })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          console.log('Backend authentication successful:', data.userId);
-          // Here you might want to fetch the user profile or update the app state
-        } else {
-          console.error('Backend authentication failed');
-        }
-      })
-      .catch(error => {
-        console.error('Error during backend authentication:', error);
-      });
+    .then(response => response.json())
+    .then(data => {
+      console.log('Backend response:', data);
+      if (data.success) {
+        console.log('Backend authentication successful:', data.userId);
+      } else {
+        console.error('Backend authentication failed');
+      }
+    })
+    .catch(error => {
+      console.error('Error during backend authentication:', error);
+    });
   };
 
   const logOut = () => {
