@@ -67,8 +67,8 @@ app.get('/deleteorg', (req, res) => {
 });
 app.post('/api/deployments/create', deploymentController.createDeployment);
 app.get('/api/deployments', deploymentController.getDeployments);
-//app.post('/create-deployment', deploymentController.createDeployment);
-//app.use('/api/deployments', deploymentRoutes);
+app.post('/create-deployment', deploymentController.createDeployment);
+app.use('/api/deployments', deploymentRoutes);
 // Retrieve Routes
 app.use('/api/apex', apexRoutes);
 app.use('/api/customObject', customObjectRoutes);
@@ -84,9 +84,9 @@ app.use('/api/custompermissions', customPermissionRoutes);
 app.use('/api/translations', translationRoutes);
 
 // Create Deployment Routes
-app.get('/create-deployment', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'create-deployment.html'));
-});
+//app.get('/create-deployment', (req, res) => {
+   // res.sendFile(path.join(__dirname, 'public', 'create-deployment.html'));
+//});
 app.get('/retrieve-apex', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'retrieve-apex.html'));
 });
