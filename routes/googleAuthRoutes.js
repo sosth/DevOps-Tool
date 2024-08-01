@@ -3,35 +3,15 @@ const { OAuth2Client } = require('google-auth-library');
 const { saveUser } = require('../services/userService');
 
 const router = express.Router();
-const oauth2Client = new OAuth2Client(
-  process.env.GOOGLE_CLIENT_ID,
-  process.env.GOOGLE_CLIENT_SECRET,
-  process.env.GOOGLE_REDIRECT_URI
-);
-
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 router.post('/login', async (req, res) => {
-  console.log('Received request body:', req.body);
-  const { code } = req.body;
-  console.log('Extracted code:', code);
-  
-  if (!code) {
-    console.log('No code provided in the request');
-    return res.status(400).json({ success: false, error: 'No code provided' });
-  }
-
+  const { token } = req.body;
   try {
-    console.log('Google Client ID:', process.env.GOOGLE_CLIENT_ID);
-    console.log('Google Client Secret:', process.env.GOOGLE_CLIENT_SECRET ? '[REDACTED]' : 'Not set');
-    console.log('Google Redirect URI:', process.env.GOOGLE_REDIRECT_URI);
-
-    const { tokens } = await oauth2Client.getToken(code);
-    oauth2Client.setCredentials(tokens);
-
-    const ticket = await oauth2Client.verifyIdToken({
-      idToken: tokens.id_token,
+    console.log('Received token:', token);
+    const ticket = await client.verifyIdToken({
+      idToken: token,
       audience: process.env.GOOGLE_CLIENT_ID,
     });
-
     const payload = ticket.getPayload();
     console.log('Google payload:', payload);
     const userData = {

@@ -11,20 +11,15 @@ function App() {
   const [profile, setProfile] = useState(null);
 
   const login = useGoogleLogin({
-    onSuccess: (codeResponse) => {
-      console.log('Google Login Success:', codeResponse);
-      if (codeResponse.code) {
-        console.log('Sending code to backend:', codeResponse.code);
-        sendCodeToBackend(codeResponse.code);
-      } else {
-        console.error('No code received from Google');
-      }
+    onSuccess: (tokenResponse) => {
+      console.log(tokenResponse);
+      sendTokenToBackend(tokenResponse);
     },
     flow: 'auth-code',
     scope: 'openid profile email',
+  
     onError: (error) => console.log('Login Failed:', error)
   });
-  
 
   useEffect(() => {
     if (user) {
@@ -35,17 +30,12 @@ function App() {
         }
       })
         .then(res => {
-          console.log("Fetched profile data:", res.data);
           setProfile(res.data);
           sendTokenToBackend(user.access_token);
         })
-        .catch(err => console.error("Error fetching profile:", err));
+        .catch(err => console.log(err));
     }
   }, [user]);
-
-  useEffect(() => {
-    console.log("Current profile state:", profile);
-  }, [profile]);
 
   const sendTokenToBackend = (tokenResponse) => {
     const idToken = tokenResponse.id_token; // Use the ID token, not the access token
@@ -67,29 +57,6 @@ function App() {
       .catch(error => {
         console.error('Error during backend authentication:', error);
       });
-  };
-  
-  const sendCodeToBackend = (code) => {
-    console.log('Sending code to backend:', code);
-    fetch('/api/google/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ code: code }),
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Backend response:', data);
-      if (data.success) {
-        console.log('Backend authentication successful:', data.userId);
-      } else {
-        console.error('Backend authentication failed');
-      }
-    })
-    .catch(error => {
-      console.error('Error during backend authentication:', error);
-    });
   };
 
   const logOut = () => {

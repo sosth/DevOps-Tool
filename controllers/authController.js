@@ -1,22 +1,23 @@
-// controllers/authController.js
-const authPKCEFlow = require('../services/authPKCEFlow');
+import * as authPKCEFlow from '../services/authPKCEFlow.js';
+
 let codeVerifier;
 
-exports.login = (req, res) => {
+export const login = (req, res) => {
     codeVerifier = authPKCEFlow.generateCodeVerifier();
     const codeChallenge = authPKCEFlow.generateCodeChallenge(codeVerifier);
     const authUrl = authPKCEFlow.getAuthorizationUrl(codeChallenge);
     res.json({ url: authUrl });
 };
 
-exports.callback = async (req, res) => {
+export const callback = async (req, res) => {
     const code = req.query.code;
     try {
         const tokenData = await authPKCEFlow.getAccessToken(code, codeVerifier);
         req.session.token = tokenData.access_token;
         req.session.instanceUrl = tokenData.instance_url;
-        res.redirect('/connect.html');
+        // Instead of redirecting, send a success response
+        res.json({ success: true, message: 'Authentication successful' });
     } catch (error) {
-        res.status(500).send('Authentication failed');
+        res.status(500).json({ success: false, message: 'Authentication failed' });
     }
 };
