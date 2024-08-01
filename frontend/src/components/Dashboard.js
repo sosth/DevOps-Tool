@@ -25,7 +25,7 @@ const Dashboard = ({ profile, logOut }) => {
           <SidebarLink icon={FaHome} text="Home" active />
           <SidebarLink icon={FaCog} text="CI Jobs" />
           <SidebarLink icon={FaClipboardList} text="Work Items" />
-          <SidebarLink icon={FaRocket} text="Deployments" to="/deploymentsfr" />
+          <SidebarLink icon={FaRocket} text="Deployments" />
           <SidebarLink icon={FaUsers} text="Organization" />
           <SidebarLink icon={FaHistory} text="History" />
         </nav>
@@ -148,11 +148,11 @@ const Dashboard = ({ profile, logOut }) => {
   );
 };
 
-const SidebarLink = ({ icon: Icon, text, active, to }) => (
-  <Link to={to} className={`flex items-center space-x-2 p-4 rounded ${active ? 'bg-yellow-500 text-black' : 'hover:bg-gray-800'}`}>
+const SidebarLink = ({ icon: Icon, text, active }) => (
+  <a href="#" className={`flex items-center space-x-2 p-4 rounded ${active ? 'bg-yellow-500 text-black' : 'hover:bg-gray-800'}`}>
     <Icon className={`text-lg ${active ? 'text-black' : 'text-white'}`} />
     <span className={active ? 'font-semibold text-black' : 'text-white'}>{text}</span>
-  </Link>
+  </a>
 );
 
 export default Dashboard;
