@@ -65,8 +65,10 @@ app.post('/deleteorg/:id', orgController.deleteOrg);
 app.get('/deleteorg', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'deleteOrg.html'));
 });
-app.post('/create-deployment', deploymentController.createDeployment);
-app.use('/api/deployments', deploymentRoutes);
+app.post('/api/deployments/create', deploymentController.createDeployment);
+app.get('/api/deployments', deploymentController.getDeployments);
+//app.post('/create-deployment', deploymentController.createDeployment);
+//app.use('/api/deployments', deploymentRoutes);
 // Retrieve Routes
 app.use('/api/apex', apexRoutes);
 app.use('/api/customObject', customObjectRoutes);
