@@ -31,7 +31,7 @@ function App() {
   }, [user]);
 
   const sendTokenToBackend = (token) => {
-    fetch('/api/google/login', {
+    fetch('/api/google/auth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
