@@ -13,7 +13,7 @@ function App() {
     onSuccess: async (codeResponse) => {
       console.log(codeResponse);
       try {
-        const result = await axios.post('/api/google/auth', {
+        const result = await axios.post('/api/google/login', {
           code: codeResponse.code
         });
         setProfile(result.data.userInfo);
