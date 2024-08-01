@@ -28,14 +28,11 @@ const Profile = ({ profile, logOut }) => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <ProfileField label="Name" value={profile.name} />
-          <ProfileField label="Email" value={profile.email} />
-          <ProfileField label="ID" value={profile.id} />
+          <ProfileField label="Full Name" value={profile.name} />
           <ProfileField label="First Name" value={profile.given_name} />
           <ProfileField label="Last Name" value={profile.family_name} />
-          <ProfileField label="Locale" value={profile.locale} />
-          <ProfileField label="Verified" value={profile.verified_email ? "Yes" : "No"} />
-          <ProfileField label="Domain" value={profile.hd || 'N/A'} />
+          <ProfileField label="Email" value={profile.email} />
+          {/* You can add more fields here if needed */}
         </div>
         
         <div className="mt-8 flex justify-center">

@@ -4,7 +4,6 @@ import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import HomePage from './components/HomePage';
 import Dashboard from './components/Dashboard';
-import CreateDeploymentPage from './components/CreateDeploymentPage';
 import Profile from './components/Profile';
 
 function App() {
@@ -96,10 +95,6 @@ function App() {
           profile ? <Profile profile={profile} logOut={logOut} /> : <Navigate to="/" />
         } />
       </Routes>
-      <Route
-          path="/create-deployment"
-          element={profile ? <CreateDeploymentPage /> : <Navigate to="/" />}
-        />
     </Router>
   );
 }
