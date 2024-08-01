@@ -1,15 +1,22 @@
-// src/components/Profile.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 
 const Profile = ({ profile, logOut }) => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    console.log("Profile component mounted. Profile data:", profile);
+  }, [profile]);
+
   const handleLogout = () => {
     logOut();
     navigate('/');
   };
+
+  if (!profile) {
+    return <div>Loading profile data...</div>;
+  }
 
   return (
     <div className="bg-gray-100 min-h-screen p-8">
@@ -32,7 +39,10 @@ const Profile = ({ profile, logOut }) => {
           <ProfileField label="First Name" value={profile.given_name} />
           <ProfileField label="Last Name" value={profile.family_name} />
           <ProfileField label="Email" value={profile.email} />
-          {/* You can add more fields here if needed */}
+          <ProfileField label="ID" value={profile.id} />
+          <ProfileField label="Locale" value={profile.locale} />
+          <ProfileField label="Verified" value={profile.verified_email ? "Yes" : "No"} />
+          <ProfileField label="Domain" value={profile.hd || 'N/A'} />
         </div>
         
         <div className="mt-8 flex justify-center">

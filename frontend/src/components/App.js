@@ -12,12 +12,11 @@ function App() {
 
   const login = useGoogleLogin({
     onSuccess: (tokenResponse) => {
-      console.log(tokenResponse);
-      sendTokenToBackend(tokenResponse);
+      console.log('Google Login Success:', tokenResponse);
+      setUser(tokenResponse);
     },
     flow: 'auth-code',
     scope: 'openid profile email',
-  
     onError: (error) => console.log('Login Failed:', error)
   });
 
@@ -30,21 +29,25 @@ function App() {
         }
       })
         .then(res => {
+          console.log("Fetched profile data:", res.data);
           setProfile(res.data);
           sendTokenToBackend(user.access_token);
         })
-        .catch(err => console.log(err));
+        .catch(err => console.error("Error fetching profile:", err));
     }
   }, [user]);
 
-  const sendTokenToBackend = (tokenResponse) => {
-    const idToken = tokenResponse.id_token; // Use the ID token, not the access token
+  useEffect(() => {
+    console.log("Current profile state:", profile);
+  }, [profile]);
+
+  const sendTokenToBackend = (accessToken) => {
     fetch('/api/google/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ token: idToken }),
+      body: JSON.stringify({ token: accessToken }),
     })
       .then(response => response.json())
       .then(data => {
