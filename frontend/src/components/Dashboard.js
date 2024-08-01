@@ -1,8 +1,24 @@
-import React, { useState } from 'react';
-import { FaHome, FaCog, FaClipboardList, FaRocket, FaUsers, FaHistory, FaBell, FaSearch, FaUserCircle, FaSyncAlt, FaCheck, FaArrowUp, FaArrowRight, FaCloud, FaUser } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import illustration from './images/home.PNG';
+import React, { useState } from "react";
+import {
+  FaHome,
+  FaCog,
+  FaClipboardList,
+  FaRocket,
+  FaUsers,
+  FaHistory,
+  FaBell,
+  FaSearch,
+  FaUserCircle,
+  FaSyncAlt,
+  FaCheck,
+  FaArrowUp,
+  FaArrowRight,
+  FaCloud,
+  FaUser,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import illustration from "./images/home.PNG";
 
 const Dashboard = ({ profile, logOut }) => {
   const [showUserMenu, setShowUserMenu] = useState(false);
@@ -10,7 +26,7 @@ const Dashboard = ({ profile, logOut }) => {
 
   const handleLogout = () => {
     logOut();
-    navigate('/');
+    navigate("/");
   };
 
   return (
@@ -25,15 +41,24 @@ const Dashboard = ({ profile, logOut }) => {
           <SidebarLink icon={FaHome} text="Home" active />
           <SidebarLink icon={FaCog} text="CI Jobs" />
           <SidebarLink icon={FaClipboardList} text="Work Items" />
-          <SidebarLink icon={FaRocket} text="Deployments" />
+          <SidebarLink
+            as={Link}
+            to="/create-deployment"
+            icon={FaRocket}
+            text="Deployments"
+          />
           <SidebarLink icon={FaUsers} text="Organization" />
           <SidebarLink icon={FaHistory} text="History" />
         </nav>
         <div className="absolute bottom-0 left-0 w-full p-4">
           <div className="bg-gray-800 p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Upgrade to Pro</h3>
-            <p className="text-sm mb-4">Unlock all features and get unlimited access to our support team.</p>
-            <button className="bg-yellow-500 text-black px-4 py-2 rounded-full w-full">Upgrade</button>
+            <p className="text-sm mb-4">
+              Unlock all features and get unlimited access to our support team.
+            </p>
+            <button className="bg-yellow-500 text-black px-4 py-2 rounded-full w-full">
+              Upgrade
+            </button>
           </div>
         </div>
       </div>
@@ -62,10 +87,17 @@ const Dashboard = ({ profile, logOut }) => {
               />
               {showUserMenu && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-                  <Link to="/profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  <Link
+                    to="/profile"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
                     Profile
                   </Link>
-                  <a href="#" onClick={handleLogout} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  <a
+                    href="#"
+                    onClick={handleLogout}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
                     Logout
                   </a>
                 </div>
@@ -77,7 +109,9 @@ const Dashboard = ({ profile, logOut }) => {
         {/* Dashboard Content */}
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-6">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-semibold">Welcome back, {profile.name}</h2>
+            <h2 className="text-2xl font-semibold">
+              Welcome back, {profile.name}
+            </h2>
             <div className="flex items-center space-x-2">
               <select className="p-2 border rounded-md border-gray-300 text-gray-700">
                 <option>Select Widgets</option>
@@ -105,7 +139,11 @@ const Dashboard = ({ profile, logOut }) => {
             <div className="flex">
               <div className="w-1/2 pr-4 border-r border-gray-900">
                 <h4 className="font-semibold mb-2">Upcoming</h4>
-                <img src={illustration} alt="No upcoming activities" className="w-full" />
+                <img
+                  src={illustration}
+                  alt="No upcoming activities"
+                  className="w-full"
+                />
               </div>
               <div className="w-1/2 pl-4">
                 <h4 className="font-semibold mb-2">Completed</h4>
@@ -148,11 +186,16 @@ const Dashboard = ({ profile, logOut }) => {
   );
 };
 
-const SidebarLink = ({ icon: Icon, text, active }) => (
-  <a href="#" className={`flex items-center space-x-2 p-4 rounded ${active ? 'bg-yellow-500 text-black' : 'hover:bg-gray-800'}`}>
+const SidebarLink = ({ as: Component = 'a', icon: Icon, text, active, ...props }) => (
+  <Component
+    className={`flex items-center space-x-2 p-4 rounded ${
+      active ? 'bg-yellow-500 text-black' : 'hover:bg-gray-800'
+    }`}
+    {...props}
+  >
     <Icon className={`text-lg ${active ? 'text-black' : 'text-white'}`} />
     <span className={active ? 'font-semibold text-black' : 'text-white'}>{text}</span>
-  </a>
+  </Component>
 );
 
 export default Dashboard;

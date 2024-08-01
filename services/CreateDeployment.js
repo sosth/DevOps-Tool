@@ -6,10 +6,11 @@ const CreateDeployment = () => {
   const [sourceOrg, setSourceOrg] = useState('');
   const [targetOrg, setTargetOrg] = useState('');
   const [orgs, setOrgs] = useState([]);
+  const [deployments, setDeployments] = useState([]);
 
   useEffect(() => {
-    // Fetch the list of organizations when the component mounts
     fetchOrgs();
+    fetchDeployments();
   }, []);
 
   const fetchOrgs = async () => {
@@ -21,56 +22,95 @@ const CreateDeployment = () => {
     }
   };
 
+  const fetchDeployments = async () => {
+    try {
+      const response = await axios.get('/api/deployments');
+      setDeployments(response.data);
+    } catch (error) {
+      console.error('Error fetching deployments:', error);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/deployments/create', {
+      await axios.post('/api/deployments/create', {
         deploymentName,
         sourceOrg,
         targetOrg
       });
-      console.log('Deployment created:', response.data);
-      // Reset form or redirect user
+      alert('Deployment created successfully!');
+      setDeploymentName('');
+      setSourceOrg('');
+      setTargetOrg('');
+      fetchDeployments();
     } catch (error) {
       console.error('Error creating deployment:', error);
+      alert('Failed to create deployment. Please try again.');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={deploymentName}
-        onChange={(e) => setDeploymentName(e.target.value)}
-        placeholder="Deployment Name"
-        required
-      />
-      <select
-        value={sourceOrg}
-        onChange={(e) => setSourceOrg(e.target.value)}
-        required
-      >
-        <option value="">Select Source Org</option>
-        {orgs.map((org) => (
-          <option key={org.id} value={org.id}>
-            {org.name}
-          </option>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Create New Deployment</h1>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="deploymentName" className="block mb-1">Deployment Name:</label>
+          <input
+            type="text"
+            id="deploymentName"
+            value={deploymentName}
+            onChange={(e) => setDeploymentName(e.target.value)}
+            className="w-full p-2 border rounded"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="sourceOrg" className="block mb-1">Source Organization:</label>
+          <select
+            id="sourceOrg"
+            value={sourceOrg}
+            onChange={(e) => setSourceOrg(e.target.value)}
+            className="w-full p-2 border rounded"
+            required
+          >
+            <option value="">Select Source Org</option>
+            {orgs.map((org) => (
+              <option key={org.id} value={org.id}>{org.name}</option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="targetOrg" className="block mb-1">Target Organization:</label>
+          <select
+            id="targetOrg"
+            value={targetOrg}
+            onChange={(e) => setTargetOrg(e.target.value)}
+            className="w-full p-2 border rounded"
+            required
+          >
+            <option value="">Select Target Org</option>
+            {orgs.map((org) => (
+              <option key={org.id} value={org.id}>{org.name}</option>
+            ))}
+          </select>
+        </div>
+        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+          Create Deployment
+        </button>
+      </form>
+
+      <h2 className="text-xl font-bold mt-8 mb-4">Existing Deployments</h2>
+      <div className="space-y-4">
+        {deployments.map((deployment) => (
+          <div key={deployment.id} className="bg-gray-100 p-4 rounded">
+            <h3 className="font-semibold">{deployment.dep_name}</h3>
+            <p>Source: {deployment.source_org_name}</p>
+            <p>Target: {deployment.target_org_name}</p>
+          </div>
         ))}
-      </select>
-      <select
-        value={targetOrg}
-        onChange={(e) => setTargetOrg(e.target.value)}
-        required
-      >
-        <option value="">Select Target Org</option>
-        {orgs.map((org) => (
-          <option key={org.id} value={org.id}>
-            {org.name}
-          </option>
-        ))}
-      </select>
-      <button type="submit">Create Deployment</button>
-    </form>
+      </div>
+    </div>
   );
 };
 
