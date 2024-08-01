@@ -11,8 +11,17 @@ const oauth2Client = new OAuth2Client(
 
 router.post('/login', async (req, res) => {
   const { code } = req.body;
+  console.log('Received code:', code);
+  
+  if (!code) {
+    return res.status(400).json({ success: false, error: 'No code provided' });
+  }
+
   try {
-    console.log('Received code:', code);
+    console.log('Google Client ID:', process.env.GOOGLE_CLIENT_ID);
+    console.log('Google Client Secret:', process.env.GOOGLE_CLIENT_SECRET ? '[REDACTED]' : 'Not set');
+    console.log('Google Redirect URI:', process.env.GOOGLE_REDIRECT_URI);
+
     const { tokens } = await oauth2Client.getToken(code);
     oauth2Client.setCredentials(tokens);
 

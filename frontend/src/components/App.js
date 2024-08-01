@@ -17,6 +17,7 @@ function App() {
     },
     flow: 'auth-code',
     scope: 'openid profile email',
+    client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID, // Make sure this is set in your .env file
     onError: (error) => console.log('Login Failed:', error)
   });
 
