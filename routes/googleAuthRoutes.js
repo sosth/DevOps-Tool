@@ -3,15 +3,24 @@ const { OAuth2Client } = require('google-auth-library');
 const { saveUser } = require('../services/userService');
 
 const router = express.Router();
-const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+const oauth2Client = new OAuth2Client(
+  process.env.GOOGLE_CLIENT_ID,
+  process.env.GOOGLE_CLIENT_SECRET,
+  process.env.GOOGLE_REDIRECT_URI
+);
+
 router.post('/login', async (req, res) => {
-  const { token } = req.body;
+  const { code } = req.body;
   try {
-    console.log('Received token:', token);
-    const ticket = await client.verifyIdToken({
-      idToken: token,
+    console.log('Received code:', code);
+    const { tokens } = await oauth2Client.getToken(code);
+    oauth2Client.setCredentials(tokens);
+
+    const ticket = await oauth2Client.verifyIdToken({
+      idToken: tokens.id_token,
       audience: process.env.GOOGLE_CLIENT_ID,
     });
+
     const payload = ticket.getPayload();
     console.log('Google payload:', payload);
     const userData = {

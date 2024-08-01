@@ -11,9 +11,9 @@ function App() {
   const [profile, setProfile] = useState(null);
 
   const login = useGoogleLogin({
-    onSuccess: (tokenResponse) => {
-      console.log('Google Login Success:', tokenResponse);
-      setUser(tokenResponse);
+    onSuccess: (codeResponse) => {
+      console.log('Google Login Success:', codeResponse);
+      sendCodeToBackend(codeResponse.code);
     },
     flow: 'auth-code',
     scope: 'openid profile email',
@@ -41,18 +41,40 @@ function App() {
     console.log("Current profile state:", profile);
   }, [profile]);
 
-  const sendTokenToBackend = (accessToken) => {
+  const sendTokenToBackend = (tokenResponse) => {
+    const idToken = tokenResponse.id_token; // Use the ID token, not the access token
     fetch('/api/google/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ token: accessToken }),
+      body: JSON.stringify({ token: idToken }),
     })
       .then(response => response.json())
       .then(data => {
         if (data.success) {
           console.log('Backend authentication successful:', data.userId);
+        } else {
+          console.error('Backend authentication failed');
+        }
+      })
+      .catch(error => {
+        console.error('Error during backend authentication:', error);
+      });
+  };
+  const sendCodeToBackend = (code) => {
+    fetch('/api/google/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ code: code }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          console.log('Backend authentication successful:', data.userId);
+          // Here you might want to fetch the user profile or update the app state
         } else {
           console.error('Backend authentication failed');
         }
