@@ -22,12 +22,12 @@ const Dashboard = ({ profile, logOut }) => {
         </div>
         <div className="border-b border-white mx-4 mb-4"></div>
         <nav className="mt-4 px-4">
-          <SidebarLink icon={FaHome} text="Home" active />
-          <SidebarLink icon={FaCog} text="CI Jobs" />
-          <SidebarLink icon={FaClipboardList} text="Work Items" />
-          <SidebarLink icon={FaRocket} text="Deployments" />
-          <SidebarLink icon={FaUsers} text="Organization" />
-          <SidebarLink icon={FaHistory} text="History" />
+          <SidebarLink to="/dashboard" icon={FaHome} text="Home" active />
+          <SidebarLink to="/ci-jobs" icon={FaCog} text="CI Jobs" />
+          <SidebarLink to="/work-items" icon={FaClipboardList} text="Work Items" />
+          <SidebarLink to="/deployments" icon={FaRocket} text="Deployments" />
+          <SidebarLink to="/organization" icon={FaUsers} text="Organization" />
+          <SidebarLink to="/history" icon={FaHistory} text="History" />
         </nav>
         <div className="absolute bottom-0 left-0 w-full p-4">
           <div className="bg-gray-800 p-4 rounded-lg">
@@ -148,11 +148,11 @@ const Dashboard = ({ profile, logOut }) => {
   );
 };
 
-const SidebarLink = ({ icon: Icon, text, active }) => (
-  <a href="#" className={`flex items-center space-x-2 p-4 rounded ${active ? 'bg-yellow-500 text-black' : 'hover:bg-gray-800'}`}>
+const SidebarLink = ({ to, icon: Icon, text, active }) => (
+  <Link to={to} className={`flex items-center space-x-2 p-4 rounded ${active ? 'bg-yellow-500 text-black' : 'hover:bg-gray-800'}`}>
     <Icon className={`text-lg ${active ? 'text-black' : 'text-white'}`} />
     <span className={active ? 'font-semibold text-black' : 'text-white'}>{text}</span>
-  </a>
+  </Link>
 );
 
 export default Dashboard;
