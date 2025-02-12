@@ -1,5 +1,0 @@
-<apex:page standardController="Contact" standardStylesheets="false" applyBodyTag="false" cache="false">
-	<div id="InnternalDiv" style="height:600px;">
-		<c:CloudPerks_SearchWidget />
-	</div>
-</apex:page>

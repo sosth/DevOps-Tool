@@ -1,3 +1,0 @@
-<apex:page id="CreateOrder" standardController="Order" extensions="SBQQ.OrderController" action="{!onNew}">
-    <apex:pageMessages />
-</apex:page>

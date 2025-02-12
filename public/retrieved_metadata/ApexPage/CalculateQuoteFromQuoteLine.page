@@ -1,3 +1,0 @@
-<apex:page id="CalculateQuoteFromQuoteLine" standardController="SBQQ__QuoteLine__c" extensions="SBQQ.QuoteExtController" action="{!onCalculate}">
-	<apex:pageMessages />
-</apex:page>

@@ -1,8 +1,8 @@
 {
   "username": "TempAuthOrg",
   "orgId": "00Dxx0000000XHP",
-  "accessToken": "00DGA000005qZkJ!ARgAQDlQM3DDd8jvHqBUy9dscZnjuD.pnMuJEHYf0ixple.3tVh47ebTi8OYX2Mliv271JWxoxjopRSAXv4q66wVUsO88USJ",
-  "instanceUrl": "https://clientcom8-dev-ed.develop.my.salesforce.com",
+  "accessToken": "",
+  "instanceUrl": "https://*.develop.my.salesforce.com",
   "loginUrl": "https://login.salesforce.com",
   "clientId": "SalesforceDevelopmentExperience",
   "clientSecret": "",
